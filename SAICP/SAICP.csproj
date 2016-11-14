@@ -54,6 +54,12 @@
     <Compile Include="GIEC-CEC.Designer.cs">
       <DependentUpon>GIEC-CEC.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIEC-NCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIEC-NCM.Designer.cs">
+      <DependentUpon>GIEC-NCM.cs</DependentUpon>
+    </Compile>
     <Compile Include="GIEC-NEC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </Compile>
     <EmbeddedResource Include="GIEC-CEC.resx">
       <DependentUpon>GIEC-CEC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIEC-NCM.resx">
+      <DependentUpon>GIEC-NCM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GIEC-NEC.resx">
       <DependentUpon>GIEC-NEC.cs</DependentUpon>

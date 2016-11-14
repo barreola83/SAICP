@@ -51,5 +51,13 @@ namespace SAICP
             Hide();
             windowQueryClinicalRecords.Show();
         }
+
+        private void mnuNewMedicalQuery_Click(object sender, EventArgs e)
+        {
+            frmNewMedicalQuery windowNewMedicalQuery = new frmNewMedicalQuery(this);
+
+            Hide();
+            windowNewMedicalQuery.Show();
+        }
     }
 }
