@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GBC-RI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GBC-RI.Designer.cs">
+      <DependentUpon>GBC-RI.cs</DependentUpon>
+    </Compile>
     <Compile Include="GIEC-CEC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Pruebas.Designer.cs">
       <DependentUpon>Pruebas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GBC-RI.resx">
+      <DependentUpon>GBC-RI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GIEC-CEC.resx">
       <DependentUpon>GIEC-CEC.cs</DependentUpon>
     </EmbeddedResource>

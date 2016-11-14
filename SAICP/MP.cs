@@ -67,5 +67,13 @@ namespace SAICP
             Hide();
             windowClinicalGraphicTracing.Show();
         }
+
+        private void mnuNewEarmingRecord_Click(object sender, EventArgs e)
+        {
+            frmNewEarningRecord windowNewEarningRecord = new frmNewEarningRecord(this);
+
+            Hide();
+            windowNewEarningRecord.Show();
+        }
     }
 }
