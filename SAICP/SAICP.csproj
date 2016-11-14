@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.9.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=12.9.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GIEC-NEC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIEC-NEC.Designer.cs">
+      <DependentUpon>GIEC-NEC.cs</DependentUpon>
+    </Compile>
     <Compile Include="MP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +62,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pruebas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pruebas.Designer.cs">
+      <DependentUpon>Pruebas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GIEC-NEC.resx">
+      <DependentUpon>GIEC-NEC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MP.resx">
       <DependentUpon>MP.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,7 +82,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Pruebas.resx">
+      <DependentUpon>Pruebas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,6 +99,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CICC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CMCM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CMEC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GBC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIEC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NEC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RACM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RICC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RNC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
