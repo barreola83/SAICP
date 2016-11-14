@@ -59,5 +59,13 @@ namespace SAICP
             Hide();
             windowNewMedicalQuery.Show();
         }
+
+        private void mnuClinicalGraphicTracing_Click(object sender, EventArgs e)
+        {
+            frmClinicalGraphicTracing windowClinicalGraphicTracing = new frmClinicalGraphicTracing(this);
+
+            Hide();
+            windowClinicalGraphicTracing.Show();
+        }
     }
 }

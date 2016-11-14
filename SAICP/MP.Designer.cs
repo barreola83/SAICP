@@ -45,7 +45,7 @@ namespace SAICP
             this.mnuQueryClinicalRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewMedicalQuery = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuClinicalGraphicTracing = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem7 = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -130,7 +130,7 @@ namespace SAICP
             this.mnuQueryClinicalRecords,
             this.mnuNewMedicalQuery,
             this.metroTileItem4,
-            this.metroTileItem13,
+            this.mnuClinicalGraphicTracing,
             this.itemContainer2});
             // 
             // 
@@ -257,20 +257,21 @@ namespace SAICP
             this.metroTileItem4.TitleText = "Búsqueda de consulas médicas";
             this.metroTileItem4.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // metroTileItem13
+            // mnuClinicalGraphicTracing
             // 
-            this.metroTileItem13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem13.Image = global::SAICP.Properties.Resources.SCG;
-            this.metroTileItem13.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTileItem13.Name = "metroTileItem13";
-            this.metroTileItem13.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem13.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Maroon;
+            this.mnuClinicalGraphicTracing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mnuClinicalGraphicTracing.Image = global::SAICP.Properties.Resources.SCG;
+            this.mnuClinicalGraphicTracing.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.mnuClinicalGraphicTracing.Name = "mnuClinicalGraphicTracing";
+            this.mnuClinicalGraphicTracing.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuClinicalGraphicTracing.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Maroon;
             // 
             // 
             // 
-            this.metroTileItem13.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem13.TitleText = "Seguimiento clínico gráfico";
-            this.metroTileItem13.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuClinicalGraphicTracing.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuClinicalGraphicTracing.TitleText = "Seguimiento clínico gráfico";
+            this.mnuClinicalGraphicTracing.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuClinicalGraphicTracing.Click += new System.EventHandler(this.mnuClinicalGraphicTracing_Click);
             // 
             // metroTileItem5
             // 
@@ -401,7 +402,7 @@ namespace SAICP
         private DevComponents.DotNetBar.ItemContainer itemContainer3;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem10;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem13;
+        private DevComponents.DotNetBar.Metro.MetroTileItem mnuClinicalGraphicTracing;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuTesting;
     }
 }
