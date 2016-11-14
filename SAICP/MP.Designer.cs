@@ -38,20 +38,20 @@ namespace SAICP
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnlModules = new DevComponents.DotNetBar.Metro.MetroTilePanel();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
+            this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
+            this.itemContainer3 = new DevComponents.DotNetBar.ItemContainer();
+            this.mnuTesting = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewClinicalRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem2 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuQueryClinicalRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem13 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem7 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem8 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.itemContainer3 = new DevComponents.DotNetBar.ItemContainer();
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.mnuTesting = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
             // statusBar
@@ -127,7 +127,7 @@ namespace SAICP
             this.itemContainer1.Name = "itemContainer1";
             this.itemContainer1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.mnuNewClinicalRecord,
-            this.metroTileItem2,
+            this.mnuQueryClinicalRecords,
             this.metroTileItem3,
             this.metroTileItem4,
             this.metroTileItem13,
@@ -138,6 +138,61 @@ namespace SAICP
             this.itemContainer1.TitleStyle.Class = "MetroTileGroupTitle";
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemContainer1.TitleText = "Gestión integral de expedientes clínicos";
+            // 
+            // itemContainer2
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer2.ItemSpacing = 3;
+            this.itemContainer2.MultiLine = true;
+            this.itemContainer2.Name = "itemContainer2";
+            this.itemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem5,
+            this.metroTileItem6,
+            this.metroTileItem7,
+            this.metroTileItem8,
+            this.itemContainer3});
+            // 
+            // 
+            // 
+            this.itemContainer2.TitleStyle.Class = "MetroTileGroupTitle";
+            this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer2.TitleText = "Gestión básica de contabilidad";
+            // 
+            // itemContainer3
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer3.ItemSpacing = 3;
+            this.itemContainer3.MultiLine = true;
+            this.itemContainer3.Name = "itemContainer3";
+            this.itemContainer3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.metroTileItem9,
+            this.metroTileItem10,
+            this.mnuTesting});
+            // 
+            // 
+            // 
+            this.itemContainer3.TitleStyle.Class = "MetroTileGroupTitle";
+            this.itemContainer3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer3.TitleText = "Administración de agenda";
+            // 
+            // mnuTesting
+            // 
+            this.mnuTesting.Name = "mnuTesting";
+            this.mnuTesting.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuTesting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            // 
+            // 
+            // 
+            this.mnuTesting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuTesting.TitleText = "Pruebas";
+            this.mnuTesting.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuTesting.Click += new System.EventHandler(this.mnuTesting_Click);
             // 
             // mnuNewClinicalRecord
             // 
@@ -155,20 +210,21 @@ namespace SAICP
             this.mnuNewClinicalRecord.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuNewClinicalRecord.Click += new System.EventHandler(this.mnuNewClinicalRecord_Click);
             // 
-            // metroTileItem2
+            // mnuQueryClinicalRecords
             // 
-            this.metroTileItem2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem2.Image = global::SAICP.Properties.Resources.CMEC;
-            this.metroTileItem2.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTileItem2.Name = "metroTileItem2";
-            this.metroTileItem2.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem2.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
+            this.mnuQueryClinicalRecords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mnuQueryClinicalRecords.Image = global::SAICP.Properties.Resources.CMEC;
+            this.mnuQueryClinicalRecords.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.mnuQueryClinicalRecords.Name = "mnuQueryClinicalRecords";
+            this.mnuQueryClinicalRecords.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuQueryClinicalRecords.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.RedViolet;
             // 
             // 
             // 
-            this.metroTileItem2.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem2.TitleText = "Consulta de expedientes clínicos";
-            this.metroTileItem2.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuQueryClinicalRecords.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuQueryClinicalRecords.TitleText = "Consulta de expedientes clínicos";
+            this.mnuQueryClinicalRecords.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuQueryClinicalRecords.Click += new System.EventHandler(this.mnuQueryClinicalRecords_Click);
             // 
             // metroTileItem3
             // 
@@ -214,28 +270,6 @@ namespace SAICP
             this.metroTileItem13.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTileItem13.TitleText = "Seguimiento clínico gráfico";
             this.metroTileItem13.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // itemContainer2
-            // 
-            // 
-            // 
-            // 
-            this.itemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer2.ItemSpacing = 3;
-            this.itemContainer2.MultiLine = true;
-            this.itemContainer2.Name = "itemContainer2";
-            this.itemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem5,
-            this.metroTileItem6,
-            this.metroTileItem7,
-            this.metroTileItem8,
-            this.itemContainer3});
-            // 
-            // 
-            // 
-            this.itemContainer2.TitleStyle.Class = "MetroTileGroupTitle";
-            this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer2.TitleText = "Gestión básica de contabilidad";
             // 
             // metroTileItem5
             // 
@@ -297,26 +331,6 @@ namespace SAICP
             this.metroTileItem8.TitleText = "Consulta de egresos";
             this.metroTileItem8.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // itemContainer3
-            // 
-            // 
-            // 
-            // 
-            this.itemContainer3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer3.ItemSpacing = 3;
-            this.itemContainer3.MultiLine = true;
-            this.itemContainer3.Name = "itemContainer3";
-            this.itemContainer3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem9,
-            this.metroTileItem10,
-            this.mnuTesting});
-            // 
-            // 
-            // 
-            this.itemContainer3.TitleStyle.Class = "MetroTileGroupTitle";
-            this.itemContainer3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer3.TitleText = "Administración de agenda";
-            // 
             // metroTileItem9
             // 
             this.metroTileItem9.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -347,19 +361,6 @@ namespace SAICP
             this.metroTileItem10.TitleText = "Consulta de citas médicas";
             this.metroTileItem10.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // mnuTesting
-            // 
-            this.mnuTesting.Name = "mnuTesting";
-            this.mnuTesting.SymbolColor = System.Drawing.Color.Empty;
-            this.mnuTesting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
-            // 
-            // 
-            // 
-            this.mnuTesting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mnuTesting.TitleText = "Pruebas";
-            this.mnuTesting.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.mnuTesting.Click += new System.EventHandler(this.mnuTesting_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,7 +389,7 @@ namespace SAICP
         private DevComponents.DotNetBar.Metro.MetroTilePanel pnlModules;
         private DevComponents.DotNetBar.ItemContainer itemContainer1;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuNewClinicalRecord;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem2;
+        private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryClinicalRecords;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem3;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem4;
         private DevComponents.DotNetBar.ItemContainer itemContainer2;

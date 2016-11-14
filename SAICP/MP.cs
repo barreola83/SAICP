@@ -32,7 +32,7 @@ namespace SAICP
         {
             frmNewClinicalRecord windowNewClinicalRecord = new frmNewClinicalRecord(this);
 
-            this.Hide();
+            Hide();
             windowNewClinicalRecord.Show();
         }
 
@@ -43,5 +43,13 @@ namespace SAICP
             test.ShowDialog();
         }
         // Fin de pruebas
+
+        private void mnuQueryClinicalRecords_Click(object sender, EventArgs e)
+        {
+            frmQueryClinicalRecords windowQueryClinicalRecords = new frmQueryClinicalRecords(this);
+
+            Hide();
+            windowQueryClinicalRecords.Show();
+        }
     }
 }

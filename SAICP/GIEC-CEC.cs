@@ -9,26 +9,26 @@ using DevComponents.DotNetBar;
 
 namespace SAICP
 {
-    public partial class frmNewClinicalRecord : DevComponents.DotNetBar.Metro.MetroForm
+    public partial class frmQueryClinicalRecords : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
 
-        public frmNewClinicalRecord(frmMain windowMenu)
+        public frmQueryClinicalRecords(frmMain windowMenu)
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
         }
 
-        private void frmNewClinicalRecord_Load(object sender, EventArgs e)
-        {
-            lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
-        }
-
-        private void frmNewClinicalRecord_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmQueryClinicalRecords_FormClosed(object sender, FormClosedEventArgs e)
         {
             Hide();
             windowMenu.Show();
+        }
+
+        private void frmQueryClinicalRecords_Load(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Today.ToString("d");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
         }
 
         private void timer_Tick(object sender, EventArgs e)
