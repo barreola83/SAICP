@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AA-CCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AA-CCM.Designer.cs">
+      <DependentUpon>AA-CCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AA-NCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AA-NCM.Designer.cs">
+      <DependentUpon>AA-NCM.cs</DependentUpon>
+    </Compile>
     <Compile Include="GBC-CE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     <Compile Include="Pruebas.Designer.cs">
       <DependentUpon>Pruebas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AA-CCM.resx">
+      <DependentUpon>AA-CCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AA-NCM.resx">
+      <DependentUpon>AA-NCM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GBC-CE.resx">
       <DependentUpon>GBC-CE.cs</DependentUpon>
     </EmbeddedResource>

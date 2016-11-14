@@ -99,5 +99,21 @@ namespace SAICP
             Hide();
             windowQueryExpenseRecords.Show();
         }
+
+        private void mnuNewMedicalDate_Click(object sender, EventArgs e)
+        {
+            frmNewMedicalDate windowNewMedicalDate = new frmNewMedicalDate(this);
+
+            Hide();
+            windowNewMedicalDate.Show();
+        }
+
+        private void mnuQueryMedicalDates_Click(object sender, EventArgs e)
+        {
+            frmQueryMedicalDates windowQueryMedicalDates = new frmQueryMedicalDates(this);
+
+            Hide();
+            windowQueryMedicalDates.Show();
+        }
     }
 }

@@ -50,8 +50,8 @@ namespace SAICP
             this.mnuQueryEarningRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewExpenseRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryExpenseRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuNewMedicalDate = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuQueryMedicalDates = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
             // statusBar
@@ -171,8 +171,8 @@ namespace SAICP
             this.itemContainer3.MultiLine = true;
             this.itemContainer3.Name = "itemContainer3";
             this.itemContainer3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.metroTileItem9,
-            this.metroTileItem10,
+            this.mnuNewMedicalDate,
+            this.mnuQueryMedicalDates,
             this.mnuTesting});
             // 
             // 
@@ -337,35 +337,37 @@ namespace SAICP
             this.mnuQueryExpenseRecords.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuQueryExpenseRecords.Click += new System.EventHandler(this.mnuQueryExpenseRecords_Click);
             // 
-            // metroTileItem9
+            // mnuNewMedicalDate
             // 
-            this.metroTileItem9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem9.Image = global::SAICP.Properties.Resources.RACM;
-            this.metroTileItem9.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTileItem9.Name = "metroTileItem9";
-            this.metroTileItem9.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem9.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkGreen;
-            // 
-            // 
-            // 
-            this.metroTileItem9.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem9.TitleText = "Nueva cita médica";
-            this.metroTileItem9.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // metroTileItem10
-            // 
-            this.metroTileItem10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem10.Image = global::SAICP.Properties.Resources.CMCM;
-            this.metroTileItem10.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTileItem10.Name = "metroTileItem10";
-            this.metroTileItem10.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem10.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkGreen;
+            this.mnuNewMedicalDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mnuNewMedicalDate.Image = global::SAICP.Properties.Resources.RACM;
+            this.mnuNewMedicalDate.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.mnuNewMedicalDate.Name = "mnuNewMedicalDate";
+            this.mnuNewMedicalDate.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuNewMedicalDate.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkGreen;
             // 
             // 
             // 
-            this.metroTileItem10.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem10.TitleText = "Consulta de citas médicas";
-            this.metroTileItem10.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuNewMedicalDate.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuNewMedicalDate.TitleText = "Nueva cita médica";
+            this.mnuNewMedicalDate.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuNewMedicalDate.Click += new System.EventHandler(this.mnuNewMedicalDate_Click);
+            // 
+            // mnuQueryMedicalDates
+            // 
+            this.mnuQueryMedicalDates.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mnuQueryMedicalDates.Image = global::SAICP.Properties.Resources.CMCM;
+            this.mnuQueryMedicalDates.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.mnuQueryMedicalDates.Name = "mnuQueryMedicalDates";
+            this.mnuQueryMedicalDates.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuQueryMedicalDates.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.DarkGreen;
+            // 
+            // 
+            // 
+            this.mnuQueryMedicalDates.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuQueryMedicalDates.TitleText = "Consulta de citas médicas";
+            this.mnuQueryMedicalDates.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuQueryMedicalDates.Click += new System.EventHandler(this.mnuQueryMedicalDates_Click);
             // 
             // frmMain
             // 
@@ -404,8 +406,8 @@ namespace SAICP
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuNewExpenseRecord;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryExpenseRecords;
         private DevComponents.DotNetBar.ItemContainer itemContainer3;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem10;
+        private DevComponents.DotNetBar.Metro.MetroTileItem mnuNewMedicalDate;
+        private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryMedicalDates;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuClinicalGraphicTracing;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuTesting;
     }
