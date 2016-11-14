@@ -28,13 +28,13 @@ namespace SAICP
         private void frmQueryClinicalRecords_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
     }
 }

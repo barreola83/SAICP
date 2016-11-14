@@ -19,13 +19,13 @@ namespace SAICP
         private void frmMain_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
         private void mnuNewClinicalRecord_Click(object sender, EventArgs e)
@@ -74,6 +74,30 @@ namespace SAICP
 
             Hide();
             windowNewEarningRecord.Show();
+        }
+
+        private void mnuQueryEarningRecords_Click(object sender, EventArgs e)
+        {
+            frmQueryEarningRecords windowQueryEarningRecords = new frmQueryEarningRecords(this);
+
+            Hide();
+            windowQueryEarningRecords.Show();
+        }
+
+        private void mnuNewExpenseRecord_Click(object sender, EventArgs e)
+        {
+            frmNewExpenseRecord windowNewExpensesRecord = new frmNewExpenseRecord(this);
+
+            Hide();
+            windowNewExpensesRecord.Show();
+        }
+
+        private void mnuQueryExpenseRecords_Click(object sender, EventArgs e)
+        {
+            frmQueryExpenseRecords windowQueryExpenseRecords = new frmQueryExpenseRecords(this);
+
+            Hide();
+            windowQueryExpenseRecords.Show();
         }
     }
 }

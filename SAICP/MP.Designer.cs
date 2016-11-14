@@ -47,9 +47,9 @@ namespace SAICP
             this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuClinicalGraphicTracing = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewEarmingRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem7 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem8 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuQueryEarningRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuNewExpenseRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuQueryExpenseRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem9 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem10 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
@@ -150,9 +150,9 @@ namespace SAICP
             this.itemContainer2.Name = "itemContainer2";
             this.itemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.mnuNewEarmingRecord,
-            this.metroTileItem6,
-            this.metroTileItem7,
-            this.metroTileItem8,
+            this.mnuQueryEarningRecords,
+            this.mnuNewExpenseRecord,
+            this.mnuQueryExpenseRecords,
             this.itemContainer3});
             // 
             // 
@@ -289,50 +289,53 @@ namespace SAICP
             this.mnuNewEarmingRecord.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuNewEarmingRecord.Click += new System.EventHandler(this.mnuNewEarmingRecord_Click);
             // 
-            // metroTileItem6
+            // mnuQueryEarningRecords
             // 
-            this.metroTileItem6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem6.Image = global::SAICP.Properties.Resources.CICC;
-            this.metroTileItem6.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTileItem6.Name = "metroTileItem6";
-            this.metroTileItem6.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem6.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
-            // 
-            // 
-            // 
-            this.metroTileItem6.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem6.TitleText = "Consulta de ingresos";
-            this.metroTileItem6.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // metroTileItem7
-            // 
-            this.metroTileItem7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem7.Image = global::SAICP.Properties.Resources.RE;
-            this.metroTileItem7.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTileItem7.Name = "metroTileItem7";
-            this.metroTileItem7.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem7.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish;
+            this.mnuQueryEarningRecords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mnuQueryEarningRecords.Image = global::SAICP.Properties.Resources.CICC;
+            this.mnuQueryEarningRecords.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.mnuQueryEarningRecords.Name = "mnuQueryEarningRecords";
+            this.mnuQueryEarningRecords.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuQueryEarningRecords.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
             // 
             // 
             // 
-            this.metroTileItem7.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem7.TitleText = "Registro de egresos";
-            this.metroTileItem7.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuQueryEarningRecords.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuQueryEarningRecords.TitleText = "Consulta de ingresos";
+            this.mnuQueryEarningRecords.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuQueryEarningRecords.Click += new System.EventHandler(this.mnuQueryEarningRecords_Click);
             // 
-            // metroTileItem8
+            // mnuNewExpenseRecord
             // 
-            this.metroTileItem8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileItem8.Image = global::SAICP.Properties.Resources.CE;
-            this.metroTileItem8.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.metroTileItem8.Name = "metroTileItem8";
-            this.metroTileItem8.SymbolColor = System.Drawing.Color.Empty;
-            this.metroTileItem8.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+            this.mnuNewExpenseRecord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mnuNewExpenseRecord.Image = global::SAICP.Properties.Resources.RE;
+            this.mnuNewExpenseRecord.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.mnuNewExpenseRecord.Name = "mnuNewExpenseRecord";
+            this.mnuNewExpenseRecord.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuNewExpenseRecord.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blueish;
             // 
             // 
             // 
-            this.metroTileItem8.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem8.TitleText = "Consulta de egresos";
-            this.metroTileItem8.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuNewExpenseRecord.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuNewExpenseRecord.TitleText = "Registro de egresos";
+            this.mnuNewExpenseRecord.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuNewExpenseRecord.Click += new System.EventHandler(this.mnuNewExpenseRecord_Click);
+            // 
+            // mnuQueryExpenseRecords
+            // 
+            this.mnuQueryExpenseRecords.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mnuQueryExpenseRecords.Image = global::SAICP.Properties.Resources.CE;
+            this.mnuQueryExpenseRecords.ImageTextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.mnuQueryExpenseRecords.Name = "mnuQueryExpenseRecords";
+            this.mnuQueryExpenseRecords.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuQueryExpenseRecords.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+            // 
+            // 
+            // 
+            this.mnuQueryExpenseRecords.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuQueryExpenseRecords.TitleText = "Consulta de egresos";
+            this.mnuQueryExpenseRecords.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuQueryExpenseRecords.Click += new System.EventHandler(this.mnuQueryExpenseRecords_Click);
             // 
             // metroTileItem9
             // 
@@ -397,9 +400,9 @@ namespace SAICP
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem4;
         private DevComponents.DotNetBar.ItemContainer itemContainer2;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuNewEarmingRecord;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem6;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem7;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem8;
+        private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryEarningRecords;
+        private DevComponents.DotNetBar.Metro.MetroTileItem mnuNewExpenseRecord;
+        private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryExpenseRecords;
         private DevComponents.DotNetBar.ItemContainer itemContainer3;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem9;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem10;

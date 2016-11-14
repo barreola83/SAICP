@@ -22,7 +22,7 @@ namespace SAICP
         private void frmNewMedicalQuery_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
         private void frmNewMedicalQuery_FormClosed(object sender, FormClosedEventArgs e)
@@ -34,7 +34,7 @@ namespace SAICP
         private void timer_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
     }
 }
