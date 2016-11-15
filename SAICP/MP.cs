@@ -39,8 +39,7 @@ namespace SAICP
         // Pruebas
         private void mnuTesting_Click(object sender, EventArgs e)
         {
-            frmTest test = new frmTest();
-            test.ShowDialog();
+
         }
         // Fin de pruebas
 
