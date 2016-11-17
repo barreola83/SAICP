@@ -36,6 +36,7 @@
     <Reference Include="DevComponents.DotNetBar.Charts, Version=12.9.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.Keyboard, Version=12.9.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.9.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=12.9.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=12.9.0.7, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=12.9.0.7, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL" />
     <Reference Include="System" />

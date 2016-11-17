@@ -36,6 +36,14 @@ namespace SAICP
             this.lblDate = new DevComponents.DotNetBar.LabelItem();
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.cldDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
+            this.lblSelectDate = new DevComponents.DotNetBar.LabelX();
+            this.tmsSelectHour = new DevComponents.Editors.DateTimeAdv.TimeSelector();
+            this.lblSelectTime = new DevComponents.DotNetBar.LabelX();
+            this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
+            this.lblFullName = new DevComponents.DotNetBar.LabelX();
+            this.txtFullName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SuspendLayout();
             // 
             // statusBar
@@ -54,9 +62,9 @@ namespace SAICP
             this.lblBlank,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 374);
+            this.statusBar.Location = new System.Drawing.Point(0, 310);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(625, 22);
+            this.statusBar.Size = new System.Drawing.Size(479, 22);
             this.statusBar.TabIndex = 0;
             // 
             // lblMessage
@@ -96,20 +104,152 @@ namespace SAICP
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // cldDate
+            // 
+            this.cldDate.AutoSize = true;
+            // 
+            // 
+            // 
+            this.cldDate.BackgroundStyle.Class = "MonthCalendarAdv";
+            this.cldDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.cldDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cldDate.ContainerControlProcessDialogKey = true;
+            this.cldDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
+            this.cldDate.Location = new System.Drawing.Point(12, 100);
+            this.cldDate.Name = "cldDate";
+            // 
+            // 
+            // 
+            this.cldDate.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.cldDate.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.cldDate.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.cldDate.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cldDate.Size = new System.Drawing.Size(170, 131);
+            this.cldDate.TabIndex = 1;
+            this.cldDate.Text = "monthCalendarAdv1";
+            // 
+            // lblSelectDate
+            // 
+            // 
+            // 
+            // 
+            this.lblSelectDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectDate.Location = new System.Drawing.Point(12, 71);
+            this.lblSelectDate.Name = "lblSelectDate";
+            this.lblSelectDate.Size = new System.Drawing.Size(160, 23);
+            this.lblSelectDate.TabIndex = 2;
+            this.lblSelectDate.Text = "Seleccione una fecha...";
+            // 
+            // tmsSelectHour
+            // 
+            this.tmsSelectHour.AutoSize = true;
+            // 
+            // 
+            // 
+            this.tmsSelectHour.BackgroundStyle.Class = "ItemPanel";
+            this.tmsSelectHour.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tmsSelectHour.ContainerControlProcessDialogKey = true;
+            this.tmsSelectHour.Location = new System.Drawing.Point(210, 100);
+            this.tmsSelectHour.Name = "tmsSelectHour";
+            this.tmsSelectHour.Size = new System.Drawing.Size(252, 190);
+            // 
+            // lblSelectTime
+            // 
+            // 
+            // 
+            // 
+            this.lblSelectTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblSelectTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectTime.Location = new System.Drawing.Point(210, 71);
+            this.lblSelectTime.Name = "lblSelectTime";
+            this.lblSelectTime.Size = new System.Drawing.Size(155, 23);
+            this.lblSelectTime.TabIndex = 4;
+            this.lblSelectTime.Text = "Seleccione una hora...";
+            // 
+            // btnSave
+            // 
+            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(97, 251);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Guardar";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(16, 251);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // lblFullName
+            // 
+            // 
+            // 
+            // 
+            this.lblFullName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(12, 13);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(142, 23);
+            this.lblFullName.TabIndex = 7;
+            this.lblFullName.Text = "Nombre completo:";
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtFullName.Border.Class = "TextBoxBorder";
+            this.txtFullName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtFullName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.ForeColor = System.Drawing.Color.Black;
+            this.txtFullName.Location = new System.Drawing.Point(12, 42);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.PreventEnterBeep = true;
+            this.txtFullName.Size = new System.Drawing.Size(309, 27);
+            this.txtFullName.TabIndex = 8;
+            this.txtFullName.WatermarkText = "Ingrese el nombre completo del paciente...";
+            // 
             // frmNewMedicalDate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 396);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(479, 332);
+            this.Controls.Add(this.txtFullName);
+            this.Controls.Add(this.lblFullName);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.lblSelectTime);
+            this.Controls.Add(this.tmsSelectHour);
+            this.Controls.Add(this.lblSelectDate);
+            this.Controls.Add(this.cldDate);
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmNewMedicalDate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Nueva cita médica";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNewMedicalDate_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewMedicalDate_FormClosing);
             this.Load += new System.EventHandler(this.frmNewMedicalDate_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -122,5 +262,13 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem lblDate;
         private DevComponents.DotNetBar.LabelItem lblHour;
         private System.Windows.Forms.Timer timer;
+        private DevComponents.Editors.DateTimeAdv.MonthCalendarAdv cldDate;
+        private DevComponents.DotNetBar.LabelX lblSelectDate;
+        private DevComponents.Editors.DateTimeAdv.TimeSelector tmsSelectHour;
+        private DevComponents.DotNetBar.LabelX lblSelectTime;
+        private DevComponents.DotNetBar.ButtonX btnSave;
+        private DevComponents.DotNetBar.ButtonX btnCancel;
+        private DevComponents.DotNetBar.LabelX lblFullName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFullName;
     }
 }

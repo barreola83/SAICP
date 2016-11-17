@@ -29,7 +29,7 @@ namespace SAICP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
             this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
@@ -111,7 +111,7 @@ namespace SAICP
             // 
             // 
             // 
-            this.cldDate.BackgroundStyle.BackColor = System.Drawing.Color.LightBlue;
+            this.cldDate.BackgroundStyle.BackColor = System.Drawing.Color.White;
             this.cldDate.BackgroundStyle.Class = "MonthCalendarAdv";
             this.cldDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
@@ -139,9 +139,10 @@ namespace SAICP
             // 
             // 
             this.lblSelectDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectDate.Location = new System.Drawing.Point(12, 16);
             this.lblSelectDate.Name = "lblSelectDate";
-            this.lblSelectDate.Size = new System.Drawing.Size(128, 23);
+            this.lblSelectDate.Size = new System.Drawing.Size(170, 23);
             this.lblSelectDate.TabIndex = 2;
             this.lblSelectDate.Text = "Seleccione una fecha...";
             // 
@@ -154,14 +155,14 @@ namespace SAICP
             this.dgvDateNumber,
             this.dgvPrice,
             this.dgvDate});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvData.Location = new System.Drawing.Point(203, 16);
             this.dgvData.Name = "dgvData";
@@ -191,6 +192,7 @@ namespace SAICP
             // 
             this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(12, 204);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
@@ -203,6 +205,7 @@ namespace SAICP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(554, 255);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvData);
@@ -214,7 +217,7 @@ namespace SAICP
             this.Name = "frmQueryEarningRecords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Consulta de ingresos por concepto de citas";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQueryEarningRecords_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQueryEarningRecords_FormClosing);
             this.Load += new System.EventHandler(this.frmQueryEarningRecords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);

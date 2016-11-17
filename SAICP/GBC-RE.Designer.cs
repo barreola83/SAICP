@@ -112,7 +112,7 @@ namespace SAICP
             // 
             // 
             // 
-            this.cldDate.BackgroundStyle.BackColor = System.Drawing.Color.LightBlue;
+            this.cldDate.BackgroundStyle.BackColor = System.Drawing.Color.White;
             this.cldDate.BackgroundStyle.Class = "MonthCalendarAdv";
             this.cldDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
@@ -140,9 +140,10 @@ namespace SAICP
             // 
             // 
             this.lblSelectDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectDate.Location = new System.Drawing.Point(345, 12);
             this.lblSelectDate.Name = "lblSelectDate";
-            this.lblSelectDate.Size = new System.Drawing.Size(152, 23);
+            this.lblSelectDate.Size = new System.Drawing.Size(170, 23);
             this.lblSelectDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.lblSelectDate.TabIndex = 2;
             this.lblSelectDate.Text = "Seleccione una fecha...";
@@ -156,6 +157,7 @@ namespace SAICP
             this.txtDescription.Border.Class = "TextBoxBorder";
             this.txtDescription.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDescription.DisabledBackColor = System.Drawing.Color.White;
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.Location = new System.Drawing.Point(12, 45);
             this.txtDescription.Multiline = true;
@@ -171,9 +173,10 @@ namespace SAICP
             // 
             // 
             this.lblDescription.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.Location = new System.Drawing.Point(12, 12);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(75, 23);
+            this.lblDescription.Size = new System.Drawing.Size(99, 23);
             this.lblDescription.TabIndex = 4;
             this.lblDescription.Text = "Descripción:";
             // 
@@ -183,6 +186,7 @@ namespace SAICP
             // 
             // 
             this.lblPrice.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(12, 178);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(75, 23);
@@ -198,11 +202,12 @@ namespace SAICP
             this.txtPrice.Border.Class = "TextBoxBorder";
             this.txtPrice.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPrice.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
             this.txtPrice.Location = new System.Drawing.Point(12, 208);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PreventEnterBeep = true;
-            this.txtPrice.Size = new System.Drawing.Size(142, 22);
+            this.txtPrice.Size = new System.Drawing.Size(142, 27);
             this.txtPrice.TabIndex = 6;
             this.txtPrice.WatermarkText = "Ingrese el importe...";
             // 
@@ -212,9 +217,10 @@ namespace SAICP
             // 
             // 
             this.lblSupplier.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblSupplier.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplier.Location = new System.Drawing.Point(12, 236);
             this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(75, 23);
+            this.lblSupplier.Size = new System.Drawing.Size(93, 23);
             this.lblSupplier.TabIndex = 7;
             this.lblSupplier.Text = "Proveedor:";
             // 
@@ -227,11 +233,12 @@ namespace SAICP
             this.txtSupplier.Border.Class = "TextBoxBorder";
             this.txtSupplier.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtSupplier.DisabledBackColor = System.Drawing.Color.White;
+            this.txtSupplier.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSupplier.ForeColor = System.Drawing.Color.Black;
             this.txtSupplier.Location = new System.Drawing.Point(12, 266);
             this.txtSupplier.Name = "txtSupplier";
             this.txtSupplier.PreventEnterBeep = true;
-            this.txtSupplier.Size = new System.Drawing.Size(247, 22);
+            this.txtSupplier.Size = new System.Drawing.Size(247, 27);
             this.txtSupplier.TabIndex = 8;
             this.txtSupplier.WatermarkText = "Ingrese el proveedor...";
             // 
@@ -239,6 +246,7 @@ namespace SAICP
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(454, 265);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
@@ -250,6 +258,7 @@ namespace SAICP
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(373, 265);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -262,6 +271,7 @@ namespace SAICP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(536, 326);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -279,7 +289,7 @@ namespace SAICP
             this.Name = "frmNewExpenseRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Registro de egresos por concepto de citas";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNewExpenseRecord_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewExpenseRecord_FormClosing);
             this.Load += new System.EventHandler(this.frmNewExpenseRecord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

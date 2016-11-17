@@ -17,6 +17,7 @@ namespace SAICP
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
+            MaximizeBox = false;
         }
 
         private void frmQueryMedicalDates_Load(object sender, EventArgs e)
@@ -25,16 +26,32 @@ namespace SAICP
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
-        private void frmQueryMedicalDates_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Hide();
-            windowMenu.Show();
-        }
-
         private void timer_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+        }
+
+        private void frmQueryMedicalDates_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Hide();
+                windowMenu.Show();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Hide();
+                windowMenu.Show();
+            }
         }
     }
 }

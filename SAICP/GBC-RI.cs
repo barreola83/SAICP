@@ -17,6 +17,7 @@ namespace SAICP
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
+            MaximizeBox = false;
         }
 
         private void frmNewEarningRecord_Load(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace SAICP
 
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea cancelar? Los datos no guardados se perderán", "Cancelar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Hide();
                 windowMenu.Show();
@@ -42,7 +43,7 @@ namespace SAICP
 
         private void frmNewEarningRecord_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea cancelar? Los datos no guardados se perderán", "Cancelar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Hide();
                 windowMenu.Show();

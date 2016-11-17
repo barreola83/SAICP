@@ -110,7 +110,7 @@ namespace SAICP
             // 
             // 
             // 
-            this.cldDate.BackgroundStyle.BackColor = System.Drawing.Color.LightBlue;
+            this.cldDate.BackgroundStyle.BackColor = System.Drawing.Color.White;
             this.cldDate.BackgroundStyle.Class = "MonthCalendarAdv";
             this.cldDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
@@ -138,9 +138,10 @@ namespace SAICP
             // 
             // 
             this.lblSelectDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectDate.Location = new System.Drawing.Point(208, 7);
             this.lblSelectDate.Name = "lblSelectDate";
-            this.lblSelectDate.Size = new System.Drawing.Size(136, 23);
+            this.lblSelectDate.Size = new System.Drawing.Size(164, 23);
             this.lblSelectDate.TabIndex = 2;
             this.lblSelectDate.Text = "Seleccione una fecha...";
             // 
@@ -150,9 +151,10 @@ namespace SAICP
             // 
             // 
             this.lblDateNumber.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblDateNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateNumber.Location = new System.Drawing.Point(12, 30);
             this.lblDateNumber.Name = "lblDateNumber";
-            this.lblDateNumber.Size = new System.Drawing.Size(98, 23);
+            this.lblDateNumber.Size = new System.Drawing.Size(126, 23);
             this.lblDateNumber.TabIndex = 3;
             this.lblDateNumber.Text = "Número de cita:";
             // 
@@ -165,11 +167,12 @@ namespace SAICP
             this.txtPrice.Border.Class = "TextBoxBorder";
             this.txtPrice.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPrice.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.ForeColor = System.Drawing.Color.Black;
             this.txtPrice.Location = new System.Drawing.Point(12, 133);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PreventEnterBeep = true;
-            this.txtPrice.Size = new System.Drawing.Size(117, 22);
+            this.txtPrice.Size = new System.Drawing.Size(151, 27);
             this.txtPrice.TabIndex = 5;
             this.txtPrice.WatermarkText = "Ingrese el importe...";
             // 
@@ -179,6 +182,7 @@ namespace SAICP
             // 
             // 
             this.lblPrice.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(12, 104);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(75, 23);
@@ -189,6 +193,7 @@ namespace SAICP
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(216, 193);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -202,6 +207,7 @@ namespace SAICP
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(297, 193);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
@@ -213,13 +219,14 @@ namespace SAICP
             // 
             this.cmbDateNumber.DisplayMember = "Text";
             this.cmbDateNumber.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDateNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDateNumber.ForeColor = System.Drawing.Color.Black;
             this.cmbDateNumber.FormatString = "N0";
             this.cmbDateNumber.FormattingEnabled = true;
-            this.cmbDateNumber.ItemHeight = 17;
+            this.cmbDateNumber.ItemHeight = 22;
             this.cmbDateNumber.Location = new System.Drawing.Point(12, 59);
             this.cmbDateNumber.Name = "cmbDateNumber";
-            this.cmbDateNumber.Size = new System.Drawing.Size(117, 23);
+            this.cmbDateNumber.Size = new System.Drawing.Size(151, 28);
             this.cmbDateNumber.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbDateNumber.TabIndex = 9;
             this.cmbDateNumber.WatermarkText = "Seleccionar...";
@@ -228,6 +235,7 @@ namespace SAICP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(388, 242);
             this.Controls.Add(this.cmbDateNumber);
             this.Controls.Add(this.btnSave);
