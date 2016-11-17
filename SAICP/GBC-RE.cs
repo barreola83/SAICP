@@ -32,6 +32,10 @@ namespace SAICP
                 Hide();
                 windowMenu.Show();
             }
+            else
+            {
+                e.Cancel = true;
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)

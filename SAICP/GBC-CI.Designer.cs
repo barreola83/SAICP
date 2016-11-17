@@ -29,7 +29,7 @@ namespace SAICP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
             this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
@@ -40,10 +40,10 @@ namespace SAICP
             this.cldDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
             this.lblSelectDate = new DevComponents.DotNetBar.LabelX();
             this.dgvData = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.dgvDateNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,32 +154,20 @@ namespace SAICP
             this.dgvDateNumber,
             this.dgvPrice,
             this.dgvDate});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvData.Location = new System.Drawing.Point(203, 16);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.Size = new System.Drawing.Size(343, 211);
             this.dgvData.TabIndex = 3;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Location = new System.Drawing.Point(12, 204);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // dgvDateNumber
             // 
@@ -199,12 +187,24 @@ namespace SAICP
             this.dgvDate.Name = "dgvDate";
             this.dgvDate.ReadOnly = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnBack.Location = new System.Drawing.Point(12, 204);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "Regresar";
+            this.btnBack.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmQueryEarningRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 255);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.lblSelectDate);
             this.Controls.Add(this.cldDate);
@@ -237,6 +237,6 @@ namespace SAICP
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDateNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
-        private DevComponents.DotNetBar.ButtonX btnCancel;
+        private DevComponents.DotNetBar.ButtonX btnBack;
     }
 }
