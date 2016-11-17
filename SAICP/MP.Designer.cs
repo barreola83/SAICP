@@ -38,20 +38,20 @@ namespace SAICP
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.pnlModules = new DevComponents.DotNetBar.Metro.MetroTilePanel();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
-            this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
-            this.itemContainer3 = new DevComponents.DotNetBar.ItemContainer();
-            this.mnuTesting = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewClinicalRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryClinicalRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewMedicalQuery = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryMedicalQuerys = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuClinicalGraphicTracing = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
             this.mnuNewEarmingRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryEarningRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewExpenseRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryExpenseRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.itemContainer3 = new DevComponents.DotNetBar.ItemContainer();
             this.mnuNewMedicalDate = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryMedicalDates = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.mnuTesting = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
             // statusBar
@@ -139,61 +139,6 @@ namespace SAICP
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.itemContainer1.TitleText = "Gestión integral de expedientes clínicos";
             // 
-            // itemContainer2
-            // 
-            // 
-            // 
-            // 
-            this.itemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer2.ItemSpacing = 3;
-            this.itemContainer2.MultiLine = true;
-            this.itemContainer2.Name = "itemContainer2";
-            this.itemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.mnuNewEarmingRecord,
-            this.mnuQueryEarningRecords,
-            this.mnuNewExpenseRecord,
-            this.mnuQueryExpenseRecords,
-            this.itemContainer3});
-            // 
-            // 
-            // 
-            this.itemContainer2.TitleStyle.Class = "MetroTileGroupTitle";
-            this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer2.TitleText = "Gestión básica de contabilidad";
-            // 
-            // itemContainer3
-            // 
-            // 
-            // 
-            // 
-            this.itemContainer3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer3.ItemSpacing = 3;
-            this.itemContainer3.MultiLine = true;
-            this.itemContainer3.Name = "itemContainer3";
-            this.itemContainer3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.mnuNewMedicalDate,
-            this.mnuQueryMedicalDates,
-            this.mnuTesting});
-            // 
-            // 
-            // 
-            this.itemContainer3.TitleStyle.Class = "MetroTileGroupTitle";
-            this.itemContainer3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer3.TitleText = "Administración de agenda";
-            // 
-            // mnuTesting
-            // 
-            this.mnuTesting.Name = "mnuTesting";
-            this.mnuTesting.SymbolColor = System.Drawing.Color.Empty;
-            this.mnuTesting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
-            // 
-            // 
-            // 
-            this.mnuTesting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mnuTesting.TitleText = "Pruebas";
-            this.mnuTesting.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.mnuTesting.Click += new System.EventHandler(this.mnuTesting_Click);
-            // 
             // mnuNewClinicalRecord
             // 
             this.mnuNewClinicalRecord.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -274,6 +219,28 @@ namespace SAICP
             this.mnuClinicalGraphicTracing.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuClinicalGraphicTracing.Click += new System.EventHandler(this.mnuClinicalGraphicTracing_Click);
             // 
+            // itemContainer2
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer2.ItemSpacing = 3;
+            this.itemContainer2.MultiLine = true;
+            this.itemContainer2.Name = "itemContainer2";
+            this.itemContainer2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.mnuNewEarmingRecord,
+            this.mnuQueryEarningRecords,
+            this.mnuNewExpenseRecord,
+            this.mnuQueryExpenseRecords,
+            this.itemContainer3});
+            // 
+            // 
+            // 
+            this.itemContainer2.TitleStyle.Class = "MetroTileGroupTitle";
+            this.itemContainer2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer2.TitleText = "Gestión básica de contabilidad";
+            // 
             // mnuNewEarmingRecord
             // 
             this.mnuNewEarmingRecord.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -338,6 +305,26 @@ namespace SAICP
             this.mnuQueryExpenseRecords.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuQueryExpenseRecords.Click += new System.EventHandler(this.mnuQueryExpenseRecords_Click);
             // 
+            // itemContainer3
+            // 
+            // 
+            // 
+            // 
+            this.itemContainer3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer3.ItemSpacing = 3;
+            this.itemContainer3.MultiLine = true;
+            this.itemContainer3.Name = "itemContainer3";
+            this.itemContainer3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.mnuNewMedicalDate,
+            this.mnuQueryMedicalDates,
+            this.mnuTesting});
+            // 
+            // 
+            // 
+            this.itemContainer3.TitleStyle.Class = "MetroTileGroupTitle";
+            this.itemContainer3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemContainer3.TitleText = "Administración de agenda";
+            // 
             // mnuNewMedicalDate
             // 
             this.mnuNewMedicalDate.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -370,6 +357,19 @@ namespace SAICP
             this.mnuQueryMedicalDates.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuQueryMedicalDates.Click += new System.EventHandler(this.mnuQueryMedicalDates_Click);
             // 
+            // mnuTesting
+            // 
+            this.mnuTesting.Name = "mnuTesting";
+            this.mnuTesting.SymbolColor = System.Drawing.Color.Empty;
+            this.mnuTesting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            // 
+            // 
+            // 
+            this.mnuTesting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mnuTesting.TitleText = "Pruebas";
+            this.mnuTesting.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.mnuTesting.Click += new System.EventHandler(this.mnuTesting_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,9 +379,11 @@ namespace SAICP
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Sistema de administración integral para consultorios pediátricos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
 

@@ -107,7 +107,7 @@ namespace SAICP
             this.Name = "frmNewMedicalQuery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Nueva consulta médica";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNewMedicalQuery_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewMedicalQuery_FormClosing);
             this.Load += new System.EventHandler(this.frmNewMedicalQuery_Load);
             this.ResumeLayout(false);
 

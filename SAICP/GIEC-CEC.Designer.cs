@@ -107,7 +107,7 @@ namespace SAICP
             this.Name = "frmQueryClinicalRecords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Consulta de expedientes clínicos";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmQueryClinicalRecords_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQueryClinicalRecords_FormClosing);
             this.Load += new System.EventHandler(this.frmQueryClinicalRecords_Load);
             this.ResumeLayout(false);
 

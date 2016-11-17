@@ -107,7 +107,7 @@ namespace SAICP
             this.Name = "frmClinicalGraphicTracing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Seguimiento clínico gráfico";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmClinicalGraphicTracing_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmClinicalGraphicTracing_FormClosing);
             this.Load += new System.EventHandler(this.frmClinicalGraphicTracing_Load);
             this.ResumeLayout(false);
 
