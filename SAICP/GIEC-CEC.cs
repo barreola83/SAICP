@@ -19,12 +19,6 @@ namespace SAICP
             this.windowMenu = windowMenu;
         }
 
-        private void frmQueryClinicalRecords_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Hide();
-            windowMenu.Show();
-        }
-
         private void frmQueryClinicalRecords_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
@@ -35,6 +29,17 @@ namespace SAICP
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+        }
+
+        private void frmQueryClinicalRecords_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                e.Cancel = true;
+            else
+            {
+                Hide();
+                windowMenu.Show();
+            }
         }
     }
 }

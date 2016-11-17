@@ -122,5 +122,11 @@ namespace SAICP
             Hide();
             windowQueryMedicalQuerys.Show();
         }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }
