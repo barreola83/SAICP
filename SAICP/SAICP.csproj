@@ -87,6 +87,12 @@
     <Compile Include="GBC-RI.Designer.cs">
       <DependentUpon>GBC-RI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIEC-BCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIEC-BCM.Designer.cs">
+      <DependentUpon>GIEC-BCM.cs</DependentUpon>
+    </Compile>
     <Compile Include="GIEC-CEC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GBC-RI.resx">
       <DependentUpon>GBC-RI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIEC-BCM.resx">
+      <DependentUpon>GIEC-BCM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GIEC-CEC.resx">
       <DependentUpon>GIEC-CEC.cs</DependentUpon>

@@ -114,5 +114,13 @@ namespace SAICP
             Hide();
             windowQueryMedicalDates.Show();
         }
+
+        private void mnuQueryMedicalQuerys_Click(object sender, EventArgs e)
+        {
+            frmQueryMedicalQuerys windowQueryMedicalQuerys = new frmQueryMedicalQuerys(this);
+
+            Hide();
+            windowQueryMedicalQuerys.Show();
+        }
     }
 }
