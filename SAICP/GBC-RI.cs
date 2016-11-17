@@ -25,7 +25,13 @@ namespace SAICP
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
-        private void frmNewEarningRecord_FormClosed(object sender, FormClosedEventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            lblDate.Text = DateTime.Today.ToString("d");
+            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+        }
+
+        private void btnCancel_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea cancelar? Los datos no guardados se perderán", "Cancelar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -34,18 +40,16 @@ namespace SAICP
             }
         }
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            lblDate.Text = DateTime.Today.ToString("d");
-            lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void frmNewEarningRecord_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("¿Seguro que desea cancelar? Los datos no guardados se perderán", "Cancelar", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Hide();
                 windowMenu.Show();
+            }
+            else
+            {
+                e.Cancel = true;
             }
         }
     }

@@ -196,7 +196,7 @@ namespace SAICP
             this.btnCancel.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancelar";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // btnSave
             // 
@@ -216,10 +216,10 @@ namespace SAICP
             this.cmbDateNumber.ForeColor = System.Drawing.Color.Black;
             this.cmbDateNumber.FormatString = "N0";
             this.cmbDateNumber.FormattingEnabled = true;
-            this.cmbDateNumber.ItemHeight = 16;
+            this.cmbDateNumber.ItemHeight = 17;
             this.cmbDateNumber.Location = new System.Drawing.Point(12, 59);
             this.cmbDateNumber.Name = "cmbDateNumber";
-            this.cmbDateNumber.Size = new System.Drawing.Size(117, 22);
+            this.cmbDateNumber.Size = new System.Drawing.Size(117, 23);
             this.cmbDateNumber.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbDateNumber.TabIndex = 9;
             this.cmbDateNumber.WatermarkText = "Seleccionar...";
@@ -243,7 +243,7 @@ namespace SAICP
             this.Name = "frmNewEarningRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Registro de ingresos por concepto de citas";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmNewEarningRecord_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewEarningRecord_FormClosing);
             this.Load += new System.EventHandler(this.frmNewEarningRecord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
