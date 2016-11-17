@@ -256,6 +256,7 @@ namespace SAICP
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancelar";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmNewExpenseRecord
             // 

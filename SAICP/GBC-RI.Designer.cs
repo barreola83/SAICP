@@ -39,11 +39,11 @@ namespace SAICP
             this.cldDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
             this.lblSelectDate = new DevComponents.DotNetBar.LabelX();
             this.lblDateNumber = new DevComponents.DotNetBar.LabelX();
-            this.txtDateNumber = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtPrice = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lblPrice = new DevComponents.DotNetBar.LabelX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.cmbDateNumber = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.SuspendLayout();
             // 
             // statusBar
@@ -62,7 +62,7 @@ namespace SAICP
             this.lblBlank,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 241);
+            this.statusBar.Location = new System.Drawing.Point(0, 220);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(388, 22);
             this.statusBar.TabIndex = 0;
@@ -156,23 +156,6 @@ namespace SAICP
             this.lblDateNumber.TabIndex = 3;
             this.lblDateNumber.Text = "Número de cita:";
             // 
-            // txtDateNumber
-            // 
-            this.txtDateNumber.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtDateNumber.Border.Class = "TextBoxBorder";
-            this.txtDateNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDateNumber.DisabledBackColor = System.Drawing.Color.White;
-            this.txtDateNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtDateNumber.Location = new System.Drawing.Point(12, 59);
-            this.txtDateNumber.Name = "txtDateNumber";
-            this.txtDateNumber.PreventEnterBeep = true;
-            this.txtDateNumber.Size = new System.Drawing.Size(153, 22);
-            this.txtDateNumber.TabIndex = 4;
-            this.txtDateNumber.WatermarkText = "Ingrese un número de cita...";
-            // 
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.White;
@@ -206,35 +189,51 @@ namespace SAICP
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Location = new System.Drawing.Point(208, 202);
+            this.btnCancel.Location = new System.Drawing.Point(216, 193);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancelar";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Location = new System.Drawing.Point(289, 202);
+            this.btnSave.Location = new System.Drawing.Point(297, 193);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Guardar";
             // 
+            // cmbDateNumber
+            // 
+            this.cmbDateNumber.DisplayMember = "Text";
+            this.cmbDateNumber.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDateNumber.ForeColor = System.Drawing.Color.Black;
+            this.cmbDateNumber.FormatString = "N0";
+            this.cmbDateNumber.FormattingEnabled = true;
+            this.cmbDateNumber.ItemHeight = 16;
+            this.cmbDateNumber.Location = new System.Drawing.Point(12, 59);
+            this.cmbDateNumber.Name = "cmbDateNumber";
+            this.cmbDateNumber.Size = new System.Drawing.Size(117, 22);
+            this.cmbDateNumber.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbDateNumber.TabIndex = 9;
+            this.cmbDateNumber.WatermarkText = "Seleccionar...";
+            // 
             // frmNewEarningRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 263);
+            this.ClientSize = new System.Drawing.Size(388, 242);
+            this.Controls.Add(this.cmbDateNumber);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtDateNumber);
             this.Controls.Add(this.lblDateNumber);
             this.Controls.Add(this.lblSelectDate);
             this.Controls.Add(this.cldDate);
@@ -263,10 +262,10 @@ namespace SAICP
         private DevComponents.Editors.DateTimeAdv.MonthCalendarAdv cldDate;
         private DevComponents.DotNetBar.LabelX lblSelectDate;
         private DevComponents.DotNetBar.LabelX lblDateNumber;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDateNumber;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPrice;
         private DevComponents.DotNetBar.LabelX lblPrice;
         private DevComponents.DotNetBar.ButtonX btnCancel;
         private DevComponents.DotNetBar.ButtonX btnSave;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbDateNumber;
     }
 }

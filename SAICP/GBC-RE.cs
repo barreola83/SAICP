@@ -27,14 +27,26 @@ namespace SAICP
 
         private void frmNewExpenseRecord_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Hide();
-            windowMenu.Show();
+            if (MessageBox.Show("¿Seguro que desea cancelar? Los datos no guardados se perderán", "Cancelar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Hide();
+                windowMenu.Show();
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea cancelar? Los datos no guardados se perderán", "Cancelar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Hide();
+                windowMenu.Show();
+            }
         }
     }
 }
