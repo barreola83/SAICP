@@ -121,7 +121,7 @@ namespace SAICP
             this.cldDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cldDate.ContainerControlProcessDialogKey = true;
             this.cldDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
-            this.cldDate.Location = new System.Drawing.Point(359, 41);
+            this.cldDate.Location = new System.Drawing.Point(345, 41);
             this.cldDate.Name = "cldDate";
             // 
             // 
@@ -140,7 +140,7 @@ namespace SAICP
             // 
             // 
             this.lblSelectDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblSelectDate.Location = new System.Drawing.Point(359, 12);
+            this.lblSelectDate.Location = new System.Drawing.Point(345, 12);
             this.lblSelectDate.Name = "lblSelectDate";
             this.lblSelectDate.Size = new System.Drawing.Size(152, 23);
             this.lblSelectDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
