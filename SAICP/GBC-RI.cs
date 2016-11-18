@@ -34,11 +34,7 @@ namespace SAICP
 
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                Hide();
-                windowMenu.Show();
-            }
+            Close();
         }
 
         private void frmNewEarningRecord_FormClosing(object sender, FormClosingEventArgs e)

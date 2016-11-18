@@ -47,11 +47,7 @@ namespace SAICP
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                Hide();
-                windowMenu.Show();
-            }
+            Close();
         }
     }
 }
