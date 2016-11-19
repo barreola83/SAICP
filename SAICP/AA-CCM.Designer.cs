@@ -29,7 +29,7 @@ namespace SAICP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
             this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
@@ -44,7 +44,7 @@ namespace SAICP
             this.cldDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
             this.lblSelectDate = new DevComponents.DotNetBar.LabelX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
-            this.btnSave = new DevComponents.DotNetBar.ButtonX();
+            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.lblSearchByName = new DevComponents.DotNetBar.LabelX();
             this.txtSearchByName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
@@ -117,18 +117,17 @@ namespace SAICP
             this.dgvName,
             this.dgvDate,
             this.dgvTime});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvData.Location = new System.Drawing.Point(290, 12);
             this.dgvData.Name = "dgvData";
-            this.dgvData.ReadOnly = true;
             this.dgvData.Size = new System.Drawing.Size(493, 260);
             this.dgvData.TabIndex = 1;
             // 
@@ -136,20 +135,17 @@ namespace SAICP
             // 
             this.dgvName.HeaderText = "Nombre";
             this.dgvName.Name = "dgvName";
-            this.dgvName.ReadOnly = true;
             this.dgvName.Width = 250;
             // 
             // dgvDate
             // 
             this.dgvDate.HeaderText = "Fecha";
             this.dgvDate.Name = "dgvDate";
-            this.dgvDate.ReadOnly = true;
             // 
             // dgvTime
             // 
             this.dgvTime.HeaderText = "Hora";
             this.dgvTime.Name = "dgvTime";
-            this.dgvTime.ReadOnly = true;
             // 
             // cldDate
             // 
@@ -204,17 +200,17 @@ namespace SAICP
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnSave
+            // btnSearch
             // 
-            this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(93, 249);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Guardar";
+            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(93, 249);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Buscar";
             // 
             // lblSearchByName
             // 
@@ -246,6 +242,7 @@ namespace SAICP
             this.txtSearchByName.Size = new System.Drawing.Size(257, 27);
             this.txtSearchByName.TabIndex = 7;
             this.txtSearchByName.WatermarkText = "Ingresa un nombre...";
+            this.txtSearchByName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchByName_KeyPress);
             // 
             // btnDelete
             // 
@@ -268,7 +265,7 @@ namespace SAICP
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtSearchByName);
             this.Controls.Add(this.lblSearchByName);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblSelectDate);
             this.Controls.Add(this.cldDate);
@@ -276,7 +273,6 @@ namespace SAICP
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmQueryMedicalDates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Consulta de citas médicas";
@@ -304,7 +300,7 @@ namespace SAICP
         private DevComponents.Editors.DateTimeAdv.MonthCalendarAdv cldDate;
         private DevComponents.DotNetBar.LabelX lblSelectDate;
         private DevComponents.DotNetBar.ButtonX btnCancel;
-        private DevComponents.DotNetBar.ButtonX btnSave;
+        private DevComponents.DotNetBar.ButtonX btnSearch;
         private DevComponents.DotNetBar.LabelX lblSearchByName;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearchByName;
         private DevComponents.DotNetBar.ButtonX btnDelete;
