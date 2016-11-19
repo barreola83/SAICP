@@ -175,6 +175,7 @@ namespace SAICP
             this.txtPrice.Size = new System.Drawing.Size(151, 27);
             this.txtPrice.TabIndex = 5;
             this.txtPrice.WatermarkText = "Ingrese el importe...";
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // lblPrice
             // 
@@ -214,11 +215,13 @@ namespace SAICP
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Guardar";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cmbDateNumber
             // 
             this.cmbDateNumber.DisplayMember = "Text";
             this.cmbDateNumber.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDateNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDateNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDateNumber.ForeColor = System.Drawing.Color.Black;
             this.cmbDateNumber.FormatString = "N0";
@@ -248,6 +251,7 @@ namespace SAICP
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmNewEarningRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Registro de ingresos por concepto de citas";

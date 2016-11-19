@@ -49,5 +49,27 @@ namespace SAICP
                 e.Cancel = true;
             }
         }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) ? true : false;
+
+            if (e.KeyChar == '.')
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(txtPrice.Text == "" || cmbDateNumber.SelectedIndex < 0)
+            {
+                MessageBox.Show("Llene todos los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+
+            }
+        }
     }
 }

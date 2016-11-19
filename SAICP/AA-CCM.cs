@@ -49,5 +49,10 @@ namespace SAICP
         {
             Close();
         }
+
+        private void txtSearchByName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) ? true : false;
+        }
     }
 }

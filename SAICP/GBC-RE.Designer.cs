@@ -210,6 +210,7 @@ namespace SAICP
             this.txtPrice.Size = new System.Drawing.Size(142, 27);
             this.txtPrice.TabIndex = 6;
             this.txtPrice.WatermarkText = "Ingrese el importe...";
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // lblSupplier
             // 
@@ -253,6 +254,7 @@ namespace SAICP
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Guardar";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 

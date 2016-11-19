@@ -49,5 +49,18 @@ namespace SAICP
         {
             Close();
         }
+
+        private void txtFullName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) ? true : false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(txtFullName.Text == "" || tmsSelectHour.SelectedTime == TimeSpan.Zero)
+            {
+                MessageBox.Show("Ingrese los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

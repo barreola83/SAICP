@@ -49,5 +49,26 @@ namespace SAICP
                 e.Cancel = true;
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(txtDescription.Text == "" || txtPrice.Text == "" || txtSupplier.Text == "")
+            {
+                MessageBox.Show("Debe llenar los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }else
+            {
+
+            }
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) ? true : false;
+
+            if (e.KeyChar == '.')
+            {
+                e.Handled = false;
+            }
+        }
     }
 }

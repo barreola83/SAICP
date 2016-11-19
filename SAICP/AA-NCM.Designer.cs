@@ -181,6 +181,7 @@ namespace SAICP
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Guardar";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -225,6 +226,7 @@ namespace SAICP
             this.txtFullName.Size = new System.Drawing.Size(309, 27);
             this.txtFullName.TabIndex = 8;
             this.txtFullName.WatermarkText = "Ingrese el nombre completo del paciente...";
+            this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
             // 
             // frmNewMedicalDate
             // 
