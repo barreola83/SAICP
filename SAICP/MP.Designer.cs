@@ -48,10 +48,9 @@ namespace SAICP
             this.mnuQueryEarningRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuNewExpenseRecord = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryExpenseRecords = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.itemContainer3 = new DevComponents.DotNetBar.ItemContainer();
+            this.cntDiary = new DevComponents.DotNetBar.ItemContainer();
             this.mnuNewMedicalDate = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.mnuQueryMedicalDates = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.mnuTesting = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.SuspendLayout();
             // 
             // statusBar
@@ -71,7 +70,7 @@ namespace SAICP
             this.lblHour});
             this.statusBar.Location = new System.Drawing.Point(0, 481);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(970, 22);
+            this.statusBar.Size = new System.Drawing.Size(1027, 22);
             this.statusBar.TabIndex = 0;
             // 
             // lblMessage
@@ -113,7 +112,7 @@ namespace SAICP
             this.pnlModules.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical;
             this.pnlModules.Location = new System.Drawing.Point(13, 13);
             this.pnlModules.Name = "pnlModules";
-            this.pnlModules.Size = new System.Drawing.Size(946, 461);
+            this.pnlModules.Size = new System.Drawing.Size(1002, 461);
             this.pnlModules.TabIndex = 1;
             // 
             // itemContainer1
@@ -233,7 +232,7 @@ namespace SAICP
             this.mnuQueryEarningRecords,
             this.mnuNewExpenseRecord,
             this.mnuQueryExpenseRecords,
-            this.itemContainer3});
+            this.cntDiary});
             // 
             // 
             // 
@@ -305,25 +304,25 @@ namespace SAICP
             this.mnuQueryExpenseRecords.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuQueryExpenseRecords.Click += new System.EventHandler(this.mnuQueryExpenseRecords_Click);
             // 
-            // itemContainer3
+            // cntDiary
             // 
             // 
             // 
             // 
-            this.itemContainer3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer3.ItemSpacing = 3;
-            this.itemContainer3.MultiLine = true;
-            this.itemContainer3.Name = "itemContainer3";
-            this.itemContainer3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.cntDiary.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cntDiary.FixedSize = new System.Drawing.Size(450, 90);
+            this.cntDiary.ItemSpacing = 3;
+            this.cntDiary.MultiLine = true;
+            this.cntDiary.Name = "cntDiary";
+            this.cntDiary.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.mnuNewMedicalDate,
-            this.mnuQueryMedicalDates,
-            this.mnuTesting});
+            this.mnuQueryMedicalDates});
             // 
             // 
             // 
-            this.itemContainer3.TitleStyle.Class = "MetroTileGroupTitle";
-            this.itemContainer3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.itemContainer3.TitleText = "Administración de agenda";
+            this.cntDiary.TitleStyle.Class = "MetroTileGroupTitle";
+            this.cntDiary.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cntDiary.TitleText = "Administración de agenda";
             // 
             // mnuNewMedicalDate
             // 
@@ -357,29 +356,15 @@ namespace SAICP
             this.mnuQueryMedicalDates.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuQueryMedicalDates.Click += new System.EventHandler(this.mnuQueryMedicalDates_Click);
             // 
-            // mnuTesting
-            // 
-            this.mnuTesting.Name = "mnuTesting";
-            this.mnuTesting.SymbolColor = System.Drawing.Color.Empty;
-            this.mnuTesting.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
-            // 
-            // 
-            // 
-            this.mnuTesting.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mnuTesting.TitleText = "Pruebas";
-            this.mnuTesting.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.mnuTesting.Click += new System.EventHandler(this.mnuTesting_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 503);
+            this.ClientSize = new System.Drawing.Size(1027, 503);
             this.Controls.Add(this.pnlModules);
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Sistema de administración integral para consultorios pediátricos";
@@ -408,10 +393,9 @@ namespace SAICP
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryEarningRecords;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuNewExpenseRecord;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryExpenseRecords;
-        private DevComponents.DotNetBar.ItemContainer itemContainer3;
+        private DevComponents.DotNetBar.ItemContainer cntDiary;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuNewMedicalDate;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuQueryMedicalDates;
         private DevComponents.DotNetBar.Metro.MetroTileItem mnuClinicalGraphicTracing;
-        private DevComponents.DotNetBar.Metro.MetroTileItem mnuTesting;
     }
 }

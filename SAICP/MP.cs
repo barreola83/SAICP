@@ -36,13 +36,6 @@ namespace SAICP
             windowNewClinicalRecord.Show();
         }
 
-        // Pruebas
-        private void mnuTesting_Click(object sender, EventArgs e)
-        {
-
-        }
-        // Fin de pruebas
-
         private void mnuQueryClinicalRecords_Click(object sender, EventArgs e)
         {
             frmQueryClinicalRecords windowQueryClinicalRecords = new frmQueryClinicalRecords(this);
