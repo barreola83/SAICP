@@ -220,6 +220,7 @@ namespace SAICP
             this.switchButtonItem1 = new DevComponents.DotNetBar.SwitchButtonItem();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.labelX64 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
@@ -260,7 +261,7 @@ namespace SAICP
             this.labelItem2,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 455);
+            this.statusBar.Location = new System.Drawing.Point(0, 490);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(829, 22);
             this.statusBar.TabIndex = 6;
@@ -327,7 +328,7 @@ namespace SAICP
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.superTabControlPanel4);
             this.superTabControl1.ForeColor = System.Drawing.Color.Black;
-            this.superTabControl1.Location = new System.Drawing.Point(13, 13);
+            this.superTabControl1.Location = new System.Drawing.Point(13, 44);
             this.superTabControl1.Name = "superTabControl1";
             this.superTabControl1.ReorderTabsEnabled = true;
             this.superTabControl1.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
@@ -3151,7 +3152,7 @@ namespace SAICP
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.buttonX2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonX2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(739, 423);
+            this.buttonX2.Location = new System.Drawing.Point(739, 454);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(75, 28);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -3165,24 +3166,41 @@ namespace SAICP
             this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.buttonX3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonX3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX3.Location = new System.Drawing.Point(659, 423);
+            this.buttonX3.Location = new System.Drawing.Point(659, 454);
             this.buttonX3.Name = "buttonX3";
             this.buttonX3.Size = new System.Drawing.Size(75, 28);
             this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX3.TabIndex = 8;
             this.buttonX3.Text = "Cancelar";
             // 
+            // labelX64
+            // 
+            this.labelX64.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX64.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX64.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelX64.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX64.Location = new System.Drawing.Point(0, 0);
+            this.labelX64.Name = "labelX64";
+            this.labelX64.Size = new System.Drawing.Size(829, 30);
+            this.labelX64.TabIndex = 16;
+            this.labelX64.Text = "   Folio: -";
+            // 
             // frmNewClinicalRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 477);
+            this.ClientSize = new System.Drawing.Size(829, 512);
+            this.Controls.Add(this.labelX64);
             this.Controls.Add(this.buttonX3);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.superTabControl1);
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmNewClinicalRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Nuevo expediente clínico";
@@ -3409,5 +3427,6 @@ namespace SAICP
         private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem1;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX3;
+        private DevComponents.DotNetBar.LabelX labelX64;
     }
 }
