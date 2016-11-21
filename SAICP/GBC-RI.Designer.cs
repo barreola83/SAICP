@@ -198,7 +198,7 @@ namespace SAICP
             this.btnCancel.Location = new System.Drawing.Point(216, 193);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.btnCancel.SymbolSet = DevComponents.DotNetBar.eSymbolSet.Material;
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancelar";
@@ -212,7 +212,7 @@ namespace SAICP
             this.btnSave.Location = new System.Drawing.Point(297, 193);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Guardar";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -251,7 +251,6 @@ namespace SAICP
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmNewEarningRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Registro de ingresos por concepto de citas";

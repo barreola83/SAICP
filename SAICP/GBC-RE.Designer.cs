@@ -166,6 +166,7 @@ namespace SAICP
             this.txtDescription.Size = new System.Drawing.Size(284, 127);
             this.txtDescription.TabIndex = 3;
             this.txtDescription.WatermarkText = "Ingrese una descripción...";
+            this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescription_KeyPress);
             // 
             // lblDescription
             // 
@@ -242,6 +243,7 @@ namespace SAICP
             this.txtSupplier.Size = new System.Drawing.Size(247, 27);
             this.txtSupplier.TabIndex = 8;
             this.txtSupplier.WatermarkText = "Ingrese el proveedor...";
+            this.txtSupplier.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSupplier_KeyPress);
             // 
             // btnSave
             // 

@@ -63,9 +63,9 @@ namespace SAICP
             this.lblBlank,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 233);
+            this.statusBar.Location = new System.Drawing.Point(0, 234);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(554, 22);
+            this.statusBar.Size = new System.Drawing.Size(546, 22);
             this.statusBar.TabIndex = 0;
             // 
             // lblMessage
@@ -148,7 +148,6 @@ namespace SAICP
             // 
             // dgvData
             // 
-            this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -206,7 +205,7 @@ namespace SAICP
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(554, 255);
+            this.ClientSize = new System.Drawing.Size(546, 256);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.lblSelectDate);
