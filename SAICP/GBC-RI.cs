@@ -73,10 +73,29 @@ namespace SAICP
             else
             {
                 SqlConnection connection = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
-                SqlCommand command = new SqlCommand("", connection);
+                SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount)", connection);
+                SqlCommand commandToModify = new SqlCommand("INSERT INTO medical_querys (medical_query_registered) VALUES(1) WHERE" + cmbDateNumber.SelectedItem.ToString() + " = @folio", connection);
+                command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
+                command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.SelectedItem.ToString());
+                command.Parameters.AddWithValue("@amount", txtPrice.Text);
 
-                
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
 
+                if (MessageBox.Show("¿Desea registrar otro egreso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    frmNewEarningRecord windowNewEarningRecord = new frmNewEarningRecord(windowMenu);
+                    Hide();
+                    windowNewEarningRecord.Show();
+                    Close();
+                }
+                else
+                {
+                    Hide();
+                    Close();
+                    windowMenu.Show();
+                }
             }
         }
 
