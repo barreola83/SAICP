@@ -74,13 +74,14 @@ namespace SAICP
             {
                 SqlConnection connection = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
                 SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount)", connection);
-                SqlCommand commandToModify = new SqlCommand("INSERT INTO medical_querys (medical_query_registered) VALUES(1) WHERE" + cmbDateNumber.SelectedItem.ToString() + " = @folio", connection);
+                SqlCommand commandToModify = new SqlCommand("UPDATE medical_querys SET medical_query_registered = 1 WHERE folio = " + cmbDateNumber.SelectedItem.ToString(), connection);
                 command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
                 command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.SelectedItem.ToString());
                 command.Parameters.AddWithValue("@amount", txtPrice.Text);
 
                 connection.Open();
                 command.ExecuteNonQuery();
+                commandToModify.ExecuteNonQuery();
                 connection.Close();
 
                 if (MessageBox.Show("¿Desea registrar otro egreso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -104,7 +105,10 @@ namespace SAICP
             dateSelected = true;
             SqlConnection connection = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
             SqlCommand command = new SqlCommand("SELECT folio FROM medical_querys WHERE medical_query_registered = 0", connection);
+            connection.Open();
+            command.ExecuteNonQuery();
             cmbDateNumber.Items.Add(command);
+            connection.Close();
         }
     }
 }
