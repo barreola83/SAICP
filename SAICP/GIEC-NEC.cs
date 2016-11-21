@@ -967,24 +967,22 @@ namespace SAICP
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
             SqlCommand command = new SqlCommand(buildInsertCommand, connection);
 
-            /*
-             * Primeramente, debemos validar que los campos de caracter obligatorio cuenten con valores.
-             * Ademas, debemos asignar los valores a los parametros del SqlCommand creado.
-             * Para ello se manda a llamar al metodo ValidateObligatoryDataAndAsignSqlCommandParameters()
-             */
+            pgrSaving.Visible = true;
+
             if (ValidateDataAndAsignSqlCommandParameters(command))
             {
-                /*
-                 * Despues, debemos verificar que el folio creado no se encuentre en la tabla. Para ello se manda a llamar
-                 * al metodo ValidateFolio.
-                 */
-                ValidateFolio(connection);
+                lblFolio.Text = "   Folio: " + folio.GetFolio();
+
+                MessageBox.Show("NDA"); // 75%
 
                 connection.Open();
 
                 command.ExecuteNonQuery();
 
                 connection.Close();
+
+                pgrSaving.PerformStep(); // 100%
+                pgrSaving.Visible = false;
 
                 MessageBox.Show("Expediente clínico guardado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -1189,6 +1187,8 @@ namespace SAICP
                     break;
             }
 
+            pgrSaving.PerformStep(); //25%
+
             // Validacion de los riesgos durante el embarazo de la madre
             if (swtMotherHadRisksPregnancy.Value)
             {
@@ -1378,6 +1378,8 @@ namespace SAICP
             else
                 command.Parameters.AddWithValue("@hygine_rutines", txtHygineRutines.Text);
 
+            pgrSaving.PerformStep(); //50%
+
             // Validacion de la edad de comienzo de la ablactacion
             if (swtAblactation.Value)
             {
@@ -1566,34 +1568,26 @@ namespace SAICP
                 command.Parameters.AddWithValue("@problems_in_development", DBNull.Value);
 
             // Validacion del folio
-            command.Parameters.AddWithValue("@folio", folio.GetFolio());
 
-            return true;
-        }
-
-        /*
-         * Este método nos permite validar que no se encuentre otro folio similar al generado
-         */
-        private void ValidateFolio(SqlConnection connection)
-        {
-            SqlCommand command = new SqlCommand("SELECT ID FROM clinical_records WHERE folio=@folio", connection);
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand selectCommand = new SqlCommand("SELECT ID FROM clinical_records WHERE folio=@folio", connection);
             SqlDataReader reader;
+
+            selectCommand.Parameters.AddWithValue("@folio", folio.GetFolio());
 
             while (true)
             {
-                command.Parameters.AddWithValue("@folio", folio.GetFolio());
-
                 connection.Open();
 
-                reader = command.ExecuteReader();
+                reader = selectCommand.ExecuteReader();
 
                 if (reader.HasRows)
                 {
+                    connection.Close();
+
                     folio.ChangeLastTwoNumbers();
 
-                    lblFolio.Text = "   Folio: " + folio.GetFolio();
-
-                    connection.Close();
+                    selectCommand.Parameters["@folio"].Value = folio.GetFolio();
                 }
                 else
                 {
@@ -1601,6 +1595,12 @@ namespace SAICP
                     break;
                 }
             }
+
+            command.Parameters.AddWithValue("@folio", folio.GetFolio());
+
+            pgrSaving.PerformStep(); // 75%
+
+            return true;
         }
 
         /* 
@@ -1636,8 +1636,8 @@ namespace SAICP
         public string Month { get; set; }
         public string Year { get; set; }
         public string Sex { get; set; }
-        private string FirstRandonNumber { get; set; }
-        private string SecondRandomNumber { get; set; }
+        public string FirstRandonNumber { get; set; }
+        public string SecondRandomNumber { get; set; }
 
         public Folio()
         {
