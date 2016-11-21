@@ -70,7 +70,7 @@ namespace SAICP
             this.lblHour});
             this.statusBar.Location = new System.Drawing.Point(0, 481);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(1027, 22);
+            this.statusBar.Size = new System.Drawing.Size(965, 22);
             this.statusBar.TabIndex = 0;
             // 
             // lblMessage
@@ -360,7 +360,7 @@ namespace SAICP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 503);
+            this.ClientSize = new System.Drawing.Size(965, 503);
             this.Controls.Add(this.pnlModules);
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;

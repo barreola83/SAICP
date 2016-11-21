@@ -6,24 +6,24 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace SAICP
 {
     public partial class frmNewEarningRecord : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
+        bool dateSelected = false;
 
         public frmNewEarningRecord(frmMain windowMenu)
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
             MaximizeBox = false;
+            cldDate.MaxSelectionCount = 1;
         }
-
-        //Agregar un dato tipo bit, y cargar todos los datos de la fecha seleccionada
-        //si el campo bit es 0, entonces se carga al comboBox y se muestra el número de cita
-        //en caso contrario, no se va a mostrar
-        //Esto para evitar dobles ingresos y malos cálculos
+        
         private void frmNewEarningRecord_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
@@ -66,14 +66,26 @@ namespace SAICP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtPrice.Text == "" || cmbDateNumber.SelectedIndex < 0)
+            if(txtPrice.Text.Length == 0 || cmbDateNumber.SelectedIndex < 0 || dateSelected == false)
             {
                 MessageBox.Show("Llene todos los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("", connection);
+
+                
 
             }
+        }
+
+        private void cldDate_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            dateSelected = true;
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT folio FROM medical_querys WHERE medical_query_registered = 0", connection);
+            cmbDateNumber.Items.Add(command);
         }
     }
 }
