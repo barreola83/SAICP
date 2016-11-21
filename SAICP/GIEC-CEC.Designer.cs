@@ -39,21 +39,11 @@ namespace SAICP
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.monthCalendarAdv1 = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -221,6 +211,20 @@ namespace SAICP
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.labelX64 = new DevComponents.DotNetBar.LabelX();
+            this.textBoxX43 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX66 = new DevComponents.DotNetBar.LabelX();
+            this.textBoxX42 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX65 = new DevComponents.DotNetBar.LabelX();
+            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
+            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
@@ -349,11 +353,12 @@ namespace SAICP
             // 
             // superTabControlPanel1
             // 
+            this.superTabControlPanel1.Controls.Add(this.textBoxX43);
+            this.superTabControlPanel1.Controls.Add(this.labelX66);
+            this.superTabControlPanel1.Controls.Add(this.textBoxX42);
+            this.superTabControlPanel1.Controls.Add(this.labelX65);
             this.superTabControlPanel1.Controls.Add(this.textBoxX5);
             this.superTabControlPanel1.Controls.Add(this.labelX7);
-            this.superTabControlPanel1.Controls.Add(this.groupPanel1);
-            this.superTabControlPanel1.Controls.Add(this.monthCalendarAdv1);
-            this.superTabControlPanel1.Controls.Add(this.labelX6);
             this.superTabControlPanel1.Controls.Add(this.textBoxX4);
             this.superTabControlPanel1.Controls.Add(this.labelX5);
             this.superTabControlPanel1.Controls.Add(this.textBoxX3);
@@ -362,6 +367,9 @@ namespace SAICP
             this.superTabControlPanel1.Controls.Add(this.labelX3);
             this.superTabControlPanel1.Controls.Add(this.textBoxX1);
             this.superTabControlPanel1.Controls.Add(this.labelX2);
+            this.superTabControlPanel1.Controls.Add(this.groupPanel1);
+            this.superTabControlPanel1.Controls.Add(this.monthCalendarAdv1);
+            this.superTabControlPanel1.Controls.Add(this.labelX6);
             this.superTabControlPanel1.Controls.Add(this.buttonX1);
             this.superTabControlPanel1.Controls.Add(this.pictureBox1);
             this.superTabControlPanel1.Controls.Add(this.labelX1);
@@ -371,39 +379,6 @@ namespace SAICP
             this.superTabControlPanel1.Size = new System.Drawing.Size(801, 379);
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // textBoxX5
-            // 
-            this.textBoxX5.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX5.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX5.Location = new System.Drawing.Point(321, 291);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.Size = new System.Drawing.Size(180, 29);
-            this.textBoxX5.TabIndex = 15;
-            this.textBoxX5.WatermarkText = "Ingrese el teléfono...";
-            // 
-            // labelX7
-            // 
-            this.labelX7.AutoSize = true;
-            this.labelX7.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX7.Location = new System.Drawing.Point(197, 276);
-            this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(100, 55);
-            this.labelX7.TabIndex = 14;
-            this.labelX7.Text = "Teléfono de\r\ncontacto:";
             // 
             // groupPanel1
             // 
@@ -490,7 +465,7 @@ namespace SAICP
             this.monthCalendarAdv1.ContainerControlProcessDialogKey = true;
             this.monthCalendarAdv1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.monthCalendarAdv1.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
-            this.monthCalendarAdv1.Location = new System.Drawing.Point(597, 78);
+            this.monthCalendarAdv1.Location = new System.Drawing.Point(601, 74);
             this.monthCalendarAdv1.Name = "monthCalendarAdv1";
             // 
             // 
@@ -512,143 +487,11 @@ namespace SAICP
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX6.Location = new System.Drawing.Point(592, 42);
+            this.labelX6.Location = new System.Drawing.Point(596, 38);
             this.labelX6.Name = "labelX6";
             this.labelX6.Size = new System.Drawing.Size(175, 30);
             this.labelX6.TabIndex = 11;
             this.labelX6.Text = "Fecha de nacimiento";
-            // 
-            // textBoxX4
-            // 
-            this.textBoxX4.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX4.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX4.Location = new System.Drawing.Point(321, 233);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.Size = new System.Drawing.Size(238, 29);
-            this.textBoxX4.TabIndex = 10;
-            this.textBoxX4.WatermarkText = "Ingrese el domicilio...";
-            // 
-            // labelX5
-            // 
-            this.labelX5.AutoSize = true;
-            this.labelX5.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX5.Location = new System.Drawing.Point(197, 232);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.Size = new System.Drawing.Size(86, 30);
-            this.labelX5.TabIndex = 9;
-            this.labelX5.Text = "Domicilio:";
-            // 
-            // textBoxX3
-            // 
-            this.textBoxX3.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX3.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX3.Location = new System.Drawing.Point(321, 180);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(238, 29);
-            this.textBoxX3.TabIndex = 8;
-            this.textBoxX3.WatermarkText = "Ingrese el nombre...";
-            // 
-            // labelX4
-            // 
-            this.labelX4.AutoSize = true;
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX4.Location = new System.Drawing.Point(197, 168);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(118, 55);
-            this.labelX4.TabIndex = 7;
-            this.labelX4.Text = "Nombre del\r\npadre o tutor:";
-            // 
-            // textBoxX2
-            // 
-            this.textBoxX2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX2.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX2.Location = new System.Drawing.Point(321, 120);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(238, 29);
-            this.textBoxX2.TabIndex = 6;
-            this.textBoxX2.WatermarkText = "Ingrese el lugar de nacimiento del paciente...";
-            // 
-            // labelX3
-            // 
-            this.labelX3.AutoSize = true;
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX3.Location = new System.Drawing.Point(197, 103);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(100, 55);
-            this.labelX3.TabIndex = 5;
-            this.labelX3.Text = "Lugar de\r\nnacimiento:";
-            // 
-            // textBoxX1
-            // 
-            this.textBoxX1.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.DisabledBackColor = System.Drawing.Color.White;
-            this.textBoxX1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX1.Location = new System.Drawing.Point(321, 57);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(238, 29);
-            this.textBoxX1.TabIndex = 4;
-            this.textBoxX1.WatermarkText = "Ingrese el nombre...";
-            // 
-            // labelX2
-            // 
-            this.labelX2.AutoSize = true;
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX2.Location = new System.Drawing.Point(197, 57);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(76, 30);
-            this.labelX2.TabIndex = 3;
-            this.labelX2.Text = "Nombre:";
             // 
             // buttonX1
             // 
@@ -3188,6 +3031,237 @@ namespace SAICP
             this.labelX64.TabIndex = 16;
             this.labelX64.Text = "   Folio: -";
             // 
+            // textBoxX43
+            // 
+            this.textBoxX43.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.textBoxX43.Border.Class = "TextBoxBorder";
+            this.textBoxX43.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX43.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX43.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX43.Location = new System.Drawing.Point(343, 117);
+            this.textBoxX43.Name = "textBoxX43";
+            this.textBoxX43.PreventEnterBeep = true;
+            this.textBoxX43.Size = new System.Drawing.Size(238, 29);
+            this.textBoxX43.TabIndex = 33;
+            this.textBoxX43.WatermarkText = "Ingrese el nombre...";
+            // 
+            // labelX66
+            // 
+            this.labelX66.AutoSize = true;
+            this.labelX66.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX66.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX66.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX66.Location = new System.Drawing.Point(219, 100);
+            this.labelX66.Name = "labelX66";
+            this.labelX66.Size = new System.Drawing.Size(78, 55);
+            this.labelX66.TabIndex = 32;
+            this.labelX66.Text = "Apellido\r\nmaterno:";
+            // 
+            // textBoxX42
+            // 
+            this.textBoxX42.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.textBoxX42.Border.Class = "TextBoxBorder";
+            this.textBoxX42.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX42.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX42.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX42.Location = new System.Drawing.Point(343, 60);
+            this.textBoxX42.Name = "textBoxX42";
+            this.textBoxX42.PreventEnterBeep = true;
+            this.textBoxX42.Size = new System.Drawing.Size(238, 29);
+            this.textBoxX42.TabIndex = 31;
+            this.textBoxX42.WatermarkText = "Ingrese el nombre...";
+            // 
+            // labelX65
+            // 
+            this.labelX65.AutoSize = true;
+            this.labelX65.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX65.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX65.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX65.Location = new System.Drawing.Point(219, 43);
+            this.labelX65.Name = "labelX65";
+            this.labelX65.Size = new System.Drawing.Size(72, 55);
+            this.labelX65.TabIndex = 30;
+            this.labelX65.Text = "Apellido\r\npaterno:";
+            // 
+            // textBoxX5
+            // 
+            this.textBoxX5.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.textBoxX5.Border.Class = "TextBoxBorder";
+            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX5.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX5.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX5.Location = new System.Drawing.Point(343, 334);
+            this.textBoxX5.Name = "textBoxX5";
+            this.textBoxX5.PreventEnterBeep = true;
+            this.textBoxX5.Size = new System.Drawing.Size(238, 29);
+            this.textBoxX5.TabIndex = 29;
+            this.textBoxX5.WatermarkText = "Ingrese el teléfono...";
+            // 
+            // labelX7
+            // 
+            this.labelX7.AutoSize = true;
+            this.labelX7.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX7.Location = new System.Drawing.Point(219, 317);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(100, 55);
+            this.labelX7.TabIndex = 28;
+            this.labelX7.Text = "Teléfono de\r\ncontacto:";
+            // 
+            // textBoxX4
+            // 
+            this.textBoxX4.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.textBoxX4.Border.Class = "TextBoxBorder";
+            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX4.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX4.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX4.Location = new System.Drawing.Point(343, 282);
+            this.textBoxX4.Name = "textBoxX4";
+            this.textBoxX4.PreventEnterBeep = true;
+            this.textBoxX4.Size = new System.Drawing.Size(238, 29);
+            this.textBoxX4.TabIndex = 27;
+            this.textBoxX4.WatermarkText = "Ingrese el domicilio...";
+            // 
+            // labelX5
+            // 
+            this.labelX5.AutoSize = true;
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX5.Location = new System.Drawing.Point(219, 281);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.Size = new System.Drawing.Size(86, 30);
+            this.labelX5.TabIndex = 26;
+            this.labelX5.Text = "Domicilio:";
+            // 
+            // textBoxX3
+            // 
+            this.textBoxX3.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.textBoxX3.Border.Class = "TextBoxBorder";
+            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX3.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX3.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX3.Location = new System.Drawing.Point(343, 234);
+            this.textBoxX3.Name = "textBoxX3";
+            this.textBoxX3.PreventEnterBeep = true;
+            this.textBoxX3.Size = new System.Drawing.Size(238, 29);
+            this.textBoxX3.TabIndex = 25;
+            this.textBoxX3.WatermarkText = "Ingrese el nombre...";
+            // 
+            // labelX4
+            // 
+            this.labelX4.AutoSize = true;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX4.Location = new System.Drawing.Point(219, 217);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(118, 55);
+            this.labelX4.TabIndex = 24;
+            this.labelX4.Text = "Nombre del\r\npadre o tutor:";
+            // 
+            // textBoxX2
+            // 
+            this.textBoxX2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.textBoxX2.Border.Class = "TextBoxBorder";
+            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX2.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX2.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX2.Location = new System.Drawing.Point(343, 173);
+            this.textBoxX2.Name = "textBoxX2";
+            this.textBoxX2.PreventEnterBeep = true;
+            this.textBoxX2.Size = new System.Drawing.Size(238, 29);
+            this.textBoxX2.TabIndex = 23;
+            this.textBoxX2.WatermarkText = "Ingrese el lugar de nacimiento del paciente...";
+            // 
+            // labelX3
+            // 
+            this.labelX3.AutoSize = true;
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX3.Location = new System.Drawing.Point(219, 156);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(100, 55);
+            this.labelX3.TabIndex = 22;
+            this.labelX3.Text = "Lugar de\r\nnacimiento:";
+            // 
+            // textBoxX1
+            // 
+            this.textBoxX1.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.textBoxX1.Border.Class = "TextBoxBorder";
+            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX1.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX1.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX1.Location = new System.Drawing.Point(343, 12);
+            this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.PreventEnterBeep = true;
+            this.textBoxX1.Size = new System.Drawing.Size(238, 29);
+            this.textBoxX1.TabIndex = 21;
+            this.textBoxX1.WatermarkText = "Ingrese el nombre...";
+            // 
+            // labelX2
+            // 
+            this.labelX2.AutoSize = true;
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX2.Location = new System.Drawing.Point(219, 7);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(76, 30);
+            this.labelX2.TabIndex = 20;
+            this.labelX2.Text = "Nombre:";
+            // 
             // frmQueryClinicalRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3259,21 +3333,11 @@ namespace SAICP
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.LabelX labelX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.Editors.DateTimeAdv.MonthCalendarAdv monthCalendarAdv1;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
@@ -3427,5 +3491,19 @@ namespace SAICP
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX3;
         private DevComponents.DotNetBar.LabelX labelX64;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX43;
+        private DevComponents.DotNetBar.LabelX labelX66;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX42;
+        private DevComponents.DotNetBar.LabelX labelX65;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
+        private DevComponents.DotNetBar.LabelX labelX7;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.LabelX labelX2;
     }
 }
