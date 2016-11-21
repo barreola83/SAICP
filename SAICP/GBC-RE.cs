@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace SAICP
 {
@@ -57,6 +59,22 @@ namespace SAICP
                 MessageBox.Show("Debe llenar los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }else
             {
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("INSERT INTO expenditures VALUES(@date, @description, @amount, @supplier)", connection);
+
+                command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
+                command.Parameters.AddWithValue("@description", txtDescription.Text);
+                command.Parameters.AddWithValue("@amount",txtPrice.Text);
+                command.Parameters.AddWithValue("@supplier",txtSupplier.Text);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                txtDescription.Clear();
+                txtPrice.Clear();
+                txtSupplier.Clear();
+                cldDate.SelectedDate = cldDate.TodayDate;
 
             }
         }
@@ -65,9 +83,29 @@ namespace SAICP
         {
             e.Handled = !char.IsDigit(e.KeyChar) ? true : false;
 
-            if (e.KeyChar == '.')
+            if (e.KeyChar == '.' || e.KeyChar == (char)Keys.Back)
             {
                 e.Handled = false;
+                if(e.KeyChar == (char)Keys.Enter)
+                {
+                    txtSupplier.Focus();
+                }
+            }
+        }
+
+        private void txtDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                txtPrice.Focus();
+            }
+        }
+
+        private void txtSupplier_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnSave.Focus();
             }
         }
     }

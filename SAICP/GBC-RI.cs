@@ -20,6 +20,10 @@ namespace SAICP
             MaximizeBox = false;
         }
 
+        //Agregar un dato tipo bit, y cargar todos los datos de la fecha seleccionada
+        //si el campo bit es 0, entonces se carga al comboBox y se muestra el número de cita
+        //en caso contrario, no se va a mostrar
+        //Esto para evitar dobles ingresos y malos cálculos
         private void frmNewEarningRecord_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
@@ -54,7 +58,7 @@ namespace SAICP
         {
             e.Handled = !char.IsDigit(e.KeyChar) ? true : false;
 
-            if (e.KeyChar == '.')
+            if (e.KeyChar == '.' || e.KeyChar == (char)Keys.Back)
             {
                 e.Handled = false;
             }
