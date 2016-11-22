@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Data.SqlClient;
 using System.IO;
+using System.Collections;
 
 namespace SAICP
 {
@@ -72,12 +73,12 @@ namespace SAICP
             }
             else
             {
-                SqlConnection connection = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
                 SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount)", connection);
                 SqlCommand commandToModify = new SqlCommand("UPDATE medical_querys SET medical_query_registered = 1 WHERE folio = " + cmbDateNumber.SelectedItem.ToString(), connection);
                 command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
-                command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.SelectedItem.ToString());
-                command.Parameters.AddWithValue("@amount", txtPrice.Text);
+                command.Parameters.AddWithValue("@ID_medical_query", int.Parse(cmbDateNumber.SelectedItem.ToString()));
+                command.Parameters.AddWithValue("@amount", int.Parse(txtPrice.Text));
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -103,11 +104,19 @@ namespace SAICP
         private void cldDate_DateSelected(object sender, DateRangeEventArgs e)
         {
             dateSelected = true;
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)/MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
+            getFolio();
+        }
+
+        public void getFolio()
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
             SqlCommand command = new SqlCommand("SELECT folio FROM medical_querys WHERE medical_query_registered = 0", connection);
             connection.Open();
-            command.ExecuteNonQuery();
-            cmbDateNumber.Items.Add(command);
+            DataSet dataSet = new DataSet();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            dataAdapter.Fill(dataSet);
+            cmbDateNumber.DataSource = dataSet.Tables[0].DefaultView;
+            cmbDateNumber.ValueMember = "folio";
             connection.Close();
         }
     }
