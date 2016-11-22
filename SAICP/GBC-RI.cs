@@ -77,7 +77,7 @@ namespace SAICP
                 SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount)", connection);
                 SqlCommand commandToModify = new SqlCommand("UPDATE medical_querys SET medical_query_registered = 1 WHERE folio = " + cmbDateNumber.SelectedItem.ToString(), connection);
                 command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
-                command.Parameters.AddWithValue("@ID_medical_query", int.Parse(cmbDateNumber.SelectedItem.ToString()));
+                command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.SelectedItem.ToString());
                 command.Parameters.AddWithValue("@amount", int.Parse(txtPrice.Text));
 
                 connection.Open();
@@ -112,10 +112,11 @@ namespace SAICP
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
             SqlCommand command = new SqlCommand("SELECT folio FROM medical_querys WHERE medical_query_registered = 0", connection);
             connection.Open();
-            DataSet dataSet = new DataSet();
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            dataAdapter.Fill(dataSet);
-            cmbDateNumber.DataSource = dataSet.Tables[0].DefaultView;
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            cmbDateNumber.DisplayMember = "folio";
+            cmbDateNumber.DataSource = dataTable;
             cmbDateNumber.ValueMember = "folio";
             connection.Close();
         }
