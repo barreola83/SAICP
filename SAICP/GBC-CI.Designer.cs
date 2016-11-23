@@ -132,6 +132,7 @@ namespace SAICP
             this.cldDate.Size = new System.Drawing.Size(170, 131);
             this.cldDate.TabIndex = 1;
             this.cldDate.Text = "monthCalendarAdv1";
+            this.cldDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.cldDate_DateSelected);
             // 
             // lblSelectDate
             // 
