@@ -37,15 +37,24 @@ namespace SAICP
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint3 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint4 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint5 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.ChartSeries chartSeries2 = new DevComponents.DotNetBar.Charts.ChartSeries();
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint6 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint7 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint8 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint9 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint10 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.ChartSeries chartSeries2 = new DevComponents.DotNetBar.Charts.ChartSeries();
             DevComponents.DotNetBar.Charts.ChartSeries chartSeries3 = new DevComponents.DotNetBar.Charts.ChartSeries();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint11 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint12 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint13 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint14 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint15 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.ChartSeries chartSeries4 = new DevComponents.DotNetBar.Charts.ChartSeries();
-            DevComponents.DotNetBar.Charts.ChartSeries chartSeries5 = new DevComponents.DotNetBar.Charts.ChartSeries();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint16 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint17 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint18 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint19 = new DevComponents.DotNetBar.Charts.SeriesPoint();
+            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint20 = new DevComponents.DotNetBar.Charts.SeriesPoint();
             DevComponents.DotNetBar.Charts.Style.Background background2 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.Background background3 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.BorderColor borderColor1 = new DevComponents.DotNetBar.Charts.Style.BorderColor();
@@ -61,6 +70,7 @@ namespace SAICP
             DevComponents.DotNetBar.Charts.Style.Padding padding3 = new DevComponents.DotNetBar.Charts.Style.Padding();
             DevComponents.DotNetBar.Charts.Style.Padding padding4 = new DevComponents.DotNetBar.Charts.Style.Padding();
             DevComponents.DotNetBar.Charts.ChartTitle chartTitle1 = new DevComponents.DotNetBar.Charts.ChartTitle();
+            DevComponents.DotNetBar.Charts.Style.Padding padding5 = new DevComponents.DotNetBar.Charts.Style.Padding();
             DevComponents.DotNetBar.Charts.Style.Background background6 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.Background background7 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.Background background8 = new DevComponents.DotNetBar.Charts.Style.Background();
@@ -77,8 +87,8 @@ namespace SAICP
             this.lblDate = new DevComponents.DotNetBar.LabelItem();
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.chartControl1 = new DevComponents.DotNetBar.Charts.ChartControl();
             this.cmdBack = new DevComponents.DotNetBar.ButtonX();
+            this.chartControl1 = new DevComponents.DotNetBar.Charts.ChartControl();
             this.SuspendLayout();
             // 
             // statusBar
@@ -139,6 +149,19 @@ namespace SAICP
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // cmdBack
+            // 
+            this.cmdBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBack.Location = new System.Drawing.Point(529, 345);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(84, 23);
+            this.cmdBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdBack.TabIndex = 3;
+            this.cmdBack.Text = "Regresar";
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
+            // 
             // chartControl1
             // 
             this.chartControl1.BackColor = System.Drawing.Color.White;
@@ -159,69 +182,103 @@ namespace SAICP
             chartXy1.ChartCrosshair.ShowValueYLabels = true;
             chartXy1.ChartCrosshair.ShowValueYLine = true;
             chartXy1.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
-            chartSeries1.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
-            chartSeries1.CrosshairHighlightPoints = DevComponents.DotNetBar.Charts.Style.Tbool.True;
             chartSeries1.EmptyValues = null;
-            chartSeries1.Name = "Peso";
-            seriesPoint1.ValueX = 0D;
+            chartSeries1.Name = "Talla";
+            seriesPoint1.ValueX = 4;
             seriesPoint1.ValueY = new object[] {
-        ((object)(31D))};
-            seriesPoint2.ValueX = 1D;
+        ((object)(7))};
+            seriesPoint2.ValueX = 5;
             seriesPoint2.ValueY = new object[] {
-        ((object)(35D))};
-            seriesPoint3.ValueX = 2D;
+        ((object)(10))};
+            seriesPoint3.ValueX = 8;
             seriesPoint3.ValueY = new object[] {
-        ((object)(35D))};
-            seriesPoint4.ValueX = 3D;
+        ((object)(12))};
+            seriesPoint4.ValueX = 10;
             seriesPoint4.ValueY = new object[] {
-        ((object)(47D))};
-            seriesPoint5.ValueX = 4D;
+        ((object)(15))};
+            seriesPoint5.ValueX = 12;
             seriesPoint5.ValueY = new object[] {
-        ((object)(18D))};
-            seriesPoint6.ValueX = 5D;
-            seriesPoint6.ValueY = new object[] {
-        ((object)(5D))};
-            seriesPoint7.ValueX = 6D;
-            seriesPoint7.ValueY = new object[] {
-        ((object)(35D))};
-            seriesPoint8.ValueX = 7D;
-            seriesPoint8.ValueY = new object[] {
-        ((object)(7D))};
-            seriesPoint9.ValueX = 8D;
-            seriesPoint9.ValueY = new object[] {
-        ((object)(5D))};
-            seriesPoint10.ValueX = 9D;
-            seriesPoint10.ValueY = new object[] {
-        ((object)(40D))};
+        ((object)(19))};
             chartSeries1.SeriesPoints.Add(seriesPoint1);
             chartSeries1.SeriesPoints.Add(seriesPoint2);
             chartSeries1.SeriesPoints.Add(seriesPoint3);
             chartSeries1.SeriesPoints.Add(seriesPoint4);
             chartSeries1.SeriesPoints.Add(seriesPoint5);
-            chartSeries1.SeriesPoints.Add(seriesPoint6);
-            chartSeries1.SeriesPoints.Add(seriesPoint7);
-            chartSeries1.SeriesPoints.Add(seriesPoint8);
-            chartSeries1.SeriesPoints.Add(seriesPoint9);
-            chartSeries1.SeriesPoints.Add(seriesPoint10);
             chartSeries1.SeriesType = DevComponents.DotNetBar.Charts.SeriesType.Line;
-            chartSeries2.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
+            chartSeries2.CrosshairHighlightPoints = DevComponents.DotNetBar.Charts.Style.Tbool.True;
             chartSeries2.EmptyValues = null;
-            chartSeries2.Name = "Talla";
-            chartSeries2.StepLines = DevComponents.DotNetBar.Charts.StepLines.Horizontal;
-            chartSeries3.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
+            chartSeries2.Name = "Peso";
+            seriesPoint6.ValueX = 4D;
+            seriesPoint6.ValueY = new object[] {
+        ((object)(6D))};
+            seriesPoint7.ValueX = 5D;
+            seriesPoint7.ValueY = new object[] {
+        ((object)(10D))};
+            seriesPoint8.ValueX = 8D;
+            seriesPoint8.ValueY = new object[] {
+        ((object)(15D))};
+            seriesPoint9.ValueX = 10D;
+            seriesPoint9.ValueY = new object[] {
+        ((object)(20D))};
+            seriesPoint10.ValueX = 12D;
+            seriesPoint10.ValueY = new object[] {
+        ((object)(24D))};
+            chartSeries2.SeriesPoints.Add(seriesPoint6);
+            chartSeries2.SeriesPoints.Add(seriesPoint7);
+            chartSeries2.SeriesPoints.Add(seriesPoint8);
+            chartSeries2.SeriesPoints.Add(seriesPoint9);
+            chartSeries2.SeriesPoints.Add(seriesPoint10);
+            chartSeries2.SeriesType = DevComponents.DotNetBar.Charts.SeriesType.Line;
             chartSeries3.EmptyValues = null;
             chartSeries3.Name = "Perímetro cefálico";
-            chartSeries4.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
+            seriesPoint11.ValueX = 4;
+            seriesPoint11.ValueY = new object[] {
+        ((object)(5))};
+            seriesPoint12.ValueX = 5;
+            seriesPoint12.ValueY = new object[] {
+        ((object)(9))};
+            seriesPoint13.ValueX = 8;
+            seriesPoint13.ValueY = new object[] {
+        ((object)(12))};
+            seriesPoint14.ValueX = 10;
+            seriesPoint14.ValueY = new object[] {
+        ((object)(15))};
+            seriesPoint15.ValueX = 12;
+            seriesPoint15.ValueY = new object[] {
+        ((object)(18))};
+            chartSeries3.SeriesPoints.Add(seriesPoint11);
+            chartSeries3.SeriesPoints.Add(seriesPoint12);
+            chartSeries3.SeriesPoints.Add(seriesPoint13);
+            chartSeries3.SeriesPoints.Add(seriesPoint14);
+            chartSeries3.SeriesPoints.Add(seriesPoint15);
+            chartSeries3.SeriesType = DevComponents.DotNetBar.Charts.SeriesType.Line;
             chartSeries4.EmptyValues = null;
             chartSeries4.Name = "IMC";
-            chartSeries5.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
-            chartSeries5.EmptyValues = null;
-            chartSeries5.Name = "Número de vacunas";
+            seriesPoint16.ValueX = 4;
+            seriesPoint16.ValueY = new object[] {
+        ((object)(5D))};
+            seriesPoint17.ValueX = 5;
+            seriesPoint17.ValueY = new object[] {
+        ((object)(7D))};
+            seriesPoint18.ValueX = 8;
+            seriesPoint18.ValueY = new object[] {
+        ((object)(12D))};
+            seriesPoint19.ValueX = 10;
+            seriesPoint19.ValueY = new object[] {
+        ((object)(15D))};
+            seriesPoint20.ValueX = 12;
+            seriesPoint20.ValueY = new object[] {
+        ((object)(19.5D))};
+            chartSeries4.SeriesPoints.Add(seriesPoint16);
+            chartSeries4.SeriesPoints.Add(seriesPoint17);
+            chartSeries4.SeriesPoints.Add(seriesPoint18);
+            chartSeries4.SeriesPoints.Add(seriesPoint19);
+            chartSeries4.SeriesPoints.Add(seriesPoint20);
+            chartSeries4.SeriesType = DevComponents.DotNetBar.Charts.SeriesType.Line;
             chartXy1.ChartSeries.Add(chartSeries1);
             chartXy1.ChartSeries.Add(chartSeries2);
             chartXy1.ChartSeries.Add(chartSeries3);
             chartXy1.ChartSeries.Add(chartSeries4);
-            chartXy1.ChartSeries.Add(chartSeries5);
             background2.Color1 = System.Drawing.Color.Yellow;
             chartXy1.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Background = background2;
             chartXy1.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Size = new System.Drawing.Size(15, 15);
@@ -289,12 +346,22 @@ namespace SAICP
             chartXy1.Legend.MaxHorizontalPct = 75D;
             chartXy1.Legend.Placement = DevComponents.DotNetBar.Charts.Placement.Outside;
             chartXy1.Legend.Visible = true;
+            chartXy1.MatrixAlignEndColumn = true;
+            chartXy1.MatrixAlignEndRow = true;
+            chartXy1.MatrixAlignStartColumn = true;
+            chartXy1.MatrixAlignStartRow = true;
             chartXy1.Name = "ChartXy1";
-            chartTitle1.ChartTitleVisualStyle.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.TopCenter;
+            chartXy1.SeriesDisplayOrder = DevComponents.DotNetBar.Charts.SeriesDisplayOrder.Forward;
+            chartTitle1.ChartTitleVisualStyle.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.MiddleCenter;
             chartTitle1.ChartTitleVisualStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            padding5.Bottom = 8;
+            padding5.Left = 8;
+            padding5.Right = 8;
+            padding5.Top = 8;
+            chartTitle1.ChartTitleVisualStyle.Padding = padding5;
             chartTitle1.ChartTitleVisualStyle.TextColor = System.Drawing.Color.Black;
-            chartTitle1.Name = "Name";
-            chartTitle1.Text = "Juan David Perez Hernandez                               JPH230910M41";
+            chartTitle1.Name = "Title1";
+            chartTitle1.Text = "Juan Pedro Perez Peña                                       JPP251112M33";
             chartTitle1.XyAlignment = DevComponents.DotNetBar.Charts.XyAlignment.Top;
             chartXy1.Titles.Add(chartTitle1);
             this.chartControl1.ChartPanel.ChartContainers.Add(chartXy1);
@@ -321,29 +388,16 @@ namespace SAICP
             this.chartControl1.Location = new System.Drawing.Point(12, 12);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.Size = new System.Drawing.Size(601, 327);
-            this.chartControl1.TabIndex = 1;
+            this.chartControl1.TabIndex = 4;
             this.chartControl1.Text = "chartControl1";
-            // 
-            // cmdBack
-            // 
-            this.cmdBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdBack.Location = new System.Drawing.Point(529, 345);
-            this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(84, 23);
-            this.cmdBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmdBack.TabIndex = 3;
-            this.cmdBack.Text = "Regresar";
-            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // frmClinicalGraphicTracing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 396);
-            this.Controls.Add(this.cmdBack);
             this.Controls.Add(this.chartControl1);
+            this.Controls.Add(this.cmdBack);
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,7 +420,7 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem lblDate;
         private DevComponents.DotNetBar.LabelItem lblHour;
         private System.Windows.Forms.Timer timer;
-        private DevComponents.DotNetBar.Charts.ChartControl chartControl1;
         private DevComponents.DotNetBar.ButtonX cmdBack;
+        private DevComponents.DotNetBar.Charts.ChartControl chartControl1;
     }
 }

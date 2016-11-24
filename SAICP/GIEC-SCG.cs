@@ -23,6 +23,8 @@ namespace SAICP
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+
+            //chrGraphic.CreateControl();
         }
 
         private void timer_Tick(object sender, EventArgs e)
