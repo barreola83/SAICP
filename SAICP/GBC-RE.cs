@@ -14,12 +14,13 @@ namespace SAICP
     public partial class frmNewExpenseRecord : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
-
+        bool dateSelected = false;
         public frmNewExpenseRecord(frmMain windowMenu)
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
             MaximizeBox = false;
+            cldDate.MaxSelectionCount = 1;
         }
 
         private void frmNewExpenseRecord_Load(object sender, EventArgs e)
@@ -54,12 +55,12 @@ namespace SAICP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtDescription.Text == "" || txtPrice.Text == "" || txtSupplier.Text == "")
+            if (txtDescription.Text.Length == 0 || txtPrice.Text.Length == 0 || txtSupplier.Text.Length == 0 || dateSelected == false)
             {
                 MessageBox.Show("Debe llenar los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }else
             {
-                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
                 SqlCommand command = new SqlCommand("INSERT INTO expenditures VALUES(@date, @description, @amount, @supplier)", connection);
 
                 command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
@@ -75,6 +76,20 @@ namespace SAICP
                 txtPrice.Clear();
                 txtSupplier.Clear();
                 cldDate.SelectedDate = cldDate.TodayDate;
+
+                if (MessageBox.Show("¿Desea registrar otro egreso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    frmNewExpenseRecord windowNewExpenseRecord = new frmNewExpenseRecord(windowMenu);
+                    Hide();
+                    windowNewExpenseRecord.Show();
+                    Close();
+                }
+                else
+                {
+                    Hide();
+                    Close();
+                    windowMenu.Show();
+                }
 
             }
         }
@@ -107,6 +122,11 @@ namespace SAICP
             {
                 btnSave.Focus();
             }
+        }
+
+        private void cldDate_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            dateSelected = true;
         }
     }
 }

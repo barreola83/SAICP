@@ -6,24 +6,25 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using System.Data.SqlClient;
+using System.IO;
+using System.Collections;
 
 namespace SAICP
 {
     public partial class frmNewEarningRecord : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
+        bool dateSelected = false;
 
         public frmNewEarningRecord(frmMain windowMenu)
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
             MaximizeBox = false;
+            cldDate.MaxSelectionCount = 1;
         }
-
-        //Agregar un dato tipo bit, y cargar todos los datos de la fecha seleccionada
-        //si el campo bit es 0, entonces se carga al comboBox y se muestra el número de cita
-        //en caso contrario, no se va a mostrar
-        //Esto para evitar dobles ingresos y malos cálculos
+        
         private void frmNewEarningRecord_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
@@ -66,14 +67,58 @@ namespace SAICP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtPrice.Text == "" || cmbDateNumber.SelectedIndex < 0)
+            if(txtPrice.Text.Length == 0 || cmbDateNumber.SelectedIndex < 0 || dateSelected == false)
             {
                 MessageBox.Show("Llene todos los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount)", connection);
+                SqlCommand commandToModify = new SqlCommand("UPDATE medical_querys SET medical_query_registered = 1 WHERE folio = @" + cmbDateNumber.SelectedItem.ToString(), connection);
+                command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
+                command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.SelectedItem.ToString());
+                command.Parameters.AddWithValue("@amount", int.Parse(txtPrice.Text));
 
+                connection.Open();
+                command.ExecuteNonQuery();
+                commandToModify.ExecuteNonQuery();
+                connection.Close();
+
+                if (MessageBox.Show("¿Desea registrar otro egreso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    frmNewEarningRecord windowNewEarningRecord = new frmNewEarningRecord(windowMenu);
+                    Hide();
+                    windowNewEarningRecord.Show();
+                    Close();
+                }
+                else
+                {
+                    Hide();
+                    Close();
+                    windowMenu.Show();
+                }
             }
+        }
+
+        private void cldDate_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            dateSelected = true;
+            getFolio();
+        }
+
+        public void getFolio()
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT folio FROM medical_querys WHERE medical_query_registered = 0", connection);
+            connection.Open();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            cmbDateNumber.DisplayMember = "folio";
+            cmbDateNumber.DataSource = dataTable;
+            cmbDateNumber.ValueMember = "folio";
+            connection.Close();
         }
     }
 }

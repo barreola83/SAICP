@@ -44,6 +44,8 @@ namespace SAICP
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.lblFullName = new DevComponents.DotNetBar.LabelX();
             this.txtFullName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lblPhoneNumber = new DevComponents.DotNetBar.LabelX();
+            this.txtPhoneNumber = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SuspendLayout();
             // 
             // statusBar
@@ -62,7 +64,7 @@ namespace SAICP
             this.lblBlank,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 310);
+            this.statusBar.Location = new System.Drawing.Point(0, 366);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(479, 22);
             this.statusBar.TabIndex = 0;
@@ -118,7 +120,7 @@ namespace SAICP
             this.cldDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cldDate.ContainerControlProcessDialogKey = true;
             this.cldDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
-            this.cldDate.Location = new System.Drawing.Point(12, 100);
+            this.cldDate.Location = new System.Drawing.Point(12, 167);
             this.cldDate.Name = "cldDate";
             // 
             // 
@@ -130,6 +132,7 @@ namespace SAICP
             this.cldDate.Size = new System.Drawing.Size(170, 131);
             this.cldDate.TabIndex = 1;
             this.cldDate.Text = "monthCalendarAdv1";
+            this.cldDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.cldDate_DateSelected);
             // 
             // lblSelectDate
             // 
@@ -138,7 +141,7 @@ namespace SAICP
             // 
             this.lblSelectDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblSelectDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectDate.Location = new System.Drawing.Point(12, 71);
+            this.lblSelectDate.Location = new System.Drawing.Point(12, 138);
             this.lblSelectDate.Name = "lblSelectDate";
             this.lblSelectDate.Size = new System.Drawing.Size(160, 23);
             this.lblSelectDate.TabIndex = 2;
@@ -153,7 +156,7 @@ namespace SAICP
             this.tmsSelectHour.BackgroundStyle.Class = "ItemPanel";
             this.tmsSelectHour.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tmsSelectHour.ContainerControlProcessDialogKey = true;
-            this.tmsSelectHour.Location = new System.Drawing.Point(210, 100);
+            this.tmsSelectHour.Location = new System.Drawing.Point(210, 167);
             this.tmsSelectHour.Name = "tmsSelectHour";
             this.tmsSelectHour.Size = new System.Drawing.Size(252, 190);
             // 
@@ -164,7 +167,7 @@ namespace SAICP
             // 
             this.lblSelectTime.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblSelectTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectTime.Location = new System.Drawing.Point(210, 71);
+            this.lblSelectTime.Location = new System.Drawing.Point(210, 138);
             this.lblSelectTime.Name = "lblSelectTime";
             this.lblSelectTime.Size = new System.Drawing.Size(155, 23);
             this.lblSelectTime.TabIndex = 4;
@@ -175,7 +178,7 @@ namespace SAICP
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(97, 251);
+            this.btnSave.Location = new System.Drawing.Point(97, 318);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -188,7 +191,7 @@ namespace SAICP
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(16, 251);
+            this.btnCancel.Location = new System.Drawing.Point(16, 318);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -228,12 +231,45 @@ namespace SAICP
             this.txtFullName.WatermarkText = "Ingrese el nombre completo del paciente...";
             this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
             // 
+            // lblPhoneNumber
+            // 
+            // 
+            // 
+            // 
+            this.lblPhoneNumber.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(12, 75);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(160, 23);
+            this.lblPhoneNumber.TabIndex = 10;
+            this.lblPhoneNumber.Text = "Teléfono de contacto";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtPhoneNumber.Border.Class = "TextBoxBorder";
+            this.txtPhoneNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPhoneNumber.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(12, 104);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PreventEnterBeep = true;
+            this.txtPhoneNumber.Size = new System.Drawing.Size(231, 27);
+            this.txtPhoneNumber.TabIndex = 11;
+            this.txtPhoneNumber.WatermarkText = "Ingrese un número de teléfono...";
+            // 
             // frmNewMedicalDate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(479, 332);
+            this.ClientSize = new System.Drawing.Size(479, 388);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.lblFullName);
             this.Controls.Add(this.btnCancel);
@@ -272,5 +308,7 @@ namespace SAICP
         private DevComponents.DotNetBar.ButtonX btnCancel;
         private DevComponents.DotNetBar.LabelX lblFullName;
         private DevComponents.DotNetBar.Controls.TextBoxX txtFullName;
+        private DevComponents.DotNetBar.LabelX lblPhoneNumber;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPhoneNumber;
     }
 }
