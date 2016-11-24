@@ -30,6 +30,7 @@ namespace SAICP
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQueryMedicalQuerys));
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
             this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
@@ -43,8 +44,8 @@ namespace SAICP
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cmdSearch = new DevComponents.DotNetBar.ButtonX();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
             this.Patient_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,6 +207,12 @@ namespace SAICP
             this.dataGridViewX1.Size = new System.Drawing.Size(302, 242);
             this.dataGridViewX1.TabIndex = 6;
             // 
+            // Patient_Name
+            // 
+            this.Patient_Name.HeaderText = "Nombre del paciente";
+            this.Patient_Name.Name = "Patient_Name";
+            this.Patient_Name.Width = 259;
+            // 
             // cmdCancel
             // 
             this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -217,12 +224,6 @@ namespace SAICP
             this.cmdCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdCancel.TabIndex = 7;
             this.cmdCancel.Text = "Cancelar";
-            // 
-            // Patient_Name
-            // 
-            this.Patient_Name.HeaderText = "Nombre del paciente";
-            this.Patient_Name.Name = "Patient_Name";
-            this.Patient_Name.Width = 259;
             // 
             // frmQueryMedicalQuerys
             // 
@@ -239,6 +240,7 @@ namespace SAICP
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQueryMedicalQuerys";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Búsqueda de consultas médicas";
