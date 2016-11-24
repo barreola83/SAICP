@@ -13,12 +13,17 @@ namespace SAICP
 {
     public partial class frmQueryClinicalRecords : DevComponents.DotNetBar.Metro.MetroForm
     {
-        private Folio folio;
-        private string OfficialConsentPath;
-        private bool FlagFormClosingBecauseNoOfficialConsent;
-        private bool FlagFromClosingAfterSavingData;
+        private enum State
+        {
+            Search = 0,
+            Modify = 1
+        };
 
+        private State formState;
+        private Folio folio;
         private frmMain windowMenu;
+        private List<SearchByFolio> foliosList;
+        private List<SearchByName> namesList;
 
         /*
          * Constructor de la clase frmNewClinicalRecord
@@ -32,26 +37,30 @@ namespace SAICP
         /*
          * Este método se ejecuta cuando se carga el formulario en memoria
          */
-        private void frmNewClinicalRecord_Load(object sender, EventArgs e)
+        private void frmQueryClinicalRecords_Load(object sender, EventArgs e)
         {
             folio = new Folio();
+
+            formState = State.Search;
 
             folio.Sex = "M";
 
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
 
+            cmbSearchBy.SelectedIndex = 0;
             cmbMaternalHemotype.SelectedIndex = 0;
             cmbPaternalHemotype.SelectedIndex = 0;
             cmbPacientBirthForm.SelectedIndex = 0;
             cmbPacientApgarEvaluation.SelectedIndex = 0;
 
-            FlagFormClosingBecauseNoOfficialConsent = false;
-            FlagFromClosingAfterSavingData = false;
-
             clnDateBirth.SelectedDate = DateTime.Today;
 
-            lblFolio.Text = "   Folio: " + folio.GetFolio();
+            lblFolio.Text = "   Folio: ";
+
+            txtSearchBy.Focus();
+
+            SetAutoCompleteCustomSourceByFolio();
         }
 
         /*
@@ -67,26 +76,28 @@ namespace SAICP
          * Este método se manda a llamar cuando se ejecute el metodo Close() o se cierre el formulario. En el se pregunta al usuario
          * la confirmacion de dicha operación. En caso de que no desee cerrar el formulario, se cancela la operación.
          */
-        private void frmNewClinicalRecord_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmQueryClinicalRecords_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!FlagFormClosingBecauseNoOfficialConsent && !FlagFromClosingAfterSavingData)
+            if (formState == State.Search)
+            {
+                if (MessageBox.Show("¿Seguro que desea regresar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                    e.Cancel = true;
+                else
+                    windowMenu.Show();
+            }
+            else
             {
                 if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                     e.Cancel = true;
                 else
-                {
-                    Hide();
                     windowMenu.Show();
-                }
             }
-            else if (!FlagFromClosingAfterSavingData)
-                windowMenu.Show();
         }
 
         /*
          * Este método mandara a llamar el método Close() para cerrar el formulario.
          */
-        private void cmdCancel_Click(object sender, EventArgs e)
+        private void cmdReturnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -606,7 +617,16 @@ namespace SAICP
          */
         private void swtCephalicSupport_ValueChanged(object sender, EventArgs e)
         {
-
+            if (swtCephalicSupport.Value)
+            {
+                txtAgeCephalicSupportStarts.Enabled = true;
+                txtAgeCephalicSupportStarts.Focus();
+            }
+            else
+            {
+                txtAgeCephalicSupportStarts.Enabled = false;
+                txtAgeCephalicSupportStarts.Clear();
+            }
         }
 
         /*
@@ -972,8 +992,8 @@ namespace SAICP
             if (ValidateDataAndAsignSqlCommandParameters(command))
             {
                 lblFolio.Text = "   Folio: " + folio.GetFolio();
-
-                MessageBox.Show("NDA"); // 75%
+                
+                // 75%
 
                 connection.Open();
 
@@ -985,8 +1005,6 @@ namespace SAICP
                 pgrSaving.Visible = false;
 
                 MessageBox.Show("Expediente clínico guardado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                FlagFromClosingAfterSavingData = true;
 
                 if (MessageBox.Show("¿Desea registrar otro expediente clínico?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -1017,13 +1035,13 @@ namespace SAICP
             MemoryStream photo;
 
             // Validacion del documento de consentimiento official
-            file = new FileStream(OfficialConsentPath, FileMode.Open);
-            fileReader = new StreamReader(file);
+            //file = new FileStream(OfficialConsentPath, FileMode.Open);
+            //fileReader = new StreamReader(file);
 
-            command.Parameters.AddWithValue("@official_consent", fileReader.ReadToEnd());
+            //command.Parameters.AddWithValue("@official_consent", fileReader.ReadToEnd());
 
-            fileReader.Close();
-            file.Close();
+            //fileReader.Close();
+            //file.Close();
 
             // Validacion de la foto
             if (pctPhoto.Image == null)
@@ -1603,27 +1621,233 @@ namespace SAICP
             return true;
         }
 
-        /* 
-         * Este método se ejecuta cuando se muestre la ventana por primera vez
+        /*
+         * Este método se ejecutara cuando se cambie el campo por el que se desea buscar
          */
-        private void frmNewClinicalRecord_Shown(object sender, EventArgs e)
+        private void cmbSearchBy_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!FlagFormClosingBecauseNoOfficialConsent)
+            if (cmbSearchBy.SelectedIndex == 0)
             {
-                OpenFileDialog openOfficialConsent = new OpenFileDialog();
+                SetAutoCompleteCustomSourceByFolio();
+                txtSearchBy.MaxLength = 12;
+            }
+            else
+            {
+                SetAutoCompleteCustomSourceByName();
+                txtSearchBy.MaxLength = 100;
+            }
 
-                openOfficialConsent.Title = "Seleccionar documento de consentimiento oficial";
-                openOfficialConsent.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                openOfficialConsent.Filter = "Archivos de texto (*.txt)|*.txt";
+            txtSearchBy.Clear();
+        }
 
-                if (openOfficialConsent.ShowDialog() == DialogResult.OK)
-                    OfficialConsentPath = openOfficialConsent.FileName;
-                else
+        /*
+         * Este metodo se debe mandar a llamar cuando se desee que el autocompletado sea para la opcion de folio
+         */
+        private void SetAutoCompleteCustomSourceByFolio()
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand commnad = new SqlCommand("SELECT ID, folio FROM clinical_records;", connection);
+            SqlDataReader reader;
+            AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+            SearchByFolio folioData;
+
+            foliosList = new List<SearchByFolio>();
+
+            connection.Open();
+
+            reader = commnad.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
                 {
-                    FlagFormClosingBecauseNoOfficialConsent = true;
-                    Close();
+                    folioData = new SearchByFolio();
+
+                    data.Add(reader["folio"].ToString());
+
+                    folioData.ID = int.Parse(reader["ID"].ToString());
+                    folioData.folio = reader["folio"].ToString();
+
+                    foliosList.Add(folioData);
                 }
             }
+
+            connection.Close();
+
+            txtSearchBy.AutoCompleteCustomSource = data;
+
+            if (namesList != null)
+                namesList.Clear();
         }
+
+        /*
+         * Este metodo se debe mandar a llamar cuando se desee que el autocompletado sea por nombre
+         */
+         private void SetAutoCompleteCustomSourceByName()
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand commnad = new SqlCommand("SELECT ID, name, first_last_name, second_last_name FROM clinical_records;", connection);
+            SqlDataReader reader;
+            AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+            SearchByName nameData;
+
+            namesList = new List<SearchByName>();
+
+            connection.Open();
+
+            reader = commnad.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    nameData = new SearchByName();
+
+                    data.Add(reader["name"].ToString() + " " + reader["first_last_name"].ToString() + " " + reader["second_last_name"].ToString());
+
+                    nameData.ID = int.Parse(reader["ID"].ToString());
+                    nameData.Name = reader["name"].ToString();
+                    nameData.FirstLastName = reader["first_last_name"].ToString();
+                    nameData.SecondLasName = reader["first_last_name"].ToString();
+
+                    namesList.Add(nameData);
+                }
+            }
+
+            connection.Close();
+
+            txtSearchBy.AutoCompleteCustomSource = data;
+
+            if (foliosList != null)
+                foliosList.Clear();
+        }
+
+        /*
+         * Este metodo se ejecutara cuando se presione una tecla en el TextBox para ingresar el folio o el nombre
+         */
+        private void txtSearchBy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cmbSearchBy.SelectedIndex == 0)
+            {
+                if (!Char.IsDigit(e.KeyChar) && !Char.IsLetter(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                    e.Handled = true;
+                else
+                {
+                    if (Char.IsLetter(e.KeyChar))
+                        e.KeyChar = Char.ToUpper(e.KeyChar);
+                    else if (e.KeyChar == (char)Keys.Enter)
+                        cmdSearch.PerformClick();
+                }
+            }
+            else if (cmbSearchBy.SelectedIndex == 1)
+            {
+                if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
+                {
+                    if (txtSearchBy.Text.Length == 0 || txtSearchBy.Text.Substring(txtSearchBy.Text.Length - 1) == " ")
+                        e.KeyChar = Char.ToUpper(e.KeyChar);
+                    else if (e.KeyChar == (char)Keys.Enter)
+                        cmdSearch.PerformClick();
+                }
+                else
+                    e.Handled = true;
+            }
+        }
+
+        /*
+         * Este metodo se ejecutara cuando se realize clic sobre el boton de buscar
+         */
+        private void cmdSearch_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command;
+            SqlDataReader reader;
+
+            if (txtSearchBy.Text.Length == 0)
+                MessageBox.Show("El campo de busqueda se encuentra vacio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else if (cmbSearchBy.SelectedIndex == 0)
+            {
+                command = new SqlCommand("SELECT * FROM clinical_records WHERE folio=@folio", connection);
+
+                if (txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text) != -1)
+                {
+                    command.Parameters.AddWithValue("@folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+
+                    connection.Open();
+
+                    reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        DisplayData(reader);
+                        MessageBox.Show("Registro encontrado");
+                    }
+
+                    connection.Close();
+                }
+                else
+                    MessageBox.Show("No se encontro el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                command = new SqlCommand("SELECT * FROM clinical_records WHERE name=@name AND first_last_name=@first_last_name AND second_last_name=@second_last_name", connection);
+            }
+        }
+
+        /*
+         * Este metodo nos permite desplegar la informacion en el formulario
+         */
+        private void DisplayData(SqlDataReader reader)
+        {
+            // Mostramos el folio
+            lblFolio.Text = "   Folio: " + reader["folio"].ToString();
+
+            // Mostramos la foto si es que hay --pendiente
+
+            // Mostramos el nombre
+            txtName.Text = reader["name"].ToString();
+
+            // Mostramos el apellid paterno
+            txtFirstLastName.Text = reader["first_last_name"].ToString();
+
+            // Mostramos el apellido materno
+            txtSecondLastName.Text = reader["second_last_name"].ToString();
+
+            // Mostramos el lugar de nacimiento
+            txtBirthPlace.Text = reader["birth_place"].ToString();
+
+            // Mostramos el nombre del padre o tutor
+            txtFatherName.Text = reader["father_name"].ToString();
+
+            // Mostramos el domicilio
+            txtHomeAddress.Text = reader["home_address"].ToString();
+
+            // Mostramos el numero de telefono de contacto
+            txtContactPhone.Text = reader["contact_phone"].ToString();
+
+            // Mostramos la fecha de nacimiento
+            //clnDateBirth.SelectedDate = reader.GetDateTime(reader.GetOrdinal("date_birth"));
+            clnDateBirth.TodayDate = reader.GetDateTime(reader.GetOrdinal("date_birth"));
+
+            // Mostramos el sexo
+            if (reader["sex"].ToString() == "M")
+                rdbMale.Checked = true;
+            else
+                rdbFemale.Checked = true;
+        }
+    }
+
+    public class SearchByFolio
+    {
+        public int ID { get; set; }
+        public string folio { get; set; }
+    }
+
+    public class SearchByName
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string FirstLastName { get; set; }
+        public string SecondLasName { get; set; }
     }
 }

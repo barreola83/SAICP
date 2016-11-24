@@ -231,8 +231,14 @@ namespace SAICP
             this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
             this.switchButtonItem1 = new DevComponents.DotNetBar.SwitchButtonItem();
             this.cmdSave = new DevComponents.DotNetBar.ButtonX();
-            this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
+            this.cmdReturnCancel = new DevComponents.DotNetBar.ButtonX();
             this.lblFolio = new DevComponents.DotNetBar.LabelX();
+            this.cmbSearchBy = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.byFolio = new DevComponents.Editors.ComboItem();
+            this.byName = new DevComponents.Editors.ComboItem();
+            this.labelX64 = new DevComponents.DotNetBar.LabelX();
+            this.txtSearchBy = new System.Windows.Forms.TextBox();
+            this.cmdSearch = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
@@ -273,7 +279,7 @@ namespace SAICP
             this.labelItem2,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 490);
+            this.statusBar.Location = new System.Drawing.Point(0, 538);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(829, 22);
             this.statusBar.TabIndex = 6;
@@ -337,11 +343,11 @@ namespace SAICP
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel6);
             this.superTabControl1.Controls.Add(this.superTabControlPanel5);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel4);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel3);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.ForeColor = System.Drawing.Color.Black;
-            this.superTabControl1.Location = new System.Drawing.Point(13, 44);
+            this.superTabControl1.Location = new System.Drawing.Point(12, 96);
             this.superTabControl1.Name = "superTabControl1";
             this.superTabControl1.ReorderTabsEnabled = true;
             this.superTabControl1.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
@@ -398,6 +404,7 @@ namespace SAICP
             this.txtSecondLastName.Border.Class = "TextBoxBorder";
             this.txtSecondLastName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtSecondLastName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtSecondLastName.Enabled = false;
             this.txtSecondLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSecondLastName.ForeColor = System.Drawing.Color.Black;
             this.txtSecondLastName.Location = new System.Drawing.Point(321, 113);
@@ -433,6 +440,7 @@ namespace SAICP
             this.txtFirstLastName.Border.Class = "TextBoxBorder";
             this.txtFirstLastName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtFirstLastName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtFirstLastName.Enabled = false;
             this.txtFirstLastName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstLastName.ForeColor = System.Drawing.Color.Black;
             this.txtFirstLastName.Location = new System.Drawing.Point(321, 56);
@@ -468,6 +476,7 @@ namespace SAICP
             this.txtContactPhone.Border.Class = "TextBoxBorder";
             this.txtContactPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtContactPhone.DisabledBackColor = System.Drawing.Color.White;
+            this.txtContactPhone.Enabled = false;
             this.txtContactPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactPhone.ForeColor = System.Drawing.Color.Black;
             this.txtContactPhone.Location = new System.Drawing.Point(321, 330);
@@ -502,6 +511,7 @@ namespace SAICP
             this.groupPanel1.Controls.Add(this.rdbFemale);
             this.groupPanel1.Controls.Add(this.rdbMale);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel1.Enabled = false;
             this.groupPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupPanel1.Location = new System.Drawing.Point(626, 215);
             this.groupPanel1.Name = "groupPanel1";
@@ -581,6 +591,7 @@ namespace SAICP
             this.clnDateBirth.ContainerControlProcessDialogKey = true;
             this.clnDateBirth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clnDateBirth.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
+            this.clnDateBirth.Enabled = false;
             this.clnDateBirth.Location = new System.Drawing.Point(595, 67);
             this.clnDateBirth.MaxSelectionCount = 1;
             this.clnDateBirth.Name = "clnDateBirth";
@@ -621,6 +632,7 @@ namespace SAICP
             this.txtHomeAddress.Border.Class = "TextBoxBorder";
             this.txtHomeAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtHomeAddress.DisabledBackColor = System.Drawing.Color.White;
+            this.txtHomeAddress.Enabled = false;
             this.txtHomeAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHomeAddress.ForeColor = System.Drawing.Color.Black;
             this.txtHomeAddress.Location = new System.Drawing.Point(321, 278);
@@ -656,6 +668,7 @@ namespace SAICP
             this.txtFatherName.Border.Class = "TextBoxBorder";
             this.txtFatherName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtFatherName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtFatherName.Enabled = false;
             this.txtFatherName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFatherName.ForeColor = System.Drawing.Color.Black;
             this.txtFatherName.Location = new System.Drawing.Point(321, 230);
@@ -691,6 +704,7 @@ namespace SAICP
             this.txtBirthPlace.Border.Class = "TextBoxBorder";
             this.txtBirthPlace.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtBirthPlace.DisabledBackColor = System.Drawing.Color.White;
+            this.txtBirthPlace.Enabled = false;
             this.txtBirthPlace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthPlace.ForeColor = System.Drawing.Color.Black;
             this.txtBirthPlace.Location = new System.Drawing.Point(321, 169);
@@ -726,6 +740,7 @@ namespace SAICP
             this.txtName.Border.Class = "TextBoxBorder";
             this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(321, 8);
@@ -766,6 +781,7 @@ namespace SAICP
             this.cmdSelectPhoto.TabIndex = 9;
             this.cmdSelectPhoto.Text = "Seleccionar";
             this.cmdSelectPhoto.Tooltip = "Seleccionar la foto del paciente";
+            this.cmdSelectPhoto.Visible = false;
             this.cmdSelectPhoto.Click += new System.EventHandler(this.cmdSelectPhoto_Click);
             // 
             // pctPhoto
@@ -891,6 +907,7 @@ namespace SAICP
             // 
             this.swtDevelopmentProblems.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtDevelopmentProblems.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtDevelopmentProblems.Enabled = false;
             this.swtDevelopmentProblems.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtDevelopmentProblems.Location = new System.Drawing.Point(714, 16);
             this.swtDevelopmentProblems.Name = "swtDevelopmentProblems";
@@ -959,6 +976,7 @@ namespace SAICP
             // 
             this.swtDentation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtDentation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtDentation.Enabled = false;
             this.swtDentation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtDentation.Location = new System.Drawing.Point(435, 277);
             this.swtDentation.Name = "swtDentation";
@@ -1027,6 +1045,7 @@ namespace SAICP
             // 
             this.swtSphincterControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtSphincterControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtSphincterControl.Enabled = false;
             this.swtSphincterControl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtSphincterControl.Location = new System.Drawing.Point(174, 277);
             this.swtSphincterControl.Name = "swtSphincterControl";
@@ -1095,6 +1114,7 @@ namespace SAICP
             // 
             this.swtLanguageDevelopment.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtLanguageDevelopment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtLanguageDevelopment.Enabled = false;
             this.swtLanguageDevelopment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtLanguageDevelopment.Location = new System.Drawing.Point(435, 200);
             this.swtLanguageDevelopment.Name = "swtLanguageDevelopment";
@@ -1163,6 +1183,7 @@ namespace SAICP
             // 
             this.swtWandering.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtWandering.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtWandering.Enabled = false;
             this.swtWandering.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtWandering.Location = new System.Drawing.Point(435, 128);
             this.swtWandering.Name = "swtWandering";
@@ -1231,6 +1252,7 @@ namespace SAICP
             // 
             this.swtBipedestation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtBipedestation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtBipedestation.Enabled = false;
             this.swtBipedestation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtBipedestation.Location = new System.Drawing.Point(174, 128);
             this.swtBipedestation.Name = "swtBipedestation";
@@ -1299,6 +1321,7 @@ namespace SAICP
             // 
             this.swtCrawl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtCrawl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtCrawl.Enabled = false;
             this.swtCrawl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtCrawl.Location = new System.Drawing.Point(174, 200);
             this.swtCrawl.Name = "swtCrawl";
@@ -1367,6 +1390,7 @@ namespace SAICP
             // 
             this.swtSedestation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtSedestation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtSedestation.Enabled = false;
             this.swtSedestation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtSedestation.Location = new System.Drawing.Point(435, 51);
             this.swtSedestation.Name = "swtSedestation";
@@ -1435,6 +1459,7 @@ namespace SAICP
             // 
             this.swtCephalicSupport.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtCephalicSupport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtCephalicSupport.Enabled = false;
             this.swtCephalicSupport.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtCephalicSupport.Location = new System.Drawing.Point(174, 49);
             this.swtCephalicSupport.Name = "swtCephalicSupport";
@@ -1545,6 +1570,7 @@ namespace SAICP
             // 
             this.swtActualTreatment.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtActualTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtActualTreatment.Enabled = false;
             this.swtActualTreatment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtActualTreatment.Location = new System.Drawing.Point(680, 196);
             this.swtActualTreatment.Name = "swtActualTreatment";
@@ -1614,6 +1640,7 @@ namespace SAICP
             // 
             this.swtSurgerie.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtSurgerie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtSurgerie.Enabled = false;
             this.swtSurgerie.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtSurgerie.Location = new System.Drawing.Point(355, 198);
             this.swtSurgerie.Name = "swtSurgerie";
@@ -1683,6 +1710,7 @@ namespace SAICP
             // 
             this.swtTransfusions.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtTransfusions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtTransfusions.Enabled = false;
             this.swtTransfusions.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtTransfusions.Location = new System.Drawing.Point(145, 198);
             this.swtTransfusions.Name = "swtTransfusions";
@@ -1752,6 +1780,7 @@ namespace SAICP
             // 
             this.swtTrauma.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtTrauma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtTrauma.Enabled = false;
             this.swtTrauma.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtTrauma.Location = new System.Drawing.Point(647, 11);
             this.swtTrauma.Name = "swtTrauma";
@@ -1821,6 +1850,7 @@ namespace SAICP
             // 
             this.swtHospitalizations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtHospitalizations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtHospitalizations.Enabled = false;
             this.swtHospitalizations.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtHospitalizations.Location = new System.Drawing.Point(420, 11);
             this.swtHospitalizations.Name = "swtHospitalizations";
@@ -1905,6 +1935,7 @@ namespace SAICP
             // 
             this.swtPreviousDiseases.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtPreviousDiseases.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtPreviousDiseases.Enabled = false;
             this.swtPreviousDiseases.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.swtPreviousDiseases.Location = new System.Drawing.Point(202, 11);
             this.swtPreviousDiseases.Name = "swtPreviousDiseases";
@@ -1937,8 +1968,8 @@ namespace SAICP
             // 
             this.tabControl1.BackColor = System.Drawing.Color.White;
             this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Controls.Add(this.tabControlPanel2);
+            this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ForeColor = System.Drawing.Color.Black;
@@ -2022,6 +2053,7 @@ namespace SAICP
             // 
             this.swtMotherHadAllergies.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtMotherHadAllergies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtMotherHadAllergies.Enabled = false;
             this.swtMotherHadAllergies.Location = new System.Drawing.Point(542, 173);
             this.swtMotherHadAllergies.Name = "swtMotherHadAllergies";
             this.swtMotherHadAllergies.OffText = "No";
@@ -2053,6 +2085,7 @@ namespace SAICP
             // 
             this.swtMotherHadDrugAddictions.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtMotherHadDrugAddictions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtMotherHadDrugAddictions.Enabled = false;
             this.swtMotherHadDrugAddictions.Location = new System.Drawing.Point(581, 11);
             this.swtMotherHadDrugAddictions.Name = "swtMotherHadDrugAddictions";
             this.swtMotherHadDrugAddictions.OffText = "No";
@@ -2106,6 +2139,7 @@ namespace SAICP
             // 
             this.swtMotherHadTreatments.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtMotherHadTreatments.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtMotherHadTreatments.Enabled = false;
             this.swtMotherHadTreatments.Location = new System.Drawing.Point(278, 173);
             this.swtMotherHadTreatments.Name = "swtMotherHadTreatments";
             this.swtMotherHadTreatments.OffText = "No";
@@ -2181,6 +2215,7 @@ namespace SAICP
             // 
             this.swtMotherHadRisksPregnancy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtMotherHadRisksPregnancy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtMotherHadRisksPregnancy.Enabled = false;
             this.swtMotherHadRisksPregnancy.Location = new System.Drawing.Point(391, 9);
             this.swtMotherHadRisksPregnancy.Name = "swtMotherHadRisksPregnancy";
             this.swtMotherHadRisksPregnancy.OffText = "No";
@@ -2211,6 +2246,7 @@ namespace SAICP
             this.cmbPaternalHemotype.DisplayMember = "Text";
             this.cmbPaternalHemotype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbPaternalHemotype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPaternalHemotype.Enabled = false;
             this.cmbPaternalHemotype.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPaternalHemotype.ForeColor = System.Drawing.Color.Black;
             this.cmbPaternalHemotype.FormattingEnabled = true;
@@ -2298,6 +2334,7 @@ namespace SAICP
             this.cmbMaternalHemotype.DisplayMember = "Text";
             this.cmbMaternalHemotype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbMaternalHemotype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMaternalHemotype.Enabled = false;
             this.cmbMaternalHemotype.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaternalHemotype.ForeColor = System.Drawing.Color.Black;
             this.cmbMaternalHemotype.FormattingEnabled = true;
@@ -2358,6 +2395,7 @@ namespace SAICP
             this.txtMotherNumberOfPrenatalQuerys.Border.Class = "TextBoxBorder";
             this.txtMotherNumberOfPrenatalQuerys.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMotherNumberOfPrenatalQuerys.DisabledBackColor = System.Drawing.Color.White;
+            this.txtMotherNumberOfPrenatalQuerys.Enabled = false;
             this.txtMotherNumberOfPrenatalQuerys.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotherNumberOfPrenatalQuerys.ForeColor = System.Drawing.Color.Black;
             this.txtMotherNumberOfPrenatalQuerys.Location = new System.Drawing.Point(92, 145);
@@ -2393,6 +2431,7 @@ namespace SAICP
             this.txtMotherNumberOfPregnancies.Border.Class = "TextBoxBorder";
             this.txtMotherNumberOfPregnancies.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMotherNumberOfPregnancies.DisabledBackColor = System.Drawing.Color.White;
+            this.txtMotherNumberOfPregnancies.Enabled = false;
             this.txtMotherNumberOfPregnancies.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotherNumberOfPregnancies.ForeColor = System.Drawing.Color.Black;
             this.txtMotherNumberOfPregnancies.Location = new System.Drawing.Point(92, 83);
@@ -2428,6 +2467,7 @@ namespace SAICP
             this.txtMotherAge.Border.Class = "TextBoxBorder";
             this.txtMotherAge.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMotherAge.DisabledBackColor = System.Drawing.Color.White;
+            this.txtMotherAge.Enabled = false;
             this.txtMotherAge.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotherAge.ForeColor = System.Drawing.Color.Black;
             this.txtMotherAge.Location = new System.Drawing.Point(92, 43);
@@ -2527,6 +2567,7 @@ namespace SAICP
             // 
             this.swtPacientHadAllergies.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtPacientHadAllergies.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtPacientHadAllergies.Enabled = false;
             this.swtPacientHadAllergies.Location = new System.Drawing.Point(652, 17);
             this.swtPacientHadAllergies.Name = "swtPacientHadAllergies";
             this.swtPacientHadAllergies.OffText = "No";
@@ -2580,6 +2621,7 @@ namespace SAICP
             // 
             this.swtPacientHadNeonatalDetection.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtPacientHadNeonatalDetection.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtPacientHadNeonatalDetection.Enabled = false;
             this.swtPacientHadNeonatalDetection.Location = new System.Drawing.Point(414, 175);
             this.swtPacientHadNeonatalDetection.Name = "swtPacientHadNeonatalDetection";
             this.swtPacientHadNeonatalDetection.OffText = "No";
@@ -2633,6 +2675,7 @@ namespace SAICP
             // 
             this.swtPacientHadBirthComplications.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtPacientHadBirthComplications.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtPacientHadBirthComplications.Enabled = false;
             this.swtPacientHadBirthComplications.Location = new System.Drawing.Point(457, 17);
             this.swtPacientHadBirthComplications.Name = "swtPacientHadBirthComplications";
             this.swtPacientHadBirthComplications.OffText = "No";
@@ -2666,6 +2709,7 @@ namespace SAICP
             this.txtPacientCephalicPerimeterAtBirth.Border.Class = "TextBoxBorder";
             this.txtPacientCephalicPerimeterAtBirth.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPacientCephalicPerimeterAtBirth.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPacientCephalicPerimeterAtBirth.Enabled = false;
             this.txtPacientCephalicPerimeterAtBirth.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacientCephalicPerimeterAtBirth.ForeColor = System.Drawing.Color.Black;
             this.txtPacientCephalicPerimeterAtBirth.Location = new System.Drawing.Point(139, 254);
@@ -2701,6 +2745,7 @@ namespace SAICP
             this.txtPacientSize.Border.Class = "TextBoxBorder";
             this.txtPacientSize.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPacientSize.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPacientSize.Enabled = false;
             this.txtPacientSize.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacientSize.ForeColor = System.Drawing.Color.Black;
             this.txtPacientSize.Location = new System.Drawing.Point(154, 202);
@@ -2736,6 +2781,7 @@ namespace SAICP
             this.txtPacientWeight.Border.Class = "TextBoxBorder";
             this.txtPacientWeight.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPacientWeight.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPacientWeight.Enabled = false;
             this.txtPacientWeight.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacientWeight.ForeColor = System.Drawing.Color.Black;
             this.txtPacientWeight.Location = new System.Drawing.Point(48, 201);
@@ -2768,6 +2814,7 @@ namespace SAICP
             this.cmbPacientApgarEvaluation.DisplayMember = "Text";
             this.cmbPacientApgarEvaluation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbPacientApgarEvaluation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPacientApgarEvaluation.Enabled = false;
             this.cmbPacientApgarEvaluation.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPacientApgarEvaluation.ForeColor = System.Drawing.Color.Black;
             this.cmbPacientApgarEvaluation.FormattingEnabled = true;
@@ -2855,6 +2902,7 @@ namespace SAICP
             this.cmbPacientBirthForm.DisplayMember = "Text";
             this.cmbPacientBirthForm.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbPacientBirthForm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPacientBirthForm.Enabled = false;
             this.cmbPacientBirthForm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPacientBirthForm.ForeColor = System.Drawing.Color.Black;
             this.cmbPacientBirthForm.FormattingEnabled = true;
@@ -2905,6 +2953,7 @@ namespace SAICP
             this.txtPacientGestationalAgeAtBirth.Border.Class = "TextBoxBorder";
             this.txtPacientGestationalAgeAtBirth.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPacientGestationalAgeAtBirth.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPacientGestationalAgeAtBirth.Enabled = false;
             this.txtPacientGestationalAgeAtBirth.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPacientGestationalAgeAtBirth.ForeColor = System.Drawing.Color.Black;
             this.txtPacientGestationalAgeAtBirth.Location = new System.Drawing.Point(131, 52);
@@ -3032,6 +3081,7 @@ namespace SAICP
             // 
             this.swtWeaning.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtWeaning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtWeaning.Enabled = false;
             this.swtWeaning.Location = new System.Drawing.Point(282, 275);
             this.swtWeaning.Name = "swtWeaning";
             this.swtWeaning.OffText = "No";
@@ -3096,6 +3146,7 @@ namespace SAICP
             // 
             this.swtAblactation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.swtAblactation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtAblactation.Enabled = false;
             this.swtAblactation.Location = new System.Drawing.Point(93, 275);
             this.swtAblactation.Name = "swtAblactation";
             this.swtAblactation.OffText = "No";
@@ -3148,6 +3199,7 @@ namespace SAICP
             this.txtHygineRutines.Border.Class = "TextBoxBorder";
             this.txtHygineRutines.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtHygineRutines.DisabledBackColor = System.Drawing.Color.White;
+            this.txtHygineRutines.Enabled = false;
             this.txtHygineRutines.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHygineRutines.ForeColor = System.Drawing.Color.Black;
             this.txtHygineRutines.Location = new System.Drawing.Point(374, 32);
@@ -3183,6 +3235,7 @@ namespace SAICP
             this.txtActualFeed.Border.Class = "TextBoxBorder";
             this.txtActualFeed.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtActualFeed.DisabledBackColor = System.Drawing.Color.White;
+            this.txtActualFeed.Enabled = false;
             this.txtActualFeed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtActualFeed.ForeColor = System.Drawing.Color.Black;
             this.txtActualFeed.Location = new System.Drawing.Point(189, 32);
@@ -3218,6 +3271,7 @@ namespace SAICP
             this.txtInitialFeed.Border.Class = "TextBoxBorder";
             this.txtInitialFeed.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtInitialFeed.DisabledBackColor = System.Drawing.Color.White;
+            this.txtInitialFeed.Enabled = false;
             this.txtInitialFeed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInitialFeed.ForeColor = System.Drawing.Color.Black;
             this.txtInitialFeed.Location = new System.Drawing.Point(4, 32);
@@ -3295,6 +3349,7 @@ namespace SAICP
             this.txtVaccineHistory.Border.Class = "TextBoxBorder";
             this.txtVaccineHistory.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtVaccineHistory.DisabledBackColor = System.Drawing.Color.White;
+            this.txtVaccineHistory.Enabled = false;
             this.txtVaccineHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVaccineHistory.ForeColor = System.Drawing.Color.Black;
             this.txtVaccineHistory.Location = new System.Drawing.Point(3, 3);
@@ -3335,6 +3390,7 @@ namespace SAICP
             this.txtFamilyHereditaryAntecedents.Border.Class = "TextBoxBorder";
             this.txtFamilyHereditaryAntecedents.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtFamilyHereditaryAntecedents.DisabledBackColor = System.Drawing.Color.White;
+            this.txtFamilyHereditaryAntecedents.Enabled = false;
             this.txtFamilyHereditaryAntecedents.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFamilyHereditaryAntecedents.ForeColor = System.Drawing.Color.Black;
             this.txtFamilyHereditaryAntecedents.Location = new System.Drawing.Point(3, 30);
@@ -3379,29 +3435,30 @@ namespace SAICP
             this.cmdSave.AutoSize = true;
             this.cmdSave.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSave.Enabled = false;
             this.cmdSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSave.Location = new System.Drawing.Point(739, 454);
+            this.cmdSave.Location = new System.Drawing.Point(738, 506);
             this.cmdSave.Name = "cmdSave";
             this.cmdSave.Size = new System.Drawing.Size(75, 28);
             this.cmdSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdSave.TabIndex = 69;
-            this.cmdSave.Text = "Guardar";
+            this.cmdSave.Text = "Modificar";
             this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
-            // cmdCancel
+            // cmdReturnCancel
             // 
-            this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdCancel.AutoSize = true;
-            this.cmdCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
-            this.cmdCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCancel.Location = new System.Drawing.Point(659, 454);
-            this.cmdCancel.Name = "cmdCancel";
-            this.cmdCancel.Size = new System.Drawing.Size(75, 28);
-            this.cmdCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmdCancel.TabIndex = 70;
-            this.cmdCancel.Text = "Cancelar";
-            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
+            this.cmdReturnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdReturnCancel.AutoSize = true;
+            this.cmdReturnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.cmdReturnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdReturnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdReturnCancel.Location = new System.Drawing.Point(658, 506);
+            this.cmdReturnCancel.Name = "cmdReturnCancel";
+            this.cmdReturnCancel.Size = new System.Drawing.Size(75, 28);
+            this.cmdReturnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdReturnCancel.TabIndex = 70;
+            this.cmdReturnCancel.Text = "Regresar";
+            this.cmdReturnCancel.Click += new System.EventHandler(this.cmdReturnCancel_Click);
             // 
             // lblFolio
             // 
@@ -3410,21 +3467,93 @@ namespace SAICP
             // 
             // 
             this.lblFolio.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblFolio.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblFolio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFolio.Location = new System.Drawing.Point(0, 0);
+            this.lblFolio.Location = new System.Drawing.Point(-1, 52);
             this.lblFolio.Name = "lblFolio";
             this.lblFolio.Size = new System.Drawing.Size(829, 30);
             this.lblFolio.TabIndex = 16;
             this.lblFolio.Text = "   Folio: ";
             // 
+            // cmbSearchBy
+            // 
+            this.cmbSearchBy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbSearchBy.DisplayMember = "Text";
+            this.cmbSearchBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSearchBy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSearchBy.ForeColor = System.Drawing.Color.Black;
+            this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.ItemHeight = 20;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            this.byFolio,
+            this.byName});
+            this.cmbSearchBy.Location = new System.Drawing.Point(250, 12);
+            this.cmbSearchBy.Name = "cmbSearchBy";
+            this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
+            this.cmbSearchBy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbSearchBy.TabIndex = 71;
+            this.cmbSearchBy.SelectedIndexChanged += new System.EventHandler(this.cmbSearchBy_SelectedIndexChanged);
+            // 
+            // byFolio
+            // 
+            this.byFolio.Text = "Folio";
+            // 
+            // byName
+            // 
+            this.byName.Text = "Nombre";
+            // 
+            // labelX64
+            // 
+            this.labelX64.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX64.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX64.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX64.Location = new System.Drawing.Point(163, 12);
+            this.labelX64.Name = "labelX64";
+            this.labelX64.Size = new System.Drawing.Size(81, 24);
+            this.labelX64.TabIndex = 72;
+            this.labelX64.Text = "Buscar por:";
+            // 
+            // txtSearchBy
+            // 
+            this.txtSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtSearchBy.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBy.Location = new System.Drawing.Point(377, 12);
+            this.txtSearchBy.MaxLength = 12;
+            this.txtSearchBy.Name = "txtSearchBy";
+            this.txtSearchBy.Size = new System.Drawing.Size(179, 27);
+            this.txtSearchBy.TabIndex = 73;
+            this.txtSearchBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBy_KeyPress);
+            // 
+            // cmdSearch
+            // 
+            this.cmdSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdSearch.AutoSize = true;
+            this.cmdSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.cmdSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSearch.Location = new System.Drawing.Point(562, 12);
+            this.cmdSearch.Name = "cmdSearch";
+            this.cmdSearch.Size = new System.Drawing.Size(75, 28);
+            this.cmdSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdSearch.TabIndex = 74;
+            this.cmdSearch.Text = "Buscar";
+            this.cmdSearch.Click += new System.EventHandler(this.cmdSearch_Click);
+            // 
             // frmQueryClinicalRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 512);
+            this.ClientSize = new System.Drawing.Size(829, 560);
+            this.Controls.Add(this.cmdSearch);
+            this.Controls.Add(this.txtSearchBy);
+            this.Controls.Add(this.labelX64);
+            this.Controls.Add(this.cmbSearchBy);
             this.Controls.Add(this.lblFolio);
-            this.Controls.Add(this.cmdCancel);
+            this.Controls.Add(this.cmdReturnCancel);
             this.Controls.Add(this.cmdSave);
             this.Controls.Add(this.superTabControl1);
             this.Controls.Add(this.statusBar);
@@ -3432,10 +3561,9 @@ namespace SAICP
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmQueryClinicalRecords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "Nuevo expediente clínico";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewClinicalRecord_FormClosing);
-            this.Load += new System.EventHandler(this.frmNewClinicalRecord_Load);
-            this.Shown += new System.EventHandler(this.frmNewClinicalRecord_Shown);
+            this.TitleText = "Consulta de expedientes clínicos";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQueryClinicalRecords_FormClosing);
+            this.Load += new System.EventHandler(this.frmQueryClinicalRecords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
             this.superTabControlPanel1.ResumeLayout(false);
@@ -3656,7 +3784,7 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelX labelX58;
         private DevComponents.DotNetBar.SwitchButtonItem switchButtonItem1;
         private DevComponents.DotNetBar.ButtonX cmdSave;
-        private DevComponents.DotNetBar.ButtonX cmdCancel;
+        private DevComponents.DotNetBar.ButtonX cmdReturnCancel;
         private DevComponents.DotNetBar.LabelX lblFolio;
         private DevComponents.DotNetBar.Controls.TextBoxX txtFirstLastName;
         private DevComponents.DotNetBar.LabelX labelX65;
@@ -3670,5 +3798,11 @@ namespace SAICP
         private DevComponents.Editors.ComboItem eight;
         private DevComponents.Editors.ComboItem nine;
         private DevComponents.Editors.ComboItem ten;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbSearchBy;
+        private DevComponents.Editors.ComboItem byFolio;
+        private DevComponents.Editors.ComboItem byName;
+        private DevComponents.DotNetBar.LabelX labelX64;
+        private System.Windows.Forms.TextBox txtSearchBy;
+        private DevComponents.DotNetBar.ButtonX cmdSearch;
     }
 }

@@ -606,7 +606,16 @@ namespace SAICP
          */
         private void swtCephalicSupport_ValueChanged(object sender, EventArgs e)
         {
-
+            if (swtCephalicSupport.Value)
+            {
+                txtAgeCephalicSupportStarts.Enabled = true;
+                txtAgeCephalicSupportStarts.Focus();
+            }
+            else
+            {
+                txtAgeCephalicSupportStarts.Enabled = false;
+                txtAgeCephalicSupportStarts.Clear();
+            }
         }
 
         /*
@@ -973,7 +982,7 @@ namespace SAICP
             {
                 lblFolio.Text = "   Folio: " + folio.GetFolio();
 
-                MessageBox.Show("NDA"); // 75%
+                // 75%
 
                 connection.Open();
 
