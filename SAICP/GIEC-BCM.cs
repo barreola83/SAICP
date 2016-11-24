@@ -41,5 +41,23 @@ namespace SAICP
                 windowMenu.Show();
             }
         }
+
+        private void dataGridViewX1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmPatientData windowPatientData = new frmPatientData(windowMenu);
+
+            Hide();
+            windowPatientData.Show();
+        }
+
+        private void cmdSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

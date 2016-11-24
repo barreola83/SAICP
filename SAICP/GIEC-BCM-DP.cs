@@ -9,42 +9,38 @@ using DevComponents.DotNetBar;
 
 namespace SAICP
 {
-    public partial class frmNewMedicalQuery : DevComponents.DotNetBar.Metro.MetroForm
+    public partial class frmPatientData : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
-
-        public frmNewMedicalQuery(frmMain windowMenu)
+        
+        public frmPatientData(frmMain windowMenu)
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
         }
 
-        private void frmNewMedicalQuery_Load(object sender, EventArgs e)
+        private void frmQueryMedicalQuerysPatientData_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
         }
 
-        private void frmNewMedicalQuery_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmPatientData_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            if (MessageBox.Show("¿Seguro que desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 e.Cancel = true;
-            else
-            {
-                Hide();
-                windowMenu.Show();
-            }
-        }
+            else {
+                frmQueryMedicalQuerys windowQueryMedicalQuerys = new frmQueryMedicalQuerys(windowMenu);
 
-        private void cmdCancel_Click(object sender, EventArgs e)
-        {
-            Close();
+                Hide();
+                windowQueryMedicalQuerys.Show();
+            }
         }
     }
 }

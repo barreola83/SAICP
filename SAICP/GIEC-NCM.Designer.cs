@@ -1133,6 +1133,7 @@ namespace SAICP
             this.cmdCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdCancel.TabIndex = 2;
             this.cmdCancel.Text = "Cancelar";
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
             // cmdSave
             // 

@@ -41,5 +41,12 @@ namespace SAICP
                 windowMenu.Show();
             }
         }
+
+        private void cmdBack_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
     }
 }

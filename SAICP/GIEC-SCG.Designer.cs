@@ -61,7 +61,6 @@ namespace SAICP
             DevComponents.DotNetBar.Charts.Style.Padding padding3 = new DevComponents.DotNetBar.Charts.Style.Padding();
             DevComponents.DotNetBar.Charts.Style.Padding padding4 = new DevComponents.DotNetBar.Charts.Style.Padding();
             DevComponents.DotNetBar.Charts.ChartTitle chartTitle1 = new DevComponents.DotNetBar.Charts.ChartTitle();
-            DevComponents.DotNetBar.Charts.Style.Padding padding5 = new DevComponents.DotNetBar.Charts.Style.Padding();
             DevComponents.DotNetBar.Charts.Style.Background background6 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.Background background7 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.Background background8 = new DevComponents.DotNetBar.Charts.Style.Background();
@@ -163,7 +162,7 @@ namespace SAICP
             chartSeries1.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
             chartSeries1.CrosshairHighlightPoints = DevComponents.DotNetBar.Charts.Style.Tbool.True;
             chartSeries1.EmptyValues = null;
-            chartSeries1.Name = "Weight";
+            chartSeries1.Name = "Peso";
             seriesPoint1.ValueX = 0D;
             seriesPoint1.ValueY = new object[] {
         ((object)(31D))};
@@ -207,7 +206,8 @@ namespace SAICP
             chartSeries1.SeriesType = DevComponents.DotNetBar.Charts.SeriesType.Line;
             chartSeries2.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
             chartSeries2.EmptyValues = null;
-            chartSeries2.Name = "Size";
+            chartSeries2.Name = "Talla";
+            chartSeries2.StepLines = DevComponents.DotNetBar.Charts.StepLines.Horizontal;
             chartSeries3.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
             chartSeries3.EmptyValues = null;
             chartSeries3.Name = "Perímetro cefálico";
@@ -290,16 +290,11 @@ namespace SAICP
             chartXy1.Legend.Placement = DevComponents.DotNetBar.Charts.Placement.Outside;
             chartXy1.Legend.Visible = true;
             chartXy1.Name = "ChartXy1";
-            chartTitle1.ChartTitleVisualStyle.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.MiddleCenter;
-            chartTitle1.ChartTitleVisualStyle.Font = new System.Drawing.Font("Georgia", 16F);
-            padding5.Bottom = 8;
-            padding5.Left = 8;
-            padding5.Right = 8;
-            padding5.Top = 8;
-            chartTitle1.ChartTitleVisualStyle.Padding = padding5;
-            chartTitle1.ChartTitleVisualStyle.TextColor = System.Drawing.Color.Navy;
-            chartTitle1.Name = "Title1";
-            chartTitle1.Text = "Chart Title";
+            chartTitle1.ChartTitleVisualStyle.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.TopCenter;
+            chartTitle1.ChartTitleVisualStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartTitle1.ChartTitleVisualStyle.TextColor = System.Drawing.Color.Black;
+            chartTitle1.Name = "Name";
+            chartTitle1.Text = "Juan David Perez Hernandez                               JPH230910M41";
             chartTitle1.XyAlignment = DevComponents.DotNetBar.Charts.XyAlignment.Top;
             chartXy1.Titles.Add(chartTitle1);
             this.chartControl1.ChartPanel.ChartContainers.Add(chartXy1);
@@ -334,12 +329,13 @@ namespace SAICP
             this.cmdBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cmdBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdBack.Location = new System.Drawing.Point(538, 345);
+            this.cmdBack.Location = new System.Drawing.Point(529, 345);
             this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(75, 23);
+            this.cmdBack.Size = new System.Drawing.Size(84, 23);
             this.cmdBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdBack.TabIndex = 3;
             this.cmdBack.Text = "Regresar";
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
             // frmClinicalGraphicTracing
             // 

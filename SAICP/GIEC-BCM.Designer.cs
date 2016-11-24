@@ -32,6 +32,12 @@ namespace SAICP
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQueryMedicalQuerys));
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
+            this.metroStatusBar1 = new DevComponents.DotNetBar.Metro.MetroStatusBar();
+            this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
+            this.progressBarItem2 = new DevComponents.DotNetBar.ProgressBarItem();
+            this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
+            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
+            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
             this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
             this.lblBlank = new DevComponents.DotNetBar.LabelItem();
@@ -45,7 +51,9 @@ namespace SAICP
             this.cmdSearch = new DevComponents.DotNetBar.ButtonX();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Patient_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
+            this.statusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +64,7 @@ namespace SAICP
             // 
             this.statusBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.statusBar.ContainerControlProcessDialogKey = true;
+            this.statusBar.Controls.Add(this.metroStatusBar1);
             this.statusBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusBar.DragDropSupport = true;
             this.statusBar.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,8 +76,61 @@ namespace SAICP
             this.lblHour});
             this.statusBar.Location = new System.Drawing.Point(0, 289);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(584, 22);
+            this.statusBar.Size = new System.Drawing.Size(724, 22);
             this.statusBar.TabIndex = 0;
+            // 
+            // metroStatusBar1
+            // 
+            // 
+            // 
+            // 
+            this.metroStatusBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroStatusBar1.ContainerControlProcessDialogKey = true;
+            this.metroStatusBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.metroStatusBar1.DragDropSupport = true;
+            this.metroStatusBar1.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroStatusBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.labelItem1,
+            this.progressBarItem2,
+            this.labelItem2,
+            this.labelItem3,
+            this.labelItem4});
+            this.metroStatusBar1.Location = new System.Drawing.Point(0, 0);
+            this.metroStatusBar1.Name = "metroStatusBar1";
+            this.metroStatusBar1.Size = new System.Drawing.Size(724, 22);
+            this.metroStatusBar1.TabIndex = 1;
+            // 
+            // labelItem1
+            // 
+            this.labelItem1.Name = "labelItem1";
+            this.labelItem1.Text = "Listo";
+            // 
+            // progressBarItem2
+            // 
+            // 
+            // 
+            // 
+            this.progressBarItem2.BackStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.progressBarItem2.ChunkGradientAngle = 0F;
+            this.progressBarItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
+            this.progressBarItem2.Name = "progressBarItem2";
+            this.progressBarItem2.RecentlyUsed = false;
+            this.progressBarItem2.Visible = false;
+            // 
+            // labelItem2
+            // 
+            this.labelItem2.Name = "labelItem2";
+            this.labelItem2.Stretch = true;
+            // 
+            // labelItem3
+            // 
+            this.labelItem3.Name = "labelItem3";
+            this.labelItem3.Text = "Fecha";
+            // 
+            // labelItem4
+            // 
+            this.labelItem4.Name = "labelItem4";
+            this.labelItem4.Text = "Hora";
             // 
             // lblMessage
             // 
@@ -181,7 +243,7 @@ namespace SAICP
             this.cmdSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cmdSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSearch.Location = new System.Drawing.Point(497, 260);
+            this.cmdSearch.Location = new System.Drawing.Point(637, 260);
             this.cmdSearch.Name = "cmdSearch";
             this.cmdSearch.Size = new System.Drawing.Size(75, 23);
             this.cmdSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -192,7 +254,8 @@ namespace SAICP
             // 
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Patient_Name});
+            this.Patient_Name,
+            this.Folio});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,32 +267,40 @@ namespace SAICP
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(270, 12);
             this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.Size = new System.Drawing.Size(302, 242);
+            this.dataGridViewX1.Size = new System.Drawing.Size(442, 242);
             this.dataGridViewX1.TabIndex = 6;
+            this.dataGridViewX1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewX1_CellDoubleClick);
             // 
             // Patient_Name
             // 
             this.Patient_Name.HeaderText = "Nombre del paciente";
             this.Patient_Name.Name = "Patient_Name";
-            this.Patient_Name.Width = 259;
+            this.Patient_Name.Width = 245;
+            // 
+            // Folio
+            // 
+            this.Folio.HeaderText = "Folio";
+            this.Folio.Name = "Folio";
+            this.Folio.Width = 154;
             // 
             // cmdCancel
             // 
             this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cmdCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCancel.Location = new System.Drawing.Point(396, 260);
+            this.cmdCancel.Location = new System.Drawing.Point(538, 260);
             this.cmdCancel.Name = "cmdCancel";
             this.cmdCancel.Size = new System.Drawing.Size(75, 23);
             this.cmdCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdCancel.TabIndex = 7;
             this.cmdCancel.Text = "Cancelar";
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
             // frmQueryMedicalQuerys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 311);
+            this.ClientSize = new System.Drawing.Size(724, 311);
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.dataGridViewX1);
             this.Controls.Add(this.cmdSearch);
@@ -246,6 +317,7 @@ namespace SAICP
             this.Text = "Búsqueda de consultas médicas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQueryMedicalQuerys_FormClosing);
             this.Load += new System.EventHandler(this.frmQueryMedicalQuerys_Load);
+            this.statusBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -269,5 +341,12 @@ namespace SAICP
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private DevComponents.DotNetBar.ButtonX cmdCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Patient_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Folio;
+        private DevComponents.DotNetBar.Metro.MetroStatusBar metroStatusBar1;
+        private DevComponents.DotNetBar.LabelItem labelItem1;
+        private DevComponents.DotNetBar.ProgressBarItem progressBarItem2;
+        private DevComponents.DotNetBar.LabelItem labelItem2;
+        private DevComponents.DotNetBar.LabelItem labelItem3;
+        private DevComponents.DotNetBar.LabelItem labelItem4;
     }
 }
