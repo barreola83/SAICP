@@ -36,7 +36,8 @@ namespace SAICP
             this.lblDate = new DevComponents.DotNetBar.LabelItem();
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cmdBCMDP_Return = new DevComponents.DotNetBar.ButtonX();
+            this.cmdBCMDP_Cancel = new DevComponents.DotNetBar.ButtonX();
+            this.cmdBCMDP_Save = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // txtPatient_Data
@@ -115,28 +116,42 @@ namespace SAICP
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // cmdBCMDP_Return
+            // cmdBCMDP_Cancel
             // 
-            this.cmdBCMDP_Return.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdBCMDP_Return.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdBCMDP_Return.Location = new System.Drawing.Point(538, 439);
-            this.cmdBCMDP_Return.Name = "cmdBCMDP_Return";
-            this.cmdBCMDP_Return.Size = new System.Drawing.Size(75, 24);
-            this.cmdBCMDP_Return.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmdBCMDP_Return.TabIndex = 2;
-            this.cmdBCMDP_Return.Text = "Regresar";
-            this.cmdBCMDP_Return.Click += new System.EventHandler(this.cmdBCM_Back_Click);
+            this.cmdBCMDP_Cancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdBCMDP_Cancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdBCMDP_Cancel.Location = new System.Drawing.Point(427, 439);
+            this.cmdBCMDP_Cancel.Name = "cmdBCMDP_Cancel";
+            this.cmdBCMDP_Cancel.Size = new System.Drawing.Size(75, 24);
+            this.cmdBCMDP_Cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdBCMDP_Cancel.TabIndex = 2;
+            this.cmdBCMDP_Cancel.Text = "Cancelar";
+            this.cmdBCMDP_Cancel.Click += new System.EventHandler(this.cmdBCM_Back_Click);
+            // 
+            // cmdBCMDP_Save
+            // 
+            this.cmdBCMDP_Save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdBCMDP_Save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdBCMDP_Save.Location = new System.Drawing.Point(538, 439);
+            this.cmdBCMDP_Save.Name = "cmdBCMDP_Save";
+            this.cmdBCMDP_Save.Size = new System.Drawing.Size(75, 24);
+            this.cmdBCMDP_Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdBCMDP_Save.TabIndex = 3;
+            this.cmdBCMDP_Save.Text = "Guardar";
+            this.cmdBCMDP_Save.Click += new System.EventHandler(this.cmdBCMDP_Save_Click);
             // 
             // frmPatientData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 491);
-            this.Controls.Add(this.cmdBCMDP_Return);
+            this.Controls.Add(this.cmdBCMDP_Save);
+            this.Controls.Add(this.cmdBCMDP_Cancel);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.txtPatient_Data);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmPatientData";
             this.Text = "Datos del paciente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPatientData_FormClosing);
@@ -155,6 +170,7 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem lblDate;
         private DevComponents.DotNetBar.LabelItem lblHour;
         private System.Windows.Forms.Timer timer1;
-        private DevComponents.DotNetBar.ButtonX cmdBCMDP_Return;
+        private DevComponents.DotNetBar.ButtonX cmdBCMDP_Cancel;
+        private DevComponents.DotNetBar.ButtonX cmdBCMDP_Save;
     }
 }
