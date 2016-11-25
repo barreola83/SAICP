@@ -36,6 +36,7 @@ namespace SAICP
             this.lblDate = new DevComponents.DotNetBar.LabelItem();
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cmdBCMDP_Return = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // txtPatient_Data
@@ -73,7 +74,7 @@ namespace SAICP
             this.lblBlank,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 439);
+            this.statusBar.Location = new System.Drawing.Point(0, 469);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(625, 22);
             this.statusBar.TabIndex = 1;
@@ -114,11 +115,24 @@ namespace SAICP
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cmdBCMDP_Return
+            // 
+            this.cmdBCMDP_Return.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdBCMDP_Return.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdBCMDP_Return.Location = new System.Drawing.Point(538, 439);
+            this.cmdBCMDP_Return.Name = "cmdBCMDP_Return";
+            this.cmdBCMDP_Return.Size = new System.Drawing.Size(75, 24);
+            this.cmdBCMDP_Return.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdBCMDP_Return.TabIndex = 2;
+            this.cmdBCMDP_Return.Text = "Regresar";
+            this.cmdBCMDP_Return.Click += new System.EventHandler(this.cmdBCM_Back_Click);
+            // 
             // frmPatientData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 461);
+            this.ClientSize = new System.Drawing.Size(625, 491);
+            this.Controls.Add(this.cmdBCMDP_Return);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.txtPatient_Data);
             this.DoubleBuffered = true;
@@ -141,5 +155,6 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem lblDate;
         private DevComponents.DotNetBar.LabelItem lblHour;
         private System.Windows.Forms.Timer timer1;
+        private DevComponents.DotNetBar.ButtonX cmdBCMDP_Return;
     }
 }

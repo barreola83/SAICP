@@ -42,5 +42,15 @@ namespace SAICP
                 windowQueryMedicalQuerys.Show();
             }
         }
+
+        private void cmdBCM_Back_Click(object sender, EventArgs e)
+        {
+            frmQueryMedicalQuerys windowQueryMedicalQuerys = new frmQueryMedicalQuerys(windowMenu);
+            if (MessageBox.Show("¿Seguro que desea salir?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) { 
+                Hide();
+                windowQueryMedicalQuerys.Show();
+            }
+            else{}
+        }
     }
 }
