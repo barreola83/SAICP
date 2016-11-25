@@ -198,7 +198,7 @@ namespace SAICP
             // 
             // 
             this.mnuQueryMedicalQuerys.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.mnuQueryMedicalQuerys.TitleText = "Búsqueda de consulas médicas";
+            this.mnuQueryMedicalQuerys.TitleText = "Búsqueda de consultas médicas";
             this.mnuQueryMedicalQuerys.TitleTextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.mnuQueryMedicalQuerys.Click += new System.EventHandler(this.mnuQueryMedicalQuerys_Click);
             // 

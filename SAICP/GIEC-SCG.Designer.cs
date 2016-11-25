@@ -89,6 +89,12 @@ namespace SAICP
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.cmdBack = new DevComponents.DotNetBar.ButtonX();
             this.chartControl1 = new DevComponents.DotNetBar.Charts.ChartControl();
+            this.cmdSearch = new DevComponents.DotNetBar.ButtonX();
+            this.txtSearchBy = new System.Windows.Forms.TextBox();
+            this.labelX64 = new DevComponents.DotNetBar.LabelX();
+            this.cmbSearchBy = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.byFolio = new DevComponents.Editors.ComboItem();
+            this.byName = new DevComponents.Editors.ComboItem();
             this.SuspendLayout();
             // 
             // statusBar
@@ -107,7 +113,7 @@ namespace SAICP
             this.lblBlank,
             this.lblDate,
             this.lblHour});
-            this.statusBar.Location = new System.Drawing.Point(0, 374);
+            this.statusBar.Location = new System.Drawing.Point(0, 418);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(625, 22);
             this.statusBar.TabIndex = 0;
@@ -154,7 +160,7 @@ namespace SAICP
             this.cmdBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.cmdBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdBack.Location = new System.Drawing.Point(529, 345);
+            this.cmdBack.Location = new System.Drawing.Point(523, 387);
             this.cmdBack.Name = "cmdBack";
             this.cmdBack.Size = new System.Drawing.Size(84, 23);
             this.cmdBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -385,17 +391,87 @@ namespace SAICP
             this.chartControl1.DefaultVisualStyles.VScrollBarVisualStyles.SelectedMouseOver.ThumbBackground = background13;
             this.chartControl1.ForeColor = System.Drawing.Color.Black;
             this.chartControl1.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.chartControl1.Location = new System.Drawing.Point(12, 12);
+            this.chartControl1.Location = new System.Drawing.Point(12, 54);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.Size = new System.Drawing.Size(601, 327);
             this.chartControl1.TabIndex = 4;
             this.chartControl1.Text = "chartControl1";
             // 
+            // cmdSearch
+            // 
+            this.cmdSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdSearch.AutoSize = true;
+            this.cmdSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.cmdSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSearch.Location = new System.Drawing.Point(473, 21);
+            this.cmdSearch.Name = "cmdSearch";
+            this.cmdSearch.Size = new System.Drawing.Size(75, 28);
+            this.cmdSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdSearch.TabIndex = 78;
+            this.cmdSearch.Text = "Buscar";
+            // 
+            // txtSearchBy
+            // 
+            this.txtSearchBy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtSearchBy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtSearchBy.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBy.Location = new System.Drawing.Point(288, 21);
+            this.txtSearchBy.MaxLength = 12;
+            this.txtSearchBy.Name = "txtSearchBy";
+            this.txtSearchBy.Size = new System.Drawing.Size(179, 27);
+            this.txtSearchBy.TabIndex = 77;
+            // 
+            // labelX64
+            // 
+            this.labelX64.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX64.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX64.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX64.Location = new System.Drawing.Point(74, 21);
+            this.labelX64.Name = "labelX64";
+            this.labelX64.Size = new System.Drawing.Size(81, 24);
+            this.labelX64.TabIndex = 76;
+            this.labelX64.Text = "Buscar por:";
+            // 
+            // cmbSearchBy
+            // 
+            this.cmbSearchBy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbSearchBy.DisplayMember = "Text";
+            this.cmbSearchBy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbSearchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSearchBy.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSearchBy.ForeColor = System.Drawing.Color.Black;
+            this.cmbSearchBy.FormattingEnabled = true;
+            this.cmbSearchBy.ItemHeight = 20;
+            this.cmbSearchBy.Items.AddRange(new object[] {
+            this.byFolio,
+            this.byName});
+            this.cmbSearchBy.Location = new System.Drawing.Point(161, 21);
+            this.cmbSearchBy.Name = "cmbSearchBy";
+            this.cmbSearchBy.Size = new System.Drawing.Size(121, 26);
+            this.cmbSearchBy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbSearchBy.TabIndex = 75;
+            // 
+            // byFolio
+            // 
+            this.byFolio.Text = "Folio";
+            // 
+            // byName
+            // 
+            this.byName.Text = "Nombre";
+            // 
             // frmClinicalGraphicTracing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 396);
+            this.ClientSize = new System.Drawing.Size(625, 440);
+            this.Controls.Add(this.cmdSearch);
+            this.Controls.Add(this.txtSearchBy);
+            this.Controls.Add(this.labelX64);
+            this.Controls.Add(this.cmbSearchBy);
             this.Controls.Add(this.chartControl1);
             this.Controls.Add(this.cmdBack);
             this.Controls.Add(this.statusBar);
@@ -408,6 +484,7 @@ namespace SAICP
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmClinicalGraphicTracing_FormClosing);
             this.Load += new System.EventHandler(this.frmClinicalGraphicTracing_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -422,5 +499,11 @@ namespace SAICP
         private System.Windows.Forms.Timer timer;
         private DevComponents.DotNetBar.ButtonX cmdBack;
         private DevComponents.DotNetBar.Charts.ChartControl chartControl1;
+        private DevComponents.DotNetBar.ButtonX cmdSearch;
+        private System.Windows.Forms.TextBox txtSearchBy;
+        private DevComponents.DotNetBar.LabelX labelX64;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbSearchBy;
+        private DevComponents.Editors.ComboItem byFolio;
+        private DevComponents.Editors.ComboItem byName;
     }
 }
