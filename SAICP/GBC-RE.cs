@@ -14,7 +14,9 @@ namespace SAICP
     public partial class frmNewExpenseRecord : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
-        bool dateSelected = false;
+        private bool dateSelected = false;
+        private bool FormClosingAfterSaving = false;
+
         public frmNewExpenseRecord(frmMain windowMenu)
         {
             InitializeComponent();
@@ -27,6 +29,8 @@ namespace SAICP
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+
+            cldDate.SelectedDate = DateTime.Today.Date;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -42,14 +46,15 @@ namespace SAICP
 
         private void frmNewExpenseRecord_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (!FormClosingAfterSaving)
             {
-                Hide();
-                windowMenu.Show();
-            }
-            else
-            {
-                e.Cancel = true;
+                if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Hide();
+                    windowMenu.Show();
+                }
+                else
+                    e.Cancel = true;
             }
         }
 
@@ -60,8 +65,8 @@ namespace SAICP
                 MessageBox.Show("Debe llenar los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }else
             {
-                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
-                SqlCommand command = new SqlCommand("INSERT INTO expenditures VALUES(@date, @description, @amount, @supplier)", connection);
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("INSERT INTO expenditures VALUES(@date, @description, @amount, @supplier);", connection);
 
                 command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
                 command.Parameters.AddWithValue("@description", txtDescription.Text);
@@ -76,6 +81,10 @@ namespace SAICP
                 txtPrice.Clear();
                 txtSupplier.Clear();
                 cldDate.SelectedDate = cldDate.TodayDate;
+
+                FormClosingAfterSaving = true;
+
+                MessageBox.Show("Egreso registrado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (MessageBox.Show("¿Desea registrar otro egreso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
