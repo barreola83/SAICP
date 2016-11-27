@@ -119,8 +119,10 @@ namespace SAICP
             // 
             this.cldDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cldDate.ContainerControlProcessDialogKey = true;
+            this.cldDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cldDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
             this.cldDate.Location = new System.Drawing.Point(208, 36);
+            this.cldDate.MaxSelectionCount = 1;
             this.cldDate.Name = "cldDate";
             // 
             // 
@@ -196,6 +198,7 @@ namespace SAICP
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(216, 193);
             this.btnCancel.Name = "btnCancel";
@@ -210,6 +213,7 @@ namespace SAICP
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(297, 193);
             this.btnSave.Name = "btnSave";
@@ -221,6 +225,7 @@ namespace SAICP
             // 
             // cmbDateNumber
             // 
+            this.cmbDateNumber.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDateNumber.DisplayMember = "Text";
             this.cmbDateNumber.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbDateNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

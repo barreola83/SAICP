@@ -15,7 +15,8 @@ namespace SAICP
     public partial class frmNewEarningRecord : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
-        bool dateSelected = false;
+        private bool dateSelected = false;
+        private bool FormClosingAfterSaving = false;
 
         public frmNewEarningRecord(frmMain windowMenu)
         {
@@ -29,6 +30,8 @@ namespace SAICP
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+
+            cldDate.SelectedDate = DateTime.Today;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -44,14 +47,15 @@ namespace SAICP
 
         private void frmNewEarningRecord_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (!FormClosingAfterSaving)
             {
-                Hide();
-                windowMenu.Show();
-            }
-            else
-            {
-                e.Cancel = true;
+                if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Hide();
+                    windowMenu.Show();
+                }
+                else
+                    e.Cancel = true;
             }
         }
 
@@ -73,19 +77,28 @@ namespace SAICP
             }
             else
             {
-                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
-                SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount)", connection);
-                SqlCommand commandToModify = new SqlCommand("UPDATE medical_querys SET medical_query_registered = 1 WHERE folio = @" + cmbDateNumber.SelectedItem.ToString(), connection);
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount);", connection);
+                SqlCommand commandToModify = new SqlCommand("UPDATE medical_querys SET medical_query_registered = 1 WHERE ID=@ID;", connection);
+
                 command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
-                command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.SelectedItem.ToString());
-                command.Parameters.AddWithValue("@amount", int.Parse(txtPrice.Text));
+                command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.GetItemText(cmbDateNumber.SelectedItem));
+                command.Parameters.AddWithValue("@amount", txtPrice.Text);
+                
+                commandToModify.Parameters.AddWithValue("@ID", cmbDateNumber.GetItemText(cmbDateNumber.SelectedItem));
 
                 connection.Open();
+
                 command.ExecuteNonQuery();
                 commandToModify.ExecuteNonQuery();
+
                 connection.Close();
 
-                if (MessageBox.Show("¿Desea registrar otro egreso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                FormClosingAfterSaving = true;
+
+                MessageBox.Show("Ingreso guardado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (MessageBox.Show("¿Desea registrar otro ingreso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     frmNewEarningRecord windowNewEarningRecord = new frmNewEarningRecord(windowMenu);
                     Hide();
@@ -104,20 +117,20 @@ namespace SAICP
         private void cldDate_DateSelected(object sender, DateRangeEventArgs e)
         {
             dateSelected = true;
-            getFolio();
+            getMedicalQueryID();
         }
 
-        public void getFolio()
+        public void getMedicalQueryID()
         {
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand command = new SqlCommand("SELECT folio FROM medical_querys WHERE medical_query_registered = 0", connection);
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT ID FROM medical_querys WHERE medical_query_registered=0;", connection);
             connection.Open();
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
-            cmbDateNumber.DisplayMember = "folio";
+            cmbDateNumber.DisplayMember = "ID";
             cmbDateNumber.DataSource = dataTable;
-            cmbDateNumber.ValueMember = "folio";
+            cmbDateNumber.ValueMember = "ID";
             connection.Close();
         }
     }
