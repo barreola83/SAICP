@@ -298,7 +298,7 @@ namespace SAICP
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNewExpenseRecord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "Registro de egresos por concepto de citas";
+            this.TitleText = "Registro de egresos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewExpenseRecord_FormClosing);
             this.Load += new System.EventHandler(this.frmNewExpenseRecord_Load);
             this.ResumeLayout(false);

@@ -25,6 +25,8 @@ namespace SAICP
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+
+            cldDate.SelectedDate = DateTime.Today.Date;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -70,7 +72,7 @@ namespace SAICP
 
                 while (reader.Read())
                 {
-                    string[] data = { reader["ID_medical_query"].ToString(), "$ " + reader["amount"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).ToString("d") };
+                    string[] data = { reader["ID_medical_query"].ToString(), "$ " + reader.GetSqlMoney(reader.GetOrdinal("amount")).ToString(), reader.GetDateTime(reader.GetOrdinal("date")).ToString("d") };
                     dgvData.Rows.Add(data);
                 }
             }
