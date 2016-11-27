@@ -13,7 +13,9 @@ namespace SAICP
     public partial class frmNewMedicalDate : DevComponents.DotNetBar.Metro.MetroForm
     {
         private frmMain windowMenu;
-        Boolean dateSelected = false;
+        private List<PacientData> pacientsNameList = new List<PacientData>();
+        private bool dateSelected = false;
+        private bool FormClosingAfterSave = false;
 
         public frmNewMedicalDate(frmMain windowMenu)
         {
@@ -26,6 +28,10 @@ namespace SAICP
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
+
+            cldDate.SelectedDate = DateTime.Today.Date;
+
+            SetAutoCompleteCustomSourceByName();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -36,14 +42,15 @@ namespace SAICP
 
         private void frmNewMedicalDate_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (!FormClosingAfterSave)
             {
-                Hide();
-                windowMenu.Show();
-            }
-            else
-            {
-                e.Cancel = true;
+                if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Hide();
+                    windowMenu.Show();
+                }
+                else
+                    e.Cancel = true;
             }
         }
 
@@ -54,27 +61,59 @@ namespace SAICP
 
         private void txtFullName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsLetter(e.KeyChar) ? true : false;
+            if (Char.IsLetter(e.KeyChar) || Char.IsControl(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar))
+            {
+                if (txtFullName.Text.Length == 0 || txtFullName.Text.Substring(txtFullName.Text.Length - 1) == " ")
+                    e.KeyChar = Char.ToUpper(e.KeyChar);
+            }
+            else
+                e.Handled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(txtFullName.Text == "" || tmsSelectHour.SelectedTime == TimeSpan.Zero || dateSelected == false)
+            if (txtFullName.Text == "" || tmsSelectHour.SelectedTime == TimeSpan.Zero || dateSelected == false)
             {
                 MessageBox.Show("Ingrese los datos correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SAICP-Database;Integrated Security=True");
-                SqlCommand command = new SqlCommand("INSERT INTO agenda VALUES (@folio, @date, @time, @name, @contact_phone)", connection);
-                command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("INSERT INTO agenda VALUES (@date, @time, @name, @contact_phone, @folio);", connection);
+
+                if (txtFullName.AutoCompleteCustomSource.Contains(txtFullName.Text))
+                    command.Parameters.AddWithValue("@folio", pacientsNameList[txtFullName.AutoCompleteCustomSource.IndexOf(txtFullName.Text)].Folio);
+                else
+                    command.Parameters.AddWithValue("@folio", DBNull.Value);
+
+                command.Parameters.AddWithValue("@date", cldDate.SelectedDate.Date);
                 command.Parameters.AddWithValue("@time", tmsSelectHour.SelectedTime);
                 command.Parameters.AddWithValue("@name", txtFullName.Text);
                 command.Parameters.AddWithValue("@contact_phone", txtPhoneNumber.Text);
 
                 connection.Open();
+
                 command.ExecuteNonQuery();
+
                 connection.Close();
+
+                FormClosingAfterSave = true;
+
+                MessageBox.Show("Cita médica guardada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (MessageBox.Show("¿Desea registrar otra cita?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    frmNewMedicalDate windowNewEarningRecord = new frmNewMedicalDate(windowMenu);
+                    Hide();
+                    windowNewEarningRecord.Show();
+                    Close();
+                }
+                else
+                {
+                    Hide();
+                    Close();
+                    windowMenu.Show();
+                }
             }
         }
 
@@ -82,5 +121,54 @@ namespace SAICP
         {
             dateSelected = true;
         }
+
+        private void SetAutoCompleteCustomSourceByName()
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT folio, name, first_last_name, second_last_name, contact_phone FROM clinical_records;", connection);
+            SqlDataReader reader;
+            AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+            PacientData pacient;
+
+            connection.Open();
+
+            reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    pacient = new PacientData();
+
+                    data.Add(reader["name"].ToString() + " " + reader["first_last_name"].ToString() + " " + reader["second_last_name"].ToString());
+
+                    pacient.Folio = reader["folio"].ToString();
+                    pacient.Name = reader["name"].ToString() + " " + reader["first_last_name"].ToString() + " " + reader["second_last_name"].ToString();
+                    pacient.ContactPhone = reader["contact_phone"].ToString();
+
+                    pacientsNameList.Add(pacient);
+                }
+            }
+
+            connection.Close();
+
+            txtFullName.AutoCompleteCustomSource = data;
+        }
+
+        private void txtFullName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtFullName.AutoCompleteCustomSource.Contains(txtFullName.Text))
+                    txtPhoneNumber.Text = pacientsNameList[txtFullName.AutoCompleteCustomSource.IndexOf(txtFullName.Text)].ContactPhone;
+            }
+        }
+    }
+
+    public class PacientData
+    {
+        public string Folio { get; set; }
+        public string Name { get; set; }
+        public string ContactPhone { get; set; }
     }
 }

@@ -120,8 +120,10 @@ namespace SAICP
             // 
             this.cldDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cldDate.ContainerControlProcessDialogKey = true;
+            this.cldDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cldDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
             this.cldDate.Location = new System.Drawing.Point(12, 167);
+            this.cldDate.MaxSelectionCount = 1;
             this.cldDate.Name = "cldDate";
             // 
             // 
@@ -157,9 +159,12 @@ namespace SAICP
             this.tmsSelectHour.BackgroundStyle.Class = "ItemPanel";
             this.tmsSelectHour.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.tmsSelectHour.ContainerControlProcessDialogKey = true;
+            this.tmsSelectHour.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tmsSelectHour.Location = new System.Drawing.Point(210, 167);
             this.tmsSelectHour.Name = "tmsSelectHour";
-            this.tmsSelectHour.Size = new System.Drawing.Size(252, 190);
+            this.tmsSelectHour.OkButtonVisible = false;
+            this.tmsSelectHour.Size = new System.Drawing.Size(252, 183);
+            this.tmsSelectHour.TimeFormat = DevComponents.Editors.DateTimeAdv.eTimeSelectorFormat.Time24H;
             // 
             // lblSelectTime
             // 
@@ -178,6 +183,7 @@ namespace SAICP
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(97, 318);
             this.btnSave.Name = "btnSave";
@@ -191,6 +197,7 @@ namespace SAICP
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(16, 318);
             this.btnCancel.Name = "btnCancel";
@@ -215,6 +222,8 @@ namespace SAICP
             // 
             // txtFullName
             // 
+            this.txtFullName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtFullName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtFullName.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -230,6 +239,7 @@ namespace SAICP
             this.txtFullName.Size = new System.Drawing.Size(309, 27);
             this.txtFullName.TabIndex = 8;
             this.txtFullName.WatermarkText = "Ingrese el nombre completo del paciente...";
+            this.txtFullName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFullName_KeyDown);
             this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
             // 
             // lblPhoneNumber
