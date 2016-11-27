@@ -120,6 +120,7 @@ namespace SAICP
             // 
             this.cldDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cldDate.ContainerControlProcessDialogKey = true;
+            this.cldDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cldDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
             this.cldDate.Location = new System.Drawing.Point(12, 45);
             this.cldDate.Name = "cldDate";
@@ -156,6 +157,7 @@ namespace SAICP
             this.dgvDateNumber,
             this.dgvPrice,
             this.dgvDate});
+            this.dgvData.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,6 +170,7 @@ namespace SAICP
             this.dgvData.Location = new System.Drawing.Point(203, 16);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
+            this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(343, 211);
             this.dgvData.TabIndex = 3;
             // 
@@ -193,6 +196,7 @@ namespace SAICP
             // 
             this.btnBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(12, 204);
             this.btnBack.Name = "btnBack";

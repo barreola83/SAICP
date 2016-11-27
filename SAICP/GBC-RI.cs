@@ -81,7 +81,7 @@ namespace SAICP
                 SqlCommand command = new SqlCommand("INSERT INTO earnings VALUES (@date, @ID_medical_query, @amount);", connection);
                 SqlCommand commandToModify = new SqlCommand("UPDATE medical_querys SET medical_query_registered = 1 WHERE ID=@ID;", connection);
 
-                command.Parameters.AddWithValue("@date", cldDate.SelectedDate);
+                command.Parameters.AddWithValue("@date", cldDate.SelectedDate.Date);
                 command.Parameters.AddWithValue("@ID_medical_query", cmbDateNumber.GetItemText(cmbDateNumber.SelectedItem));
                 command.Parameters.AddWithValue("@amount", txtPrice.Text);
                 
