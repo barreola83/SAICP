@@ -24,6 +24,7 @@ namespace SAICP
         private frmMain windowMenu;
         private List<SearchByFolio> foliosList;
         private List<SearchByName> namesList;
+        private int selectedID;
 
         /*
          * Constructor de la clase frmNewClinicalRecord
@@ -40,6 +41,8 @@ namespace SAICP
         private void frmQueryClinicalRecords_Load(object sender, EventArgs e)
         {
             folio = new Folio();
+            foliosList = new List<SearchByFolio>();
+            namesList = new List<SearchByName>();
 
             formState = State.Search;
 
@@ -53,8 +56,6 @@ namespace SAICP
             cmbPaternalHemotype.SelectedIndex = 0;
             cmbPacientBirthForm.SelectedIndex = 0;
             cmbPacientApgarEvaluation.SelectedIndex = 0;
-
-            clnDateBirth.SelectedDate = DateTime.Today;
 
             lblFolio.Text = "   Folio: ";
 
@@ -85,7 +86,7 @@ namespace SAICP
                 else
                     windowMenu.Show();
             }
-            else
+            else if (formState == State.Modify)
             {
                 if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                     e.Cancel = true;
@@ -99,7 +100,30 @@ namespace SAICP
          */
         private void cmdReturnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            if (formState == State.Modify)
+            {
+                if (MessageBox.Show("¿Seguro que desea cancelar? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Search();
+
+                    EnableComponents(false);
+
+                    cmbSearchBy.Enabled = true;
+                    cmdSearch.Enabled = true;
+
+                    cmdModifySave.Text = "Modificar";
+
+                    cmdReturnCancel.Text = "Regresar";
+
+                    cmbSearchBy.Enabled = true;
+                    txtSearchBy.Enabled = true;
+                    cmdSearch.Enabled = true;
+
+                    formState = State.Search;
+                }
+            }
+            else
+                Close();
         }
 
         /*
@@ -926,102 +950,127 @@ namespace SAICP
         /*
          * Este método se ejecuta cuando se de click sobre el botón para guardar
          */
-        private void cmdSave_Click(object sender, EventArgs e)
+        private void cmdModifySave_Click(object sender, EventArgs e)
         {
-            // Declarar las variables aqui
-            string buildInsertCommand = @"INSERT INTO clinical_records VALUES (
-            @folio,
-            @official_consent,
-            @photo,
-            @name,
-            @first_last_name,
-            @second_last_name,
-            @birth_place,
-            @father_name,
-            @home_address,
-            @contact_phone,
-            @date_birth,
-            @sex,
-            @family_hereditary_antecedents,
-            @mother_age,
-            @mother_number_of_pregnancies,
-            @mother_number_of_prenatal_querys,
-            @maternal_hemotype,
-            @paternal_hemotype,
-            @mother_risks_pregnancy,
-            @mother_treatments,
-            @mother_drug_addictions,
-            @mother_allergies,
-            @pacient_gestational_age_at_birth,
-            @pacient_birth_form,
-            @pacient_apgar_evaluation,
-            @pacient_weight,
-            @pacient_size,
-            @pacient_cephalic_perimeter_at_birth,
-            @pacient_birth_complications,
-            @pacient_neonatal_detection,
-            @pacient_allergies,
-            @vaccine_history,
-            @initial_feed,
-            @actual_feed,
-            @hygine_rutines,
-            @age_ablactation_starts,
-            @age_weaning_starts,
-            @previous_diseases,
-            @hospitalization_causes,
-            @trauma_causes,
-            @transfusions_causes,
-            @surgeries_causes,
-            @actual_treatment,
-            @age_cephalic_support_starts,
-            @age_sedestation_starts,
-            @age_bipedestation_starts,
-            @age_wandering_starts,
-            @age_crawl_starts,
-            @age_language_development_starts,
-            @age_sphincter_control_starts,
-            @age_dentation_appears,
-            @problems_in_development
-            );";
-
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand command = new SqlCommand(buildInsertCommand, connection);
-
-            pgrSaving.Visible = true;
-
-            if (ValidateDataAndAsignSqlCommandParameters(command))
+            if (formState == State.Search)
             {
-                lblFolio.Text = "   Folio: " + folio.GetFolio();
-                
-                // 75%
+                formState = State.Modify;
 
-                connection.Open();
+                EnableComponents(true);
 
-                command.ExecuteNonQuery();
+                cmbSearchBy.Enabled = false;
 
-                connection.Close();
+                txtSearchBy.Enabled = false;
 
-                pgrSaving.PerformStep(); // 100%
-                pgrSaving.Visible = false;
-
-                MessageBox.Show("Expediente clínico guardado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                if (MessageBox.Show("¿Desea registrar otro expediente clínico?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    frmNewClinicalRecord windowNewClinicalRecord = new frmNewClinicalRecord(windowMenu);
-                    Hide();
-                    windowNewClinicalRecord.Show();
-                    Close();
-                }
-                else
-                {
-                    Hide();
-                    windowMenu.Show();
-                    Close();
-                }
+                cmdSearch.Enabled = false;
+                cmdModifySave.Text = "Guardar";
+                cmdReturnCancel.Text = "Cancelar";
             }
             else
-                MessageBox.Show("Faltan campos obligatorios por llenar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            {
+                // Declarar las variables aqui
+                string buildUpdateCommandForClinicalRecords = @"UPDATE clinical_records SET
+                folio=@folio,
+                photo=@photo,
+                name=@name,
+                first_last_name=@first_last_name,
+                second_last_name=@second_last_name,
+                birth_place=@birth_place,
+                father_name=@father_name,
+                home_address=@home_address,
+                contact_phone=@contact_phone,
+                date_birth=@date_birth,
+                sex=@sex,
+                family_hereditary_antecedents=@family_hereditary_antecedents,
+                mother_age=@mother_age,
+                mother_number_of_pregnancies=@mother_number_of_pregnancies,
+                mother_number_of_prenatal_querys=@mother_number_of_prenatal_querys,
+                maternal_hemotype=@maternal_hemotype,
+                paternal_hemotype=@paternal_hemotype,
+                mother_risks_pregnancy=@mother_risks_pregnancy,
+                mother_treatments=@mother_treatments,
+                mother_drug_addictions=@mother_drug_addictions,
+                mother_allergies=@mother_allergies,
+                pacient_gestational_age_at_birth=@pacient_gestational_age_at_birth,
+                pacient_birth_form=@pacient_birth_form,
+                pacient_apgar_evaluation=@pacient_apgar_evaluation,
+                pacient_weight=@pacient_weight,
+                pacient_size=@pacient_size,
+                pacient_cephalic_perimeter_at_birth=@pacient_cephalic_perimeter_at_birth,
+                pacient_birth_complications=@pacient_birth_complications,
+                pacient_neonatal_detection=@pacient_neonatal_detection,
+                pacient_allergies=@pacient_allergies,
+                vaccine_history=@vaccine_history,
+                initial_feed=@initial_feed,
+                actual_feed=@actual_feed,
+                hygine_rutines=@hygine_rutines,
+                age_ablactation_starts=@age_ablactation_starts,
+                age_weaning_starts=@age_weaning_starts,
+                previous_diseases=@previous_diseases,
+                hospitalization_causes=@hospitalization_causes,
+                trauma_causes=@trauma_causes,
+                transfusions_causes=@transfusions_causes,
+                surgeries_causes=@surgeries_causes,
+                actual_treatment=@actual_treatment,
+                age_cephalic_support_starts=@age_cephalic_support_starts,
+                age_sedestation_starts=@age_sedestation_starts,
+                age_bipedestation_starts=@age_bipedestation_starts,
+                age_wandering_starts=@age_wandering_starts,
+                age_crawl_starts=@age_crawl_starts,
+                age_language_development_starts=@age_language_development_starts,
+                age_sphincter_control_starts=@age_sphincter_control_starts,
+                age_dentation_appears=@age_dentation_appears,
+                problems_in_development=@problems_in_development
+                WHERE ID=@ID;";
+
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand(buildUpdateCommandForClinicalRecords, connection);
+
+                if (MessageBox.Show("¿Seguro que desea guardar los cambios?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                    return;
+
+                formState = State.Search;
+
+                pgrSaving.Visible = true;
+
+                if (ValidateDataAndAsignSqlCommandParameters(command))
+                {
+                    lblFolio.Text = "   Folio: " + folio.GetFolio();
+
+                    // 75%
+
+                    connection.Open();
+
+                    command.ExecuteNonQuery();
+
+                    // Actualizar registros en la tabla de medical_querys
+                    UpdateMedicalQuerys(connection);
+
+                    // Actualizar registros en la tabla de agenda
+                    UpdateAgenda(connection);
+
+                    connection.Close();
+
+                    pgrSaving.PerformStep(); // 100%
+                    pgrSaving.Visible = false;
+
+                    MessageBox.Show("Expediente clínico guardado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    EnableComponents(false);
+
+                    cmdModifySave.Text = "Modificar";
+
+                    cmdReturnCancel.Text = "Regresar";
+
+                    cmbSearchBy.Enabled = true;
+
+                    txtSearchBy.Enabled = true;
+
+                    cmdSearch.Enabled = true;
+                }
+                else
+                    MessageBox.Show("Faltan campos obligatorios por llenar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         /*
@@ -1030,18 +1079,12 @@ namespace SAICP
         private bool ValidateDataAndAsignSqlCommandParameters(SqlCommand command)
         {
             // Declarar variables aqui
-            FileStream file;
-            StreamReader fileReader;
             MemoryStream photo;
 
-            // Validacion del documento de consentimiento official
-            //file = new FileStream(OfficialConsentPath, FileMode.Open);
-            //fileReader = new StreamReader(file);
-
-            //command.Parameters.AddWithValue("@official_consent", fileReader.ReadToEnd());
-
-            //fileReader.Close();
-            //file.Close();
+            if (foliosList.Count != 0)
+                command.Parameters.AddWithValue("@ID", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].ID);
+            else if (namesList.Count != 0) // --pendiente de revisar
+                command.Parameters.AddWithValue("@ID", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].ID);
 
             // Validacion de la foto
             if (pctPhoto.Image == null)
@@ -1586,31 +1629,33 @@ namespace SAICP
                 command.Parameters.AddWithValue("@problems_in_development", DBNull.Value);
 
             // Validacion del folio
-
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand selectCommand = new SqlCommand("SELECT ID FROM clinical_records WHERE folio=@folio", connection);
-            SqlDataReader reader;
-
-            selectCommand.Parameters.AddWithValue("@folio", folio.GetFolio());
-
-            while (true)
+            if ((foliosList.Count != 0 && folio.GetFolio() != foliosList[selectedID].folio) || (namesList.Count != 0 && folio.GetFolio() != namesList[selectedID].folio))
             {
-                connection.Open();
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand selectCommand = new SqlCommand("SELECT ID FROM clinical_records WHERE folio=@folio", connection);
+                SqlDataReader reader;
 
-                reader = selectCommand.ExecuteReader();
+                selectCommand.Parameters.AddWithValue("@folio", folio.GetFolio());
 
-                if (reader.HasRows)
+                while (true)
                 {
-                    connection.Close();
+                    connection.Open();
 
-                    folio.ChangeLastTwoNumbers();
+                    reader = selectCommand.ExecuteReader();
 
-                    selectCommand.Parameters["@folio"].Value = folio.GetFolio();
-                }
-                else
-                {
-                    connection.Close();
-                    break;
+                    if (reader.HasRows)
+                    {
+                        connection.Close();
+
+                        folio.ChangeLastTwoNumbers();
+
+                        selectCommand.Parameters["@folio"].Value = folio.GetFolio();
+                    }
+                    else
+                    {
+                        connection.Close();
+                        break;
+                    }
                 }
             }
 
@@ -1683,10 +1728,10 @@ namespace SAICP
         /*
          * Este metodo se debe mandar a llamar cuando se desee que el autocompletado sea por nombre
          */
-         private void SetAutoCompleteCustomSourceByName()
+        private void SetAutoCompleteCustomSourceByName()
         {
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand commnad = new SqlCommand("SELECT ID, name, first_last_name, second_last_name FROM clinical_records;", connection);
+            SqlCommand commnad = new SqlCommand("SELECT ID, folio, name, first_last_name, second_last_name FROM clinical_records;", connection);
             SqlDataReader reader;
             AutoCompleteStringCollection data = new AutoCompleteStringCollection();
             SearchByName nameData;
@@ -1706,9 +1751,10 @@ namespace SAICP
                     data.Add(reader["name"].ToString() + " " + reader["first_last_name"].ToString() + " " + reader["second_last_name"].ToString());
 
                     nameData.ID = int.Parse(reader["ID"].ToString());
+                    nameData.folio = reader["folio"].ToString();
                     nameData.Name = reader["name"].ToString();
                     nameData.FirstLastName = reader["first_last_name"].ToString();
-                    nameData.SecondLasName = reader["first_last_name"].ToString();
+                    nameData.SecondLastName = reader["second_last_name"].ToString();
 
                     namesList.Add(nameData);
                 }
@@ -1758,40 +1804,7 @@ namespace SAICP
          */
         private void cmdSearch_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand command;
-            SqlDataReader reader;
-
-            if (txtSearchBy.Text.Length == 0)
-                MessageBox.Show("El campo de busqueda se encuentra vacio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else if (cmbSearchBy.SelectedIndex == 0)
-            {
-                command = new SqlCommand("SELECT * FROM clinical_records WHERE folio=@folio", connection);
-
-                if (txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text) != -1)
-                {
-                    command.Parameters.AddWithValue("@folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
-
-                    connection.Open();
-
-                    reader = command.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        reader.Read();
-                        DisplayData(reader);
-                        MessageBox.Show("Registro encontrado");
-                    }
-
-                    connection.Close();
-                }
-                else
-                    MessageBox.Show("No se encontro el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                command = new SqlCommand("SELECT * FROM clinical_records WHERE name=@name AND first_last_name=@first_last_name AND second_last_name=@second_last_name", connection);
-            }
+            Search();
         }
 
         /*
@@ -1799,10 +1812,31 @@ namespace SAICP
          */
         private void DisplayData(SqlDataReader reader)
         {
+            // Variables
+            MemoryStream photo;
+
             // Mostramos el folio
             lblFolio.Text = "   Folio: " + reader["folio"].ToString();
 
+            // Guardamos el folio internamente
+            folio.NameFirstLetter = reader["folio"].ToString()[0].ToString();
+            folio.FirstLastNameFirstLetter = reader["folio"].ToString()[1].ToString();
+            folio.SecondLastNameFirstLetter = reader["folio"].ToString()[2].ToString();
+            folio.Day = reader["folio"].ToString()[3].ToString() + reader["folio"].ToString()[4].ToString();
+            folio.Month = reader["folio"].ToString()[5].ToString() + reader["folio"].ToString()[6].ToString();
+            folio.Year = reader["folio"].ToString()[7].ToString() + reader["folio"].ToString()[8].ToString();
+            folio.Sex = reader["folio"].ToString()[9].ToString();
+            folio.FirstRandonNumber = reader["folio"].ToString()[10].ToString();
+            folio.SecondRandomNumber = reader["folio"].ToString()[11].ToString();
+
             // Mostramos la foto si es que hay --pendiente
+            if (!reader.IsDBNull(reader.GetOrdinal("photo")))
+            {
+                photo = new MemoryStream((byte[])reader["photo"]);
+                pctPhoto.Image = Image.FromStream(photo);
+            }
+            else
+                pctPhoto.Image = null;
 
             // Mostramos el nombre
             txtName.Text = reader["name"].ToString();
@@ -1826,14 +1860,686 @@ namespace SAICP
             txtContactPhone.Text = reader["contact_phone"].ToString();
 
             // Mostramos la fecha de nacimiento
-            //clnDateBirth.SelectedDate = reader.GetDateTime(reader.GetOrdinal("date_birth"));
-            clnDateBirth.TodayDate = reader.GetDateTime(reader.GetOrdinal("date_birth"));
+            clnDateBirth.SelectedDate = reader.GetDateTime(reader.GetOrdinal("date_birth"));
 
             // Mostramos el sexo
             if (reader["sex"].ToString() == "M")
                 rdbMale.Checked = true;
             else
                 rdbFemale.Checked = true;
+
+            // Mostramos los antecedentes familiares y hereditarios
+            txtFamilyHereditaryAntecedents.Text = reader["family_hereditary_antecedents"].ToString();
+
+            // Mostramos la edad de la madre
+            txtMotherAge.Text = reader["mother_age"].ToString();
+
+            // Mostramos el número de embarazos
+            txtMotherNumberOfPregnancies.Text = reader["mother_number_of_pregnancies"].ToString();
+
+            // Mostramos el número de consultas prenatales
+            txtMotherNumberOfPrenatalQuerys.Text = reader["mother_number_of_prenatal_querys"].ToString();
+
+            // Mostramos el hemotipo materno
+            switch (reader["maternal_hemotype"].ToString())
+            {
+                case "O-":
+                    cmbMaternalHemotype.SelectedIndex = 0;
+                    break;
+
+                case "O+":
+                    cmbMaternalHemotype.SelectedIndex = 1;
+                    break;
+
+                case "A-":
+                    cmbMaternalHemotype.SelectedIndex = 2;
+                    break;
+
+                case "A+":
+                    cmbMaternalHemotype.SelectedIndex = 3;
+                    break;
+
+                case "B-":
+                    cmbMaternalHemotype.SelectedIndex = 4;
+                    break;
+
+                case "B+":
+                    cmbMaternalHemotype.SelectedIndex = 5;
+                    break;
+
+                case "AB-":
+                    cmbMaternalHemotype.SelectedIndex = 6;
+                    break;
+
+                default:
+                    cmbMaternalHemotype.SelectedIndex = 7;
+                    break;
+            }
+
+            // Mostramos el hemotipo paterno
+            switch (reader["paternal_hemotype"].ToString())
+            {
+                case "O-":
+                    cmbPaternalHemotype.SelectedIndex = 0;
+                    break;
+
+                case "O+":
+                    cmbPaternalHemotype.SelectedIndex = 1;
+                    break;
+
+                case "A-":
+                    cmbPaternalHemotype.SelectedIndex = 2;
+                    break;
+
+                case "A+":
+                    cmbPaternalHemotype.SelectedIndex = 3;
+                    break;
+
+                case "B-":
+                    cmbPaternalHemotype.SelectedIndex = 4;
+                    break;
+
+                case "B+":
+                    cmbPaternalHemotype.SelectedIndex = 5;
+                    break;
+
+                case "AB-":
+                    cmbPaternalHemotype.SelectedIndex = 6;
+                    break;
+
+                default:
+                    cmbPaternalHemotype.SelectedIndex = 7;
+                    break;
+            }
+
+            // Mostramos los riesgos durante el embarazo de la madre
+            if (!reader.IsDBNull(reader.GetOrdinal("mother_risks_pregnancy")))
+            {
+                swtMotherHadRisksPregnancy.Value = true;
+                txtMotherRisksPregnancy.Text = reader["mother_risks_pregnancy"].ToString();
+                txtMotherRisksPregnancy.Enabled = false;
+            }
+
+            // Mostramos los tratamientos de la madre
+            if (!reader.IsDBNull(reader.GetOrdinal("mother_treatments")))
+            {
+                swtMotherHadTreatments.Value = true;
+                txtMotherTreatments.Text = reader["mother_treatments"].ToString();
+                txtMotherTreatments.Enabled = false;
+            }
+
+            // Mostramos las toxicomanías de la madre
+            if (!reader.IsDBNull(reader.GetOrdinal("mother_drug_addictions")))
+            {
+                swtMotherHadDrugAddictions.Value = true;
+                txtMotherDrugAddictions.Text = reader["mother_drug_addictions"].ToString();
+                txtMotherDrugAddictions.Enabled = false;
+            }
+
+            // Mostramos las alergias de la madre
+            if (!reader.IsDBNull(reader.GetOrdinal("mother_allergies")))
+            {
+                swtMotherHadAllergies.Value = true;
+                txtMotherAllergies.Text = reader["mother_allergies"].ToString();
+                txtMotherAllergies.Enabled = false;
+            }
+
+            // Mostramos la edad gestacional al nacimiento del paciente
+            txtPacientGestationalAgeAtBirth.Text = reader["pacient_gestational_age_at_birth"].ToString();
+
+            // Mostramos la forma de nacimiento
+            switch (reader["pacient_birth_form"].ToString())
+            {
+                case "Parto natural":
+                    cmbPacientBirthForm.SelectedIndex = 0;
+                    break;
+
+                case "Cesárea":
+                    cmbPacientBirthForm.SelectedIndex = 1;
+                    break;
+
+                default:
+                    cmbPacientBirthForm.SelectedIndex = 2;
+                    break;
+            }
+
+            // Mostramos la evaluacion de apgar del paciente
+            switch (reader["pacient_apgar_evaluation"].ToString())
+            {
+                case "0":
+                    cmbPacientApgarEvaluation.SelectedIndex = 0;
+                    break;
+
+                case "1":
+                    cmbPacientApgarEvaluation.SelectedIndex = 1;
+                    break;
+
+                case "2":
+                    cmbPacientApgarEvaluation.SelectedIndex = 2;
+                    break;
+
+                case "3":
+                    cmbPacientApgarEvaluation.SelectedIndex = 3;
+                    break;
+
+                case "4":
+                    cmbPacientApgarEvaluation.SelectedIndex = 4;
+                    break;
+
+                case "5":
+                    cmbPacientApgarEvaluation.SelectedIndex = 5;
+                    break;
+
+                case "6":
+                    cmbPacientApgarEvaluation.SelectedIndex = 6;
+                    break;
+
+                case "7":
+                    cmbPacientApgarEvaluation.SelectedIndex = 7;
+                    break;
+
+                case "8":
+                    cmbPacientApgarEvaluation.SelectedIndex = 8;
+                    break;
+
+                case "9":
+                    cmbPacientApgarEvaluation.SelectedIndex = 9;
+                    break;
+
+                case "10":
+                    cmbPacientApgarEvaluation.SelectedIndex = 10;
+                    break;
+            }
+
+            // Mostramos el peso del paciente
+            txtPacientWeight.Text = reader["pacient_weight"].ToString();
+
+            // Mostramos la talla del paciente
+            txtPacientSize.Text = reader["pacient_size"].ToString();
+
+            // Mostramos el perimetro cefalico al nacimiento del paciente
+            txtPacientCephalicPerimeterAtBirth.Text = reader["pacient_cephalic_perimeter_at_birth"].ToString();
+
+            // Mostramos las complicaciones al nacimiento del pacient
+            if (!reader.IsDBNull(reader.GetOrdinal("pacient_birth_complications")))
+            {
+                swtPacientHadBirthComplications.Value = true;
+                txtPacientBirthComplications.Text = reader["pacient_birth_complications"].ToString();
+                txtPacientBirthComplications.Enabled = false;
+            }
+
+            // Mostramos las detecciones neonatales del paciente
+            if (!reader.IsDBNull(reader.GetOrdinal("pacient_neonatal_detection")))
+            {
+                swtPacientHadNeonatalDetection.Value = true;
+                txtPacientNeonatalDetection.Text = reader["pacient_neonatal_detection"].ToString();
+                txtPacientNeonatalDetection.Enabled = false;
+            }
+
+            // Mostramos las alergias del paciente
+            if (!reader.IsDBNull(reader.GetOrdinal("pacient_allergies")))
+            {
+                swtPacientHadAllergies.Value = true;
+                txtPacientAllergies.Text = reader["pacient_allergies"].ToString();
+                txtPacientAllergies.Enabled = false;
+            }
+
+            // Historial de vacunas
+            txtVaccineHistory.Text = reader["vaccine_history"].ToString();
+
+            // Alimentacion inicial
+            txtInitialFeed.Text = reader["initial_feed"].ToString();
+
+            // Alimentacion actual
+            txtActualFeed.Text = reader["actual_feed"].ToString();
+
+            // Rutinas de higiene
+            txtHygineRutines.Text = reader["hygine_rutines"].ToString();
+
+            // Ablactacion
+            if (!reader.IsDBNull(reader.GetOrdinal("age_ablactation_starts")))
+            {
+                swtAblactation.Value = true;
+                txtAgeAblactationStarts.Text = reader["age_ablactation_starts"].ToString();
+                txtAgeAblactationStarts.Enabled = false;
+            }
+
+            // Destete
+            if (!reader.IsDBNull(reader.GetOrdinal("age_weaning_starts")))
+            {
+                swtWeaning.Value = true;
+                txtAgeWeaningStarts.Text = reader["age_weaning_starts"].ToString();
+                txtAgeWeaningStarts.Enabled = false;
+            }
+
+            // Enfermedades previas
+            if (!reader.IsDBNull(reader.GetOrdinal("previous_diseases")))
+            {
+                swtPreviousDiseases.Value = true;
+                txtPreviousDiseases.Text = reader["previous_diseases"].ToString();
+                txtPreviousDiseases.Enabled = false;
+            }
+
+            // Hospitalizaciones
+            if (!reader.IsDBNull(reader.GetOrdinal("hospitalization_causes")))
+            {
+                swtHospitalizations.Value = true;
+                txtHospitalizationCauses.Text = reader["hospitalization_causes"].ToString();
+                txtHospitalizationCauses.Enabled = false;
+            }
+
+            // Traumas
+            if (!reader.IsDBNull(reader.GetOrdinal("trauma_causes")))
+            {
+                swtTrauma.Value = true;
+                txtTraumaCauses.Text = reader["trauma_causes"].ToString();
+                txtTraumaCauses.Enabled = false;
+            }
+
+            // Transfusiones
+            if (!reader.IsDBNull(reader.GetOrdinal("transfusions_causes")))
+            {
+                swtTransfusions.Value = true;
+                txtTransfusionsCauses.Text = reader["transfusions_causes"].ToString();
+                txtTransfusionsCauses.Enabled = false;
+            }
+
+            // Cirugias
+            if (!reader.IsDBNull(reader.GetOrdinal("surgeries_causes")))
+            {
+                swtSurgerie.Value = true;
+                txtSurgeriesCauses.Text = reader["surgeries_causes"].ToString();
+                txtSurgeriesCauses.Enabled = false;
+            }
+
+            // Tratamiento actual
+            if (!reader.IsDBNull(reader.GetOrdinal("actual_treatment")))
+            {
+                swtActualTreatment.Value = true;
+                txtActualTreatment.Text = reader["actual_treatment"].ToString();
+                txtActualTreatment.Enabled = false;
+            }
+
+            // Tratamiento actual
+            if (!reader.IsDBNull(reader.GetOrdinal("actual_treatment")))
+            {
+                swtActualTreatment.Value = true;
+                txtActualTreatment.Text = reader["actual_treatment"].ToString();
+                txtActualTreatment.Enabled = false;
+            }
+
+            // Sosten cefalico
+            if (!reader.IsDBNull(reader.GetOrdinal("age_cephalic_support_starts")))
+            {
+                swtCephalicSupport.Value = true;
+                txtAgeCephalicSupportStarts.Text = reader["age_cephalic_support_starts"].ToString();
+                txtAgeCephalicSupportStarts.Enabled = false;
+            }
+
+            // Sedestacion
+            if (!reader.IsDBNull(reader.GetOrdinal("age_sedestation_starts")))
+            {
+                swtSedestation.Value = true;
+                txtAgeSedestationStarts.Text = reader["age_sedestation_starts"].ToString();
+                txtAgeSedestationStarts.Enabled = false;
+            }
+
+            // Bipedestacion
+            if (!reader.IsDBNull(reader.GetOrdinal("age_bipedestation_starts")))
+            {
+                swtBipedestation.Value = true;
+                txtAgeBipedestationStarts.Text = reader["age_bipedestation_starts"].ToString();
+                txtAgeBipedestationStarts.Enabled = false;
+            }
+
+            // Deambulacion
+            if (!reader.IsDBNull(reader.GetOrdinal("age_wandering_starts")))
+            {
+                swtWandering.Value = true;
+                txtAgeWanderingStarts.Text = reader["age_wandering_starts"].ToString();
+                txtAgeWanderingStarts.Enabled = false;
+            }
+
+            // Gateo
+            if (!reader.IsDBNull(reader.GetOrdinal("age_crawl_starts")))
+            {
+                swtCrawl.Value = true;
+                txtAgeCrawlStarts.Text = reader["age_crawl_starts"].ToString();
+                txtAgeCrawlStarts.Enabled = false;
+            }
+
+            // Desarrollo del lenguaje
+            if (!reader.IsDBNull(reader.GetOrdinal("age_language_development_starts")))
+            {
+                swtLanguageDevelopment.Value = true;
+                txtAgeLanguageDevelopmentStarts.Text = reader["age_language_development_starts"].ToString();
+                txtAgeLanguageDevelopmentStarts.Enabled = false;
+            }
+
+            // Control de esfinteres
+            if (!reader.IsDBNull(reader.GetOrdinal("age_sphincter_control_starts")))
+            {
+                swtSphincterControl.Value = true;
+                txtAgeSphincterControlStarts.Text = reader["age_sphincter_control_starts"].ToString();
+                txtAgeSphincterControlStarts.Enabled = false;
+            }
+
+            // Aparicion de la denticion
+            if (!reader.IsDBNull(reader.GetOrdinal("age_dentation_appears")))
+            {
+                swtDentation.Value = true;
+                txtAgeDentationStarts.Text = reader["age_dentation_appears"].ToString();
+                txtAgeDentationStarts.Enabled = false;
+            }
+
+            // Problemas en el desarrollo
+            if (!reader.IsDBNull(reader.GetOrdinal("problems_in_development")))
+            {
+                swtDevelopmentProblems.Value = true;
+                txtProblemsInDevelopment.Text = reader["problems_in_development"].ToString();
+                txtProblemsInDevelopment.Enabled = false;
+            }
+
+            // Activamos los botones
+            cmdModifySave.Enabled = true;
+        }
+
+        private void EnableComponents(bool enable)
+        {
+            if (enable)
+            {
+                cmdSelectPhoto.Visible = true;
+
+                txtName.Enabled = true;
+                txtFirstLastName.Enabled = true;
+                txtSecondLastName.Enabled = true;
+                txtBirthPlace.Enabled = true;
+                txtFatherName.Enabled = true;
+                txtHomeAddress.Enabled = true;
+                txtContactPhone.Enabled = true;
+
+                clnDateBirth.Enabled = true;
+
+                grpSex.Enabled = true;
+
+                txtFamilyHereditaryAntecedents.Enabled = true;
+                txtMotherAge.Enabled = true;
+                txtMotherNumberOfPregnancies.Enabled = true;
+                txtMotherNumberOfPrenatalQuerys.Enabled = true;
+
+                cmbMaternalHemotype.Enabled = true;
+                cmbPaternalHemotype.Enabled = true;
+
+                swtMotherHadRisksPregnancy.Enabled = true;
+                swtMotherHadTreatments.Enabled = true;
+                swtMotherHadDrugAddictions.Enabled = true;
+                swtMotherHadAllergies.Enabled = true;
+
+                txtPacientGestationalAgeAtBirth.Enabled = true;
+
+                cmbPacientBirthForm.Enabled = true;
+                cmbPacientApgarEvaluation.Enabled = true;
+
+                txtPacientWeight.Enabled = true;
+                txtPacientSize.Enabled = true;
+                txtPacientCephalicPerimeterAtBirth.Enabled = true;
+
+                swtPacientHadBirthComplications.Enabled = true;
+                swtPacientHadNeonatalDetection.Enabled = true;
+                swtPacientHadAllergies.Enabled = true;
+
+                txtVaccineHistory.Enabled = true;
+                txtInitialFeed.Enabled = true;
+                txtActualFeed.Enabled = true;
+                txtHygineRutines.Enabled = true;
+
+                swtAblactation.Enabled = true;
+                swtWeaning.Enabled = true;
+
+                swtPreviousDiseases.Enabled = true;
+                swtHospitalizations.Enabled = true;
+                swtTrauma.Enabled = true;
+                swtTransfusions.Enabled = true;
+                swtSurgerie.Enabled = true;
+                swtActualTreatment.Enabled = true;
+
+                swtCephalicSupport.Enabled = true;
+                swtSedestation.Enabled = true;
+                swtBipedestation.Enabled = true;
+                swtWandering.Enabled = true;
+                swtCrawl.Enabled = true;
+                swtLanguageDevelopment.Enabled = true;
+                swtSphincterControl.Enabled = true;
+                swtDentation.Enabled = true;
+                swtDevelopmentProblems.Enabled = true;
+            }
+            else
+            {
+                cmdSelectPhoto.Visible = false;
+
+                txtName.Enabled = false;
+                txtFirstLastName.Enabled = false;
+                txtSecondLastName.Enabled = false;
+                txtBirthPlace.Enabled = false;
+                txtFatherName.Enabled = false;
+                txtHomeAddress.Enabled = false;
+                txtContactPhone.Enabled = false;
+
+                clnDateBirth.Enabled = false;
+
+                grpSex.Enabled = false;
+
+                txtFamilyHereditaryAntecedents.Enabled = false;
+                txtMotherAge.Enabled = false;
+                txtMotherNumberOfPregnancies.Enabled = false;
+                txtMotherNumberOfPrenatalQuerys.Enabled = false;
+
+                cmbMaternalHemotype.Enabled = false;
+                cmbPaternalHemotype.Enabled = false;
+
+                swtMotherHadRisksPregnancy.Enabled = false;
+                txtMotherRisksPregnancy.Enabled = false;
+
+                swtMotherHadTreatments.Enabled = false;
+                txtMotherTreatments.Enabled = false;
+
+                swtMotherHadDrugAddictions.Enabled = false;
+                txtMotherDrugAddictions.Enabled = false;
+
+                swtMotherHadAllergies.Enabled = false;
+                txtMotherAllergies.Enabled = false;
+
+                txtPacientGestationalAgeAtBirth.Enabled = false;
+
+                cmbPacientBirthForm.Enabled = false;
+                cmbPacientApgarEvaluation.Enabled = false;
+
+                txtPacientWeight.Enabled = false;
+                txtPacientSize.Enabled = false;
+                txtPacientCephalicPerimeterAtBirth.Enabled = false;
+
+                swtPacientHadBirthComplications.Enabled = false;
+                txtPacientBirthComplications.Enabled = false;
+
+                swtPacientHadNeonatalDetection.Enabled = false;
+                txtPacientNeonatalDetection.Enabled = false;
+
+                swtPacientHadAllergies.Enabled = false;
+                txtPacientAllergies.Enabled = false;
+
+                txtVaccineHistory.Enabled = false;
+                txtInitialFeed.Enabled = false;
+                txtActualFeed.Enabled = false;
+                txtHygineRutines.Enabled = false;
+
+                swtAblactation.Enabled = false;
+                txtAgeAblactationStarts.Enabled = false;
+
+                swtWeaning.Enabled = false;
+                txtAgeWeaningStarts.Enabled = false;
+
+                swtPreviousDiseases.Enabled = false;
+                txtPreviousDiseases.Enabled = false;
+
+                swtHospitalizations.Enabled = false;
+                txtHospitalizationCauses.Enabled = false;
+
+                swtTrauma.Enabled = false;
+                txtTraumaCauses.Enabled = false;
+
+                swtTransfusions.Enabled = false;
+                txtTransfusionsCauses.Enabled = false;
+
+                swtSurgerie.Enabled = false;
+                txtSurgeriesCauses.Enabled = false;
+
+                swtActualTreatment.Enabled = false;
+                txtActualTreatment.Enabled = false;
+
+                swtCephalicSupport.Enabled = false;
+                txtAgeCephalicSupportStarts.Enabled = false;
+
+                swtSedestation.Enabled = false;
+                txtAgeSedestationStarts.Enabled = false;
+
+                swtBipedestation.Enabled = false;
+                txtAgeBipedestationStarts.Enabled = false;
+
+                swtWandering.Enabled = false;
+                txtAgeWanderingStarts.Enabled = false;
+
+                swtCrawl.Enabled = false;
+                txtAgeCrawlStarts.Enabled = false;
+
+                swtLanguageDevelopment.Enabled = false;
+                txtAgeLanguageDevelopmentStarts.Enabled = false;
+
+                swtSphincterControl.Enabled = false;
+                txtAgeSphincterControlStarts.Enabled = false;
+
+                swtDentation.Enabled = false;
+                txtAgeDentationStarts.Enabled = false;
+
+                swtDevelopmentProblems.Enabled = false;
+                txtProblemsInDevelopment.Enabled = false;
+            }
+        }
+
+        private void UpdateMedicalQuerys(SqlConnection connection)
+        {
+            SqlCommand command = new SqlCommand("UPDATE medical_querys SET folio=@folio, name=@name WHERE folio=@old_folio;", connection);
+
+            if (foliosList.Count != 0)
+            {
+                command.Parameters.AddWithValue("@old_folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@folio", folio.GetFolio());
+                command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
+            }
+            else if (namesList.Count != 0)
+            {
+                command.Parameters.AddWithValue("@old_folio", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@folio", folio.GetFolio());
+                command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
+            }
+
+            command.ExecuteNonQuery();
+        }
+
+        private void UpdateAgenda(SqlConnection connection)
+        {
+            SqlCommand command = new SqlCommand("UPDATE agenda SET folio=@folio, name=@name, contact_phone=@contact_phone WHERE folio=@old_folio", connection);
+
+            if (foliosList.Count != 0)
+            {
+                command.Parameters.AddWithValue("@old_folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@folio", folio.GetFolio());
+                command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
+                command.Parameters.AddWithValue("@contact_phone", txtContactPhone.Text);
+            }
+            else if (namesList.Count != 0)
+            {
+                command.Parameters.AddWithValue("@old_folio", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@folio", folio.GetFolio());
+                command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
+                command.Parameters.AddWithValue("@contact_phone", txtContactPhone.Text);
+            }
+
+            command.ExecuteNonQuery();
+        }
+
+        private void Search()
+        {
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command;
+            SqlDataReader reader;
+
+            if (txtSearchBy.Text.Length == 0)
+            {
+                MessageBox.Show("El campo de busqueda se encuentra vacio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cmdModifySave.Enabled = false;
+            }
+            else if (cmbSearchBy.SelectedIndex == 0)
+            {
+                command = new SqlCommand("SELECT * FROM clinical_records WHERE folio=@folio", connection);
+
+                if (txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text) != -1)
+                {
+                    selectedID = txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text);
+
+                    command.Parameters.AddWithValue("@folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+
+                    connection.Open();
+
+                    reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        DisplayData(reader);
+                    }
+
+                    connection.Close();
+
+                    SetAutoCompleteCustomSourceByFolio();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmdModifySave.Enabled = false;
+                }
+            }
+            else
+            {
+                command = new SqlCommand("SELECT * FROM clinical_records WHERE (name=@name AND first_last_name=@first_last_name) AND second_last_name=@second_last_name;", connection);
+
+                if (txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text) != -1)
+                {
+                    selectedID = txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text);
+
+                    command.Parameters.AddWithValue("@name", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Name);
+                    command.Parameters.AddWithValue("@first_last_name", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].FirstLastName);
+                    command.Parameters.AddWithValue("@second_last_name", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].SecondLastName);
+
+                    connection.Open();
+
+                    reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        DisplayData(reader);
+                    }
+
+                    connection.Close();
+
+                    SetAutoCompleteCustomSourceByName();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmdModifySave.Enabled = false;
+                }
+            }
         }
     }
 
@@ -1846,8 +2552,9 @@ namespace SAICP
     public class SearchByName
     {
         public int ID { get; set; }
+        public string folio { get; set; }
         public string Name { get; set; }
         public string FirstLastName { get; set; }
-        public string SecondLasName { get; set; }
+        public string SecondLastName { get; set; }
     }
 }
