@@ -64,12 +64,6 @@
     <Compile Include="AA-NCM.Designer.cs">
       <DependentUpon>AA-NCM.cs</DependentUpon>
     </Compile>
-    <Compile Include="GIEC-BCM-DP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GIEC-BCM-DP.Designer.cs">
-      <DependentUpon>GIEC-BCM-DP.cs</DependentUpon>
-    </Compile>
     <Compile Include="GBC-CE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AA-NCM.resx">
       <DependentUpon>AA-NCM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GIEC-BCM-DP.resx">
-      <DependentUpon>GIEC-BCM-DP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GBC-CE.resx">
       <DependentUpon>GBC-CE.cs</DependentUpon>

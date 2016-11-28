@@ -31,6 +31,7 @@ namespace SAICP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             DevComponents.DotNetBar.Charts.ChartXy chartXy1 = new DevComponents.DotNetBar.Charts.ChartXy();
             DevComponents.DotNetBar.Charts.Style.Background background1 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.ChartSeries chartSeries1 = new DevComponents.DotNetBar.Charts.ChartSeries();
@@ -105,22 +106,34 @@ namespace SAICP
             DevComponents.DotNetBar.Charts.Style.Background background24 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.Background background25 = new DevComponents.DotNetBar.Charts.Style.Background();
             DevComponents.DotNetBar.Charts.Style.Background background26 = new DevComponents.DotNetBar.Charts.Style.Background();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewMedicalQuery));
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
-            this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
+            this.pgrSaving = new DevComponents.DotNetBar.ProgressBarItem();
             this.lblBlank = new DevComponents.DotNetBar.LabelItem();
             this.lblDate = new DevComponents.DotNetBar.LabelItem();
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.stcGeneral_Data = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.dgvPercentile_Table = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Standar_Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stiTable = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.tabControl1 = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
+            this.tbiSize = new DevComponents.DotNetBar.TabItem(this.components);
+            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
+            this.tbiIMC = new DevComponents.DotNetBar.TabItem(this.components);
+            this.stiGraphics = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.txtHead_Circunference = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtIMC = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtSize = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtWeight = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtDate = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lblxTreatment = new DevComponents.DotNetBar.LabelX();
             this.lblxDiagnostic = new DevComponents.DotNetBar.LabelX();
@@ -137,35 +150,21 @@ namespace SAICP
             this.lblxDate = new DevComponents.DotNetBar.LabelX();
             this.lblxName = new DevComponents.DotNetBar.LabelX();
             this.stiGeneral_Data = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.chtSize = new DevComponents.DotNetBar.Charts.ChartControl();
-            this.tbiSize = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.chtIMC = new DevComponents.DotNetBar.Charts.ChartControl();
-            this.tbiIMC = new DevComponents.DotNetBar.TabItem(this.components);
-            this.stiGraphics = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.dgvPercentile_Table = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Standar_Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stiTable = new DevComponents.DotNetBar.SuperTabItem();
             this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
             this.cmdSave = new DevComponents.DotNetBar.ButtonX();
-            this.lblFolio = new DevComponents.DotNetBar.LabelX();
+            this.chtSize = new DevComponents.DotNetBar.Charts.ChartControl();
+            this.chtIMC = new DevComponents.DotNetBar.Charts.ChartControl();
+            this.lblF_Date = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.stcGeneral_Data)).BeginInit();
             this.stcGeneral_Data.SuspendLayout();
-            this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentile_Table)).BeginInit();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
-            this.superTabControlPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentile_Table)).BeginInit();
+            this.superTabControlPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusBar
@@ -180,7 +179,7 @@ namespace SAICP
             this.statusBar.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.lblMessage,
-            this.progressBarItem1,
+            this.pgrSaving,
             this.lblBlank,
             this.lblDate,
             this.lblHour});
@@ -194,17 +193,17 @@ namespace SAICP
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Text = "Listo";
             // 
-            // progressBarItem1
+            // pgrSaving
             // 
             // 
             // 
             // 
-            this.progressBarItem1.BackStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.progressBarItem1.ChunkGradientAngle = 0F;
-            this.progressBarItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.progressBarItem1.Name = "progressBarItem1";
-            this.progressBarItem1.RecentlyUsed = false;
-            this.progressBarItem1.Visible = false;
+            this.pgrSaving.BackStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pgrSaving.ChunkGradientAngle = 0F;
+            this.pgrSaving.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
+            this.pgrSaving.Name = "pgrSaving";
+            this.pgrSaving.RecentlyUsed = false;
+            this.pgrSaving.Visible = false;
             // 
             // lblBlank
             // 
@@ -263,13 +262,161 @@ namespace SAICP
             this.stcGeneral_Data.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.stcGeneral_Data.Text = "superTabControl1";
             // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Controls.Add(this.dgvPercentile_Table);
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(760, 405);
+            this.superTabControlPanel3.TabIndex = 3;
+            this.superTabControlPanel3.TabItem = this.stiTable;
+            // 
+            // dgvPercentile_Table
+            // 
+            this.dgvPercentile_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPercentile_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Patient,
+            this.Date,
+            this.Weight,
+            this.Standar_Weight});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPercentile_Table.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPercentile_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvPercentile_Table.Location = new System.Drawing.Point(3, 3);
+            this.dgvPercentile_Table.Name = "dgvPercentile_Table";
+            this.dgvPercentile_Table.Size = new System.Drawing.Size(754, 399);
+            this.dgvPercentile_Table.TabIndex = 0;
+            // 
+            // Patient
+            // 
+            this.Patient.HeaderText = "Nombre del paciente";
+            this.Patient.Name = "Patient";
+            this.Patient.Width = 291;
+            // 
+            // Date
+            // 
+            this.Date.HeaderText = "Edad";
+            this.Date.Name = "Date";
+            this.Date.Width = 140;
+            // 
+            // Weight
+            // 
+            this.Weight.HeaderText = "Peso";
+            this.Weight.Name = "Weight";
+            this.Weight.Width = 140;
+            // 
+            // Standar_Weight
+            // 
+            this.Standar_Weight.HeaderText = "Peso estándar";
+            this.Standar_Weight.Name = "Standar_Weight";
+            this.Standar_Weight.Width = 140;
+            // 
+            // stiTable
+            // 
+            this.stiTable.AttachedControl = this.superTabControlPanel3;
+            this.stiTable.GlobalItem = false;
+            this.stiTable.Name = "stiTable";
+            this.stiTable.Text = "Tabla";
+            this.stiTable.Click += new System.EventHandler(this.stiTable_Click);
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Controls.Add(this.tabControl1);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(760, 405);
+            this.superTabControlPanel2.TabIndex = 2;
+            this.superTabControlPanel2.TabItem = this.stiGraphics;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.BackColor = System.Drawing.Color.White;
+            this.tabControl1.CanReorderTabs = true;
+            this.tabControl1.Controls.Add(this.tabControlPanel1);
+            this.tabControl1.Controls.Add(this.tabControlPanel2);
+            this.tabControl1.ForeColor = System.Drawing.Color.Black;
+            this.tabControl1.Location = new System.Drawing.Point(4, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.tabControl1.SelectedTabIndex = 1;
+            this.tabControl1.Size = new System.Drawing.Size(753, 398);
+            this.tabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
+            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
+            this.tabControl1.Tabs.Add(this.tbiSize);
+            this.tabControl1.Tabs.Add(this.tbiIMC);
+            this.tabControl1.Text = "tabControl1";
+            // 
+            // tabControlPanel1
+            // 
+            this.tabControlPanel1.Controls.Add(this.chtSize);
+            this.tabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
+            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel1.Location = new System.Drawing.Point(0, 27);
+            this.tabControlPanel1.Name = "tabControlPanel1";
+            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel1.Size = new System.Drawing.Size(753, 371);
+            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel1.Style.GradientAngle = 90;
+            this.tabControlPanel1.TabIndex = 1;
+            this.tabControlPanel1.TabItem = this.tbiSize;
+            // 
+            // tbiSize
+            // 
+            this.tbiSize.AttachedControl = this.tabControlPanel1;
+            this.tbiSize.Name = "tbiSize";
+            this.tbiSize.Text = "Talla";
+            // 
+            // tabControlPanel2
+            // 
+            this.tabControlPanel2.Controls.Add(this.chtIMC);
+            this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
+            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel2.Location = new System.Drawing.Point(0, 27);
+            this.tabControlPanel2.Name = "tabControlPanel2";
+            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel2.Size = new System.Drawing.Size(753, 371);
+            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel2.Style.GradientAngle = 90;
+            this.tabControlPanel2.TabIndex = 5;
+            this.tabControlPanel2.TabItem = this.tbiIMC;
+            // 
+            // tbiIMC
+            // 
+            this.tbiIMC.AttachedControl = this.tabControlPanel2;
+            this.tbiIMC.Name = "tbiIMC";
+            this.tbiIMC.Text = "IMC";
+            // 
+            // stiGraphics
+            // 
+            this.stiGraphics.AttachedControl = this.superTabControlPanel2;
+            this.stiGraphics.GlobalItem = false;
+            this.stiGraphics.Name = "stiGraphics";
+            this.stiGraphics.Text = "Gráficas";
+            // 
             // superTabControlPanel1
             // 
+            this.superTabControlPanel1.Controls.Add(this.lblF_Date);
             this.superTabControlPanel1.Controls.Add(this.txtHead_Circunference);
             this.superTabControlPanel1.Controls.Add(this.txtIMC);
             this.superTabControlPanel1.Controls.Add(this.txtSize);
             this.superTabControlPanel1.Controls.Add(this.txtWeight);
-            this.superTabControlPanel1.Controls.Add(this.txtDate);
             this.superTabControlPanel1.Controls.Add(this.txtName);
             this.superTabControlPanel1.Controls.Add(this.lblxTreatment);
             this.superTabControlPanel1.Controls.Add(this.lblxDiagnostic);
@@ -309,6 +456,7 @@ namespace SAICP
             this.txtHead_Circunference.Size = new System.Drawing.Size(70, 25);
             this.txtHead_Circunference.TabIndex = 20;
             this.txtHead_Circunference.WatermarkText = "...";
+            this.txtHead_Circunference.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHead_Circunference_KeyPress);
             // 
             // txtIMC
             // 
@@ -327,6 +475,7 @@ namespace SAICP
             this.txtIMC.Size = new System.Drawing.Size(70, 25);
             this.txtIMC.TabIndex = 19;
             this.txtIMC.WatermarkText = "...";
+            this.txtIMC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMC_KeyPress);
             // 
             // txtSize
             // 
@@ -345,6 +494,7 @@ namespace SAICP
             this.txtSize.Size = new System.Drawing.Size(70, 25);
             this.txtSize.TabIndex = 18;
             this.txtSize.WatermarkText = "...";
+            this.txtSize.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSize_KeyPress);
             // 
             // txtWeight
             // 
@@ -363,24 +513,7 @@ namespace SAICP
             this.txtWeight.Size = new System.Drawing.Size(70, 25);
             this.txtWeight.TabIndex = 17;
             this.txtWeight.WatermarkText = "...";
-            // 
-            // txtDate
-            // 
-            this.txtDate.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtDate.Border.Class = "TextBoxBorder";
-            this.txtDate.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDate.DisabledBackColor = System.Drawing.Color.White;
-            this.txtDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDate.ForeColor = System.Drawing.Color.Black;
-            this.txtDate.Location = new System.Drawing.Point(88, 48);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.PreventEnterBeep = true;
-            this.txtDate.Size = new System.Drawing.Size(135, 25);
-            this.txtDate.TabIndex = 16;
-            this.txtDate.WatermarkText = "Ingrese la fecha...";
+            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // txtName
             // 
@@ -399,6 +532,7 @@ namespace SAICP
             this.txtName.Size = new System.Drawing.Size(268, 25);
             this.txtName.TabIndex = 15;
             this.txtName.WatermarkText = "Ingrese el nombre del paciente...";
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // lblxTreatment
             // 
@@ -462,6 +596,7 @@ namespace SAICP
             this.txtReason.TabIndex = 11;
             this.txtReason.WatermarkText = "Ingrese el motivo de la consulta...";
             this.txtReason.WordWrap = false;
+            this.txtReason.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReason_KeyPress);
             // 
             // txtTreatment
             // 
@@ -483,6 +618,7 @@ namespace SAICP
             this.txtTreatment.TabIndex = 10;
             this.txtTreatment.WatermarkText = "Ingrese el tratamiento del paciente...";
             this.txtTreatment.WordWrap = false;
+            this.txtTreatment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTreatment_KeyPress);
             // 
             // txtDiagnostic
             // 
@@ -504,6 +640,7 @@ namespace SAICP
             this.txtDiagnostic.TabIndex = 9;
             this.txtDiagnostic.WatermarkText = "Ingrese el diagnóstico del paciente...";
             this.txtDiagnostic.WordWrap = false;
+            this.txtDiagnostic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiagnostic_KeyPress);
             // 
             // txtPhysical_Exploration
             // 
@@ -525,6 +662,7 @@ namespace SAICP
             this.txtPhysical_Exploration.TabIndex = 8;
             this.txtPhysical_Exploration.WatermarkText = "Ingrese la exploración física del paciente...";
             this.txtPhysical_Exploration.WordWrap = false;
+            this.txtPhysical_Exploration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhysical_Exploration_KeyPress);
             // 
             // lblxReason
             // 
@@ -631,52 +769,31 @@ namespace SAICP
             this.stiGeneral_Data.Name = "stiGeneral_Data";
             this.stiGeneral_Data.Text = "Datos generales";
             // 
-            // superTabControlPanel2
+            // cmdCancel
             // 
-            this.superTabControlPanel2.Controls.Add(this.tabControl1);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(760, 405);
-            this.superTabControlPanel2.TabIndex = 2;
-            this.superTabControlPanel2.TabItem = this.stiGraphics;
+            this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancel.Location = new System.Drawing.Point(616, 469);
+            this.cmdCancel.Name = "cmdCancel";
+            this.cmdCancel.Size = new System.Drawing.Size(75, 24);
+            this.cmdCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdCancel.TabIndex = 2;
+            this.cmdCancel.Text = "Cancelar";
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
-            // tabControl1
+            // cmdSave
             // 
-            this.tabControl1.BackColor = System.Drawing.Color.White;
-            this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel1);
-            this.tabControl1.Controls.Add(this.tabControlPanel2);
-            this.tabControl1.ForeColor = System.Drawing.Color.Black;
-            this.tabControl1.Location = new System.Drawing.Point(4, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tabControl1.SelectedTabIndex = 1;
-            this.tabControl1.Size = new System.Drawing.Size(753, 398);
-            this.tabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.tabControl1.Tabs.Add(this.tbiSize);
-            this.tabControl1.Tabs.Add(this.tbiIMC);
-            this.tabControl1.Text = "tabControl1";
-            // 
-            // tabControlPanel1
-            // 
-            this.tabControlPanel1.Controls.Add(this.chtSize);
-            this.tabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 27);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(753, 371);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.tbiSize;
+            this.cmdSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSave.Location = new System.Drawing.Point(697, 469);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(75, 24);
+            this.cmdSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdSave.TabIndex = 3;
+            this.cmdSave.Text = "Guardar";
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
             // chtSize
             // 
@@ -844,35 +961,11 @@ namespace SAICP
             this.chtSize.DefaultVisualStyles.VScrollBarVisualStyles.SelectedMouseOver.ThumbBackground = background13;
             this.chtSize.ForeColor = System.Drawing.Color.Black;
             this.chtSize.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.chtSize.Location = new System.Drawing.Point(4, 4);
+            this.chtSize.Location = new System.Drawing.Point(3, 4);
             this.chtSize.Name = "chtSize";
             this.chtSize.Size = new System.Drawing.Size(746, 363);
-            this.chtSize.TabIndex = 19;
+            this.chtSize.TabIndex = 22;
             this.chtSize.Text = "chartControl1";
-            // 
-            // tbiSize
-            // 
-            this.tbiSize.AttachedControl = this.tabControlPanel1;
-            this.tbiSize.Name = "tbiSize";
-            this.tbiSize.Text = "Talla";
-            // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Controls.Add(this.chtIMC);
-            this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 27);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(753, 371);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 5;
-            this.tabControlPanel2.TabItem = this.tbiIMC;
             // 
             // chtIMC
             // 
@@ -1041,133 +1134,30 @@ namespace SAICP
             this.chtIMC.DefaultVisualStyles.VScrollBarVisualStyles.SelectedMouseOver.ThumbBackground = background26;
             this.chtIMC.ForeColor = System.Drawing.Color.Black;
             this.chtIMC.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.chtIMC.Location = new System.Drawing.Point(4, 6);
+            this.chtIMC.Location = new System.Drawing.Point(5, 4);
             this.chtIMC.Name = "chtIMC";
             this.chtIMC.Size = new System.Drawing.Size(744, 362);
-            this.chtIMC.TabIndex = 19;
+            this.chtIMC.TabIndex = 23;
             // 
-            // tbiIMC
+            // lblF_Date
             // 
-            this.tbiIMC.AttachedControl = this.tabControlPanel2;
-            this.tbiIMC.Name = "tbiIMC";
-            this.tbiIMC.Text = "IMC";
-            // 
-            // stiGraphics
-            // 
-            this.stiGraphics.AttachedControl = this.superTabControlPanel2;
-            this.stiGraphics.GlobalItem = false;
-            this.stiGraphics.Name = "stiGraphics";
-            this.stiGraphics.Text = "Gráficas";
-            // 
-            // superTabControlPanel3
-            // 
-            this.superTabControlPanel3.Controls.Add(this.dgvPercentile_Table);
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(760, 405);
-            this.superTabControlPanel3.TabIndex = 3;
-            this.superTabControlPanel3.TabItem = this.stiTable;
-            // 
-            // dgvPercentile_Table
-            // 
-            this.dgvPercentile_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPercentile_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Patient,
-            this.Date,
-            this.Weight,
-            this.Standar_Weight});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPercentile_Table.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPercentile_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvPercentile_Table.Location = new System.Drawing.Point(3, 3);
-            this.dgvPercentile_Table.Name = "dgvPercentile_Table";
-            this.dgvPercentile_Table.Size = new System.Drawing.Size(754, 399);
-            this.dgvPercentile_Table.TabIndex = 0;
-            // 
-            // Patient
-            // 
-            this.Patient.HeaderText = "Nombre del paciente";
-            this.Patient.Name = "Patient";
-            this.Patient.Width = 291;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Edad";
-            this.Date.Name = "Date";
-            this.Date.Width = 140;
-            // 
-            // Weight
-            // 
-            this.Weight.HeaderText = "Peso";
-            this.Weight.Name = "Weight";
-            this.Weight.Width = 140;
-            // 
-            // Standar_Weight
-            // 
-            this.Standar_Weight.HeaderText = "Peso estándar";
-            this.Standar_Weight.Name = "Standar_Weight";
-            this.Standar_Weight.Width = 140;
-            // 
-            // stiTable
-            // 
-            this.stiTable.AttachedControl = this.superTabControlPanel3;
-            this.stiTable.GlobalItem = false;
-            this.stiTable.Name = "stiTable";
-            this.stiTable.Text = "Tabla";
-            // 
-            // cmdCancel
-            // 
-            this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCancel.Location = new System.Drawing.Point(616, 469);
-            this.cmdCancel.Name = "cmdCancel";
-            this.cmdCancel.Size = new System.Drawing.Size(75, 24);
-            this.cmdCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmdCancel.TabIndex = 2;
-            this.cmdCancel.Text = "Cancelar";
-            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
-            // 
-            // cmdSave
-            // 
-            this.cmdSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSave.Location = new System.Drawing.Point(697, 469);
-            this.cmdSave.Name = "cmdSave";
-            this.cmdSave.Size = new System.Drawing.Size(75, 24);
-            this.cmdSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmdSave.TabIndex = 3;
-            this.cmdSave.Text = "Guardar";
-            // 
-            // lblFolio
-            // 
-            this.lblFolio.BackColor = System.Drawing.Color.Transparent;
+            this.lblF_Date.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.lblFolio.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblFolio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblFolio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFolio.Location = new System.Drawing.Point(0, 0);
-            this.lblFolio.Name = "lblFolio";
-            this.lblFolio.Size = new System.Drawing.Size(784, 27);
-            this.lblFolio.TabIndex = 17;
-            this.lblFolio.Text = "   Folio: ";
+            this.lblF_Date.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblF_Date.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblF_Date.Location = new System.Drawing.Point(88, 48);
+            this.lblF_Date.Name = "lblF_Date";
+            this.lblF_Date.SingleLineColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblF_Date.Size = new System.Drawing.Size(121, 23);
+            this.lblF_Date.TabIndex = 21;
             // 
             // frmNewMedicalQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 521);
-            this.Controls.Add(this.lblFolio);
             this.Controls.Add(this.cmdSave);
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.stcGeneral_Data);
@@ -1182,14 +1172,14 @@ namespace SAICP
             this.Load += new System.EventHandler(this.frmNewMedicalQuery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stcGeneral_Data)).EndInit();
             this.stcGeneral_Data.ResumeLayout(false);
-            this.superTabControlPanel1.ResumeLayout(false);
+            this.superTabControlPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentile_Table)).EndInit();
             this.superTabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabControlPanel1.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
-            this.superTabControlPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentile_Table)).EndInit();
+            this.superTabControlPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1308,7 +1298,7 @@ namespace SAICP
 
         private DevComponents.DotNetBar.Metro.MetroStatusBar statusBar;
         private DevComponents.DotNetBar.LabelItem lblMessage;
-        private DevComponents.DotNetBar.ProgressBarItem progressBarItem1;
+        private DevComponents.DotNetBar.ProgressBarItem pgrSaving;
         private DevComponents.DotNetBar.LabelItem lblBlank;
         private DevComponents.DotNetBar.LabelItem lblDate;
         private DevComponents.DotNetBar.LabelItem lblHour;
@@ -1334,7 +1324,6 @@ namespace SAICP
         private DevComponents.DotNetBar.Controls.TextBoxX txtIMC;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSize;
         private DevComponents.DotNetBar.Controls.TextBoxX txtWeight;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDate;
         private DevComponents.DotNetBar.Controls.TextBoxX txtName;
         private DevComponents.DotNetBar.LabelX lblxTreatment;
         private DevComponents.DotNetBar.LabelX lblxDiagnostic;
@@ -1348,12 +1337,12 @@ namespace SAICP
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvPercentile_Table;
         private DevComponents.DotNetBar.ButtonX cmdCancel;
         private DevComponents.DotNetBar.ButtonX cmdSave;
-        private DevComponents.DotNetBar.LabelX lblFolio;
-        private DevComponents.DotNetBar.Charts.ChartControl chtIMC;
-        private DevComponents.DotNetBar.Charts.ChartControl chtSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn Patient;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
         private System.Windows.Forms.DataGridViewTextBoxColumn Standar_Weight;
+        private DevComponents.DotNetBar.LabelX lblF_Date;
+        private DevComponents.DotNetBar.Charts.ChartControl chtSize;
+        private DevComponents.DotNetBar.Charts.ChartControl chtIMC;
     }
 }

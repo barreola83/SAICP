@@ -980,6 +980,7 @@ namespace SAICP
 
             if (ValidateDataAndAsignSqlCommandParameters(command))
             {
+
                 lblFolio.Text = "   Folio: " + folio.GetFolio();
 
                 // 75%
@@ -1579,7 +1580,7 @@ namespace SAICP
             // Validacion del folio
 
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand selectCommand = new SqlCommand("SELECT ID FROM clinical_records WHERE folio=@folio", connection);
+            SqlCommand selectCommand = new SqlCommand("SELECT Folio FROM clinical_records WHERE Folio=@folio", connection);
             SqlDataReader reader;
 
             selectCommand.Parameters.AddWithValue("@folio", folio.GetFolio());

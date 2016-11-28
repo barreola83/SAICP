@@ -44,7 +44,7 @@ namespace SAICP
 
         private void dataGridViewX1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmPatientData windowPatientData = new frmPatientData(windowMenu);
+            frmNewMedicalQuery windowPatientData = new frmNewMedicalQuery(windowMenu);
 
             Hide();
             windowPatientData.Show();
