@@ -1629,7 +1629,7 @@ namespace SAICP
                 command.Parameters.AddWithValue("@problems_in_development", DBNull.Value);
 
             // Validacion del folio
-            if ((foliosList.Count != 0 && folio.GetFolio() != foliosList[selectedID].folio) || (namesList.Count != 0 && folio.GetFolio() != namesList[selectedID].folio))
+            if ((foliosList.Count != 0 && folio.GetFolio() != foliosList[selectedID].Folio) || (namesList.Count != 0 && folio.GetFolio() != namesList[selectedID].Folio))
             {
                 SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
                 SqlCommand selectCommand = new SqlCommand("SELECT ID FROM clinical_records WHERE folio=@folio", connection);
@@ -1711,7 +1711,7 @@ namespace SAICP
                     data.Add(reader["folio"].ToString());
 
                     folioData.ID = int.Parse(reader["ID"].ToString());
-                    folioData.folio = reader["folio"].ToString();
+                    folioData.Folio = reader["folio"].ToString();
 
                     foliosList.Add(folioData);
                 }
@@ -1751,7 +1751,7 @@ namespace SAICP
                     data.Add(reader["name"].ToString() + " " + reader["first_last_name"].ToString() + " " + reader["second_last_name"].ToString());
 
                     nameData.ID = int.Parse(reader["ID"].ToString());
-                    nameData.folio = reader["folio"].ToString();
+                    nameData.Folio = reader["folio"].ToString();
                     nameData.Name = reader["name"].ToString();
                     nameData.FirstLastName = reader["first_last_name"].ToString();
                     nameData.SecondLastName = reader["second_last_name"].ToString();
@@ -2432,13 +2432,13 @@ namespace SAICP
 
             if (foliosList.Count != 0)
             {
-                command.Parameters.AddWithValue("@old_folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@old_folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Folio);
                 command.Parameters.AddWithValue("@folio", folio.GetFolio());
                 command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
             }
             else if (namesList.Count != 0)
             {
-                command.Parameters.AddWithValue("@old_folio", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@old_folio", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Folio);
                 command.Parameters.AddWithValue("@folio", folio.GetFolio());
                 command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
             }
@@ -2452,14 +2452,14 @@ namespace SAICP
 
             if (foliosList.Count != 0)
             {
-                command.Parameters.AddWithValue("@old_folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@old_folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Folio);
                 command.Parameters.AddWithValue("@folio", folio.GetFolio());
                 command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
                 command.Parameters.AddWithValue("@contact_phone", txtContactPhone.Text);
             }
             else if (namesList.Count != 0)
             {
-                command.Parameters.AddWithValue("@old_folio", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                command.Parameters.AddWithValue("@old_folio", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Folio);
                 command.Parameters.AddWithValue("@folio", folio.GetFolio());
                 command.Parameters.AddWithValue("@name", txtName.Text + " " + txtFirstLastName.Text + " " + txtSecondLastName.Text);
                 command.Parameters.AddWithValue("@contact_phone", txtContactPhone.Text);
@@ -2487,7 +2487,7 @@ namespace SAICP
                 {
                     selectedID = txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text);
 
-                    command.Parameters.AddWithValue("@folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].folio);
+                    command.Parameters.AddWithValue("@folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Folio);
 
                     connection.Open();
 
@@ -2547,13 +2547,13 @@ namespace SAICP
     public class SearchByFolio
     {
         public int ID { get; set; }
-        public string folio { get; set; }
+        public string Folio { get; set; }
     }
 
     public class SearchByName
     {
         public int ID { get; set; }
-        public string folio { get; set; }
+        public string Folio { get; set; }
         public string Name { get; set; }
         public string FirstLastName { get; set; }
         public string SecondLastName { get; set; }

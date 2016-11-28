@@ -32,80 +32,8 @@ namespace SAICP
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            DevComponents.DotNetBar.Charts.ChartXy chartXy1 = new DevComponents.DotNetBar.Charts.ChartXy();
-            DevComponents.DotNetBar.Charts.Style.Background background1 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.ChartSeries chartSeries1 = new DevComponents.DotNetBar.Charts.ChartSeries();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint1 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint2 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint3 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint4 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint5 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint6 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint7 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint8 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint9 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint10 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.Style.Background background2 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background3 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.BorderColor borderColor1 = new DevComponents.DotNetBar.Charts.Style.BorderColor();
-            DevComponents.DotNetBar.Charts.Style.Thickness thickness1 = new DevComponents.DotNetBar.Charts.Style.Thickness();
-            DevComponents.DotNetBar.Charts.Style.Padding padding1 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Background background4 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.BorderColor borderColor2 = new DevComponents.DotNetBar.Charts.Style.BorderColor();
-            DevComponents.DotNetBar.Charts.Style.Thickness thickness2 = new DevComponents.DotNetBar.Charts.Style.Thickness();
-            DevComponents.DotNetBar.Charts.Style.Padding padding2 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Background background5 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.BorderColor borderColor3 = new DevComponents.DotNetBar.Charts.Style.BorderColor();
-            DevComponents.DotNetBar.Charts.Style.Thickness thickness3 = new DevComponents.DotNetBar.Charts.Style.Thickness();
-            DevComponents.DotNetBar.Charts.Style.Padding padding3 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Padding padding4 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.ChartTitle chartTitle1 = new DevComponents.DotNetBar.Charts.ChartTitle();
-            DevComponents.DotNetBar.Charts.Style.Padding padding5 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Background background6 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background7 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background8 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background9 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background10 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background11 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background12 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background13 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.ChartXy chartXy2 = new DevComponents.DotNetBar.Charts.ChartXy();
-            DevComponents.DotNetBar.Charts.Style.Background background14 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.ChartSeries chartSeries2 = new DevComponents.DotNetBar.Charts.ChartSeries();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint11 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint12 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint13 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint14 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint15 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint16 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint17 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint18 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint19 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.SeriesPoint seriesPoint20 = new DevComponents.DotNetBar.Charts.SeriesPoint();
-            DevComponents.DotNetBar.Charts.Style.Background background15 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background16 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.BorderColor borderColor4 = new DevComponents.DotNetBar.Charts.Style.BorderColor();
-            DevComponents.DotNetBar.Charts.Style.Thickness thickness4 = new DevComponents.DotNetBar.Charts.Style.Thickness();
-            DevComponents.DotNetBar.Charts.Style.Padding padding6 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Background background17 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.BorderColor borderColor5 = new DevComponents.DotNetBar.Charts.Style.BorderColor();
-            DevComponents.DotNetBar.Charts.Style.Thickness thickness5 = new DevComponents.DotNetBar.Charts.Style.Thickness();
-            DevComponents.DotNetBar.Charts.Style.Padding padding7 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Background background18 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.BorderColor borderColor6 = new DevComponents.DotNetBar.Charts.Style.BorderColor();
-            DevComponents.DotNetBar.Charts.Style.Thickness thickness6 = new DevComponents.DotNetBar.Charts.Style.Thickness();
-            DevComponents.DotNetBar.Charts.Style.Padding padding8 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Padding padding9 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.ChartTitle chartTitle2 = new DevComponents.DotNetBar.Charts.ChartTitle();
-            DevComponents.DotNetBar.Charts.Style.Padding padding10 = new DevComponents.DotNetBar.Charts.Style.Padding();
-            DevComponents.DotNetBar.Charts.Style.Background background19 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background20 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background21 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background22 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background23 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background24 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background25 = new DevComponents.DotNetBar.Charts.Style.Background();
-            DevComponents.DotNetBar.Charts.Style.Background background26 = new DevComponents.DotNetBar.Charts.Style.Background();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewMedicalQuery));
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
@@ -116,20 +44,17 @@ namespace SAICP
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.stcGeneral_Data = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.dgvPercentile_Table = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.Patient = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Standar_Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPercentilTable = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stiTable = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tabControl1 = new DevComponents.DotNetBar.TabControl();
-            this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tbiSize = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tbiIMC = new DevComponents.DotNetBar.TabItem(this.components);
-            this.stiGraphics = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.txtFolio = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtHead_Circunference = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtIMC = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtSize = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -147,24 +72,31 @@ namespace SAICP
             this.lblxIMC = new DevComponents.DotNetBar.LabelX();
             this.lblxSize = new DevComponents.DotNetBar.LabelX();
             this.lblxWeight = new DevComponents.DotNetBar.LabelX();
-            this.lblxDate = new DevComponents.DotNetBar.LabelX();
             this.lblxName = new DevComponents.DotNetBar.LabelX();
             this.stiGeneral_Data = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.chrSize = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.sptSize = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.chrIMC = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.sptIMC = new DevComponents.DotNetBar.SuperTabItem();
+            this.stiGraphics = new DevComponents.DotNetBar.SuperTabItem();
             this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
             this.cmdSave = new DevComponents.DotNetBar.ButtonX();
-            this.chtSize = new DevComponents.DotNetBar.Charts.ChartControl();
-            this.chtIMC = new DevComponents.DotNetBar.Charts.ChartControl();
-            this.lblF_Date = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.stcGeneral_Data)).BeginInit();
             this.stcGeneral_Data.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentile_Table)).BeginInit();
-            this.superTabControlPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabControlPanel1.SuspendLayout();
-            this.tabControlPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentilTable)).BeginInit();
             this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
+            this.superTabControl1.SuspendLayout();
+            this.superTabControlPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chrSize)).BeginInit();
+            this.superTabControlPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chrIMC)).BeginInit();
             this.SuspendLayout();
             // 
             // statusBar
@@ -243,9 +175,9 @@ namespace SAICP
             this.stcGeneral_Data.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.stcGeneral_Data.ControlBox.MenuBox,
             this.stcGeneral_Data.ControlBox.CloseBox});
+            this.stcGeneral_Data.Controls.Add(this.superTabControlPanel3);
             this.stcGeneral_Data.Controls.Add(this.superTabControlPanel1);
             this.stcGeneral_Data.Controls.Add(this.superTabControlPanel2);
-            this.stcGeneral_Data.Controls.Add(this.superTabControlPanel3);
             this.stcGeneral_Data.ForeColor = System.Drawing.Color.Black;
             this.stcGeneral_Data.Location = new System.Drawing.Point(12, 33);
             this.stcGeneral_Data.Name = "stcGeneral_Data";
@@ -264,7 +196,7 @@ namespace SAICP
             // 
             // superTabControlPanel3
             // 
-            this.superTabControlPanel3.Controls.Add(this.dgvPercentile_Table);
+            this.superTabControlPanel3.Controls.Add(this.dgvPercentilTable);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
@@ -272,14 +204,17 @@ namespace SAICP
             this.superTabControlPanel3.TabIndex = 3;
             this.superTabControlPanel3.TabItem = this.stiTable;
             // 
-            // dgvPercentile_Table
+            // dgvPercentilTable
             // 
-            this.dgvPercentile_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPercentile_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Patient,
-            this.Date,
-            this.Weight,
-            this.Standar_Weight});
+            this.dgvPercentilTable.AllowUserToDeleteRows = false;
+            this.dgvPercentilTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPercentilTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.age,
+            this.weight,
+            this.standardWeight,
+            this.size,
+            this.standardSize});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -287,36 +222,51 @@ namespace SAICP
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPercentile_Table.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPercentile_Table.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvPercentile_Table.Location = new System.Drawing.Point(3, 3);
-            this.dgvPercentile_Table.Name = "dgvPercentile_Table";
-            this.dgvPercentile_Table.Size = new System.Drawing.Size(754, 399);
-            this.dgvPercentile_Table.TabIndex = 0;
+            this.dgvPercentilTable.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPercentilTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvPercentilTable.Location = new System.Drawing.Point(4, 4);
+            this.dgvPercentilTable.Name = "dgvPercentilTable";
+            this.dgvPercentilTable.ReadOnly = true;
+            this.dgvPercentilTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPercentilTable.Size = new System.Drawing.Size(753, 398);
+            this.dgvPercentilTable.TabIndex = 0;
             // 
-            // Patient
+            // name
             // 
-            this.Patient.HeaderText = "Nombre del paciente";
-            this.Patient.Name = "Patient";
-            this.Patient.Width = 291;
+            this.name.HeaderText = "Nombre del paciente";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 210;
             // 
-            // Date
+            // age
             // 
-            this.Date.HeaderText = "Edad";
-            this.Date.Name = "Date";
-            this.Date.Width = 140;
+            this.age.HeaderText = "Edad";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
             // 
-            // Weight
+            // weight
             // 
-            this.Weight.HeaderText = "Peso";
-            this.Weight.Name = "Weight";
-            this.Weight.Width = 140;
+            this.weight.HeaderText = "Peso";
+            this.weight.Name = "weight";
+            this.weight.ReadOnly = true;
             // 
-            // Standar_Weight
+            // standardWeight
             // 
-            this.Standar_Weight.HeaderText = "Peso estándar";
-            this.Standar_Weight.Name = "Standar_Weight";
-            this.Standar_Weight.Width = 140;
+            this.standardWeight.HeaderText = "Peso estándar";
+            this.standardWeight.Name = "standardWeight";
+            this.standardWeight.ReadOnly = true;
+            // 
+            // size
+            // 
+            this.size.HeaderText = "Talla";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            // 
+            // standardSize
+            // 
+            this.standardSize.HeaderText = "Talla estándar";
+            this.standardSize.Name = "standardSize";
+            this.standardSize.ReadOnly = true;
             // 
             // stiTable
             // 
@@ -326,93 +276,10 @@ namespace SAICP
             this.stiTable.Text = "Tabla";
             this.stiTable.Click += new System.EventHandler(this.stiTable_Click);
             // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Controls.Add(this.tabControl1);
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(760, 405);
-            this.superTabControlPanel2.TabIndex = 2;
-            this.superTabControlPanel2.TabItem = this.stiGraphics;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.BackColor = System.Drawing.Color.White;
-            this.tabControl1.CanReorderTabs = true;
-            this.tabControl1.Controls.Add(this.tabControlPanel1);
-            this.tabControl1.Controls.Add(this.tabControlPanel2);
-            this.tabControl1.ForeColor = System.Drawing.Color.Black;
-            this.tabControl1.Location = new System.Drawing.Point(4, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tabControl1.SelectedTabIndex = 1;
-            this.tabControl1.Size = new System.Drawing.Size(753, 398);
-            this.tabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.Metro;
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.tabControl1.Tabs.Add(this.tbiSize);
-            this.tabControl1.Tabs.Add(this.tbiIMC);
-            this.tabControl1.Text = "tabControl1";
-            // 
-            // tabControlPanel1
-            // 
-            this.tabControlPanel1.Controls.Add(this.chtSize);
-            this.tabControlPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel1.Location = new System.Drawing.Point(0, 27);
-            this.tabControlPanel1.Name = "tabControlPanel1";
-            this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(753, 371);
-            this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.tabControlPanel1.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel1.Style.GradientAngle = 90;
-            this.tabControlPanel1.TabIndex = 1;
-            this.tabControlPanel1.TabItem = this.tbiSize;
-            // 
-            // tbiSize
-            // 
-            this.tbiSize.AttachedControl = this.tabControlPanel1;
-            this.tbiSize.Name = "tbiSize";
-            this.tbiSize.Text = "Talla";
-            // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Controls.Add(this.chtIMC);
-            this.tabControlPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 27);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(753, 371);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 5;
-            this.tabControlPanel2.TabItem = this.tbiIMC;
-            // 
-            // tbiIMC
-            // 
-            this.tbiIMC.AttachedControl = this.tabControlPanel2;
-            this.tbiIMC.Name = "tbiIMC";
-            this.tbiIMC.Text = "IMC";
-            // 
-            // stiGraphics
-            // 
-            this.stiGraphics.AttachedControl = this.superTabControlPanel2;
-            this.stiGraphics.GlobalItem = false;
-            this.stiGraphics.Name = "stiGraphics";
-            this.stiGraphics.Text = "Gráficas";
-            // 
             // superTabControlPanel1
             // 
-            this.superTabControlPanel1.Controls.Add(this.lblF_Date);
+            this.superTabControlPanel1.Controls.Add(this.txtFolio);
+            this.superTabControlPanel1.Controls.Add(this.labelX1);
             this.superTabControlPanel1.Controls.Add(this.txtHead_Circunference);
             this.superTabControlPanel1.Controls.Add(this.txtIMC);
             this.superTabControlPanel1.Controls.Add(this.txtSize);
@@ -430,7 +297,6 @@ namespace SAICP
             this.superTabControlPanel1.Controls.Add(this.lblxIMC);
             this.superTabControlPanel1.Controls.Add(this.lblxSize);
             this.superTabControlPanel1.Controls.Add(this.lblxWeight);
-            this.superTabControlPanel1.Controls.Add(this.lblxDate);
             this.superTabControlPanel1.Controls.Add(this.lblxName);
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
@@ -438,6 +304,43 @@ namespace SAICP
             this.superTabControlPanel1.Size = new System.Drawing.Size(760, 405);
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.stiGeneral_Data;
+            // 
+            // txtFolio
+            // 
+            this.txtFolio.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtFolio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtFolio.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtFolio.Border.Class = "TextBoxBorder";
+            this.txtFolio.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtFolio.DisabledBackColor = System.Drawing.Color.White;
+            this.txtFolio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFolio.ForeColor = System.Drawing.Color.Black;
+            this.txtFolio.Location = new System.Drawing.Point(88, 51);
+            this.txtFolio.Name = "txtFolio";
+            this.txtFolio.PreventEnterBeep = true;
+            this.txtFolio.Size = new System.Drawing.Size(268, 25);
+            this.txtFolio.TabIndex = 22;
+            this.txtFolio.WatermarkText = "Ingrese el folio....";
+            this.txtFolio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFolio_KeyDown);
+            this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
+            // 
+            // labelX1
+            // 
+            this.labelX1.AutoSize = true;
+            this.labelX1.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX1.Location = new System.Drawing.Point(3, 49);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(38, 22);
+            this.labelX1.TabIndex = 22;
+            this.labelX1.Text = "Folio:";
             // 
             // txtHead_Circunference
             // 
@@ -517,6 +420,8 @@ namespace SAICP
             // 
             // txtName
             // 
+            this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtName.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -532,6 +437,7 @@ namespace SAICP
             this.txtName.Size = new System.Drawing.Size(268, 25);
             this.txtName.TabIndex = 15;
             this.txtName.WatermarkText = "Ingrese el nombre del paciente...";
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // lblxTreatment
@@ -596,7 +502,6 @@ namespace SAICP
             this.txtReason.TabIndex = 11;
             this.txtReason.WatermarkText = "Ingrese el motivo de la consulta...";
             this.txtReason.WordWrap = false;
-            this.txtReason.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReason_KeyPress);
             // 
             // txtTreatment
             // 
@@ -618,7 +523,6 @@ namespace SAICP
             this.txtTreatment.TabIndex = 10;
             this.txtTreatment.WatermarkText = "Ingrese el tratamiento del paciente...";
             this.txtTreatment.WordWrap = false;
-            this.txtTreatment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTreatment_KeyPress);
             // 
             // txtDiagnostic
             // 
@@ -640,7 +544,6 @@ namespace SAICP
             this.txtDiagnostic.TabIndex = 9;
             this.txtDiagnostic.WatermarkText = "Ingrese el diagnóstico del paciente...";
             this.txtDiagnostic.WordWrap = false;
-            this.txtDiagnostic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDiagnostic_KeyPress);
             // 
             // txtPhysical_Exploration
             // 
@@ -662,7 +565,6 @@ namespace SAICP
             this.txtPhysical_Exploration.TabIndex = 8;
             this.txtPhysical_Exploration.WatermarkText = "Ingrese la exploración física del paciente...";
             this.txtPhysical_Exploration.WordWrap = false;
-            this.txtPhysical_Exploration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhysical_Exploration_KeyPress);
             // 
             // lblxReason
             // 
@@ -734,20 +636,6 @@ namespace SAICP
             this.lblxWeight.TabIndex = 2;
             this.lblxWeight.Text = "Peso:";
             // 
-            // lblxDate
-            // 
-            this.lblxDate.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.lblxDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblxDate.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblxDate.Location = new System.Drawing.Point(3, 48);
-            this.lblxDate.Name = "lblxDate";
-            this.lblxDate.Size = new System.Drawing.Size(75, 18);
-            this.lblxDate.TabIndex = 1;
-            this.lblxDate.Text = "Fecha:";
-            // 
             // lblxName
             // 
             this.lblxName.BackColor = System.Drawing.Color.White;
@@ -769,10 +657,120 @@ namespace SAICP
             this.stiGeneral_Data.Name = "stiGeneral_Data";
             this.stiGeneral_Data.Text = "Datos generales";
             // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Controls.Add(this.superTabControl1);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(760, 405);
+            this.superTabControlPanel2.TabIndex = 2;
+            this.superTabControlPanel2.TabItem = this.stiGraphics;
+            // 
+            // superTabControl1
+            // 
+            this.superTabControl1.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.superTabControl1.ControlBox.CloseBox.Name = "";
+            // 
+            // 
+            // 
+            this.superTabControl1.ControlBox.MenuBox.Name = "";
+            this.superTabControl1.ControlBox.Name = "";
+            this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabControl1.ControlBox.MenuBox,
+            this.superTabControl1.ControlBox.CloseBox});
+            this.superTabControl1.Controls.Add(this.superTabControlPanel4);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel5);
+            this.superTabControl1.ForeColor = System.Drawing.Color.Black;
+            this.superTabControl1.Location = new System.Drawing.Point(3, 3);
+            this.superTabControl1.Name = "superTabControl1";
+            this.superTabControl1.ReorderTabsEnabled = true;
+            this.superTabControl1.SelectedTabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.superTabControl1.SelectedTabIndex = 0;
+            this.superTabControl1.Size = new System.Drawing.Size(754, 399);
+            this.superTabControl1.TabFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.superTabControl1.TabIndex = 1;
+            this.superTabControl1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.sptSize,
+            this.sptIMC});
+            this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
+            this.superTabControl1.Text = "data";
+            // 
+            // superTabControlPanel4
+            // 
+            this.superTabControlPanel4.Controls.Add(this.chrSize);
+            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel4.Name = "superTabControlPanel4";
+            this.superTabControlPanel4.Size = new System.Drawing.Size(754, 374);
+            this.superTabControlPanel4.TabIndex = 1;
+            this.superTabControlPanel4.TabItem = this.sptSize;
+            // 
+            // chrSize
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chrSize.ChartAreas.Add(chartArea1);
+            this.chrSize.Location = new System.Drawing.Point(4, 4);
+            this.chrSize.Name = "chrSize";
+            this.chrSize.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            this.chrSize.Size = new System.Drawing.Size(747, 367);
+            this.chrSize.TabIndex = 0;
+            this.chrSize.Text = "chart2";
+            // 
+            // sptSize
+            // 
+            this.sptSize.AttachedControl = this.superTabControlPanel4;
+            this.sptSize.GlobalItem = false;
+            this.sptSize.Name = "sptSize";
+            this.sptSize.Text = "Talla";
+            // 
+            // superTabControlPanel5
+            // 
+            this.superTabControlPanel5.Controls.Add(this.chrIMC);
+            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel5.Name = "superTabControlPanel5";
+            this.superTabControlPanel5.Size = new System.Drawing.Size(754, 374);
+            this.superTabControlPanel5.TabIndex = 0;
+            this.superTabControlPanel5.TabItem = this.sptIMC;
+            // 
+            // chrIMC
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chrIMC.ChartAreas.Add(chartArea2);
+            this.chrIMC.Location = new System.Drawing.Point(4, 4);
+            this.chrIMC.Name = "chrIMC";
+            this.chrIMC.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            this.chrIMC.Size = new System.Drawing.Size(747, 367);
+            this.chrIMC.TabIndex = 0;
+            this.chrIMC.Text = "chart1";
+            // 
+            // sptIMC
+            // 
+            this.sptIMC.AttachedControl = this.superTabControlPanel5;
+            this.sptIMC.GlobalItem = false;
+            this.sptIMC.Name = "sptIMC";
+            this.sptIMC.Text = "IMC";
+            // 
+            // stiGraphics
+            // 
+            this.stiGraphics.AttachedControl = this.superTabControlPanel2;
+            this.stiGraphics.GlobalItem = false;
+            this.stiGraphics.Name = "stiGraphics";
+            this.stiGraphics.Text = "Gráficas";
+            this.stiGraphics.Click += new System.EventHandler(this.stiGraphics_Click);
+            // 
             // cmdCancel
             // 
             this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancel.Location = new System.Drawing.Point(616, 469);
             this.cmdCancel.Name = "cmdCancel";
@@ -786,6 +784,7 @@ namespace SAICP
             // 
             this.cmdSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdSave.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdSave.Location = new System.Drawing.Point(697, 469);
             this.cmdSave.Name = "cmdSave";
@@ -794,364 +793,6 @@ namespace SAICP
             this.cmdSave.TabIndex = 3;
             this.cmdSave.Text = "Guardar";
             this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
-            // 
-            // chtSize
-            // 
-            this.chtSize.BackColor = System.Drawing.Color.White;
-            chartXy1.AxisX.MajorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.Gainsboro;
-            chartXy1.AxisX.MinorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartXy1.AxisX.Title.Name = null;
-            chartXy1.AxisY.AxisAlignment = DevComponents.DotNetBar.Charts.AxisAlignment.Far;
-            chartXy1.AxisY.MajorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.Gainsboro;
-            chartXy1.AxisY.MinorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartXy1.AxisY.Title.Name = null;
-            chartXy1.ChartCrosshair.CrosshairLabelMode = DevComponents.DotNetBar.Charts.CrosshairLabelMode.NearestSeries;
-            background1.Color1 = System.Drawing.Color.White;
-            chartXy1.ChartCrosshair.CrosshairVisualStyle.Background = background1;
-            chartXy1.ChartCrosshair.HighlightPoints = true;
-            chartXy1.ChartCrosshair.ShowCrosshairLabels = true;
-            chartXy1.ChartCrosshair.ShowValueXLabels = true;
-            chartXy1.ChartCrosshair.ShowValueXLine = true;
-            chartXy1.ChartCrosshair.ShowValueYLabels = true;
-            chartXy1.ChartCrosshair.ShowValueYLine = true;
-            chartSeries1.CrosshairHighlightPoints = DevComponents.DotNetBar.Charts.Style.Tbool.True;
-            chartSeries1.EmptyValues = null;
-            chartSeries1.Name = "Talla";
-            seriesPoint1.ValueX = 0D;
-            seriesPoint1.ValueY = new object[] {
-        ((object)(48D))};
-            seriesPoint2.ValueX = 1D;
-            seriesPoint2.ValueY = new object[] {
-        ((object)(37D))};
-            seriesPoint3.ValueX = 2D;
-            seriesPoint3.ValueY = new object[] {
-        ((object)(29D))};
-            seriesPoint4.ValueX = 3D;
-            seriesPoint4.ValueY = new object[] {
-        ((object)(3D))};
-            seriesPoint5.ValueX = 4D;
-            seriesPoint5.ValueY = new object[] {
-        ((object)(10D))};
-            seriesPoint6.ValueX = 5D;
-            seriesPoint6.ValueY = new object[] {
-        ((object)(33D))};
-            seriesPoint7.ValueX = 6D;
-            seriesPoint7.ValueY = new object[] {
-        ((object)(9D))};
-            seriesPoint8.ValueX = 7D;
-            seriesPoint8.ValueY = new object[] {
-        ((object)(2D))};
-            seriesPoint9.ValueX = 8D;
-            seriesPoint9.ValueY = new object[] {
-        ((object)(37D))};
-            seriesPoint10.ValueX = 9D;
-            seriesPoint10.ValueY = new object[] {
-        ((object)(32D))};
-            chartSeries1.SeriesPoints.Add(seriesPoint1);
-            chartSeries1.SeriesPoints.Add(seriesPoint2);
-            chartSeries1.SeriesPoints.Add(seriesPoint3);
-            chartSeries1.SeriesPoints.Add(seriesPoint4);
-            chartSeries1.SeriesPoints.Add(seriesPoint5);
-            chartSeries1.SeriesPoints.Add(seriesPoint6);
-            chartSeries1.SeriesPoints.Add(seriesPoint7);
-            chartSeries1.SeriesPoints.Add(seriesPoint8);
-            chartSeries1.SeriesPoints.Add(seriesPoint9);
-            chartSeries1.SeriesPoints.Add(seriesPoint10);
-            chartSeries1.SeriesType = DevComponents.DotNetBar.Charts.SeriesType.Line;
-            chartXy1.ChartSeries.Add(chartSeries1);
-            background2.Color1 = System.Drawing.Color.Yellow;
-            chartXy1.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Background = background2;
-            chartXy1.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Size = new System.Drawing.Size(15, 15);
-            chartXy1.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Type = DevComponents.DotNetBar.Charts.PointMarkerType.Ellipse;
-            background3.Color1 = System.Drawing.Color.White;
-            chartXy1.ChartVisualStyle.Background = background3;
-            borderColor1.Bottom = System.Drawing.Color.Black;
-            borderColor1.Left = System.Drawing.Color.Black;
-            borderColor1.Right = System.Drawing.Color.Black;
-            borderColor1.Top = System.Drawing.Color.Black;
-            chartXy1.ChartVisualStyle.BorderColor = borderColor1;
-            thickness1.Bottom = 1;
-            thickness1.Left = 1;
-            thickness1.Right = 1;
-            thickness1.Top = 1;
-            chartXy1.ChartVisualStyle.BorderThickness = thickness1;
-            padding1.Bottom = 6;
-            padding1.Left = 6;
-            padding1.Right = 6;
-            padding1.Top = 6;
-            chartXy1.ChartVisualStyle.Padding = padding1;
-            background4.Color1 = System.Drawing.Color.White;
-            chartXy1.ContainerVisualStyles.Default.Background = background4;
-            borderColor2.Bottom = System.Drawing.Color.DimGray;
-            borderColor2.Left = System.Drawing.Color.DimGray;
-            borderColor2.Right = System.Drawing.Color.DimGray;
-            borderColor2.Top = System.Drawing.Color.DimGray;
-            chartXy1.ContainerVisualStyles.Default.BorderColor = borderColor2;
-            thickness2.Bottom = 1;
-            thickness2.Left = 1;
-            thickness2.Right = 1;
-            thickness2.Top = 1;
-            chartXy1.ContainerVisualStyles.Default.BorderThickness = thickness2;
-            chartXy1.ContainerVisualStyles.Default.DropShadow.Enabled = DevComponents.DotNetBar.Charts.Style.Tbool.True;
-            padding2.Bottom = 6;
-            padding2.Left = 6;
-            padding2.Right = 6;
-            padding2.Top = 6;
-            chartXy1.ContainerVisualStyles.Default.Padding = padding2;
-            chartXy1.Legend.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.TopRight;
-            chartXy1.Legend.AlignVerticalItems = true;
-            background5.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            chartXy1.Legend.ChartLegendVisualStyles.Default.Background = background5;
-            borderColor3.Bottom = System.Drawing.Color.Black;
-            borderColor3.Left = System.Drawing.Color.Black;
-            borderColor3.Right = System.Drawing.Color.Black;
-            borderColor3.Top = System.Drawing.Color.Black;
-            chartXy1.Legend.ChartLegendVisualStyles.Default.BorderColor = borderColor3;
-            thickness3.Bottom = 1;
-            thickness3.Left = 1;
-            thickness3.Right = 1;
-            thickness3.Top = 1;
-            chartXy1.Legend.ChartLegendVisualStyles.Default.BorderThickness = thickness3;
-            padding3.Bottom = 8;
-            padding3.Left = 8;
-            padding3.Right = 8;
-            padding3.Top = 8;
-            chartXy1.Legend.ChartLegendVisualStyles.Default.Margin = padding3;
-            padding4.Bottom = 4;
-            padding4.Left = 4;
-            padding4.Right = 4;
-            padding4.Top = 4;
-            chartXy1.Legend.ChartLegendVisualStyles.Default.Padding = padding4;
-            chartXy1.Legend.Direction = DevComponents.DotNetBar.Charts.Direction.LeftToRight;
-            chartXy1.Legend.MaxHorizontalPct = 75D;
-            chartXy1.Legend.Name = "serieSize";
-            chartXy1.Legend.Placement = DevComponents.DotNetBar.Charts.Placement.Outside;
-            chartXy1.Legend.Visible = true;
-            chartXy1.Name = "ChartXy1";
-            chartTitle1.ChartTitleVisualStyle.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.MiddleCenter;
-            chartTitle1.ChartTitleVisualStyle.Font = new System.Drawing.Font("Georgia", 16F);
-            padding5.Bottom = 8;
-            padding5.Left = 8;
-            padding5.Right = 8;
-            padding5.Top = 8;
-            chartTitle1.ChartTitleVisualStyle.Padding = padding5;
-            chartTitle1.ChartTitleVisualStyle.TextColor = System.Drawing.Color.Navy;
-            chartTitle1.Name = "titleSIZE";
-            chartTitle1.Text = "Talla";
-            chartTitle1.XyAlignment = DevComponents.DotNetBar.Charts.XyAlignment.Top;
-            chartXy1.Titles.Add(chartTitle1);
-            this.chtSize.ChartPanel.ChartContainers.Add(chartXy1);
-            this.chtSize.ChartPanel.Legend.Visible = false;
-            this.chtSize.ChartPanel.Name = "PrimaryPanel";
-            background6.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtSize.DefaultVisualStyles.HScrollBarVisualStyles.MouseOver.ArrowBackground = background6;
-            background7.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtSize.DefaultVisualStyles.HScrollBarVisualStyles.MouseOver.ThumbBackground = background7;
-            background8.Color1 = System.Drawing.Color.White;
-            this.chtSize.DefaultVisualStyles.HScrollBarVisualStyles.SelectedMouseOver.ArrowBackground = background8;
-            background9.Color1 = System.Drawing.Color.White;
-            this.chtSize.DefaultVisualStyles.HScrollBarVisualStyles.SelectedMouseOver.ThumbBackground = background9;
-            background10.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtSize.DefaultVisualStyles.VScrollBarVisualStyles.MouseOver.ArrowBackground = background10;
-            background11.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtSize.DefaultVisualStyles.VScrollBarVisualStyles.MouseOver.ThumbBackground = background11;
-            background12.Color1 = System.Drawing.Color.White;
-            this.chtSize.DefaultVisualStyles.VScrollBarVisualStyles.SelectedMouseOver.ArrowBackground = background12;
-            background13.Color1 = System.Drawing.Color.White;
-            this.chtSize.DefaultVisualStyles.VScrollBarVisualStyles.SelectedMouseOver.ThumbBackground = background13;
-            this.chtSize.ForeColor = System.Drawing.Color.Black;
-            this.chtSize.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.chtSize.Location = new System.Drawing.Point(3, 4);
-            this.chtSize.Name = "chtSize";
-            this.chtSize.Size = new System.Drawing.Size(746, 363);
-            this.chtSize.TabIndex = 22;
-            this.chtSize.Text = "chartControl1";
-            // 
-            // chtIMC
-            // 
-            this.chtIMC.BackColor = System.Drawing.Color.White;
-            chartXy2.AxisX.MajorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.Gainsboro;
-            chartXy2.AxisX.MinorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartXy2.AxisX.Title.Name = null;
-            chartXy2.AxisY.AxisAlignment = DevComponents.DotNetBar.Charts.AxisAlignment.Far;
-            chartXy2.AxisY.MajorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.Gainsboro;
-            chartXy2.AxisY.MinorGridLines.GridLinesVisualStyle.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartXy2.AxisY.Title.Name = null;
-            chartXy2.ChartCrosshair.CrosshairLabelMode = DevComponents.DotNetBar.Charts.CrosshairLabelMode.NearestSeries;
-            background14.Color1 = System.Drawing.Color.White;
-            chartXy2.ChartCrosshair.CrosshairVisualStyle.Background = background14;
-            chartXy2.ChartCrosshair.HighlightPoints = true;
-            chartXy2.ChartCrosshair.ShowCrosshairLabels = true;
-            chartXy2.ChartCrosshair.ShowValueXLabels = true;
-            chartXy2.ChartCrosshair.ShowValueXLine = true;
-            chartXy2.ChartCrosshair.ShowValueYLabels = true;
-            chartXy2.ChartCrosshair.ShowValueYLine = true;
-            chartXy2.ChartLineDisplayMode = DevComponents.DotNetBar.Charts.ChartLineDisplayMode.DisplayLine;
-            chartSeries2.CrosshairHighlightPoints = DevComponents.DotNetBar.Charts.Style.Tbool.True;
-            chartSeries2.EmptyValues = null;
-            chartSeries2.Name = "IMC";
-            seriesPoint11.ValueX = 0D;
-            seriesPoint11.ValueY = new object[] {
-        ((object)(30D))};
-            seriesPoint12.ValueX = 1D;
-            seriesPoint12.ValueY = new object[] {
-        ((object)(42D))};
-            seriesPoint13.ValueX = 2D;
-            seriesPoint13.ValueY = new object[] {
-        ((object)(45D))};
-            seriesPoint14.ValueX = 3D;
-            seriesPoint14.ValueY = new object[] {
-        ((object)(17D))};
-            seriesPoint15.ValueX = 4D;
-            seriesPoint15.ValueY = new object[] {
-        ((object)(17D))};
-            seriesPoint16.ValueX = 5D;
-            seriesPoint16.ValueY = new object[] {
-        ((object)(47D))};
-            seriesPoint17.ValueX = 6D;
-            seriesPoint17.ValueY = new object[] {
-        ((object)(21D))};
-            seriesPoint18.ValueX = 7D;
-            seriesPoint18.ValueY = new object[] {
-        ((object)(12D))};
-            seriesPoint19.ValueX = 8D;
-            seriesPoint19.ValueY = new object[] {
-        ((object)(47D))};
-            seriesPoint20.ValueX = 9D;
-            seriesPoint20.ValueY = new object[] {
-        ((object)(13D))};
-            chartSeries2.SeriesPoints.Add(seriesPoint11);
-            chartSeries2.SeriesPoints.Add(seriesPoint12);
-            chartSeries2.SeriesPoints.Add(seriesPoint13);
-            chartSeries2.SeriesPoints.Add(seriesPoint14);
-            chartSeries2.SeriesPoints.Add(seriesPoint15);
-            chartSeries2.SeriesPoints.Add(seriesPoint16);
-            chartSeries2.SeriesPoints.Add(seriesPoint17);
-            chartSeries2.SeriesPoints.Add(seriesPoint18);
-            chartSeries2.SeriesPoints.Add(seriesPoint19);
-            chartSeries2.SeriesPoints.Add(seriesPoint20);
-            chartSeries2.SeriesType = DevComponents.DotNetBar.Charts.SeriesType.Line;
-            chartXy2.ChartSeries.Add(chartSeries2);
-            background15.Color1 = System.Drawing.Color.Yellow;
-            chartXy2.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Background = background15;
-            chartXy2.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Size = new System.Drawing.Size(15, 15);
-            chartXy2.ChartSeriesVisualStyle.MarkerHighlightVisualStyle.Type = DevComponents.DotNetBar.Charts.PointMarkerType.Ellipse;
-            background16.Color1 = System.Drawing.Color.White;
-            chartXy2.ChartVisualStyle.Background = background16;
-            borderColor4.Bottom = System.Drawing.Color.Black;
-            borderColor4.Left = System.Drawing.Color.Black;
-            borderColor4.Right = System.Drawing.Color.Black;
-            borderColor4.Top = System.Drawing.Color.Black;
-            chartXy2.ChartVisualStyle.BorderColor = borderColor4;
-            thickness4.Bottom = 1;
-            thickness4.Left = 1;
-            thickness4.Right = 1;
-            thickness4.Top = 1;
-            chartXy2.ChartVisualStyle.BorderThickness = thickness4;
-            padding6.Bottom = 6;
-            padding6.Left = 6;
-            padding6.Right = 6;
-            padding6.Top = 6;
-            chartXy2.ChartVisualStyle.Padding = padding6;
-            background17.Color1 = System.Drawing.Color.White;
-            chartXy2.ContainerVisualStyles.Default.Background = background17;
-            borderColor5.Bottom = System.Drawing.Color.DimGray;
-            borderColor5.Left = System.Drawing.Color.DimGray;
-            borderColor5.Right = System.Drawing.Color.DimGray;
-            borderColor5.Top = System.Drawing.Color.DimGray;
-            chartXy2.ContainerVisualStyles.Default.BorderColor = borderColor5;
-            thickness5.Bottom = 1;
-            thickness5.Left = 1;
-            thickness5.Right = 1;
-            thickness5.Top = 1;
-            chartXy2.ContainerVisualStyles.Default.BorderThickness = thickness5;
-            chartXy2.ContainerVisualStyles.Default.DropShadow.Enabled = DevComponents.DotNetBar.Charts.Style.Tbool.True;
-            padding7.Bottom = 6;
-            padding7.Left = 6;
-            padding7.Right = 6;
-            padding7.Top = 6;
-            chartXy2.ContainerVisualStyles.Default.Padding = padding7;
-            chartXy2.Legend.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.TopRight;
-            chartXy2.Legend.AlignVerticalItems = true;
-            background18.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            chartXy2.Legend.ChartLegendVisualStyles.Default.Background = background18;
-            borderColor6.Bottom = System.Drawing.Color.Black;
-            borderColor6.Left = System.Drawing.Color.Black;
-            borderColor6.Right = System.Drawing.Color.Black;
-            borderColor6.Top = System.Drawing.Color.Black;
-            chartXy2.Legend.ChartLegendVisualStyles.Default.BorderColor = borderColor6;
-            thickness6.Bottom = 1;
-            thickness6.Left = 1;
-            thickness6.Right = 1;
-            thickness6.Top = 1;
-            chartXy2.Legend.ChartLegendVisualStyles.Default.BorderThickness = thickness6;
-            padding8.Bottom = 8;
-            padding8.Left = 8;
-            padding8.Right = 8;
-            padding8.Top = 8;
-            chartXy2.Legend.ChartLegendVisualStyles.Default.Margin = padding8;
-            padding9.Bottom = 4;
-            padding9.Left = 4;
-            padding9.Right = 4;
-            padding9.Top = 4;
-            chartXy2.Legend.ChartLegendVisualStyles.Default.Padding = padding9;
-            chartXy2.Legend.Direction = DevComponents.DotNetBar.Charts.Direction.LeftToRight;
-            chartXy2.Legend.MaxHorizontalPct = 75D;
-            chartXy2.Legend.Name = "serieIMC";
-            chartXy2.Legend.Placement = DevComponents.DotNetBar.Charts.Placement.Outside;
-            chartXy2.Legend.Visible = true;
-            chartXy2.Name = "ChartXy1";
-            chartTitle2.ChartTitleVisualStyle.Alignment = DevComponents.DotNetBar.Charts.Style.Alignment.MiddleCenter;
-            chartTitle2.ChartTitleVisualStyle.Font = new System.Drawing.Font("Georgia", 16F);
-            padding10.Bottom = 8;
-            padding10.Left = 8;
-            padding10.Right = 8;
-            padding10.Top = 8;
-            chartTitle2.ChartTitleVisualStyle.Padding = padding10;
-            chartTitle2.ChartTitleVisualStyle.TextColor = System.Drawing.Color.Navy;
-            chartTitle2.Name = "titleIMC";
-            chartTitle2.Text = "IMC";
-            chartTitle2.XyAlignment = DevComponents.DotNetBar.Charts.XyAlignment.Top;
-            chartXy2.Titles.Add(chartTitle2);
-            this.chtIMC.ChartPanel.ChartContainers.Add(chartXy2);
-            this.chtIMC.ChartPanel.Legend.Visible = false;
-            this.chtIMC.ChartPanel.Name = "PrimaryPanel";
-            background19.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtIMC.DefaultVisualStyles.HScrollBarVisualStyles.MouseOver.ArrowBackground = background19;
-            background20.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtIMC.DefaultVisualStyles.HScrollBarVisualStyles.MouseOver.ThumbBackground = background20;
-            background21.Color1 = System.Drawing.Color.White;
-            this.chtIMC.DefaultVisualStyles.HScrollBarVisualStyles.SelectedMouseOver.ArrowBackground = background21;
-            background22.Color1 = System.Drawing.Color.White;
-            this.chtIMC.DefaultVisualStyles.HScrollBarVisualStyles.SelectedMouseOver.ThumbBackground = background22;
-            background23.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtIMC.DefaultVisualStyles.VScrollBarVisualStyles.MouseOver.ArrowBackground = background23;
-            background24.Color1 = System.Drawing.Color.AliceBlue;
-            this.chtIMC.DefaultVisualStyles.VScrollBarVisualStyles.MouseOver.ThumbBackground = background24;
-            background25.Color1 = System.Drawing.Color.White;
-            this.chtIMC.DefaultVisualStyles.VScrollBarVisualStyles.SelectedMouseOver.ArrowBackground = background25;
-            background26.Color1 = System.Drawing.Color.White;
-            this.chtIMC.DefaultVisualStyles.VScrollBarVisualStyles.SelectedMouseOver.ThumbBackground = background26;
-            this.chtIMC.ForeColor = System.Drawing.Color.Black;
-            this.chtIMC.LicenseKey = "F962CEC7-CD8F-4911-A9E9-CAB39962FC1F";
-            this.chtIMC.Location = new System.Drawing.Point(5, 4);
-            this.chtIMC.Name = "chtIMC";
-            this.chtIMC.Size = new System.Drawing.Size(744, 362);
-            this.chtIMC.TabIndex = 23;
-            // 
-            // lblF_Date
-            // 
-            this.lblF_Date.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.lblF_Date.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblF_Date.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblF_Date.Location = new System.Drawing.Point(88, 48);
-            this.lblF_Date.Name = "lblF_Date";
-            this.lblF_Date.SingleLineColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblF_Date.Size = new System.Drawing.Size(121, 23);
-            this.lblF_Date.TabIndex = 21;
             // 
             // frmNewMedicalQuery
             // 
@@ -1162,6 +803,7 @@ namespace SAICP
             this.Controls.Add(this.cmdCancel);
             this.Controls.Add(this.stcGeneral_Data);
             this.Controls.Add(this.statusBar);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1173,13 +815,16 @@ namespace SAICP
             ((System.ComponentModel.ISupportInitialize)(this.stcGeneral_Data)).EndInit();
             this.stcGeneral_Data.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentile_Table)).EndInit();
-            this.superTabControlPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabControlPanel1.ResumeLayout(false);
-            this.tabControlPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentilTable)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
+            this.superTabControlPanel1.PerformLayout();
+            this.superTabControlPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
+            this.superTabControl1.ResumeLayout(false);
+            this.superTabControlPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chrSize)).EndInit();
+            this.superTabControlPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chrIMC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1311,7 +956,6 @@ namespace SAICP
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel2;
         private DevComponents.DotNetBar.SuperTabItem stiGraphics;
         private DevComponents.DotNetBar.LabelX lblxName;
-        private DevComponents.DotNetBar.LabelX lblxDate;
         private DevComponents.DotNetBar.LabelX lblxWeight;
         private DevComponents.DotNetBar.Controls.TextBoxX txtTreatment;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDiagnostic;
@@ -1329,20 +973,23 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelX lblxDiagnostic;
         private DevComponents.DotNetBar.LabelX lblxPhysical_Exploration;
         private DevComponents.DotNetBar.Controls.TextBoxX txtReason;
-        private DevComponents.DotNetBar.TabControl tabControl1;
-        private DevComponents.DotNetBar.TabControlPanel tabControlPanel1;
-        private DevComponents.DotNetBar.TabItem tbiSize;
-        private DevComponents.DotNetBar.TabControlPanel tabControlPanel2;
-        private DevComponents.DotNetBar.TabItem tbiIMC;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvPercentile_Table;
         private DevComponents.DotNetBar.ButtonX cmdCancel;
         private DevComponents.DotNetBar.ButtonX cmdSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Patient;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Standar_Weight;
-        private DevComponents.DotNetBar.LabelX lblF_Date;
-        private DevComponents.DotNetBar.Charts.ChartControl chtSize;
-        private DevComponents.DotNetBar.Charts.ChartControl chtIMC;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFolio;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.SuperTabControl superTabControl1;
+        private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel5;
+        private DevComponents.DotNetBar.SuperTabItem sptIMC;
+        private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel4;
+        private DevComponents.DotNetBar.SuperTabItem sptSize;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrIMC;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrSize;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvPercentilTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn standardWeight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn standardSize;
     }
 }

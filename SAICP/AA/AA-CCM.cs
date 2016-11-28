@@ -81,6 +81,8 @@ namespace SAICP
             AutoCompleteStringCollection data = new AutoCompleteStringCollection();
             PacientData pacient;
 
+            pacientList.Clear();
+
             connection.Open();
 
             reader = command.ExecuteReader();
