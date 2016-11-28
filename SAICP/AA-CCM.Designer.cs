@@ -39,13 +39,13 @@ namespace SAICP
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.dgvData = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contact_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cldDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
             this.lblSelectDate = new DevComponents.DotNetBar.LabelX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
-            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.lblSearchByName = new DevComponents.DotNetBar.LabelX();
             this.txtSearchByName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
@@ -115,9 +115,11 @@ namespace SAICP
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvName,
-            this.dgvDate,
-            this.dgvTime});
+            this.name,
+            this.date,
+            this.time,
+            this.contact_phone});
+            this.dgvData.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,25 +130,40 @@ namespace SAICP
             this.dgvData.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvData.Location = new System.Drawing.Point(290, 12);
+            this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(493, 260);
             this.dgvData.TabIndex = 1;
+            this.dgvData.DoubleClick += new System.EventHandler(this.dgvData_DoubleClick);
             // 
-            // dgvName
+            // name
             // 
-            this.dgvName.HeaderText = "Nombre";
-            this.dgvName.Name = "dgvName";
-            this.dgvName.Width = 250;
+            this.name.HeaderText = "Nombre";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 190;
             // 
-            // dgvDate
+            // date
             // 
-            this.dgvDate.HeaderText = "Fecha";
-            this.dgvDate.Name = "dgvDate";
+            this.date.HeaderText = "Fecha";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 80;
             // 
-            // dgvTime
+            // time
             // 
-            this.dgvTime.HeaderText = "Hora";
-            this.dgvTime.Name = "dgvTime";
+            this.time.HeaderText = "Hora";
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            this.time.Width = 80;
+            // 
+            // contact_phone
+            // 
+            this.contact_phone.HeaderText = "Télefono";
+            this.contact_phone.Name = "contact_phone";
+            this.contact_phone.ReadOnly = true;
             // 
             // cldDate
             // 
@@ -161,6 +178,7 @@ namespace SAICP
             // 
             this.cldDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.cldDate.ContainerControlProcessDialogKey = true;
+            this.cldDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cldDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
             this.cldDate.Location = new System.Drawing.Point(24, 104);
             this.cldDate.Name = "cldDate";
@@ -174,6 +192,7 @@ namespace SAICP
             this.cldDate.Size = new System.Drawing.Size(170, 131);
             this.cldDate.TabIndex = 2;
             this.cldDate.Text = "monthCalendarAdv1";
+            this.cldDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.cldDate_DateSelected);
             // 
             // lblSelectDate
             // 
@@ -192,26 +211,15 @@ namespace SAICP
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(12, 249);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.Text = "Regresar";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(93, 249);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Buscar";
             // 
             // lblSearchByName
             // 
@@ -228,6 +236,8 @@ namespace SAICP
             // 
             // txtSearchByName
             // 
+            this.txtSearchByName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtSearchByName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtSearchByName.BackColor = System.Drawing.Color.White;
             // 
             // 
@@ -243,20 +253,23 @@ namespace SAICP
             this.txtSearchByName.Size = new System.Drawing.Size(257, 27);
             this.txtSearchByName.TabIndex = 7;
             this.txtSearchByName.WatermarkText = "Ingresa un nombre...";
+            this.txtSearchByName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchByName_KeyDown);
             this.txtSearchByName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchByName_KeyPress);
             // 
             // btnDelete
             // 
             this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(174, 249);
+            this.btnDelete.Location = new System.Drawing.Point(93, 249);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Eliminar";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmQueryMedicalDates
             // 
@@ -266,7 +279,6 @@ namespace SAICP
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtSearchByName);
             this.Controls.Add(this.lblSearchByName);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblSelectDate);
             this.Controls.Add(this.cldDate);
@@ -296,15 +308,15 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem lblHour;
         private System.Windows.Forms.Timer timer;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTime;
         private DevComponents.Editors.DateTimeAdv.MonthCalendarAdv cldDate;
         private DevComponents.DotNetBar.LabelX lblSelectDate;
         private DevComponents.DotNetBar.ButtonX btnCancel;
-        private DevComponents.DotNetBar.ButtonX btnSearch;
         private DevComponents.DotNetBar.LabelX lblSearchByName;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearchByName;
         private DevComponents.DotNetBar.ButtonX btnDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contact_phone;
     }
 }
