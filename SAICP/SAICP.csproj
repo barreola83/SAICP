@@ -52,64 +52,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AA-CCM.cs">
+    <Compile Include="AA\AA-CCM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AA-CCM.Designer.cs">
+    <Compile Include="AA\AA-CCM.Designer.cs">
       <DependentUpon>AA-CCM.cs</DependentUpon>
     </Compile>
-    <Compile Include="AA-NCM.cs">
+    <Compile Include="AA\AA-NCM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AA-NCM.Designer.cs">
+    <Compile Include="AA\AA-NCM.Designer.cs">
       <DependentUpon>AA-NCM.cs</DependentUpon>
     </Compile>
-    <Compile Include="GBC-CE.cs">
+    <Compile Include="GBC\GBC-CE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GBC-CE.Designer.cs">
+    <Compile Include="GBC\GBC-CE.Designer.cs">
       <DependentUpon>GBC-CE.cs</DependentUpon>
     </Compile>
-    <Compile Include="GBC-CI.cs">
+    <Compile Include="GBC\GBC-CI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GBC-CI.Designer.cs">
+    <Compile Include="GBC\GBC-CI.Designer.cs">
       <DependentUpon>GBC-CI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GBC-RE.cs">
+    <Compile Include="GBC\GBC-RE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GBC-RE.Designer.cs">
+    <Compile Include="GBC\GBC-RE.Designer.cs">
       <DependentUpon>GBC-RE.cs</DependentUpon>
     </Compile>
-    <Compile Include="GBC-RI.cs">
+    <Compile Include="GBC\GBC-RI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GBC-RI.Designer.cs">
+    <Compile Include="GBC\GBC-RI.Designer.cs">
       <DependentUpon>GBC-RI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GIEC-BCM.cs">
+    <Compile Include="GIEC\GIEC-BCM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GIEC-BCM.Designer.cs">
+    <Compile Include="GIEC\GIEC-BCM.Designer.cs">
       <DependentUpon>GIEC-BCM.cs</DependentUpon>
     </Compile>
-    <Compile Include="GIEC-NCM.cs">
+    <Compile Include="GIEC\GIEC-NCM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GIEC-NCM.Designer.cs">
+    <Compile Include="GIEC\GIEC-NCM.Designer.cs">
       <DependentUpon>GIEC-NCM.cs</DependentUpon>
     </Compile>
-    <Compile Include="GIEC-NEC.cs">
+    <Compile Include="GIEC\GIEC-NEC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GIEC-NEC.Designer.cs">
+    <Compile Include="GIEC\GIEC-NEC.Designer.cs">
       <DependentUpon>GIEC-NEC.cs</DependentUpon>
     </Compile>
-    <Compile Include="GIEC-SCG.cs">
+    <Compile Include="GIEC\GIEC-SCG.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GIEC-SCG.Designer.cs">
+    <Compile Include="GIEC\GIEC-SCG.Designer.cs">
       <DependentUpon>GIEC-SCG.cs</DependentUpon>
     </Compile>
     <Compile Include="MP.cs">
@@ -120,46 +120,46 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GIEC-CEC.cs">
+    <Compile Include="GIEC\GIEC-CEC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GIEC-CEC.Designer.cs">
+    <Compile Include="GIEC\GIEC-CEC.Designer.cs">
       <DependentUpon>GIEC-CEC.cs</DependentUpon>
     </Compile>
-    <Compile Include="AA-MCM.cs">
+    <Compile Include="AA\AA-MCM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AA-MCM.Designer.cs">
+    <Compile Include="AA\AA-MCM.Designer.cs">
       <DependentUpon>AA-MCM.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AA-CCM.resx">
+    <EmbeddedResource Include="AA\AA-CCM.resx">
       <DependentUpon>AA-CCM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AA-NCM.resx">
+    <EmbeddedResource Include="AA\AA-NCM.resx">
       <DependentUpon>AA-NCM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GBC-CE.resx">
+    <EmbeddedResource Include="GBC\GBC-CE.resx">
       <DependentUpon>GBC-CE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GBC-CI.resx">
+    <EmbeddedResource Include="GBC\GBC-CI.resx">
       <DependentUpon>GBC-CI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GBC-RE.resx">
+    <EmbeddedResource Include="GBC\GBC-RE.resx">
       <DependentUpon>GBC-RE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GBC-RI.resx">
+    <EmbeddedResource Include="GBC\GBC-RI.resx">
       <DependentUpon>GBC-RI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GIEC-BCM.resx">
+    <EmbeddedResource Include="GIEC\GIEC-BCM.resx">
       <DependentUpon>GIEC-BCM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GIEC-NCM.resx">
+    <EmbeddedResource Include="GIEC\GIEC-NCM.resx">
       <DependentUpon>GIEC-NCM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GIEC-NEC.resx">
+    <EmbeddedResource Include="GIEC\GIEC-NEC.resx">
       <DependentUpon>GIEC-NEC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GIEC-SCG.resx">
+    <EmbeddedResource Include="GIEC\GIEC-SCG.resx">
       <DependentUpon>GIEC-SCG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MP.resx">
@@ -175,10 +175,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="GIEC-CEC.resx">
+    <EmbeddedResource Include="GIEC\GIEC-CEC.resx">
       <DependentUpon>GIEC-CEC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AA-MCM.resx">
+    <EmbeddedResource Include="AA\AA-MCM.resx">
       <DependentUpon>AA-MCM.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
