@@ -39,16 +39,16 @@ namespace SAICP
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.dgvData = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contact_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cldDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
             this.lblSelectDate = new DevComponents.DotNetBar.LabelX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.lblSearchByName = new DevComponents.DotNetBar.LabelX();
             this.txtSearchByName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contact_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,9 +132,38 @@ namespace SAICP
             this.dgvData.Location = new System.Drawing.Point(290, 12);
             this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvData.Size = new System.Drawing.Size(493, 260);
             this.dgvData.TabIndex = 1;
+            this.dgvData.DoubleClick += new System.EventHandler(this.dgvData_DoubleClick);
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Nombre";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 190;
+            // 
+            // date
+            // 
+            this.date.HeaderText = "Fecha";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 80;
+            // 
+            // time
+            // 
+            this.time.HeaderText = "Hora";
+            this.time.Name = "time";
+            this.time.ReadOnly = true;
+            this.time.Width = 80;
+            // 
+            // contact_phone
+            // 
+            this.contact_phone.HeaderText = "Télefono";
+            this.contact_phone.Name = "contact_phone";
+            this.contact_phone.ReadOnly = true;
             // 
             // cldDate
             // 
@@ -231,6 +260,7 @@ namespace SAICP
             // 
             this.btnDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(93, 249);
@@ -240,29 +270,6 @@ namespace SAICP
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Nombre";
-            this.name.Name = "name";
-            this.name.Width = 190;
-            // 
-            // date
-            // 
-            this.date.HeaderText = "Fecha";
-            this.date.Name = "date";
-            this.date.Width = 80;
-            // 
-            // time
-            // 
-            this.time.HeaderText = "Hora";
-            this.time.Name = "time";
-            this.time.Width = 80;
-            // 
-            // contact_phone
-            // 
-            this.contact_phone.HeaderText = "Télefono";
-            this.contact_phone.Name = "contact_phone";
             // 
             // frmQueryMedicalDates
             // 

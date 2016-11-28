@@ -132,10 +132,11 @@ namespace SAICP
             this.cldDate.NavigationBackgroundStyle.BackColorGradientAngle = 90;
             this.cldDate.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.cldDate.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cldDate.ShowTodayMarker = false;
             this.cldDate.Size = new System.Drawing.Size(170, 131);
             this.cldDate.TabIndex = 1;
             this.cldDate.Text = "monthCalendarAdv1";
-            this.cldDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.cldDate_DateSelected);
+            this.cldDate.DateChanged += new System.EventHandler(this.cldDate_DateChanged);
             // 
             // lblSelectDate
             // 
@@ -231,6 +232,7 @@ namespace SAICP
             this.txtFullName.Border.Class = "TextBoxBorder";
             this.txtFullName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtFullName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtFullName.Enabled = false;
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.Location = new System.Drawing.Point(12, 42);
@@ -239,8 +241,6 @@ namespace SAICP
             this.txtFullName.Size = new System.Drawing.Size(309, 27);
             this.txtFullName.TabIndex = 8;
             this.txtFullName.WatermarkText = "Ingrese el nombre completo del paciente...";
-            this.txtFullName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFullName_KeyDown);
-            this.txtFullName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFullName_KeyPress);
             // 
             // lblPhoneNumber
             // 
@@ -296,8 +296,8 @@ namespace SAICP
             this.Name = "frmUpdateMedicalDate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TitleText = "Modificar cita médica";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewMedicalDate_FormClosing);
-            this.Load += new System.EventHandler(this.frmNewMedicalDate_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUpdateMedicalDate_FormClosing);
+            this.Load += new System.EventHandler(this.frmUpdateMedicalDate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

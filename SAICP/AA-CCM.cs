@@ -19,8 +19,8 @@ namespace SAICP
         };
 
         private frmMain windowMenu;
-        private List<PacientData> pacientList = new List<PacientData>();
         private SearchBy search;
+        private List<PacientData> pacientList = new List<PacientData>();
         private bool searchFound = false;
 
         public frmQueryMedicalDates(frmMain windowMenu)
@@ -114,8 +114,6 @@ namespace SAICP
 
             command.Parameters.AddWithValue("@date", cldDate.SelectedDate.Date);
 
-            search = SearchBy.Date;
-
             dgvData.Rows.Clear();
             txtSearchByName.Clear();
 
@@ -125,7 +123,9 @@ namespace SAICP
 
             if (reader.HasRows)
             {
+                search = SearchBy.Date;
                 searchFound = true;
+
                 while (reader.Read())
                 {
                     string[] data = { reader["name"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).ToString("d"), reader.GetTimeSpan(reader.GetOrdinal("time")).ToString(), reader["contact_phone"].ToString() };
@@ -153,8 +153,6 @@ namespace SAICP
 
                 command.Parameters.AddWithValue("@name", txtSearchByName.Text);
 
-                search = SearchBy.Name;
-
                 dgvData.Rows.Clear();
 
                 connection.Open();
@@ -163,6 +161,7 @@ namespace SAICP
 
                 if (reader.HasRows)
                 {
+                    search = SearchBy.Name;
                     searchFound = true;
 
                     while (reader.Read())
@@ -187,23 +186,116 @@ namespace SAICP
         {
             if (dgvData.Rows.GetRowCount(DataGridViewElementStates.Selected) != 0 && searchFound)
             {
-                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-                SqlCommand command = new SqlCommand("DELETE FROM agenda WHERE name=@name AND (date=@date AND time=@time);", connection);
+                if (MessageBox.Show("¿Seguro que desea eliminar la cita médica?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                    SqlCommand command = new SqlCommand("DELETE FROM agenda WHERE name=@name AND (date=@date AND time=@time);", connection);
 
-                command.Parameters.AddWithValue("@name", dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["name"].Value.ToString());
-                command.Parameters.AddWithValue("@date", DateTime.Parse(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["date"].Value.ToString()).Date);
-                command.Parameters.AddWithValue("@time", TimeSpan.Parse(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["time"].Value.ToString()));
+                    command.Parameters.AddWithValue("@name", dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["name"].Value.ToString());
+                    command.Parameters.AddWithValue("@date", DateTime.Parse(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["date"].Value.ToString()).Date);
+                    command.Parameters.AddWithValue("@time", TimeSpan.Parse(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["time"].Value.ToString()));
 
-                connection.Open();
+                    connection.Open();
 
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
 
-                connection.Close();
+                    connection.Close();
 
-                dgvData.Rows.RemoveAt(dgvData.CurrentCell.RowIndex);
+                    dgvData.Rows.RemoveAt(dgvData.CurrentCell.RowIndex);
+                }
             }
             else
                 MessageBox.Show("Seleccione una cita", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void dgvData_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvData.Rows.GetRowCount(DataGridViewElementStates.Selected) != 0 && searchFound)
+            {
+                frmUpdateMedicalDate updateMedicalDate = new frmUpdateMedicalDate(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["name"].Value.ToString(), 
+                                                                                  dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["contact_phone"].Value.ToString(), 
+                                                                                  DateTime.Parse(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["date"].Value.ToString()).Date, 
+                                                                                  TimeSpan.Parse(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["time"].Value.ToString()));
+
+                updateMedicalDate.ShowDialog();
+
+                RefreshDataGridView();
+            }
+        }
+
+        private void RefreshDataGridView()
+        {
+            if (search == SearchBy.Date)
+            {
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("SELECT date, time, name, contact_phone, folio FROM agenda WHERE date=@date;", connection);
+                SqlDataReader reader;
+
+                command.Parameters.AddWithValue("@date", cldDate.SelectedDate.Date);
+
+                dgvData.Rows.Clear();
+                txtSearchByName.Clear();
+
+                connection.Open();
+
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    search = SearchBy.Date;
+                    searchFound = true;
+
+                    while (reader.Read())
+                    {
+                        string[] data = { reader["name"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).ToString("d"), reader.GetTimeSpan(reader.GetOrdinal("time")).ToString(), reader["contact_phone"].ToString() };
+                        dgvData.Rows.Add(data);
+                    }
+
+                    btnDelete.Enabled = true;
+                }
+                else
+                {
+                    searchFound = false;
+                    btnDelete.Enabled = false;
+                }
+
+                connection.Close();
+            }
+            else if (search == SearchBy.Name)
+            {
+                SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                SqlCommand command = new SqlCommand("SELECT name, date, time, contact_phone FROM agenda WHERE name=@name;", connection);
+                SqlDataReader reader;
+
+                command.Parameters.AddWithValue("@name", txtSearchByName.Text);
+
+                dgvData.Rows.Clear();
+
+                connection.Open();
+
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    search = SearchBy.Name;
+                    searchFound = true;
+
+                    while (reader.Read())
+                    {
+                        string[] data = { reader["name"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).ToString("d"), reader.GetTimeSpan(reader.GetOrdinal("time")).ToString(), reader["contact_phone"].ToString() };
+                        dgvData.Rows.Add(data);
+                    }
+
+                    btnDelete.Enabled = true;
+                }
+                else
+                {
+                    searchFound = false;
+                    btnDelete.Enabled = false;
+                }
+
+                connection.Close();
+            }
         }
     }
 }
