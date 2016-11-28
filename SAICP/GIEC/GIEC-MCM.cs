@@ -23,7 +23,10 @@ namespace SAICP
             MaximizeBox = false;
 
             stiGraphics.Enabled = false;
+            stiGraphics.Visible = false;
+
             stiTable.Enabled = false;
+            stiTable.Visible = false;
 
             this.IDFromMedicalQuery = IDFromMedicalQuery;
 

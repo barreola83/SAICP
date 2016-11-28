@@ -1782,8 +1782,6 @@ namespace SAICP
                 {
                     if (Char.IsLetter(e.KeyChar))
                         e.KeyChar = Char.ToUpper(e.KeyChar);
-                    else if (e.KeyChar == (char)Keys.Enter)
-                        cmdSearch.PerformClick();
                 }
             }
             else if (cmbSearchBy.SelectedIndex == 1)
@@ -1792,8 +1790,6 @@ namespace SAICP
                 {
                     if (txtSearchBy.Text.Length == 0 || txtSearchBy.Text.Substring(txtSearchBy.Text.Length - 1) == " ")
                         e.KeyChar = Char.ToUpper(e.KeyChar);
-                    else if (e.KeyChar == (char)Keys.Enter)
-                        cmdSearch.PerformClick();
                 }
                 else
                     e.Handled = true;
@@ -1805,7 +1801,77 @@ namespace SAICP
          */
         private void cmdSearch_Click(object sender, EventArgs e)
         {
-            Search();
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command;
+            SqlDataReader reader;
+
+            if (txtSearchBy.Text.Length == 0)
+            {
+                MessageBox.Show("El campo de busqueda se encuentra vacio", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cmdModifySave.Enabled = false;
+            }
+            else if (cmbSearchBy.SelectedIndex == 0)
+            {
+                command = new SqlCommand("SELECT * FROM clinical_records WHERE folio=@folio", connection);
+
+                if (txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text) != -1)
+                {
+                    selectedID = txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text);
+
+                    command.Parameters.AddWithValue("@folio", foliosList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Folio);
+
+                    connection.Open();
+
+                    reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        DisplayData(reader);
+                    }
+
+                    connection.Close();
+
+                    SetAutoCompleteCustomSourceByFolio();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmdModifySave.Enabled = false;
+                }
+            }
+            else
+            {
+                command = new SqlCommand("SELECT * FROM clinical_records WHERE (name=@name AND first_last_name=@first_last_name) AND second_last_name=@second_last_name;", connection);
+
+                if (txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text) != -1)
+                {
+                    selectedID = txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text);
+
+                    command.Parameters.AddWithValue("@name", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].Name);
+                    command.Parameters.AddWithValue("@first_last_name", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].FirstLastName);
+                    command.Parameters.AddWithValue("@second_last_name", namesList[txtSearchBy.AutoCompleteCustomSource.IndexOf(txtSearchBy.Text)].SecondLastName);
+
+                    connection.Open();
+
+                    reader = command.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        DisplayData(reader);
+                    }
+
+                    connection.Close();
+
+                    SetAutoCompleteCustomSourceByName();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cmdModifySave.Enabled = false;
+                }
+            }
         }
 
         /*
@@ -2541,6 +2607,14 @@ namespace SAICP
                     MessageBox.Show("No se encontro el registro", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cmdModifySave.Enabled = false;
                 }
+            }
+        }
+
+        private void txtSearchBy_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmdSearch.PerformClick();
             }
         }
     }

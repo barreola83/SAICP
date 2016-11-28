@@ -63,89 +63,6 @@ namespace SAICP
             this.pctPhoto = new System.Windows.Forms.PictureBox();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel6 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.txtProblemsInDevelopment = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX51 = new DevComponents.DotNetBar.LabelX();
-            this.swtDevelopmentProblems = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX50 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeDentationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX49 = new DevComponents.DotNetBar.LabelX();
-            this.swtDentation = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX48 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeSphincterControlStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX47 = new DevComponents.DotNetBar.LabelX();
-            this.swtSphincterControl = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX46 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeLanguageDevelopmentStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX45 = new DevComponents.DotNetBar.LabelX();
-            this.swtLanguageDevelopment = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX44 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeWanderingStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX43 = new DevComponents.DotNetBar.LabelX();
-            this.swtWandering = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX42 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeBipedestationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX41 = new DevComponents.DotNetBar.LabelX();
-            this.swtBipedestation = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX40 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeCrawlStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX39 = new DevComponents.DotNetBar.LabelX();
-            this.swtCrawl = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX38 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeSedestationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX36 = new DevComponents.DotNetBar.LabelX();
-            this.swtSedestation = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX37 = new DevComponents.DotNetBar.LabelX();
-            this.txtAgeCephalicSupportStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX35 = new DevComponents.DotNetBar.LabelX();
-            this.swtCephalicSupport = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX34 = new DevComponents.DotNetBar.LabelX();
-            this.superTabItem7 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.txtActualTreatment = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX32 = new DevComponents.DotNetBar.LabelX();
-            this.swtActualTreatment = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX33 = new DevComponents.DotNetBar.LabelX();
-            this.txtSurgeriesCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX30 = new DevComponents.DotNetBar.LabelX();
-            this.swtSurgerie = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX31 = new DevComponents.DotNetBar.LabelX();
-            this.txtTransfusionsCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX28 = new DevComponents.DotNetBar.LabelX();
-            this.swtTransfusions = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX29 = new DevComponents.DotNetBar.LabelX();
-            this.txtTraumaCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX26 = new DevComponents.DotNetBar.LabelX();
-            this.swtTrauma = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX27 = new DevComponents.DotNetBar.LabelX();
-            this.txtHospitalizationCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX25 = new DevComponents.DotNetBar.LabelX();
-            this.swtHospitalizations = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.labelX24 = new DevComponents.DotNetBar.LabelX();
-            this.txtPreviousDiseases = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX23 = new DevComponents.DotNetBar.LabelX();
-            this.labelX22 = new DevComponents.DotNetBar.LabelX();
-            this.swtPreviousDiseases = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.superTabItem6 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX20 = new DevComponents.DotNetBar.LabelX();
-            this.swtWeaning = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.txtAgeWeaningStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX21 = new DevComponents.DotNetBar.LabelX();
-            this.labelX19 = new DevComponents.DotNetBar.LabelX();
-            this.swtAblactation = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.txtAgeAblactationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX18 = new DevComponents.DotNetBar.LabelX();
-            this.txtHygineRutines = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX17 = new DevComponents.DotNetBar.LabelX();
-            this.txtActualFeed = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX16 = new DevComponents.DotNetBar.LabelX();
-            this.txtInitialFeed = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX15 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.txtVaccineHistory = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.superTabItem5 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
@@ -230,6 +147,89 @@ namespace SAICP
             this.txtFamilyHereditaryAntecedents = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel5 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.txtActualTreatment = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX32 = new DevComponents.DotNetBar.LabelX();
+            this.swtActualTreatment = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX33 = new DevComponents.DotNetBar.LabelX();
+            this.txtSurgeriesCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX30 = new DevComponents.DotNetBar.LabelX();
+            this.swtSurgerie = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX31 = new DevComponents.DotNetBar.LabelX();
+            this.txtTransfusionsCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX28 = new DevComponents.DotNetBar.LabelX();
+            this.swtTransfusions = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX29 = new DevComponents.DotNetBar.LabelX();
+            this.txtTraumaCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX26 = new DevComponents.DotNetBar.LabelX();
+            this.swtTrauma = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX27 = new DevComponents.DotNetBar.LabelX();
+            this.txtHospitalizationCauses = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX25 = new DevComponents.DotNetBar.LabelX();
+            this.swtHospitalizations = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX24 = new DevComponents.DotNetBar.LabelX();
+            this.txtPreviousDiseases = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX23 = new DevComponents.DotNetBar.LabelX();
+            this.labelX22 = new DevComponents.DotNetBar.LabelX();
+            this.swtPreviousDiseases = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.superTabItem6 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX20 = new DevComponents.DotNetBar.LabelX();
+            this.swtWeaning = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.txtAgeWeaningStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX21 = new DevComponents.DotNetBar.LabelX();
+            this.labelX19 = new DevComponents.DotNetBar.LabelX();
+            this.swtAblactation = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.txtAgeAblactationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX18 = new DevComponents.DotNetBar.LabelX();
+            this.txtHygineRutines = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX17 = new DevComponents.DotNetBar.LabelX();
+            this.txtActualFeed = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX16 = new DevComponents.DotNetBar.LabelX();
+            this.txtInitialFeed = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX15 = new DevComponents.DotNetBar.LabelX();
+            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.txtVaccineHistory = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.superTabItem5 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel6 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.txtProblemsInDevelopment = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX51 = new DevComponents.DotNetBar.LabelX();
+            this.swtDevelopmentProblems = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX50 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeDentationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX49 = new DevComponents.DotNetBar.LabelX();
+            this.swtDentation = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX48 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeSphincterControlStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX47 = new DevComponents.DotNetBar.LabelX();
+            this.swtSphincterControl = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX46 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeLanguageDevelopmentStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX45 = new DevComponents.DotNetBar.LabelX();
+            this.swtLanguageDevelopment = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX44 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeWanderingStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX43 = new DevComponents.DotNetBar.LabelX();
+            this.swtWandering = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX42 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeBipedestationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX41 = new DevComponents.DotNetBar.LabelX();
+            this.swtBipedestation = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX40 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeCrawlStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX39 = new DevComponents.DotNetBar.LabelX();
+            this.swtCrawl = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX38 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeSedestationStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX36 = new DevComponents.DotNetBar.LabelX();
+            this.swtSedestation = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX37 = new DevComponents.DotNetBar.LabelX();
+            this.txtAgeCephalicSupportStarts = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX35 = new DevComponents.DotNetBar.LabelX();
+            this.swtCephalicSupport = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.labelX34 = new DevComponents.DotNetBar.LabelX();
+            this.superTabItem7 = new DevComponents.DotNetBar.SuperTabItem();
             this.switchButtonItem1 = new DevComponents.DotNetBar.SwitchButtonItem();
             this.cmdModifySave = new DevComponents.DotNetBar.ButtonX();
             this.cmdReturnCancel = new DevComponents.DotNetBar.ButtonX();
@@ -245,17 +245,17 @@ namespace SAICP
             this.superTabControlPanel1.SuspendLayout();
             this.grpSex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).BeginInit();
-            this.superTabControlPanel6.SuspendLayout();
-            this.superTabControlPanel5.SuspendLayout();
-            this.superTabControlPanel4.SuspendLayout();
-            this.groupPanel4.SuspendLayout();
-            this.groupPanel3.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
+            this.superTabControlPanel5.SuspendLayout();
+            this.superTabControlPanel4.SuspendLayout();
+            this.groupPanel4.SuspendLayout();
+            this.groupPanel3.SuspendLayout();
+            this.superTabControlPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // superTabItem2
@@ -818,1518 +818,6 @@ namespace SAICP
             this.superTabItem1.GlobalItem = false;
             this.superTabItem1.Name = "superTabItem1";
             this.superTabItem1.Text = "Datos generales";
-            // 
-            // superTabControlPanel6
-            // 
-            this.superTabControlPanel6.Controls.Add(this.txtProblemsInDevelopment);
-            this.superTabControlPanel6.Controls.Add(this.labelX51);
-            this.superTabControlPanel6.Controls.Add(this.swtDevelopmentProblems);
-            this.superTabControlPanel6.Controls.Add(this.labelX50);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeDentationStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX49);
-            this.superTabControlPanel6.Controls.Add(this.swtDentation);
-            this.superTabControlPanel6.Controls.Add(this.labelX48);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeSphincterControlStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX47);
-            this.superTabControlPanel6.Controls.Add(this.swtSphincterControl);
-            this.superTabControlPanel6.Controls.Add(this.labelX46);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeLanguageDevelopmentStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX45);
-            this.superTabControlPanel6.Controls.Add(this.swtLanguageDevelopment);
-            this.superTabControlPanel6.Controls.Add(this.labelX44);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeWanderingStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX43);
-            this.superTabControlPanel6.Controls.Add(this.swtWandering);
-            this.superTabControlPanel6.Controls.Add(this.labelX42);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeBipedestationStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX41);
-            this.superTabControlPanel6.Controls.Add(this.swtBipedestation);
-            this.superTabControlPanel6.Controls.Add(this.labelX40);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeCrawlStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX39);
-            this.superTabControlPanel6.Controls.Add(this.swtCrawl);
-            this.superTabControlPanel6.Controls.Add(this.labelX38);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeSedestationStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX36);
-            this.superTabControlPanel6.Controls.Add(this.swtSedestation);
-            this.superTabControlPanel6.Controls.Add(this.labelX37);
-            this.superTabControlPanel6.Controls.Add(this.txtAgeCephalicSupportStarts);
-            this.superTabControlPanel6.Controls.Add(this.labelX35);
-            this.superTabControlPanel6.Controls.Add(this.swtCephalicSupport);
-            this.superTabControlPanel6.Controls.Add(this.labelX34);
-            this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel6.Name = "superTabControlPanel6";
-            this.superTabControlPanel6.Size = new System.Drawing.Size(801, 379);
-            this.superTabControlPanel6.TabIndex = 0;
-            this.superTabControlPanel6.TabItem = this.superTabItem7;
-            // 
-            // txtProblemsInDevelopment
-            // 
-            this.txtProblemsInDevelopment.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtProblemsInDevelopment.Border.Class = "TextBoxBorder";
-            this.txtProblemsInDevelopment.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProblemsInDevelopment.DisabledBackColor = System.Drawing.Color.White;
-            this.txtProblemsInDevelopment.Enabled = false;
-            this.txtProblemsInDevelopment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProblemsInDevelopment.ForeColor = System.Drawing.Color.Black;
-            this.txtProblemsInDevelopment.Location = new System.Drawing.Point(515, 74);
-            this.txtProblemsInDevelopment.Multiline = true;
-            this.txtProblemsInDevelopment.Name = "txtProblemsInDevelopment";
-            this.txtProblemsInDevelopment.PreventEnterBeep = true;
-            this.txtProblemsInDevelopment.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtProblemsInDevelopment.Size = new System.Drawing.Size(265, 302);
-            this.txtProblemsInDevelopment.TabIndex = 68;
-            this.txtProblemsInDevelopment.WatermarkText = "Ingrese los problemas en el desarrollo...";
-            this.txtProblemsInDevelopment.WordWrap = false;
-            // 
-            // labelX51
-            // 
-            this.labelX51.AutoSize = true;
-            this.labelX51.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX51.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX51.Location = new System.Drawing.Point(515, 44);
-            this.labelX51.Name = "labelX51";
-            this.labelX51.Size = new System.Drawing.Size(91, 24);
-            this.labelX51.TabIndex = 34;
-            this.labelX51.Text = "Información:";
-            // 
-            // swtDevelopmentProblems
-            // 
-            // 
-            // 
-            // 
-            this.swtDevelopmentProblems.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtDevelopmentProblems.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtDevelopmentProblems.Enabled = false;
-            this.swtDevelopmentProblems.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtDevelopmentProblems.Location = new System.Drawing.Point(714, 16);
-            this.swtDevelopmentProblems.Name = "swtDevelopmentProblems";
-            this.swtDevelopmentProblems.OffText = "No";
-            this.swtDevelopmentProblems.OnText = "Si";
-            this.swtDevelopmentProblems.Size = new System.Drawing.Size(66, 22);
-            this.swtDevelopmentProblems.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtDevelopmentProblems.TabIndex = 67;
-            this.swtDevelopmentProblems.ValueChanged += new System.EventHandler(this.swtDevelopmentProblems_ValueChanged);
-            // 
-            // labelX50
-            // 
-            this.labelX50.AutoSize = true;
-            this.labelX50.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX50.Location = new System.Drawing.Point(515, 14);
-            this.labelX50.Name = "labelX50";
-            this.labelX50.Size = new System.Drawing.Size(193, 24);
-            this.labelX50.TabIndex = 32;
-            this.labelX50.Text = "Problemas en el desarrollo:";
-            // 
-            // txtAgeDentationStarts
-            // 
-            this.txtAgeDentationStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeDentationStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeDentationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeDentationStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeDentationStarts.Enabled = false;
-            this.txtAgeDentationStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeDentationStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeDentationStarts.Location = new System.Drawing.Point(435, 301);
-            this.txtAgeDentationStarts.MaxLength = 3;
-            this.txtAgeDentationStarts.Name = "txtAgeDentationStarts";
-            this.txtAgeDentationStarts.PreventEnterBeep = true;
-            this.txtAgeDentationStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeDentationStarts.TabIndex = 66;
-            this.txtAgeDentationStarts.WatermarkText = "...";
-            this.txtAgeDentationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeDentationStarts_KeyPress);
-            // 
-            // labelX49
-            // 
-            this.labelX49.AutoSize = true;
-            this.labelX49.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX49.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX49.Location = new System.Drawing.Point(253, 304);
-            this.labelX49.Name = "labelX49";
-            this.labelX49.Size = new System.Drawing.Size(136, 24);
-            this.labelX49.TabIndex = 30;
-            this.labelX49.Text = "Edad de comienzo:";
-            // 
-            // swtDentation
-            // 
-            // 
-            // 
-            // 
-            this.swtDentation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtDentation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtDentation.Enabled = false;
-            this.swtDentation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtDentation.Location = new System.Drawing.Point(435, 277);
-            this.swtDentation.Name = "swtDentation";
-            this.swtDentation.OffText = "No";
-            this.swtDentation.OnText = "Si";
-            this.swtDentation.Size = new System.Drawing.Size(66, 22);
-            this.swtDentation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtDentation.TabIndex = 65;
-            this.swtDentation.ValueChanged += new System.EventHandler(this.swtDentation_ValueChanged);
-            // 
-            // labelX48
-            // 
-            this.labelX48.AutoSize = true;
-            this.labelX48.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX48.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX48.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX48.Location = new System.Drawing.Point(253, 275);
-            this.labelX48.Name = "labelX48";
-            this.labelX48.Size = new System.Drawing.Size(182, 24);
-            this.labelX48.TabIndex = 28;
-            this.labelX48.Text = "Aparición de la dentición:";
-            // 
-            // txtAgeSphincterControlStarts
-            // 
-            this.txtAgeSphincterControlStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeSphincterControlStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeSphincterControlStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeSphincterControlStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeSphincterControlStarts.Enabled = false;
-            this.txtAgeSphincterControlStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeSphincterControlStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeSphincterControlStarts.Location = new System.Drawing.Point(174, 305);
-            this.txtAgeSphincterControlStarts.MaxLength = 3;
-            this.txtAgeSphincterControlStarts.Name = "txtAgeSphincterControlStarts";
-            this.txtAgeSphincterControlStarts.PreventEnterBeep = true;
-            this.txtAgeSphincterControlStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeSphincterControlStarts.TabIndex = 58;
-            this.txtAgeSphincterControlStarts.WatermarkText = "...";
-            this.txtAgeSphincterControlStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeSphincterControlStarts_KeyPress);
-            // 
-            // labelX47
-            // 
-            this.labelX47.AutoSize = true;
-            this.labelX47.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX47.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX47.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX47.Location = new System.Drawing.Point(15, 304);
-            this.labelX47.Name = "labelX47";
-            this.labelX47.Size = new System.Drawing.Size(136, 24);
-            this.labelX47.TabIndex = 26;
-            this.labelX47.Text = "Edad de comienzo:";
-            // 
-            // swtSphincterControl
-            // 
-            // 
-            // 
-            // 
-            this.swtSphincterControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtSphincterControl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtSphincterControl.Enabled = false;
-            this.swtSphincterControl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtSphincterControl.Location = new System.Drawing.Point(174, 277);
-            this.swtSphincterControl.Name = "swtSphincterControl";
-            this.swtSphincterControl.OffText = "No";
-            this.swtSphincterControl.OnText = "Si";
-            this.swtSphincterControl.Size = new System.Drawing.Size(66, 22);
-            this.swtSphincterControl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtSphincterControl.TabIndex = 57;
-            this.swtSphincterControl.ValueChanged += new System.EventHandler(this.swtSphincterControl_ValueChanged);
-            // 
-            // labelX46
-            // 
-            this.labelX46.AutoSize = true;
-            this.labelX46.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX46.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX46.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX46.Location = new System.Drawing.Point(15, 275);
-            this.labelX46.Name = "labelX46";
-            this.labelX46.Size = new System.Drawing.Size(153, 24);
-            this.labelX46.TabIndex = 24;
-            this.labelX46.Text = "Control de esfínteres:";
-            // 
-            // txtAgeLanguageDevelopmentStarts
-            // 
-            this.txtAgeLanguageDevelopmentStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeLanguageDevelopmentStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeLanguageDevelopmentStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeLanguageDevelopmentStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeLanguageDevelopmentStarts.Enabled = false;
-            this.txtAgeLanguageDevelopmentStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeLanguageDevelopmentStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeLanguageDevelopmentStarts.Location = new System.Drawing.Point(435, 226);
-            this.txtAgeLanguageDevelopmentStarts.MaxLength = 3;
-            this.txtAgeLanguageDevelopmentStarts.Name = "txtAgeLanguageDevelopmentStarts";
-            this.txtAgeLanguageDevelopmentStarts.PreventEnterBeep = true;
-            this.txtAgeLanguageDevelopmentStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeLanguageDevelopmentStarts.TabIndex = 64;
-            this.txtAgeLanguageDevelopmentStarts.WatermarkText = "...";
-            this.txtAgeLanguageDevelopmentStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeLanguageDevelopmentStarts_KeyPress);
-            // 
-            // labelX45
-            // 
-            this.labelX45.AutoSize = true;
-            this.labelX45.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX45.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX45.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX45.Location = new System.Drawing.Point(253, 226);
-            this.labelX45.Name = "labelX45";
-            this.labelX45.Size = new System.Drawing.Size(136, 24);
-            this.labelX45.TabIndex = 22;
-            this.labelX45.Text = "Edad de comienzo:";
-            // 
-            // swtLanguageDevelopment
-            // 
-            // 
-            // 
-            // 
-            this.swtLanguageDevelopment.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtLanguageDevelopment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtLanguageDevelopment.Enabled = false;
-            this.swtLanguageDevelopment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtLanguageDevelopment.Location = new System.Drawing.Point(435, 200);
-            this.swtLanguageDevelopment.Name = "swtLanguageDevelopment";
-            this.swtLanguageDevelopment.OffText = "No";
-            this.swtLanguageDevelopment.OnText = "Si";
-            this.swtLanguageDevelopment.Size = new System.Drawing.Size(66, 22);
-            this.swtLanguageDevelopment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtLanguageDevelopment.TabIndex = 63;
-            this.swtLanguageDevelopment.ValueChanged += new System.EventHandler(this.swtLanguageDevelopment_ValueChanged);
-            // 
-            // labelX44
-            // 
-            this.labelX44.AutoSize = true;
-            this.labelX44.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX44.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX44.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX44.Location = new System.Drawing.Point(253, 198);
-            this.labelX44.Name = "labelX44";
-            this.labelX44.Size = new System.Drawing.Size(169, 24);
-            this.labelX44.TabIndex = 20;
-            this.labelX44.Text = "Desarrollo del lenguaje:";
-            // 
-            // txtAgeWanderingStarts
-            // 
-            this.txtAgeWanderingStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeWanderingStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeWanderingStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeWanderingStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeWanderingStarts.Enabled = false;
-            this.txtAgeWanderingStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeWanderingStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeWanderingStarts.Location = new System.Drawing.Point(435, 155);
-            this.txtAgeWanderingStarts.MaxLength = 3;
-            this.txtAgeWanderingStarts.Name = "txtAgeWanderingStarts";
-            this.txtAgeWanderingStarts.PreventEnterBeep = true;
-            this.txtAgeWanderingStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeWanderingStarts.TabIndex = 62;
-            this.txtAgeWanderingStarts.WatermarkText = "...";
-            this.txtAgeWanderingStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeWanderingStarts_KeyPress);
-            // 
-            // labelX43
-            // 
-            this.labelX43.AutoSize = true;
-            this.labelX43.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX43.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX43.Location = new System.Drawing.Point(253, 157);
-            this.labelX43.Name = "labelX43";
-            this.labelX43.Size = new System.Drawing.Size(136, 24);
-            this.labelX43.TabIndex = 18;
-            this.labelX43.Text = "Edad de comienzo:";
-            // 
-            // swtWandering
-            // 
-            // 
-            // 
-            // 
-            this.swtWandering.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtWandering.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtWandering.Enabled = false;
-            this.swtWandering.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtWandering.Location = new System.Drawing.Point(435, 128);
-            this.swtWandering.Name = "swtWandering";
-            this.swtWandering.OffText = "No";
-            this.swtWandering.OnText = "Si";
-            this.swtWandering.Size = new System.Drawing.Size(66, 22);
-            this.swtWandering.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtWandering.TabIndex = 61;
-            this.swtWandering.ValueChanged += new System.EventHandler(this.swtWandering_ValueChanged);
-            // 
-            // labelX42
-            // 
-            this.labelX42.AutoSize = true;
-            this.labelX42.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX42.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX42.Location = new System.Drawing.Point(253, 126);
-            this.labelX42.Name = "labelX42";
-            this.labelX42.Size = new System.Drawing.Size(108, 24);
-            this.labelX42.TabIndex = 16;
-            this.labelX42.Text = "Deambulación:";
-            // 
-            // txtAgeBipedestationStarts
-            // 
-            this.txtAgeBipedestationStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeBipedestationStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeBipedestationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeBipedestationStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeBipedestationStarts.Enabled = false;
-            this.txtAgeBipedestationStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeBipedestationStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeBipedestationStarts.Location = new System.Drawing.Point(174, 155);
-            this.txtAgeBipedestationStarts.MaxLength = 3;
-            this.txtAgeBipedestationStarts.Name = "txtAgeBipedestationStarts";
-            this.txtAgeBipedestationStarts.PreventEnterBeep = true;
-            this.txtAgeBipedestationStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeBipedestationStarts.TabIndex = 54;
-            this.txtAgeBipedestationStarts.WatermarkText = "...";
-            this.txtAgeBipedestationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeBipedestationStarts_KeyPress);
-            // 
-            // labelX41
-            // 
-            this.labelX41.AutoSize = true;
-            this.labelX41.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX41.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX41.Location = new System.Drawing.Point(14, 157);
-            this.labelX41.Name = "labelX41";
-            this.labelX41.Size = new System.Drawing.Size(136, 24);
-            this.labelX41.TabIndex = 14;
-            this.labelX41.Text = "Edad de comienzo:";
-            // 
-            // swtBipedestation
-            // 
-            // 
-            // 
-            // 
-            this.swtBipedestation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtBipedestation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtBipedestation.Enabled = false;
-            this.swtBipedestation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtBipedestation.Location = new System.Drawing.Point(174, 128);
-            this.swtBipedestation.Name = "swtBipedestation";
-            this.swtBipedestation.OffText = "No";
-            this.swtBipedestation.OnText = "Si";
-            this.swtBipedestation.Size = new System.Drawing.Size(66, 22);
-            this.swtBipedestation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtBipedestation.TabIndex = 53;
-            this.swtBipedestation.ValueChanged += new System.EventHandler(this.swtBipedestation_ValueChanged);
-            // 
-            // labelX40
-            // 
-            this.labelX40.AutoSize = true;
-            this.labelX40.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX40.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX40.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX40.Location = new System.Drawing.Point(14, 126);
-            this.labelX40.Name = "labelX40";
-            this.labelX40.Size = new System.Drawing.Size(105, 24);
-            this.labelX40.TabIndex = 12;
-            this.labelX40.Text = "Bipedestación:";
-            // 
-            // txtAgeCrawlStarts
-            // 
-            this.txtAgeCrawlStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeCrawlStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeCrawlStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeCrawlStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeCrawlStarts.Enabled = false;
-            this.txtAgeCrawlStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeCrawlStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeCrawlStarts.Location = new System.Drawing.Point(174, 226);
-            this.txtAgeCrawlStarts.MaxLength = 3;
-            this.txtAgeCrawlStarts.Name = "txtAgeCrawlStarts";
-            this.txtAgeCrawlStarts.PreventEnterBeep = true;
-            this.txtAgeCrawlStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeCrawlStarts.TabIndex = 56;
-            this.txtAgeCrawlStarts.WatermarkText = "...";
-            this.txtAgeCrawlStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeCrawlStarts_KeyPress);
-            // 
-            // labelX39
-            // 
-            this.labelX39.AutoSize = true;
-            this.labelX39.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX39.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX39.Location = new System.Drawing.Point(15, 226);
-            this.labelX39.Name = "labelX39";
-            this.labelX39.Size = new System.Drawing.Size(136, 24);
-            this.labelX39.TabIndex = 10;
-            this.labelX39.Text = "Edad de comienzo:";
-            // 
-            // swtCrawl
-            // 
-            // 
-            // 
-            // 
-            this.swtCrawl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtCrawl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtCrawl.Enabled = false;
-            this.swtCrawl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtCrawl.Location = new System.Drawing.Point(174, 200);
-            this.swtCrawl.Name = "swtCrawl";
-            this.swtCrawl.OffText = "No";
-            this.swtCrawl.OnText = "Si";
-            this.swtCrawl.Size = new System.Drawing.Size(66, 22);
-            this.swtCrawl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtCrawl.TabIndex = 55;
-            this.swtCrawl.ValueChanged += new System.EventHandler(this.swtCrawl_ValueChanged);
-            // 
-            // labelX38
-            // 
-            this.labelX38.AutoSize = true;
-            this.labelX38.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX38.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX38.Location = new System.Drawing.Point(15, 198);
-            this.labelX38.Name = "labelX38";
-            this.labelX38.Size = new System.Drawing.Size(48, 24);
-            this.labelX38.TabIndex = 8;
-            this.labelX38.Text = "Gateo:";
-            // 
-            // txtAgeSedestationStarts
-            // 
-            this.txtAgeSedestationStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeSedestationStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeSedestationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeSedestationStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeSedestationStarts.Enabled = false;
-            this.txtAgeSedestationStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeSedestationStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeSedestationStarts.Location = new System.Drawing.Point(435, 78);
-            this.txtAgeSedestationStarts.MaxLength = 3;
-            this.txtAgeSedestationStarts.Name = "txtAgeSedestationStarts";
-            this.txtAgeSedestationStarts.PreventEnterBeep = true;
-            this.txtAgeSedestationStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeSedestationStarts.TabIndex = 60;
-            this.txtAgeSedestationStarts.WatermarkText = "...";
-            this.txtAgeSedestationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeSedestationStarts_KeyPress);
-            // 
-            // labelX36
-            // 
-            this.labelX36.AutoSize = true;
-            this.labelX36.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX36.Location = new System.Drawing.Point(253, 77);
-            this.labelX36.Name = "labelX36";
-            this.labelX36.Size = new System.Drawing.Size(136, 24);
-            this.labelX36.TabIndex = 6;
-            this.labelX36.Text = "Edad de comienzo:";
-            // 
-            // swtSedestation
-            // 
-            // 
-            // 
-            // 
-            this.swtSedestation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtSedestation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtSedestation.Enabled = false;
-            this.swtSedestation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtSedestation.Location = new System.Drawing.Point(435, 51);
-            this.swtSedestation.Name = "swtSedestation";
-            this.swtSedestation.OffText = "No";
-            this.swtSedestation.OnText = "Si";
-            this.swtSedestation.Size = new System.Drawing.Size(66, 22);
-            this.swtSedestation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtSedestation.TabIndex = 59;
-            this.swtSedestation.ValueChanged += new System.EventHandler(this.swtSedestation_ValueChanged);
-            // 
-            // labelX37
-            // 
-            this.labelX37.AutoSize = true;
-            this.labelX37.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX37.Location = new System.Drawing.Point(253, 49);
-            this.labelX37.Name = "labelX37";
-            this.labelX37.Size = new System.Drawing.Size(91, 24);
-            this.labelX37.TabIndex = 4;
-            this.labelX37.Text = "Sedestación:";
-            // 
-            // txtAgeCephalicSupportStarts
-            // 
-            this.txtAgeCephalicSupportStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeCephalicSupportStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeCephalicSupportStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeCephalicSupportStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeCephalicSupportStarts.Enabled = false;
-            this.txtAgeCephalicSupportStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgeCephalicSupportStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeCephalicSupportStarts.Location = new System.Drawing.Point(174, 78);
-            this.txtAgeCephalicSupportStarts.MaxLength = 3;
-            this.txtAgeCephalicSupportStarts.Name = "txtAgeCephalicSupportStarts";
-            this.txtAgeCephalicSupportStarts.PreventEnterBeep = true;
-            this.txtAgeCephalicSupportStarts.Size = new System.Drawing.Size(40, 27);
-            this.txtAgeCephalicSupportStarts.TabIndex = 52;
-            this.txtAgeCephalicSupportStarts.WatermarkText = "...";
-            this.txtAgeCephalicSupportStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeCephalicSupportStarts_KeyPress);
-            // 
-            // labelX35
-            // 
-            this.labelX35.AutoSize = true;
-            this.labelX35.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX35.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX35.Location = new System.Drawing.Point(15, 77);
-            this.labelX35.Name = "labelX35";
-            this.labelX35.Size = new System.Drawing.Size(136, 24);
-            this.labelX35.TabIndex = 2;
-            this.labelX35.Text = "Edad de comienzo:";
-            // 
-            // swtCephalicSupport
-            // 
-            // 
-            // 
-            // 
-            this.swtCephalicSupport.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtCephalicSupport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtCephalicSupport.Enabled = false;
-            this.swtCephalicSupport.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtCephalicSupport.Location = new System.Drawing.Point(174, 49);
-            this.swtCephalicSupport.Name = "swtCephalicSupport";
-            this.swtCephalicSupport.OffText = "No";
-            this.swtCephalicSupport.OnText = "Si";
-            this.swtCephalicSupport.Size = new System.Drawing.Size(66, 22);
-            this.swtCephalicSupport.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtCephalicSupport.TabIndex = 52;
-            this.swtCephalicSupport.ValueChanged += new System.EventHandler(this.swtCephalicSupport_ValueChanged);
-            // 
-            // labelX34
-            // 
-            this.labelX34.AutoSize = true;
-            this.labelX34.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX34.Location = new System.Drawing.Point(14, 47);
-            this.labelX34.Name = "labelX34";
-            this.labelX34.Size = new System.Drawing.Size(111, 24);
-            this.labelX34.TabIndex = 0;
-            this.labelX34.Text = "Sostén céfalico:";
-            // 
-            // superTabItem7
-            // 
-            this.superTabItem7.AttachedControl = this.superTabControlPanel6;
-            this.superTabItem7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.superTabItem7.GlobalItem = false;
-            this.superTabItem7.Name = "superTabItem7";
-            this.superTabItem7.Text = "Evolución del desarrollo psicomotor";
-            // 
-            // superTabControlPanel5
-            // 
-            this.superTabControlPanel5.Controls.Add(this.txtActualTreatment);
-            this.superTabControlPanel5.Controls.Add(this.labelX32);
-            this.superTabControlPanel5.Controls.Add(this.swtActualTreatment);
-            this.superTabControlPanel5.Controls.Add(this.labelX33);
-            this.superTabControlPanel5.Controls.Add(this.txtSurgeriesCauses);
-            this.superTabControlPanel5.Controls.Add(this.labelX30);
-            this.superTabControlPanel5.Controls.Add(this.swtSurgerie);
-            this.superTabControlPanel5.Controls.Add(this.labelX31);
-            this.superTabControlPanel5.Controls.Add(this.txtTransfusionsCauses);
-            this.superTabControlPanel5.Controls.Add(this.labelX28);
-            this.superTabControlPanel5.Controls.Add(this.swtTransfusions);
-            this.superTabControlPanel5.Controls.Add(this.labelX29);
-            this.superTabControlPanel5.Controls.Add(this.txtTraumaCauses);
-            this.superTabControlPanel5.Controls.Add(this.labelX26);
-            this.superTabControlPanel5.Controls.Add(this.swtTrauma);
-            this.superTabControlPanel5.Controls.Add(this.labelX27);
-            this.superTabControlPanel5.Controls.Add(this.txtHospitalizationCauses);
-            this.superTabControlPanel5.Controls.Add(this.labelX25);
-            this.superTabControlPanel5.Controls.Add(this.swtHospitalizations);
-            this.superTabControlPanel5.Controls.Add(this.labelX24);
-            this.superTabControlPanel5.Controls.Add(this.txtPreviousDiseases);
-            this.superTabControlPanel5.Controls.Add(this.labelX23);
-            this.superTabControlPanel5.Controls.Add(this.labelX22);
-            this.superTabControlPanel5.Controls.Add(this.swtPreviousDiseases);
-            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel5.Name = "superTabControlPanel5";
-            this.superTabControlPanel5.Size = new System.Drawing.Size(801, 379);
-            this.superTabControlPanel5.TabIndex = 0;
-            this.superTabControlPanel5.TabItem = this.superTabItem6;
-            // 
-            // txtActualTreatment
-            // 
-            this.txtActualTreatment.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtActualTreatment.Border.Class = "TextBoxBorder";
-            this.txtActualTreatment.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtActualTreatment.DisabledBackColor = System.Drawing.Color.White;
-            this.txtActualTreatment.Enabled = false;
-            this.txtActualTreatment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActualTreatment.ForeColor = System.Drawing.Color.Black;
-            this.txtActualTreatment.Location = new System.Drawing.Point(536, 254);
-            this.txtActualTreatment.Multiline = true;
-            this.txtActualTreatment.Name = "txtActualTreatment";
-            this.txtActualTreatment.PreventEnterBeep = true;
-            this.txtActualTreatment.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtActualTreatment.Size = new System.Drawing.Size(232, 120);
-            this.txtActualTreatment.TabIndex = 51;
-            this.txtActualTreatment.WatermarkText = "Ingrese el tratamiento actual...";
-            this.txtActualTreatment.WordWrap = false;
-            // 
-            // labelX32
-            // 
-            this.labelX32.AutoSize = true;
-            this.labelX32.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX32.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX32.Location = new System.Drawing.Point(535, 224);
-            this.labelX32.Name = "labelX32";
-            this.labelX32.Size = new System.Drawing.Size(91, 24);
-            this.labelX32.TabIndex = 22;
-            this.labelX32.Text = "Información:";
-            // 
-            // swtActualTreatment
-            // 
-            // 
-            // 
-            // 
-            this.swtActualTreatment.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtActualTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtActualTreatment.Enabled = false;
-            this.swtActualTreatment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtActualTreatment.Location = new System.Drawing.Point(680, 196);
-            this.swtActualTreatment.Name = "swtActualTreatment";
-            this.swtActualTreatment.OffText = "No";
-            this.swtActualTreatment.OnText = "Si";
-            this.swtActualTreatment.Size = new System.Drawing.Size(66, 22);
-            this.swtActualTreatment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtActualTreatment.TabIndex = 50;
-            this.swtActualTreatment.ValueChanged += new System.EventHandler(this.swtActualTreatment_ValueChanged);
-            // 
-            // labelX33
-            // 
-            this.labelX33.AutoSize = true;
-            this.labelX33.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX33.Location = new System.Drawing.Point(536, 194);
-            this.labelX33.Name = "labelX33";
-            this.labelX33.Size = new System.Drawing.Size(138, 24);
-            this.labelX33.TabIndex = 20;
-            this.labelX33.Text = "Tratamiento actual:";
-            // 
-            // txtSurgeriesCauses
-            // 
-            this.txtSurgeriesCauses.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtSurgeriesCauses.Border.Class = "TextBoxBorder";
-            this.txtSurgeriesCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSurgeriesCauses.DisabledBackColor = System.Drawing.Color.White;
-            this.txtSurgeriesCauses.Enabled = false;
-            this.txtSurgeriesCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurgeriesCauses.ForeColor = System.Drawing.Color.Black;
-            this.txtSurgeriesCauses.Location = new System.Drawing.Point(286, 256);
-            this.txtSurgeriesCauses.Multiline = true;
-            this.txtSurgeriesCauses.Name = "txtSurgeriesCauses";
-            this.txtSurgeriesCauses.PreventEnterBeep = true;
-            this.txtSurgeriesCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtSurgeriesCauses.Size = new System.Drawing.Size(232, 120);
-            this.txtSurgeriesCauses.TabIndex = 47;
-            this.txtSurgeriesCauses.WatermarkText = "Ingrese la causa de las cirugías...";
-            this.txtSurgeriesCauses.WordWrap = false;
-            // 
-            // labelX30
-            // 
-            this.labelX30.AutoSize = true;
-            this.labelX30.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX30.Location = new System.Drawing.Point(285, 226);
-            this.labelX30.Name = "labelX30";
-            this.labelX30.Size = new System.Drawing.Size(91, 24);
-            this.labelX30.TabIndex = 18;
-            this.labelX30.Text = "Información:";
-            // 
-            // swtSurgerie
-            // 
-            // 
-            // 
-            // 
-            this.swtSurgerie.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtSurgerie.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtSurgerie.Enabled = false;
-            this.swtSurgerie.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtSurgerie.Location = new System.Drawing.Point(355, 198);
-            this.swtSurgerie.Name = "swtSurgerie";
-            this.swtSurgerie.OffText = "No";
-            this.swtSurgerie.OnText = "Si";
-            this.swtSurgerie.Size = new System.Drawing.Size(66, 22);
-            this.swtSurgerie.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtSurgerie.TabIndex = 46;
-            this.swtSurgerie.ValueChanged += new System.EventHandler(this.swtSurgerie_ValueChanged);
-            // 
-            // labelX31
-            // 
-            this.labelX31.AutoSize = true;
-            this.labelX31.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX31.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX31.Location = new System.Drawing.Point(286, 196);
-            this.labelX31.Name = "labelX31";
-            this.labelX31.Size = new System.Drawing.Size(63, 24);
-            this.labelX31.TabIndex = 16;
-            this.labelX31.Text = "Cirugías:";
-            // 
-            // txtTransfusionsCauses
-            // 
-            this.txtTransfusionsCauses.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtTransfusionsCauses.Border.Class = "TextBoxBorder";
-            this.txtTransfusionsCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTransfusionsCauses.DisabledBackColor = System.Drawing.Color.White;
-            this.txtTransfusionsCauses.Enabled = false;
-            this.txtTransfusionsCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTransfusionsCauses.ForeColor = System.Drawing.Color.Black;
-            this.txtTransfusionsCauses.Location = new System.Drawing.Point(37, 256);
-            this.txtTransfusionsCauses.Multiline = true;
-            this.txtTransfusionsCauses.Name = "txtTransfusionsCauses";
-            this.txtTransfusionsCauses.PreventEnterBeep = true;
-            this.txtTransfusionsCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTransfusionsCauses.Size = new System.Drawing.Size(232, 120);
-            this.txtTransfusionsCauses.TabIndex = 43;
-            this.txtTransfusionsCauses.WatermarkText = "Ingrese la causa de las transfusiones...";
-            this.txtTransfusionsCauses.WordWrap = false;
-            // 
-            // labelX28
-            // 
-            this.labelX28.AutoSize = true;
-            this.labelX28.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX28.Location = new System.Drawing.Point(36, 226);
-            this.labelX28.Name = "labelX28";
-            this.labelX28.Size = new System.Drawing.Size(91, 24);
-            this.labelX28.TabIndex = 14;
-            this.labelX28.Text = "Información:";
-            // 
-            // swtTransfusions
-            // 
-            // 
-            // 
-            // 
-            this.swtTransfusions.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtTransfusions.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtTransfusions.Enabled = false;
-            this.swtTransfusions.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtTransfusions.Location = new System.Drawing.Point(145, 198);
-            this.swtTransfusions.Name = "swtTransfusions";
-            this.swtTransfusions.OffText = "No";
-            this.swtTransfusions.OnText = "Si";
-            this.swtTransfusions.Size = new System.Drawing.Size(66, 22);
-            this.swtTransfusions.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtTransfusions.TabIndex = 42;
-            this.swtTransfusions.ValueChanged += new System.EventHandler(this.swtTransfusions_ValueChanged);
-            // 
-            // labelX29
-            // 
-            this.labelX29.AutoSize = true;
-            this.labelX29.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX29.Location = new System.Drawing.Point(37, 196);
-            this.labelX29.Name = "labelX29";
-            this.labelX29.Size = new System.Drawing.Size(102, 24);
-            this.labelX29.TabIndex = 12;
-            this.labelX29.Text = "Transfusiones:";
-            // 
-            // txtTraumaCauses
-            // 
-            this.txtTraumaCauses.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtTraumaCauses.Border.Class = "TextBoxBorder";
-            this.txtTraumaCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTraumaCauses.DisabledBackColor = System.Drawing.Color.White;
-            this.txtTraumaCauses.Enabled = false;
-            this.txtTraumaCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTraumaCauses.ForeColor = System.Drawing.Color.Black;
-            this.txtTraumaCauses.Location = new System.Drawing.Point(536, 69);
-            this.txtTraumaCauses.Multiline = true;
-            this.txtTraumaCauses.Name = "txtTraumaCauses";
-            this.txtTraumaCauses.PreventEnterBeep = true;
-            this.txtTraumaCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTraumaCauses.Size = new System.Drawing.Size(232, 120);
-            this.txtTraumaCauses.TabIndex = 49;
-            this.txtTraumaCauses.WatermarkText = "Ingrese las causas de traumatismos...";
-            this.txtTraumaCauses.WordWrap = false;
-            // 
-            // labelX26
-            // 
-            this.labelX26.AutoSize = true;
-            this.labelX26.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX26.Location = new System.Drawing.Point(535, 39);
-            this.labelX26.Name = "labelX26";
-            this.labelX26.Size = new System.Drawing.Size(91, 24);
-            this.labelX26.TabIndex = 10;
-            this.labelX26.Text = "Información:";
-            // 
-            // swtTrauma
-            // 
-            // 
-            // 
-            // 
-            this.swtTrauma.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtTrauma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtTrauma.Enabled = false;
-            this.swtTrauma.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtTrauma.Location = new System.Drawing.Point(647, 11);
-            this.swtTrauma.Name = "swtTrauma";
-            this.swtTrauma.OffText = "No";
-            this.swtTrauma.OnText = "Si";
-            this.swtTrauma.Size = new System.Drawing.Size(66, 22);
-            this.swtTrauma.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtTrauma.TabIndex = 48;
-            this.swtTrauma.ValueChanged += new System.EventHandler(this.swtTrauma_ValueChanged);
-            // 
-            // labelX27
-            // 
-            this.labelX27.AutoSize = true;
-            this.labelX27.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX27.Location = new System.Drawing.Point(536, 9);
-            this.labelX27.Name = "labelX27";
-            this.labelX27.Size = new System.Drawing.Size(105, 24);
-            this.labelX27.TabIndex = 8;
-            this.labelX27.Text = "Traumatismos:";
-            // 
-            // txtHospitalizationCauses
-            // 
-            this.txtHospitalizationCauses.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtHospitalizationCauses.Border.Class = "TextBoxBorder";
-            this.txtHospitalizationCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtHospitalizationCauses.DisabledBackColor = System.Drawing.Color.White;
-            this.txtHospitalizationCauses.Enabled = false;
-            this.txtHospitalizationCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHospitalizationCauses.ForeColor = System.Drawing.Color.Black;
-            this.txtHospitalizationCauses.Location = new System.Drawing.Point(286, 69);
-            this.txtHospitalizationCauses.Multiline = true;
-            this.txtHospitalizationCauses.Name = "txtHospitalizationCauses";
-            this.txtHospitalizationCauses.PreventEnterBeep = true;
-            this.txtHospitalizationCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHospitalizationCauses.Size = new System.Drawing.Size(232, 120);
-            this.txtHospitalizationCauses.TabIndex = 45;
-            this.txtHospitalizationCauses.WatermarkText = "Ingrese las causas de hospitalizaciones...";
-            this.txtHospitalizationCauses.WordWrap = false;
-            // 
-            // labelX25
-            // 
-            this.labelX25.AutoSize = true;
-            this.labelX25.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX25.Location = new System.Drawing.Point(285, 39);
-            this.labelX25.Name = "labelX25";
-            this.labelX25.Size = new System.Drawing.Size(91, 24);
-            this.labelX25.TabIndex = 6;
-            this.labelX25.Text = "Información:";
-            // 
-            // swtHospitalizations
-            // 
-            // 
-            // 
-            // 
-            this.swtHospitalizations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtHospitalizations.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtHospitalizations.Enabled = false;
-            this.swtHospitalizations.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtHospitalizations.Location = new System.Drawing.Point(420, 11);
-            this.swtHospitalizations.Name = "swtHospitalizations";
-            this.swtHospitalizations.OffText = "No";
-            this.swtHospitalizations.OnText = "Si";
-            this.swtHospitalizations.Size = new System.Drawing.Size(66, 22);
-            this.swtHospitalizations.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtHospitalizations.TabIndex = 44;
-            this.swtHospitalizations.ValueChanged += new System.EventHandler(this.swtHospitalizations_ValueChanged);
-            // 
-            // labelX24
-            // 
-            this.labelX24.AutoSize = true;
-            this.labelX24.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX24.Location = new System.Drawing.Point(286, 9);
-            this.labelX24.Name = "labelX24";
-            this.labelX24.Size = new System.Drawing.Size(128, 24);
-            this.labelX24.TabIndex = 4;
-            this.labelX24.Text = "Hospitalizaciones:";
-            // 
-            // txtPreviousDiseases
-            // 
-            this.txtPreviousDiseases.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtPreviousDiseases.Border.Class = "TextBoxBorder";
-            this.txtPreviousDiseases.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPreviousDiseases.DisabledBackColor = System.Drawing.Color.White;
-            this.txtPreviousDiseases.Enabled = false;
-            this.txtPreviousDiseases.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreviousDiseases.ForeColor = System.Drawing.Color.Black;
-            this.txtPreviousDiseases.Location = new System.Drawing.Point(36, 69);
-            this.txtPreviousDiseases.Multiline = true;
-            this.txtPreviousDiseases.Name = "txtPreviousDiseases";
-            this.txtPreviousDiseases.PreventEnterBeep = true;
-            this.txtPreviousDiseases.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtPreviousDiseases.Size = new System.Drawing.Size(232, 120);
-            this.txtPreviousDiseases.TabIndex = 41;
-            this.txtPreviousDiseases.WatermarkText = "Ingrese las enfermedades previas...";
-            this.txtPreviousDiseases.WordWrap = false;
-            // 
-            // labelX23
-            // 
-            this.labelX23.AutoSize = true;
-            this.labelX23.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX23.Location = new System.Drawing.Point(35, 39);
-            this.labelX23.Name = "labelX23";
-            this.labelX23.Size = new System.Drawing.Size(91, 24);
-            this.labelX23.TabIndex = 2;
-            this.labelX23.Text = "Información:";
-            // 
-            // labelX22
-            // 
-            this.labelX22.AutoSize = true;
-            this.labelX22.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX22.Location = new System.Drawing.Point(35, 9);
-            this.labelX22.Name = "labelX22";
-            this.labelX22.Size = new System.Drawing.Size(161, 24);
-            this.labelX22.TabIndex = 1;
-            this.labelX22.Text = "Enfermedades previas:";
-            // 
-            // swtPreviousDiseases
-            // 
-            // 
-            // 
-            // 
-            this.swtPreviousDiseases.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtPreviousDiseases.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtPreviousDiseases.Enabled = false;
-            this.swtPreviousDiseases.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.swtPreviousDiseases.Location = new System.Drawing.Point(202, 11);
-            this.swtPreviousDiseases.Name = "swtPreviousDiseases";
-            this.swtPreviousDiseases.OffText = "No";
-            this.swtPreviousDiseases.OnText = "Si";
-            this.swtPreviousDiseases.Size = new System.Drawing.Size(66, 22);
-            this.swtPreviousDiseases.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtPreviousDiseases.TabIndex = 40;
-            this.swtPreviousDiseases.ValueChanged += new System.EventHandler(this.swtPreviousDiseases_ValueChanged);
-            // 
-            // superTabItem6
-            // 
-            this.superTabItem6.AttachedControl = this.superTabControlPanel5;
-            this.superTabItem6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.superTabItem6.GlobalItem = false;
-            this.superTabItem6.Name = "superTabItem6";
-            this.superTabItem6.Text = "Antecedentes patológicos";
-            // 
-            // superTabControlPanel4
-            // 
-            this.superTabControlPanel4.Controls.Add(this.groupPanel4);
-            this.superTabControlPanel4.Controls.Add(this.groupPanel3);
-            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel4.Name = "superTabControlPanel4";
-            this.superTabControlPanel4.Size = new System.Drawing.Size(801, 379);
-            this.superTabControlPanel4.TabIndex = 0;
-            this.superTabControlPanel4.TabItem = this.superTabItem5;
-            // 
-            // groupPanel4
-            // 
-            this.groupPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel4.Controls.Add(this.labelX20);
-            this.groupPanel4.Controls.Add(this.swtWeaning);
-            this.groupPanel4.Controls.Add(this.txtAgeWeaningStarts);
-            this.groupPanel4.Controls.Add(this.labelX21);
-            this.groupPanel4.Controls.Add(this.labelX19);
-            this.groupPanel4.Controls.Add(this.swtAblactation);
-            this.groupPanel4.Controls.Add(this.txtAgeAblactationStarts);
-            this.groupPanel4.Controls.Add(this.labelX18);
-            this.groupPanel4.Controls.Add(this.txtHygineRutines);
-            this.groupPanel4.Controls.Add(this.labelX17);
-            this.groupPanel4.Controls.Add(this.txtActualFeed);
-            this.groupPanel4.Controls.Add(this.labelX16);
-            this.groupPanel4.Controls.Add(this.txtInitialFeed);
-            this.groupPanel4.Controls.Add(this.labelX15);
-            this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPanel4.Location = new System.Drawing.Point(211, 4);
-            this.groupPanel4.Name = "groupPanel4";
-            this.groupPanel4.Size = new System.Drawing.Size(571, 372);
-            // 
-            // 
-            // 
-            this.groupPanel4.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel4.Style.BackColorGradientAngle = 90;
-            this.groupPanel4.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel4.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderBottomWidth = 1;
-            this.groupPanel4.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel4.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderLeftWidth = 1;
-            this.groupPanel4.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderRightWidth = 1;
-            this.groupPanel4.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel4.Style.BorderTopWidth = 1;
-            this.groupPanel4.Style.CornerDiameter = 4;
-            this.groupPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel4.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel4.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel4.TabIndex = 1;
-            this.groupPanel4.Text = "Antecedentes de alimentación";
-            // 
-            // labelX20
-            // 
-            this.labelX20.AutoSize = true;
-            this.labelX20.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX20.Location = new System.Drawing.Point(220, 275);
-            this.labelX20.Name = "labelX20";
-            this.labelX20.Size = new System.Drawing.Size(56, 22);
-            this.labelX20.TabIndex = 21;
-            this.labelX20.Text = "Destete:";
-            // 
-            // swtWeaning
-            // 
-            // 
-            // 
-            // 
-            this.swtWeaning.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtWeaning.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtWeaning.Enabled = false;
-            this.swtWeaning.Location = new System.Drawing.Point(282, 275);
-            this.swtWeaning.Name = "swtWeaning";
-            this.swtWeaning.OffText = "No";
-            this.swtWeaning.OnText = "Si";
-            this.swtWeaning.Size = new System.Drawing.Size(66, 22);
-            this.swtWeaning.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtWeaning.TabIndex = 38;
-            this.swtWeaning.ValueChanged += new System.EventHandler(this.swtWeaning_ValueChanged);
-            // 
-            // txtAgeWeaningStarts
-            // 
-            this.txtAgeWeaningStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeWeaningStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeWeaningStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeWeaningStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeWeaningStarts.Enabled = false;
-            this.txtAgeWeaningStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeWeaningStarts.Location = new System.Drawing.Point(354, 302);
-            this.txtAgeWeaningStarts.MaxLength = 3;
-            this.txtAgeWeaningStarts.Name = "txtAgeWeaningStarts";
-            this.txtAgeWeaningStarts.PreventEnterBeep = true;
-            this.txtAgeWeaningStarts.Size = new System.Drawing.Size(57, 27);
-            this.txtAgeWeaningStarts.TabIndex = 39;
-            this.txtAgeWeaningStarts.WatermarkText = "...";
-            this.txtAgeWeaningStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeWeaningStarts_KeyPress);
-            // 
-            // labelX21
-            // 
-            this.labelX21.AutoSize = true;
-            this.labelX21.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX21.Location = new System.Drawing.Point(220, 303);
-            this.labelX21.Name = "labelX21";
-            this.labelX21.Size = new System.Drawing.Size(128, 22);
-            this.labelX21.TabIndex = 19;
-            this.labelX21.Text = "Edad de comienzo:";
-            // 
-            // labelX19
-            // 
-            this.labelX19.AutoSize = true;
-            this.labelX19.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX19.Location = new System.Drawing.Point(4, 275);
-            this.labelX19.Name = "labelX19";
-            this.labelX19.Size = new System.Drawing.Size(83, 22);
-            this.labelX19.TabIndex = 17;
-            this.labelX19.Text = "Ablactación:";
-            // 
-            // swtAblactation
-            // 
-            // 
-            // 
-            // 
-            this.swtAblactation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.swtAblactation.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.swtAblactation.Enabled = false;
-            this.swtAblactation.Location = new System.Drawing.Point(93, 275);
-            this.swtAblactation.Name = "swtAblactation";
-            this.swtAblactation.OffText = "No";
-            this.swtAblactation.OnText = "Si";
-            this.swtAblactation.Size = new System.Drawing.Size(66, 22);
-            this.swtAblactation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.swtAblactation.TabIndex = 36;
-            this.swtAblactation.ValueChanged += new System.EventHandler(this.swtAblactation_ValueChanged);
-            // 
-            // txtAgeAblactationStarts
-            // 
-            this.txtAgeAblactationStarts.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtAgeAblactationStarts.Border.Class = "TextBoxBorder";
-            this.txtAgeAblactationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAgeAblactationStarts.DisabledBackColor = System.Drawing.Color.White;
-            this.txtAgeAblactationStarts.Enabled = false;
-            this.txtAgeAblactationStarts.ForeColor = System.Drawing.Color.Black;
-            this.txtAgeAblactationStarts.Location = new System.Drawing.Point(138, 302);
-            this.txtAgeAblactationStarts.MaxLength = 3;
-            this.txtAgeAblactationStarts.Name = "txtAgeAblactationStarts";
-            this.txtAgeAblactationStarts.PreventEnterBeep = true;
-            this.txtAgeAblactationStarts.Size = new System.Drawing.Size(57, 27);
-            this.txtAgeAblactationStarts.TabIndex = 37;
-            this.txtAgeAblactationStarts.WatermarkText = "...";
-            this.txtAgeAblactationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeAblactationStarts_KeyPress);
-            // 
-            // labelX18
-            // 
-            this.labelX18.AutoSize = true;
-            this.labelX18.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX18.Location = new System.Drawing.Point(4, 303);
-            this.labelX18.Name = "labelX18";
-            this.labelX18.Size = new System.Drawing.Size(128, 22);
-            this.labelX18.TabIndex = 15;
-            this.labelX18.Text = "Edad de comienzo:";
-            // 
-            // txtHygineRutines
-            // 
-            this.txtHygineRutines.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtHygineRutines.Border.Class = "TextBoxBorder";
-            this.txtHygineRutines.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtHygineRutines.DisabledBackColor = System.Drawing.Color.White;
-            this.txtHygineRutines.Enabled = false;
-            this.txtHygineRutines.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHygineRutines.ForeColor = System.Drawing.Color.Black;
-            this.txtHygineRutines.Location = new System.Drawing.Point(374, 32);
-            this.txtHygineRutines.Multiline = true;
-            this.txtHygineRutines.Name = "txtHygineRutines";
-            this.txtHygineRutines.PreventEnterBeep = true;
-            this.txtHygineRutines.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHygineRutines.Size = new System.Drawing.Size(179, 224);
-            this.txtHygineRutines.TabIndex = 35;
-            this.txtHygineRutines.WatermarkText = "Ingrese las rutinas de higiene...";
-            this.txtHygineRutines.WordWrap = false;
-            // 
-            // labelX17
-            // 
-            this.labelX17.AutoSize = true;
-            this.labelX17.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX17.Location = new System.Drawing.Point(374, 5);
-            this.labelX17.Name = "labelX17";
-            this.labelX17.Size = new System.Drawing.Size(128, 22);
-            this.labelX17.TabIndex = 12;
-            this.labelX17.Text = "Rutinas de higiene:";
-            // 
-            // txtActualFeed
-            // 
-            this.txtActualFeed.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtActualFeed.Border.Class = "TextBoxBorder";
-            this.txtActualFeed.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtActualFeed.DisabledBackColor = System.Drawing.Color.White;
-            this.txtActualFeed.Enabled = false;
-            this.txtActualFeed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActualFeed.ForeColor = System.Drawing.Color.Black;
-            this.txtActualFeed.Location = new System.Drawing.Point(189, 32);
-            this.txtActualFeed.Multiline = true;
-            this.txtActualFeed.Name = "txtActualFeed";
-            this.txtActualFeed.PreventEnterBeep = true;
-            this.txtActualFeed.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtActualFeed.Size = new System.Drawing.Size(179, 224);
-            this.txtActualFeed.TabIndex = 34;
-            this.txtActualFeed.WatermarkText = "Ingrese la alimentación actual...";
-            this.txtActualFeed.WordWrap = false;
-            // 
-            // labelX16
-            // 
-            this.labelX16.AutoSize = true;
-            this.labelX16.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX16.Location = new System.Drawing.Point(189, 5);
-            this.labelX16.Name = "labelX16";
-            this.labelX16.Size = new System.Drawing.Size(136, 22);
-            this.labelX16.TabIndex = 10;
-            this.labelX16.Text = "Alimentación actual:";
-            // 
-            // txtInitialFeed
-            // 
-            this.txtInitialFeed.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtInitialFeed.Border.Class = "TextBoxBorder";
-            this.txtInitialFeed.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtInitialFeed.DisabledBackColor = System.Drawing.Color.White;
-            this.txtInitialFeed.Enabled = false;
-            this.txtInitialFeed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInitialFeed.ForeColor = System.Drawing.Color.Black;
-            this.txtInitialFeed.Location = new System.Drawing.Point(4, 32);
-            this.txtInitialFeed.Multiline = true;
-            this.txtInitialFeed.Name = "txtInitialFeed";
-            this.txtInitialFeed.PreventEnterBeep = true;
-            this.txtInitialFeed.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtInitialFeed.Size = new System.Drawing.Size(179, 224);
-            this.txtInitialFeed.TabIndex = 33;
-            this.txtInitialFeed.WatermarkText = "Ingrese la alimentación inicial...";
-            this.txtInitialFeed.WordWrap = false;
-            // 
-            // labelX15
-            // 
-            this.labelX15.AutoSize = true;
-            this.labelX15.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Location = new System.Drawing.Point(4, 4);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.Size = new System.Drawing.Size(134, 22);
-            this.labelX15.TabIndex = 0;
-            this.labelX15.Text = "Alimentación inicial:";
-            // 
-            // groupPanel3
-            // 
-            this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.txtVaccineHistory);
-            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPanel3.Location = new System.Drawing.Point(4, 4);
-            this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(200, 372);
-            // 
-            // 
-            // 
-            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel3.Style.BackColorGradientAngle = 90;
-            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderBottomWidth = 1;
-            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderLeftWidth = 1;
-            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderRightWidth = 1;
-            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel3.Style.BorderTopWidth = 1;
-            this.groupPanel3.Style.CornerDiameter = 4;
-            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel3.TabIndex = 0;
-            this.groupPanel3.Text = "Historial de vacunas";
-            // 
-            // txtVaccineHistory
-            // 
-            this.txtVaccineHistory.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.txtVaccineHistory.Border.Class = "TextBoxBorder";
-            this.txtVaccineHistory.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtVaccineHistory.DisabledBackColor = System.Drawing.Color.White;
-            this.txtVaccineHistory.Enabled = false;
-            this.txtVaccineHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVaccineHistory.ForeColor = System.Drawing.Color.Black;
-            this.txtVaccineHistory.Location = new System.Drawing.Point(3, 3);
-            this.txtVaccineHistory.Multiline = true;
-            this.txtVaccineHistory.Name = "txtVaccineHistory";
-            this.txtVaccineHistory.PreventEnterBeep = true;
-            this.txtVaccineHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtVaccineHistory.Size = new System.Drawing.Size(188, 336);
-            this.txtVaccineHistory.TabIndex = 32;
-            this.txtVaccineHistory.WatermarkText = "Ingrese las vacunas...";
-            this.txtVaccineHistory.WordWrap = false;
-            // 
-            // superTabItem5
-            // 
-            this.superTabItem5.AttachedControl = this.superTabControlPanel4;
-            this.superTabItem5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.superTabItem5.GlobalItem = false;
-            this.superTabItem5.Name = "superTabItem5";
-            this.superTabItem5.Text = "Antecedentes no patológicos";
             // 
             // superTabControlPanel3
             // 
@@ -3426,6 +1914,1518 @@ namespace SAICP
             this.superTabItem3.Name = "superTabItem3";
             this.superTabItem3.Text = "Antecedentes familiares y hereditarios";
             // 
+            // superTabControlPanel5
+            // 
+            this.superTabControlPanel5.Controls.Add(this.txtActualTreatment);
+            this.superTabControlPanel5.Controls.Add(this.labelX32);
+            this.superTabControlPanel5.Controls.Add(this.swtActualTreatment);
+            this.superTabControlPanel5.Controls.Add(this.labelX33);
+            this.superTabControlPanel5.Controls.Add(this.txtSurgeriesCauses);
+            this.superTabControlPanel5.Controls.Add(this.labelX30);
+            this.superTabControlPanel5.Controls.Add(this.swtSurgerie);
+            this.superTabControlPanel5.Controls.Add(this.labelX31);
+            this.superTabControlPanel5.Controls.Add(this.txtTransfusionsCauses);
+            this.superTabControlPanel5.Controls.Add(this.labelX28);
+            this.superTabControlPanel5.Controls.Add(this.swtTransfusions);
+            this.superTabControlPanel5.Controls.Add(this.labelX29);
+            this.superTabControlPanel5.Controls.Add(this.txtTraumaCauses);
+            this.superTabControlPanel5.Controls.Add(this.labelX26);
+            this.superTabControlPanel5.Controls.Add(this.swtTrauma);
+            this.superTabControlPanel5.Controls.Add(this.labelX27);
+            this.superTabControlPanel5.Controls.Add(this.txtHospitalizationCauses);
+            this.superTabControlPanel5.Controls.Add(this.labelX25);
+            this.superTabControlPanel5.Controls.Add(this.swtHospitalizations);
+            this.superTabControlPanel5.Controls.Add(this.labelX24);
+            this.superTabControlPanel5.Controls.Add(this.txtPreviousDiseases);
+            this.superTabControlPanel5.Controls.Add(this.labelX23);
+            this.superTabControlPanel5.Controls.Add(this.labelX22);
+            this.superTabControlPanel5.Controls.Add(this.swtPreviousDiseases);
+            this.superTabControlPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel5.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel5.Name = "superTabControlPanel5";
+            this.superTabControlPanel5.Size = new System.Drawing.Size(801, 379);
+            this.superTabControlPanel5.TabIndex = 0;
+            this.superTabControlPanel5.TabItem = this.superTabItem6;
+            // 
+            // txtActualTreatment
+            // 
+            this.txtActualTreatment.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtActualTreatment.Border.Class = "TextBoxBorder";
+            this.txtActualTreatment.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtActualTreatment.DisabledBackColor = System.Drawing.Color.White;
+            this.txtActualTreatment.Enabled = false;
+            this.txtActualTreatment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActualTreatment.ForeColor = System.Drawing.Color.Black;
+            this.txtActualTreatment.Location = new System.Drawing.Point(536, 254);
+            this.txtActualTreatment.Multiline = true;
+            this.txtActualTreatment.Name = "txtActualTreatment";
+            this.txtActualTreatment.PreventEnterBeep = true;
+            this.txtActualTreatment.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtActualTreatment.Size = new System.Drawing.Size(232, 120);
+            this.txtActualTreatment.TabIndex = 51;
+            this.txtActualTreatment.WatermarkText = "Ingrese el tratamiento actual...";
+            this.txtActualTreatment.WordWrap = false;
+            // 
+            // labelX32
+            // 
+            this.labelX32.AutoSize = true;
+            this.labelX32.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX32.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX32.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX32.Location = new System.Drawing.Point(535, 224);
+            this.labelX32.Name = "labelX32";
+            this.labelX32.Size = new System.Drawing.Size(91, 24);
+            this.labelX32.TabIndex = 22;
+            this.labelX32.Text = "Información:";
+            // 
+            // swtActualTreatment
+            // 
+            // 
+            // 
+            // 
+            this.swtActualTreatment.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtActualTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtActualTreatment.Enabled = false;
+            this.swtActualTreatment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtActualTreatment.Location = new System.Drawing.Point(680, 196);
+            this.swtActualTreatment.Name = "swtActualTreatment";
+            this.swtActualTreatment.OffText = "No";
+            this.swtActualTreatment.OnText = "Si";
+            this.swtActualTreatment.Size = new System.Drawing.Size(66, 22);
+            this.swtActualTreatment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtActualTreatment.TabIndex = 50;
+            this.swtActualTreatment.ValueChanged += new System.EventHandler(this.swtActualTreatment_ValueChanged);
+            // 
+            // labelX33
+            // 
+            this.labelX33.AutoSize = true;
+            this.labelX33.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX33.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX33.Location = new System.Drawing.Point(536, 194);
+            this.labelX33.Name = "labelX33";
+            this.labelX33.Size = new System.Drawing.Size(138, 24);
+            this.labelX33.TabIndex = 20;
+            this.labelX33.Text = "Tratamiento actual:";
+            // 
+            // txtSurgeriesCauses
+            // 
+            this.txtSurgeriesCauses.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtSurgeriesCauses.Border.Class = "TextBoxBorder";
+            this.txtSurgeriesCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSurgeriesCauses.DisabledBackColor = System.Drawing.Color.White;
+            this.txtSurgeriesCauses.Enabled = false;
+            this.txtSurgeriesCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurgeriesCauses.ForeColor = System.Drawing.Color.Black;
+            this.txtSurgeriesCauses.Location = new System.Drawing.Point(286, 256);
+            this.txtSurgeriesCauses.Multiline = true;
+            this.txtSurgeriesCauses.Name = "txtSurgeriesCauses";
+            this.txtSurgeriesCauses.PreventEnterBeep = true;
+            this.txtSurgeriesCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtSurgeriesCauses.Size = new System.Drawing.Size(232, 120);
+            this.txtSurgeriesCauses.TabIndex = 47;
+            this.txtSurgeriesCauses.WatermarkText = "Ingrese la causa de las cirugías...";
+            this.txtSurgeriesCauses.WordWrap = false;
+            // 
+            // labelX30
+            // 
+            this.labelX30.AutoSize = true;
+            this.labelX30.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX30.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX30.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX30.Location = new System.Drawing.Point(285, 226);
+            this.labelX30.Name = "labelX30";
+            this.labelX30.Size = new System.Drawing.Size(91, 24);
+            this.labelX30.TabIndex = 18;
+            this.labelX30.Text = "Información:";
+            // 
+            // swtSurgerie
+            // 
+            // 
+            // 
+            // 
+            this.swtSurgerie.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtSurgerie.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtSurgerie.Enabled = false;
+            this.swtSurgerie.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtSurgerie.Location = new System.Drawing.Point(355, 198);
+            this.swtSurgerie.Name = "swtSurgerie";
+            this.swtSurgerie.OffText = "No";
+            this.swtSurgerie.OnText = "Si";
+            this.swtSurgerie.Size = new System.Drawing.Size(66, 22);
+            this.swtSurgerie.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtSurgerie.TabIndex = 46;
+            this.swtSurgerie.ValueChanged += new System.EventHandler(this.swtSurgerie_ValueChanged);
+            // 
+            // labelX31
+            // 
+            this.labelX31.AutoSize = true;
+            this.labelX31.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX31.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX31.Location = new System.Drawing.Point(286, 196);
+            this.labelX31.Name = "labelX31";
+            this.labelX31.Size = new System.Drawing.Size(63, 24);
+            this.labelX31.TabIndex = 16;
+            this.labelX31.Text = "Cirugías:";
+            // 
+            // txtTransfusionsCauses
+            // 
+            this.txtTransfusionsCauses.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtTransfusionsCauses.Border.Class = "TextBoxBorder";
+            this.txtTransfusionsCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTransfusionsCauses.DisabledBackColor = System.Drawing.Color.White;
+            this.txtTransfusionsCauses.Enabled = false;
+            this.txtTransfusionsCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransfusionsCauses.ForeColor = System.Drawing.Color.Black;
+            this.txtTransfusionsCauses.Location = new System.Drawing.Point(37, 256);
+            this.txtTransfusionsCauses.Multiline = true;
+            this.txtTransfusionsCauses.Name = "txtTransfusionsCauses";
+            this.txtTransfusionsCauses.PreventEnterBeep = true;
+            this.txtTransfusionsCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtTransfusionsCauses.Size = new System.Drawing.Size(232, 120);
+            this.txtTransfusionsCauses.TabIndex = 43;
+            this.txtTransfusionsCauses.WatermarkText = "Ingrese la causa de las transfusiones...";
+            this.txtTransfusionsCauses.WordWrap = false;
+            // 
+            // labelX28
+            // 
+            this.labelX28.AutoSize = true;
+            this.labelX28.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX28.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX28.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX28.Location = new System.Drawing.Point(36, 226);
+            this.labelX28.Name = "labelX28";
+            this.labelX28.Size = new System.Drawing.Size(91, 24);
+            this.labelX28.TabIndex = 14;
+            this.labelX28.Text = "Información:";
+            // 
+            // swtTransfusions
+            // 
+            // 
+            // 
+            // 
+            this.swtTransfusions.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtTransfusions.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtTransfusions.Enabled = false;
+            this.swtTransfusions.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtTransfusions.Location = new System.Drawing.Point(145, 198);
+            this.swtTransfusions.Name = "swtTransfusions";
+            this.swtTransfusions.OffText = "No";
+            this.swtTransfusions.OnText = "Si";
+            this.swtTransfusions.Size = new System.Drawing.Size(66, 22);
+            this.swtTransfusions.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtTransfusions.TabIndex = 42;
+            this.swtTransfusions.ValueChanged += new System.EventHandler(this.swtTransfusions_ValueChanged);
+            // 
+            // labelX29
+            // 
+            this.labelX29.AutoSize = true;
+            this.labelX29.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX29.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX29.Location = new System.Drawing.Point(37, 196);
+            this.labelX29.Name = "labelX29";
+            this.labelX29.Size = new System.Drawing.Size(102, 24);
+            this.labelX29.TabIndex = 12;
+            this.labelX29.Text = "Transfusiones:";
+            // 
+            // txtTraumaCauses
+            // 
+            this.txtTraumaCauses.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtTraumaCauses.Border.Class = "TextBoxBorder";
+            this.txtTraumaCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTraumaCauses.DisabledBackColor = System.Drawing.Color.White;
+            this.txtTraumaCauses.Enabled = false;
+            this.txtTraumaCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTraumaCauses.ForeColor = System.Drawing.Color.Black;
+            this.txtTraumaCauses.Location = new System.Drawing.Point(536, 69);
+            this.txtTraumaCauses.Multiline = true;
+            this.txtTraumaCauses.Name = "txtTraumaCauses";
+            this.txtTraumaCauses.PreventEnterBeep = true;
+            this.txtTraumaCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtTraumaCauses.Size = new System.Drawing.Size(232, 120);
+            this.txtTraumaCauses.TabIndex = 49;
+            this.txtTraumaCauses.WatermarkText = "Ingrese las causas de traumatismos...";
+            this.txtTraumaCauses.WordWrap = false;
+            // 
+            // labelX26
+            // 
+            this.labelX26.AutoSize = true;
+            this.labelX26.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX26.Location = new System.Drawing.Point(535, 39);
+            this.labelX26.Name = "labelX26";
+            this.labelX26.Size = new System.Drawing.Size(91, 24);
+            this.labelX26.TabIndex = 10;
+            this.labelX26.Text = "Información:";
+            // 
+            // swtTrauma
+            // 
+            // 
+            // 
+            // 
+            this.swtTrauma.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtTrauma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtTrauma.Enabled = false;
+            this.swtTrauma.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtTrauma.Location = new System.Drawing.Point(647, 11);
+            this.swtTrauma.Name = "swtTrauma";
+            this.swtTrauma.OffText = "No";
+            this.swtTrauma.OnText = "Si";
+            this.swtTrauma.Size = new System.Drawing.Size(66, 22);
+            this.swtTrauma.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtTrauma.TabIndex = 48;
+            this.swtTrauma.ValueChanged += new System.EventHandler(this.swtTrauma_ValueChanged);
+            // 
+            // labelX27
+            // 
+            this.labelX27.AutoSize = true;
+            this.labelX27.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX27.Location = new System.Drawing.Point(536, 9);
+            this.labelX27.Name = "labelX27";
+            this.labelX27.Size = new System.Drawing.Size(105, 24);
+            this.labelX27.TabIndex = 8;
+            this.labelX27.Text = "Traumatismos:";
+            // 
+            // txtHospitalizationCauses
+            // 
+            this.txtHospitalizationCauses.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtHospitalizationCauses.Border.Class = "TextBoxBorder";
+            this.txtHospitalizationCauses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtHospitalizationCauses.DisabledBackColor = System.Drawing.Color.White;
+            this.txtHospitalizationCauses.Enabled = false;
+            this.txtHospitalizationCauses.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHospitalizationCauses.ForeColor = System.Drawing.Color.Black;
+            this.txtHospitalizationCauses.Location = new System.Drawing.Point(286, 69);
+            this.txtHospitalizationCauses.Multiline = true;
+            this.txtHospitalizationCauses.Name = "txtHospitalizationCauses";
+            this.txtHospitalizationCauses.PreventEnterBeep = true;
+            this.txtHospitalizationCauses.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtHospitalizationCauses.Size = new System.Drawing.Size(232, 120);
+            this.txtHospitalizationCauses.TabIndex = 45;
+            this.txtHospitalizationCauses.WatermarkText = "Ingrese las causas de hospitalizaciones...";
+            this.txtHospitalizationCauses.WordWrap = false;
+            // 
+            // labelX25
+            // 
+            this.labelX25.AutoSize = true;
+            this.labelX25.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX25.Location = new System.Drawing.Point(285, 39);
+            this.labelX25.Name = "labelX25";
+            this.labelX25.Size = new System.Drawing.Size(91, 24);
+            this.labelX25.TabIndex = 6;
+            this.labelX25.Text = "Información:";
+            // 
+            // swtHospitalizations
+            // 
+            // 
+            // 
+            // 
+            this.swtHospitalizations.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtHospitalizations.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtHospitalizations.Enabled = false;
+            this.swtHospitalizations.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtHospitalizations.Location = new System.Drawing.Point(420, 11);
+            this.swtHospitalizations.Name = "swtHospitalizations";
+            this.swtHospitalizations.OffText = "No";
+            this.swtHospitalizations.OnText = "Si";
+            this.swtHospitalizations.Size = new System.Drawing.Size(66, 22);
+            this.swtHospitalizations.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtHospitalizations.TabIndex = 44;
+            this.swtHospitalizations.ValueChanged += new System.EventHandler(this.swtHospitalizations_ValueChanged);
+            // 
+            // labelX24
+            // 
+            this.labelX24.AutoSize = true;
+            this.labelX24.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX24.Location = new System.Drawing.Point(286, 9);
+            this.labelX24.Name = "labelX24";
+            this.labelX24.Size = new System.Drawing.Size(128, 24);
+            this.labelX24.TabIndex = 4;
+            this.labelX24.Text = "Hospitalizaciones:";
+            // 
+            // txtPreviousDiseases
+            // 
+            this.txtPreviousDiseases.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtPreviousDiseases.Border.Class = "TextBoxBorder";
+            this.txtPreviousDiseases.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPreviousDiseases.DisabledBackColor = System.Drawing.Color.White;
+            this.txtPreviousDiseases.Enabled = false;
+            this.txtPreviousDiseases.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreviousDiseases.ForeColor = System.Drawing.Color.Black;
+            this.txtPreviousDiseases.Location = new System.Drawing.Point(36, 69);
+            this.txtPreviousDiseases.Multiline = true;
+            this.txtPreviousDiseases.Name = "txtPreviousDiseases";
+            this.txtPreviousDiseases.PreventEnterBeep = true;
+            this.txtPreviousDiseases.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtPreviousDiseases.Size = new System.Drawing.Size(232, 120);
+            this.txtPreviousDiseases.TabIndex = 41;
+            this.txtPreviousDiseases.WatermarkText = "Ingrese las enfermedades previas...";
+            this.txtPreviousDiseases.WordWrap = false;
+            // 
+            // labelX23
+            // 
+            this.labelX23.AutoSize = true;
+            this.labelX23.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX23.Location = new System.Drawing.Point(35, 39);
+            this.labelX23.Name = "labelX23";
+            this.labelX23.Size = new System.Drawing.Size(91, 24);
+            this.labelX23.TabIndex = 2;
+            this.labelX23.Text = "Información:";
+            // 
+            // labelX22
+            // 
+            this.labelX22.AutoSize = true;
+            this.labelX22.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX22.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX22.Location = new System.Drawing.Point(35, 9);
+            this.labelX22.Name = "labelX22";
+            this.labelX22.Size = new System.Drawing.Size(161, 24);
+            this.labelX22.TabIndex = 1;
+            this.labelX22.Text = "Enfermedades previas:";
+            // 
+            // swtPreviousDiseases
+            // 
+            // 
+            // 
+            // 
+            this.swtPreviousDiseases.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtPreviousDiseases.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtPreviousDiseases.Enabled = false;
+            this.swtPreviousDiseases.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtPreviousDiseases.Location = new System.Drawing.Point(202, 11);
+            this.swtPreviousDiseases.Name = "swtPreviousDiseases";
+            this.swtPreviousDiseases.OffText = "No";
+            this.swtPreviousDiseases.OnText = "Si";
+            this.swtPreviousDiseases.Size = new System.Drawing.Size(66, 22);
+            this.swtPreviousDiseases.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtPreviousDiseases.TabIndex = 40;
+            this.swtPreviousDiseases.ValueChanged += new System.EventHandler(this.swtPreviousDiseases_ValueChanged);
+            // 
+            // superTabItem6
+            // 
+            this.superTabItem6.AttachedControl = this.superTabControlPanel5;
+            this.superTabItem6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.superTabItem6.GlobalItem = false;
+            this.superTabItem6.Name = "superTabItem6";
+            this.superTabItem6.Text = "Antecedentes patológicos";
+            // 
+            // superTabControlPanel4
+            // 
+            this.superTabControlPanel4.Controls.Add(this.groupPanel4);
+            this.superTabControlPanel4.Controls.Add(this.groupPanel3);
+            this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel4.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel4.Name = "superTabControlPanel4";
+            this.superTabControlPanel4.Size = new System.Drawing.Size(801, 379);
+            this.superTabControlPanel4.TabIndex = 0;
+            this.superTabControlPanel4.TabItem = this.superTabItem5;
+            // 
+            // groupPanel4
+            // 
+            this.groupPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel4.Controls.Add(this.labelX20);
+            this.groupPanel4.Controls.Add(this.swtWeaning);
+            this.groupPanel4.Controls.Add(this.txtAgeWeaningStarts);
+            this.groupPanel4.Controls.Add(this.labelX21);
+            this.groupPanel4.Controls.Add(this.labelX19);
+            this.groupPanel4.Controls.Add(this.swtAblactation);
+            this.groupPanel4.Controls.Add(this.txtAgeAblactationStarts);
+            this.groupPanel4.Controls.Add(this.labelX18);
+            this.groupPanel4.Controls.Add(this.txtHygineRutines);
+            this.groupPanel4.Controls.Add(this.labelX17);
+            this.groupPanel4.Controls.Add(this.txtActualFeed);
+            this.groupPanel4.Controls.Add(this.labelX16);
+            this.groupPanel4.Controls.Add(this.txtInitialFeed);
+            this.groupPanel4.Controls.Add(this.labelX15);
+            this.groupPanel4.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupPanel4.Location = new System.Drawing.Point(211, 4);
+            this.groupPanel4.Name = "groupPanel4";
+            this.groupPanel4.Size = new System.Drawing.Size(571, 372);
+            // 
+            // 
+            // 
+            this.groupPanel4.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel4.Style.BackColorGradientAngle = 90;
+            this.groupPanel4.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel4.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderBottomWidth = 1;
+            this.groupPanel4.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel4.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderLeftWidth = 1;
+            this.groupPanel4.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderRightWidth = 1;
+            this.groupPanel4.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel4.Style.BorderTopWidth = 1;
+            this.groupPanel4.Style.CornerDiameter = 4;
+            this.groupPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel4.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel4.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel4.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel4.TabIndex = 1;
+            this.groupPanel4.Text = "Antecedentes de alimentación";
+            // 
+            // labelX20
+            // 
+            this.labelX20.AutoSize = true;
+            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX20.Location = new System.Drawing.Point(220, 275);
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Size = new System.Drawing.Size(56, 22);
+            this.labelX20.TabIndex = 21;
+            this.labelX20.Text = "Destete:";
+            // 
+            // swtWeaning
+            // 
+            // 
+            // 
+            // 
+            this.swtWeaning.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtWeaning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtWeaning.Enabled = false;
+            this.swtWeaning.Location = new System.Drawing.Point(282, 275);
+            this.swtWeaning.Name = "swtWeaning";
+            this.swtWeaning.OffText = "No";
+            this.swtWeaning.OnText = "Si";
+            this.swtWeaning.Size = new System.Drawing.Size(66, 22);
+            this.swtWeaning.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtWeaning.TabIndex = 38;
+            this.swtWeaning.ValueChanged += new System.EventHandler(this.swtWeaning_ValueChanged);
+            // 
+            // txtAgeWeaningStarts
+            // 
+            this.txtAgeWeaningStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeWeaningStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeWeaningStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeWeaningStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeWeaningStarts.Enabled = false;
+            this.txtAgeWeaningStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeWeaningStarts.Location = new System.Drawing.Point(354, 302);
+            this.txtAgeWeaningStarts.MaxLength = 3;
+            this.txtAgeWeaningStarts.Name = "txtAgeWeaningStarts";
+            this.txtAgeWeaningStarts.PreventEnterBeep = true;
+            this.txtAgeWeaningStarts.Size = new System.Drawing.Size(57, 27);
+            this.txtAgeWeaningStarts.TabIndex = 39;
+            this.txtAgeWeaningStarts.WatermarkText = "...";
+            this.txtAgeWeaningStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeWeaningStarts_KeyPress);
+            // 
+            // labelX21
+            // 
+            this.labelX21.AutoSize = true;
+            this.labelX21.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX21.Location = new System.Drawing.Point(220, 303);
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Size = new System.Drawing.Size(128, 22);
+            this.labelX21.TabIndex = 19;
+            this.labelX21.Text = "Edad de comienzo:";
+            // 
+            // labelX19
+            // 
+            this.labelX19.AutoSize = true;
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX19.Location = new System.Drawing.Point(4, 275);
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Size = new System.Drawing.Size(83, 22);
+            this.labelX19.TabIndex = 17;
+            this.labelX19.Text = "Ablactación:";
+            // 
+            // swtAblactation
+            // 
+            // 
+            // 
+            // 
+            this.swtAblactation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtAblactation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtAblactation.Enabled = false;
+            this.swtAblactation.Location = new System.Drawing.Point(93, 275);
+            this.swtAblactation.Name = "swtAblactation";
+            this.swtAblactation.OffText = "No";
+            this.swtAblactation.OnText = "Si";
+            this.swtAblactation.Size = new System.Drawing.Size(66, 22);
+            this.swtAblactation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtAblactation.TabIndex = 36;
+            this.swtAblactation.ValueChanged += new System.EventHandler(this.swtAblactation_ValueChanged);
+            // 
+            // txtAgeAblactationStarts
+            // 
+            this.txtAgeAblactationStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeAblactationStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeAblactationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeAblactationStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeAblactationStarts.Enabled = false;
+            this.txtAgeAblactationStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeAblactationStarts.Location = new System.Drawing.Point(138, 302);
+            this.txtAgeAblactationStarts.MaxLength = 3;
+            this.txtAgeAblactationStarts.Name = "txtAgeAblactationStarts";
+            this.txtAgeAblactationStarts.PreventEnterBeep = true;
+            this.txtAgeAblactationStarts.Size = new System.Drawing.Size(57, 27);
+            this.txtAgeAblactationStarts.TabIndex = 37;
+            this.txtAgeAblactationStarts.WatermarkText = "...";
+            this.txtAgeAblactationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeAblactationStarts_KeyPress);
+            // 
+            // labelX18
+            // 
+            this.labelX18.AutoSize = true;
+            this.labelX18.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX18.Location = new System.Drawing.Point(4, 303);
+            this.labelX18.Name = "labelX18";
+            this.labelX18.Size = new System.Drawing.Size(128, 22);
+            this.labelX18.TabIndex = 15;
+            this.labelX18.Text = "Edad de comienzo:";
+            // 
+            // txtHygineRutines
+            // 
+            this.txtHygineRutines.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtHygineRutines.Border.Class = "TextBoxBorder";
+            this.txtHygineRutines.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtHygineRutines.DisabledBackColor = System.Drawing.Color.White;
+            this.txtHygineRutines.Enabled = false;
+            this.txtHygineRutines.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHygineRutines.ForeColor = System.Drawing.Color.Black;
+            this.txtHygineRutines.Location = new System.Drawing.Point(374, 32);
+            this.txtHygineRutines.Multiline = true;
+            this.txtHygineRutines.Name = "txtHygineRutines";
+            this.txtHygineRutines.PreventEnterBeep = true;
+            this.txtHygineRutines.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtHygineRutines.Size = new System.Drawing.Size(179, 224);
+            this.txtHygineRutines.TabIndex = 35;
+            this.txtHygineRutines.WatermarkText = "Ingrese las rutinas de higiene...";
+            this.txtHygineRutines.WordWrap = false;
+            // 
+            // labelX17
+            // 
+            this.labelX17.AutoSize = true;
+            this.labelX17.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX17.Location = new System.Drawing.Point(374, 5);
+            this.labelX17.Name = "labelX17";
+            this.labelX17.Size = new System.Drawing.Size(128, 22);
+            this.labelX17.TabIndex = 12;
+            this.labelX17.Text = "Rutinas de higiene:";
+            // 
+            // txtActualFeed
+            // 
+            this.txtActualFeed.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtActualFeed.Border.Class = "TextBoxBorder";
+            this.txtActualFeed.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtActualFeed.DisabledBackColor = System.Drawing.Color.White;
+            this.txtActualFeed.Enabled = false;
+            this.txtActualFeed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActualFeed.ForeColor = System.Drawing.Color.Black;
+            this.txtActualFeed.Location = new System.Drawing.Point(189, 32);
+            this.txtActualFeed.Multiline = true;
+            this.txtActualFeed.Name = "txtActualFeed";
+            this.txtActualFeed.PreventEnterBeep = true;
+            this.txtActualFeed.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtActualFeed.Size = new System.Drawing.Size(179, 224);
+            this.txtActualFeed.TabIndex = 34;
+            this.txtActualFeed.WatermarkText = "Ingrese la alimentación actual...";
+            this.txtActualFeed.WordWrap = false;
+            // 
+            // labelX16
+            // 
+            this.labelX16.AutoSize = true;
+            this.labelX16.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX16.Location = new System.Drawing.Point(189, 5);
+            this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(136, 22);
+            this.labelX16.TabIndex = 10;
+            this.labelX16.Text = "Alimentación actual:";
+            // 
+            // txtInitialFeed
+            // 
+            this.txtInitialFeed.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtInitialFeed.Border.Class = "TextBoxBorder";
+            this.txtInitialFeed.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtInitialFeed.DisabledBackColor = System.Drawing.Color.White;
+            this.txtInitialFeed.Enabled = false;
+            this.txtInitialFeed.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInitialFeed.ForeColor = System.Drawing.Color.Black;
+            this.txtInitialFeed.Location = new System.Drawing.Point(4, 32);
+            this.txtInitialFeed.Multiline = true;
+            this.txtInitialFeed.Name = "txtInitialFeed";
+            this.txtInitialFeed.PreventEnterBeep = true;
+            this.txtInitialFeed.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtInitialFeed.Size = new System.Drawing.Size(179, 224);
+            this.txtInitialFeed.TabIndex = 33;
+            this.txtInitialFeed.WatermarkText = "Ingrese la alimentación inicial...";
+            this.txtInitialFeed.WordWrap = false;
+            // 
+            // labelX15
+            // 
+            this.labelX15.AutoSize = true;
+            this.labelX15.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX15.Location = new System.Drawing.Point(4, 4);
+            this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(134, 22);
+            this.labelX15.TabIndex = 0;
+            this.labelX15.Text = "Alimentación inicial:";
+            // 
+            // groupPanel3
+            // 
+            this.groupPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.txtVaccineHistory);
+            this.groupPanel3.DisabledBackColor = System.Drawing.Color.Empty;
+            this.groupPanel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupPanel3.Location = new System.Drawing.Point(4, 4);
+            this.groupPanel3.Name = "groupPanel3";
+            this.groupPanel3.Size = new System.Drawing.Size(200, 372);
+            // 
+            // 
+            // 
+            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel3.Style.BackColorGradientAngle = 90;
+            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderBottomWidth = 1;
+            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderLeftWidth = 1;
+            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderRightWidth = 1;
+            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderTopWidth = 1;
+            this.groupPanel3.Style.CornerDiameter = 4;
+            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel3.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel3.TabIndex = 0;
+            this.groupPanel3.Text = "Historial de vacunas";
+            // 
+            // txtVaccineHistory
+            // 
+            this.txtVaccineHistory.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtVaccineHistory.Border.Class = "TextBoxBorder";
+            this.txtVaccineHistory.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtVaccineHistory.DisabledBackColor = System.Drawing.Color.White;
+            this.txtVaccineHistory.Enabled = false;
+            this.txtVaccineHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVaccineHistory.ForeColor = System.Drawing.Color.Black;
+            this.txtVaccineHistory.Location = new System.Drawing.Point(3, 3);
+            this.txtVaccineHistory.Multiline = true;
+            this.txtVaccineHistory.Name = "txtVaccineHistory";
+            this.txtVaccineHistory.PreventEnterBeep = true;
+            this.txtVaccineHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtVaccineHistory.Size = new System.Drawing.Size(188, 336);
+            this.txtVaccineHistory.TabIndex = 32;
+            this.txtVaccineHistory.WatermarkText = "Ingrese las vacunas...";
+            this.txtVaccineHistory.WordWrap = false;
+            // 
+            // superTabItem5
+            // 
+            this.superTabItem5.AttachedControl = this.superTabControlPanel4;
+            this.superTabItem5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.superTabItem5.GlobalItem = false;
+            this.superTabItem5.Name = "superTabItem5";
+            this.superTabItem5.Text = "Antecedentes no patológicos";
+            // 
+            // superTabControlPanel6
+            // 
+            this.superTabControlPanel6.Controls.Add(this.txtProblemsInDevelopment);
+            this.superTabControlPanel6.Controls.Add(this.labelX51);
+            this.superTabControlPanel6.Controls.Add(this.swtDevelopmentProblems);
+            this.superTabControlPanel6.Controls.Add(this.labelX50);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeDentationStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX49);
+            this.superTabControlPanel6.Controls.Add(this.swtDentation);
+            this.superTabControlPanel6.Controls.Add(this.labelX48);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeSphincterControlStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX47);
+            this.superTabControlPanel6.Controls.Add(this.swtSphincterControl);
+            this.superTabControlPanel6.Controls.Add(this.labelX46);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeLanguageDevelopmentStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX45);
+            this.superTabControlPanel6.Controls.Add(this.swtLanguageDevelopment);
+            this.superTabControlPanel6.Controls.Add(this.labelX44);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeWanderingStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX43);
+            this.superTabControlPanel6.Controls.Add(this.swtWandering);
+            this.superTabControlPanel6.Controls.Add(this.labelX42);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeBipedestationStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX41);
+            this.superTabControlPanel6.Controls.Add(this.swtBipedestation);
+            this.superTabControlPanel6.Controls.Add(this.labelX40);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeCrawlStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX39);
+            this.superTabControlPanel6.Controls.Add(this.swtCrawl);
+            this.superTabControlPanel6.Controls.Add(this.labelX38);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeSedestationStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX36);
+            this.superTabControlPanel6.Controls.Add(this.swtSedestation);
+            this.superTabControlPanel6.Controls.Add(this.labelX37);
+            this.superTabControlPanel6.Controls.Add(this.txtAgeCephalicSupportStarts);
+            this.superTabControlPanel6.Controls.Add(this.labelX35);
+            this.superTabControlPanel6.Controls.Add(this.swtCephalicSupport);
+            this.superTabControlPanel6.Controls.Add(this.labelX34);
+            this.superTabControlPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel6.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel6.Name = "superTabControlPanel6";
+            this.superTabControlPanel6.Size = new System.Drawing.Size(801, 379);
+            this.superTabControlPanel6.TabIndex = 0;
+            this.superTabControlPanel6.TabItem = this.superTabItem7;
+            // 
+            // txtProblemsInDevelopment
+            // 
+            this.txtProblemsInDevelopment.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtProblemsInDevelopment.Border.Class = "TextBoxBorder";
+            this.txtProblemsInDevelopment.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtProblemsInDevelopment.DisabledBackColor = System.Drawing.Color.White;
+            this.txtProblemsInDevelopment.Enabled = false;
+            this.txtProblemsInDevelopment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProblemsInDevelopment.ForeColor = System.Drawing.Color.Black;
+            this.txtProblemsInDevelopment.Location = new System.Drawing.Point(515, 74);
+            this.txtProblemsInDevelopment.Multiline = true;
+            this.txtProblemsInDevelopment.Name = "txtProblemsInDevelopment";
+            this.txtProblemsInDevelopment.PreventEnterBeep = true;
+            this.txtProblemsInDevelopment.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtProblemsInDevelopment.Size = new System.Drawing.Size(265, 302);
+            this.txtProblemsInDevelopment.TabIndex = 68;
+            this.txtProblemsInDevelopment.WatermarkText = "Ingrese los problemas en el desarrollo...";
+            this.txtProblemsInDevelopment.WordWrap = false;
+            // 
+            // labelX51
+            // 
+            this.labelX51.AutoSize = true;
+            this.labelX51.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX51.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX51.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX51.Location = new System.Drawing.Point(515, 44);
+            this.labelX51.Name = "labelX51";
+            this.labelX51.Size = new System.Drawing.Size(91, 24);
+            this.labelX51.TabIndex = 34;
+            this.labelX51.Text = "Información:";
+            // 
+            // swtDevelopmentProblems
+            // 
+            // 
+            // 
+            // 
+            this.swtDevelopmentProblems.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtDevelopmentProblems.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtDevelopmentProblems.Enabled = false;
+            this.swtDevelopmentProblems.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtDevelopmentProblems.Location = new System.Drawing.Point(714, 16);
+            this.swtDevelopmentProblems.Name = "swtDevelopmentProblems";
+            this.swtDevelopmentProblems.OffText = "No";
+            this.swtDevelopmentProblems.OnText = "Si";
+            this.swtDevelopmentProblems.Size = new System.Drawing.Size(66, 22);
+            this.swtDevelopmentProblems.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtDevelopmentProblems.TabIndex = 67;
+            this.swtDevelopmentProblems.ValueChanged += new System.EventHandler(this.swtDevelopmentProblems_ValueChanged);
+            // 
+            // labelX50
+            // 
+            this.labelX50.AutoSize = true;
+            this.labelX50.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX50.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX50.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX50.Location = new System.Drawing.Point(515, 14);
+            this.labelX50.Name = "labelX50";
+            this.labelX50.Size = new System.Drawing.Size(193, 24);
+            this.labelX50.TabIndex = 32;
+            this.labelX50.Text = "Problemas en el desarrollo:";
+            // 
+            // txtAgeDentationStarts
+            // 
+            this.txtAgeDentationStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeDentationStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeDentationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeDentationStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeDentationStarts.Enabled = false;
+            this.txtAgeDentationStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeDentationStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeDentationStarts.Location = new System.Drawing.Point(435, 301);
+            this.txtAgeDentationStarts.MaxLength = 3;
+            this.txtAgeDentationStarts.Name = "txtAgeDentationStarts";
+            this.txtAgeDentationStarts.PreventEnterBeep = true;
+            this.txtAgeDentationStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeDentationStarts.TabIndex = 66;
+            this.txtAgeDentationStarts.WatermarkText = "...";
+            this.txtAgeDentationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeDentationStarts_KeyPress);
+            // 
+            // labelX49
+            // 
+            this.labelX49.AutoSize = true;
+            this.labelX49.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX49.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX49.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX49.Location = new System.Drawing.Point(253, 304);
+            this.labelX49.Name = "labelX49";
+            this.labelX49.Size = new System.Drawing.Size(136, 24);
+            this.labelX49.TabIndex = 30;
+            this.labelX49.Text = "Edad de comienzo:";
+            // 
+            // swtDentation
+            // 
+            // 
+            // 
+            // 
+            this.swtDentation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtDentation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtDentation.Enabled = false;
+            this.swtDentation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtDentation.Location = new System.Drawing.Point(435, 277);
+            this.swtDentation.Name = "swtDentation";
+            this.swtDentation.OffText = "No";
+            this.swtDentation.OnText = "Si";
+            this.swtDentation.Size = new System.Drawing.Size(66, 22);
+            this.swtDentation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtDentation.TabIndex = 65;
+            this.swtDentation.ValueChanged += new System.EventHandler(this.swtDentation_ValueChanged);
+            // 
+            // labelX48
+            // 
+            this.labelX48.AutoSize = true;
+            this.labelX48.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX48.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX48.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX48.Location = new System.Drawing.Point(253, 275);
+            this.labelX48.Name = "labelX48";
+            this.labelX48.Size = new System.Drawing.Size(182, 24);
+            this.labelX48.TabIndex = 28;
+            this.labelX48.Text = "Aparición de la dentición:";
+            // 
+            // txtAgeSphincterControlStarts
+            // 
+            this.txtAgeSphincterControlStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeSphincterControlStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeSphincterControlStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeSphincterControlStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeSphincterControlStarts.Enabled = false;
+            this.txtAgeSphincterControlStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeSphincterControlStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeSphincterControlStarts.Location = new System.Drawing.Point(174, 305);
+            this.txtAgeSphincterControlStarts.MaxLength = 3;
+            this.txtAgeSphincterControlStarts.Name = "txtAgeSphincterControlStarts";
+            this.txtAgeSphincterControlStarts.PreventEnterBeep = true;
+            this.txtAgeSphincterControlStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeSphincterControlStarts.TabIndex = 58;
+            this.txtAgeSphincterControlStarts.WatermarkText = "...";
+            this.txtAgeSphincterControlStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeSphincterControlStarts_KeyPress);
+            // 
+            // labelX47
+            // 
+            this.labelX47.AutoSize = true;
+            this.labelX47.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX47.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX47.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX47.Location = new System.Drawing.Point(15, 304);
+            this.labelX47.Name = "labelX47";
+            this.labelX47.Size = new System.Drawing.Size(136, 24);
+            this.labelX47.TabIndex = 26;
+            this.labelX47.Text = "Edad de comienzo:";
+            // 
+            // swtSphincterControl
+            // 
+            // 
+            // 
+            // 
+            this.swtSphincterControl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtSphincterControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtSphincterControl.Enabled = false;
+            this.swtSphincterControl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtSphincterControl.Location = new System.Drawing.Point(174, 277);
+            this.swtSphincterControl.Name = "swtSphincterControl";
+            this.swtSphincterControl.OffText = "No";
+            this.swtSphincterControl.OnText = "Si";
+            this.swtSphincterControl.Size = new System.Drawing.Size(66, 22);
+            this.swtSphincterControl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtSphincterControl.TabIndex = 57;
+            this.swtSphincterControl.ValueChanged += new System.EventHandler(this.swtSphincterControl_ValueChanged);
+            // 
+            // labelX46
+            // 
+            this.labelX46.AutoSize = true;
+            this.labelX46.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX46.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX46.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX46.Location = new System.Drawing.Point(15, 275);
+            this.labelX46.Name = "labelX46";
+            this.labelX46.Size = new System.Drawing.Size(153, 24);
+            this.labelX46.TabIndex = 24;
+            this.labelX46.Text = "Control de esfínteres:";
+            // 
+            // txtAgeLanguageDevelopmentStarts
+            // 
+            this.txtAgeLanguageDevelopmentStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeLanguageDevelopmentStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeLanguageDevelopmentStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeLanguageDevelopmentStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeLanguageDevelopmentStarts.Enabled = false;
+            this.txtAgeLanguageDevelopmentStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeLanguageDevelopmentStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeLanguageDevelopmentStarts.Location = new System.Drawing.Point(435, 226);
+            this.txtAgeLanguageDevelopmentStarts.MaxLength = 3;
+            this.txtAgeLanguageDevelopmentStarts.Name = "txtAgeLanguageDevelopmentStarts";
+            this.txtAgeLanguageDevelopmentStarts.PreventEnterBeep = true;
+            this.txtAgeLanguageDevelopmentStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeLanguageDevelopmentStarts.TabIndex = 64;
+            this.txtAgeLanguageDevelopmentStarts.WatermarkText = "...";
+            this.txtAgeLanguageDevelopmentStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeLanguageDevelopmentStarts_KeyPress);
+            // 
+            // labelX45
+            // 
+            this.labelX45.AutoSize = true;
+            this.labelX45.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX45.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX45.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX45.Location = new System.Drawing.Point(253, 226);
+            this.labelX45.Name = "labelX45";
+            this.labelX45.Size = new System.Drawing.Size(136, 24);
+            this.labelX45.TabIndex = 22;
+            this.labelX45.Text = "Edad de comienzo:";
+            // 
+            // swtLanguageDevelopment
+            // 
+            // 
+            // 
+            // 
+            this.swtLanguageDevelopment.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtLanguageDevelopment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtLanguageDevelopment.Enabled = false;
+            this.swtLanguageDevelopment.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtLanguageDevelopment.Location = new System.Drawing.Point(435, 200);
+            this.swtLanguageDevelopment.Name = "swtLanguageDevelopment";
+            this.swtLanguageDevelopment.OffText = "No";
+            this.swtLanguageDevelopment.OnText = "Si";
+            this.swtLanguageDevelopment.Size = new System.Drawing.Size(66, 22);
+            this.swtLanguageDevelopment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtLanguageDevelopment.TabIndex = 63;
+            this.swtLanguageDevelopment.ValueChanged += new System.EventHandler(this.swtLanguageDevelopment_ValueChanged);
+            // 
+            // labelX44
+            // 
+            this.labelX44.AutoSize = true;
+            this.labelX44.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX44.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX44.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX44.Location = new System.Drawing.Point(253, 198);
+            this.labelX44.Name = "labelX44";
+            this.labelX44.Size = new System.Drawing.Size(169, 24);
+            this.labelX44.TabIndex = 20;
+            this.labelX44.Text = "Desarrollo del lenguaje:";
+            // 
+            // txtAgeWanderingStarts
+            // 
+            this.txtAgeWanderingStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeWanderingStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeWanderingStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeWanderingStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeWanderingStarts.Enabled = false;
+            this.txtAgeWanderingStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeWanderingStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeWanderingStarts.Location = new System.Drawing.Point(435, 155);
+            this.txtAgeWanderingStarts.MaxLength = 3;
+            this.txtAgeWanderingStarts.Name = "txtAgeWanderingStarts";
+            this.txtAgeWanderingStarts.PreventEnterBeep = true;
+            this.txtAgeWanderingStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeWanderingStarts.TabIndex = 62;
+            this.txtAgeWanderingStarts.WatermarkText = "...";
+            this.txtAgeWanderingStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeWanderingStarts_KeyPress);
+            // 
+            // labelX43
+            // 
+            this.labelX43.AutoSize = true;
+            this.labelX43.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX43.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX43.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX43.Location = new System.Drawing.Point(253, 157);
+            this.labelX43.Name = "labelX43";
+            this.labelX43.Size = new System.Drawing.Size(136, 24);
+            this.labelX43.TabIndex = 18;
+            this.labelX43.Text = "Edad de comienzo:";
+            // 
+            // swtWandering
+            // 
+            // 
+            // 
+            // 
+            this.swtWandering.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtWandering.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtWandering.Enabled = false;
+            this.swtWandering.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtWandering.Location = new System.Drawing.Point(435, 128);
+            this.swtWandering.Name = "swtWandering";
+            this.swtWandering.OffText = "No";
+            this.swtWandering.OnText = "Si";
+            this.swtWandering.Size = new System.Drawing.Size(66, 22);
+            this.swtWandering.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtWandering.TabIndex = 61;
+            this.swtWandering.ValueChanged += new System.EventHandler(this.swtWandering_ValueChanged);
+            // 
+            // labelX42
+            // 
+            this.labelX42.AutoSize = true;
+            this.labelX42.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX42.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX42.Location = new System.Drawing.Point(253, 126);
+            this.labelX42.Name = "labelX42";
+            this.labelX42.Size = new System.Drawing.Size(108, 24);
+            this.labelX42.TabIndex = 16;
+            this.labelX42.Text = "Deambulación:";
+            // 
+            // txtAgeBipedestationStarts
+            // 
+            this.txtAgeBipedestationStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeBipedestationStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeBipedestationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeBipedestationStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeBipedestationStarts.Enabled = false;
+            this.txtAgeBipedestationStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeBipedestationStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeBipedestationStarts.Location = new System.Drawing.Point(174, 155);
+            this.txtAgeBipedestationStarts.MaxLength = 3;
+            this.txtAgeBipedestationStarts.Name = "txtAgeBipedestationStarts";
+            this.txtAgeBipedestationStarts.PreventEnterBeep = true;
+            this.txtAgeBipedestationStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeBipedestationStarts.TabIndex = 54;
+            this.txtAgeBipedestationStarts.WatermarkText = "...";
+            this.txtAgeBipedestationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeBipedestationStarts_KeyPress);
+            // 
+            // labelX41
+            // 
+            this.labelX41.AutoSize = true;
+            this.labelX41.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX41.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX41.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX41.Location = new System.Drawing.Point(14, 157);
+            this.labelX41.Name = "labelX41";
+            this.labelX41.Size = new System.Drawing.Size(136, 24);
+            this.labelX41.TabIndex = 14;
+            this.labelX41.Text = "Edad de comienzo:";
+            // 
+            // swtBipedestation
+            // 
+            // 
+            // 
+            // 
+            this.swtBipedestation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtBipedestation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtBipedestation.Enabled = false;
+            this.swtBipedestation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtBipedestation.Location = new System.Drawing.Point(174, 128);
+            this.swtBipedestation.Name = "swtBipedestation";
+            this.swtBipedestation.OffText = "No";
+            this.swtBipedestation.OnText = "Si";
+            this.swtBipedestation.Size = new System.Drawing.Size(66, 22);
+            this.swtBipedestation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtBipedestation.TabIndex = 53;
+            this.swtBipedestation.ValueChanged += new System.EventHandler(this.swtBipedestation_ValueChanged);
+            // 
+            // labelX40
+            // 
+            this.labelX40.AutoSize = true;
+            this.labelX40.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX40.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX40.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX40.Location = new System.Drawing.Point(14, 126);
+            this.labelX40.Name = "labelX40";
+            this.labelX40.Size = new System.Drawing.Size(105, 24);
+            this.labelX40.TabIndex = 12;
+            this.labelX40.Text = "Bipedestación:";
+            // 
+            // txtAgeCrawlStarts
+            // 
+            this.txtAgeCrawlStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeCrawlStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeCrawlStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeCrawlStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeCrawlStarts.Enabled = false;
+            this.txtAgeCrawlStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeCrawlStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeCrawlStarts.Location = new System.Drawing.Point(174, 226);
+            this.txtAgeCrawlStarts.MaxLength = 3;
+            this.txtAgeCrawlStarts.Name = "txtAgeCrawlStarts";
+            this.txtAgeCrawlStarts.PreventEnterBeep = true;
+            this.txtAgeCrawlStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeCrawlStarts.TabIndex = 56;
+            this.txtAgeCrawlStarts.WatermarkText = "...";
+            this.txtAgeCrawlStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeCrawlStarts_KeyPress);
+            // 
+            // labelX39
+            // 
+            this.labelX39.AutoSize = true;
+            this.labelX39.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX39.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX39.Location = new System.Drawing.Point(15, 226);
+            this.labelX39.Name = "labelX39";
+            this.labelX39.Size = new System.Drawing.Size(136, 24);
+            this.labelX39.TabIndex = 10;
+            this.labelX39.Text = "Edad de comienzo:";
+            // 
+            // swtCrawl
+            // 
+            // 
+            // 
+            // 
+            this.swtCrawl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtCrawl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtCrawl.Enabled = false;
+            this.swtCrawl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtCrawl.Location = new System.Drawing.Point(174, 200);
+            this.swtCrawl.Name = "swtCrawl";
+            this.swtCrawl.OffText = "No";
+            this.swtCrawl.OnText = "Si";
+            this.swtCrawl.Size = new System.Drawing.Size(66, 22);
+            this.swtCrawl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtCrawl.TabIndex = 55;
+            this.swtCrawl.ValueChanged += new System.EventHandler(this.swtCrawl_ValueChanged);
+            // 
+            // labelX38
+            // 
+            this.labelX38.AutoSize = true;
+            this.labelX38.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX38.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX38.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX38.Location = new System.Drawing.Point(15, 198);
+            this.labelX38.Name = "labelX38";
+            this.labelX38.Size = new System.Drawing.Size(48, 24);
+            this.labelX38.TabIndex = 8;
+            this.labelX38.Text = "Gateo:";
+            // 
+            // txtAgeSedestationStarts
+            // 
+            this.txtAgeSedestationStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeSedestationStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeSedestationStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeSedestationStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeSedestationStarts.Enabled = false;
+            this.txtAgeSedestationStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeSedestationStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeSedestationStarts.Location = new System.Drawing.Point(435, 78);
+            this.txtAgeSedestationStarts.MaxLength = 3;
+            this.txtAgeSedestationStarts.Name = "txtAgeSedestationStarts";
+            this.txtAgeSedestationStarts.PreventEnterBeep = true;
+            this.txtAgeSedestationStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeSedestationStarts.TabIndex = 60;
+            this.txtAgeSedestationStarts.WatermarkText = "...";
+            this.txtAgeSedestationStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeSedestationStarts_KeyPress);
+            // 
+            // labelX36
+            // 
+            this.labelX36.AutoSize = true;
+            this.labelX36.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX36.Location = new System.Drawing.Point(253, 77);
+            this.labelX36.Name = "labelX36";
+            this.labelX36.Size = new System.Drawing.Size(136, 24);
+            this.labelX36.TabIndex = 6;
+            this.labelX36.Text = "Edad de comienzo:";
+            // 
+            // swtSedestation
+            // 
+            // 
+            // 
+            // 
+            this.swtSedestation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtSedestation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtSedestation.Enabled = false;
+            this.swtSedestation.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtSedestation.Location = new System.Drawing.Point(435, 51);
+            this.swtSedestation.Name = "swtSedestation";
+            this.swtSedestation.OffText = "No";
+            this.swtSedestation.OnText = "Si";
+            this.swtSedestation.Size = new System.Drawing.Size(66, 22);
+            this.swtSedestation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtSedestation.TabIndex = 59;
+            this.swtSedestation.ValueChanged += new System.EventHandler(this.swtSedestation_ValueChanged);
+            // 
+            // labelX37
+            // 
+            this.labelX37.AutoSize = true;
+            this.labelX37.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX37.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX37.Location = new System.Drawing.Point(253, 49);
+            this.labelX37.Name = "labelX37";
+            this.labelX37.Size = new System.Drawing.Size(91, 24);
+            this.labelX37.TabIndex = 4;
+            this.labelX37.Text = "Sedestación:";
+            // 
+            // txtAgeCephalicSupportStarts
+            // 
+            this.txtAgeCephalicSupportStarts.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.txtAgeCephalicSupportStarts.Border.Class = "TextBoxBorder";
+            this.txtAgeCephalicSupportStarts.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtAgeCephalicSupportStarts.DisabledBackColor = System.Drawing.Color.White;
+            this.txtAgeCephalicSupportStarts.Enabled = false;
+            this.txtAgeCephalicSupportStarts.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgeCephalicSupportStarts.ForeColor = System.Drawing.Color.Black;
+            this.txtAgeCephalicSupportStarts.Location = new System.Drawing.Point(174, 78);
+            this.txtAgeCephalicSupportStarts.MaxLength = 3;
+            this.txtAgeCephalicSupportStarts.Name = "txtAgeCephalicSupportStarts";
+            this.txtAgeCephalicSupportStarts.PreventEnterBeep = true;
+            this.txtAgeCephalicSupportStarts.Size = new System.Drawing.Size(40, 27);
+            this.txtAgeCephalicSupportStarts.TabIndex = 52;
+            this.txtAgeCephalicSupportStarts.WatermarkText = "...";
+            this.txtAgeCephalicSupportStarts.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAgeCephalicSupportStarts_KeyPress);
+            // 
+            // labelX35
+            // 
+            this.labelX35.AutoSize = true;
+            this.labelX35.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX35.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX35.Location = new System.Drawing.Point(15, 77);
+            this.labelX35.Name = "labelX35";
+            this.labelX35.Size = new System.Drawing.Size(136, 24);
+            this.labelX35.TabIndex = 2;
+            this.labelX35.Text = "Edad de comienzo:";
+            // 
+            // swtCephalicSupport
+            // 
+            // 
+            // 
+            // 
+            this.swtCephalicSupport.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.swtCephalicSupport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.swtCephalicSupport.Enabled = false;
+            this.swtCephalicSupport.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.swtCephalicSupport.Location = new System.Drawing.Point(174, 49);
+            this.swtCephalicSupport.Name = "swtCephalicSupport";
+            this.swtCephalicSupport.OffText = "No";
+            this.swtCephalicSupport.OnText = "Si";
+            this.swtCephalicSupport.Size = new System.Drawing.Size(66, 22);
+            this.swtCephalicSupport.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.swtCephalicSupport.TabIndex = 52;
+            this.swtCephalicSupport.ValueChanged += new System.EventHandler(this.swtCephalicSupport_ValueChanged);
+            // 
+            // labelX34
+            // 
+            this.labelX34.AutoSize = true;
+            this.labelX34.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX34.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX34.Location = new System.Drawing.Point(14, 47);
+            this.labelX34.Name = "labelX34";
+            this.labelX34.Size = new System.Drawing.Size(111, 24);
+            this.labelX34.TabIndex = 0;
+            this.labelX34.Text = "Sostén céfalico:";
+            // 
+            // superTabItem7
+            // 
+            this.superTabItem7.AttachedControl = this.superTabControlPanel6;
+            this.superTabItem7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.superTabItem7.GlobalItem = false;
+            this.superTabItem7.Name = "superTabItem7";
+            this.superTabItem7.Text = "Evolución del desarrollo psicomotor";
+            // 
             // switchButtonItem1
             // 
             this.switchButtonItem1.Name = "switchButtonItem1";
@@ -3527,6 +3527,7 @@ namespace SAICP
             this.txtSearchBy.Name = "txtSearchBy";
             this.txtSearchBy.Size = new System.Drawing.Size(215, 27);
             this.txtSearchBy.TabIndex = 73;
+            this.txtSearchBy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBy_KeyDown);
             this.txtSearchBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBy_KeyPress);
             // 
             // cmdSearch
@@ -3573,14 +3574,6 @@ namespace SAICP
             this.grpSex.ResumeLayout(false);
             this.grpSex.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).EndInit();
-            this.superTabControlPanel6.ResumeLayout(false);
-            this.superTabControlPanel6.PerformLayout();
-            this.superTabControlPanel5.ResumeLayout(false);
-            this.superTabControlPanel5.PerformLayout();
-            this.superTabControlPanel4.ResumeLayout(false);
-            this.groupPanel4.ResumeLayout(false);
-            this.groupPanel4.PerformLayout();
-            this.groupPanel3.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -3590,6 +3583,14 @@ namespace SAICP
             this.tabControlPanel2.PerformLayout();
             this.superTabControlPanel2.ResumeLayout(false);
             this.superTabControlPanel2.PerformLayout();
+            this.superTabControlPanel5.ResumeLayout(false);
+            this.superTabControlPanel5.PerformLayout();
+            this.superTabControlPanel4.ResumeLayout(false);
+            this.groupPanel4.ResumeLayout(false);
+            this.groupPanel4.PerformLayout();
+            this.groupPanel3.ResumeLayout(false);
+            this.superTabControlPanel6.ResumeLayout(false);
+            this.superTabControlPanel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
