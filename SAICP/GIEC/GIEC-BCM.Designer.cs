@@ -45,16 +45,16 @@ namespace SAICP
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.clnDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
-            this.txtPatient_Name = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtSearchByName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lblPatient_Name = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.cmdSearch = new DevComponents.DotNetBar.ButtonX();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.Patient_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
+            this.cmdBack = new DevComponents.DotNetBar.ButtonX();
+            this.dgvData = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
             // statusBar
@@ -76,7 +76,7 @@ namespace SAICP
             this.lblHour});
             this.statusBar.Location = new System.Drawing.Point(0, 289);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(724, 22);
+            this.statusBar.Size = new System.Drawing.Size(782, 22);
             this.statusBar.TabIndex = 0;
             // 
             // metroStatusBar1
@@ -97,7 +97,7 @@ namespace SAICP
             this.labelItem4});
             this.metroStatusBar1.Location = new System.Drawing.Point(0, 0);
             this.metroStatusBar1.Name = "metroStatusBar1";
-            this.metroStatusBar1.Size = new System.Drawing.Size(724, 22);
+            this.metroStatusBar1.Size = new System.Drawing.Size(782, 22);
             this.metroStatusBar1.TabIndex = 1;
             // 
             // labelItem1
@@ -182,8 +182,9 @@ namespace SAICP
             // 
             this.clnDate.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.clnDate.ContainerControlProcessDialogKey = true;
+            this.clnDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clnDate.DisplayMonth = new System.DateTime(2016, 11, 1, 0, 0, 0, 0);
-            this.clnDate.Location = new System.Drawing.Point(36, 109);
+            this.clnDate.Location = new System.Drawing.Point(12, 109);
             this.clnDate.Name = "clnDate";
             // 
             // 
@@ -195,22 +196,29 @@ namespace SAICP
             this.clnDate.Size = new System.Drawing.Size(170, 131);
             this.clnDate.TabIndex = 1;
             this.clnDate.Text = "monthCalendarAdv1";
+            this.clnDate.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.clnDate_DateSelected);
             // 
-            // txtPatient_Name
+            // txtSearchByName
             // 
-            this.txtPatient_Name.BackColor = System.Drawing.Color.White;
+            this.txtSearchByName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtSearchByName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtSearchByName.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.txtPatient_Name.Border.Class = "TextBoxBorder";
-            this.txtPatient_Name.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatient_Name.DisabledBackColor = System.Drawing.Color.White;
-            this.txtPatient_Name.ForeColor = System.Drawing.Color.Black;
-            this.txtPatient_Name.Location = new System.Drawing.Point(12, 41);
-            this.txtPatient_Name.Name = "txtPatient_Name";
-            this.txtPatient_Name.PreventEnterBeep = true;
-            this.txtPatient_Name.Size = new System.Drawing.Size(226, 22);
-            this.txtPatient_Name.TabIndex = 2;
+            this.txtSearchByName.Border.Class = "TextBoxBorder";
+            this.txtSearchByName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSearchByName.DisabledBackColor = System.Drawing.Color.White;
+            this.txtSearchByName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchByName.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchByName.Location = new System.Drawing.Point(12, 41);
+            this.txtSearchByName.Name = "txtSearchByName";
+            this.txtSearchByName.PreventEnterBeep = true;
+            this.txtSearchByName.Size = new System.Drawing.Size(226, 27);
+            this.txtSearchByName.TabIndex = 2;
+            this.txtSearchByName.WatermarkText = "Ingresa un nombre...";
+            this.txtSearchByName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchByName_KeyDown);
+            this.txtSearchByName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchByName_KeyPress);
             // 
             // lblPatient_Name
             // 
@@ -238,24 +246,29 @@ namespace SAICP
             this.labelX1.TabIndex = 4;
             this.labelX1.Text = "Seleccione una fecha...";
             // 
-            // cmdSearch
+            // cmdBack
             // 
-            this.cmdSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdSearch.Location = new System.Drawing.Point(637, 260);
-            this.cmdSearch.Name = "cmdSearch";
-            this.cmdSearch.Size = new System.Drawing.Size(75, 23);
-            this.cmdSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmdSearch.TabIndex = 5;
-            this.cmdSearch.Text = "Buscar";
+            this.cmdBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdBack.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.cmdBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdBack.Location = new System.Drawing.Point(12, 260);
+            this.cmdBack.Name = "cmdBack";
+            this.cmdBack.Size = new System.Drawing.Size(75, 23);
+            this.cmdBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdBack.TabIndex = 7;
+            this.cmdBack.Text = "Regresar";
+            this.cmdBack.Click += new System.EventHandler(this.cmdBack_Click);
             // 
-            // dataGridViewX1
+            // dgvData
             // 
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Patient_Name,
-            this.Folio});
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.folio,
+            this.date});
+            this.dgvData.Cursor = System.Windows.Forms.Cursors.Hand;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,50 +276,48 @@ namespace SAICP
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(270, 12);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.Size = new System.Drawing.Size(442, 242);
-            this.dataGridViewX1.TabIndex = 6;
-            this.dataGridViewX1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewX1_CellDoubleClick);
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvData.Location = new System.Drawing.Point(279, 13);
+            this.dgvData.MultiSelect = false;
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvData.Size = new System.Drawing.Size(503, 270);
+            this.dgvData.TabIndex = 8;
+            this.dgvData.DoubleClick += new System.EventHandler(this.dgvData_DoubleClick);
             // 
-            // Patient_Name
+            // name
             // 
-            this.Patient_Name.HeaderText = "Nombre del paciente";
-            this.Patient_Name.Name = "Patient_Name";
-            this.Patient_Name.Width = 245;
+            this.name.HeaderText = "Nombre del paciente";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 200;
             // 
-            // Folio
+            // folio
             // 
-            this.Folio.HeaderText = "Folio";
-            this.Folio.Name = "Folio";
-            this.Folio.Width = 154;
+            this.folio.HeaderText = "Folio";
+            this.folio.Name = "folio";
+            this.folio.ReadOnly = true;
+            this.folio.Width = 140;
             // 
-            // cmdCancel
+            // date
             // 
-            this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.cmdCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.cmdCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdCancel.Location = new System.Drawing.Point(538, 260);
-            this.cmdCancel.Name = "cmdCancel";
-            this.cmdCancel.Size = new System.Drawing.Size(75, 23);
-            this.cmdCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmdCancel.TabIndex = 7;
-            this.cmdCancel.Text = "Cancelar";
-            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
+            this.date.HeaderText = "Fecha";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Width = 120;
             // 
             // frmQueryMedicalQuerys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 311);
-            this.Controls.Add(this.cmdCancel);
-            this.Controls.Add(this.dataGridViewX1);
-            this.Controls.Add(this.cmdSearch);
+            this.ClientSize = new System.Drawing.Size(782, 311);
+            this.Controls.Add(this.dgvData);
+            this.Controls.Add(this.cmdBack);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.lblPatient_Name);
-            this.Controls.Add(this.txtPatient_Name);
+            this.Controls.Add(this.txtSearchByName);
             this.Controls.Add(this.clnDate);
             this.Controls.Add(this.statusBar);
             this.DoubleBuffered = true;
@@ -318,7 +329,7 @@ namespace SAICP
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQueryMedicalQuerys_FormClosing);
             this.Load += new System.EventHandler(this.frmQueryMedicalQuerys_Load);
             this.statusBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,19 +345,19 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem lblHour;
         private System.Windows.Forms.Timer timer;
         private DevComponents.Editors.DateTimeAdv.MonthCalendarAdv clnDate;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPatient_Name;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSearchByName;
         private DevComponents.DotNetBar.LabelX lblPatient_Name;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.ButtonX cmdSearch;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
-        private DevComponents.DotNetBar.ButtonX cmdCancel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Patient_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Folio;
+        private DevComponents.DotNetBar.ButtonX cmdBack;
         private DevComponents.DotNetBar.Metro.MetroStatusBar metroStatusBar1;
         private DevComponents.DotNetBar.LabelItem labelItem1;
         private DevComponents.DotNetBar.ProgressBarItem progressBarItem2;
         private DevComponents.DotNetBar.LabelItem labelItem2;
         private DevComponents.DotNetBar.LabelItem labelItem3;
         private DevComponents.DotNetBar.LabelItem labelItem4;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn folio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }

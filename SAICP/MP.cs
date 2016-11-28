@@ -14,6 +14,7 @@ namespace SAICP
         public frmMain()
         {
             InitializeComponent();
+            MaximizeBox = false;
         }
 
         private void frmMain_Load(object sender, EventArgs e)

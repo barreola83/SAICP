@@ -19,6 +19,7 @@ namespace SAICP
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
+            MaximizeBox = false;
         }
 
         private void frmClinicalGraphicTracing_Load(object sender, EventArgs e)

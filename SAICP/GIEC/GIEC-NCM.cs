@@ -424,9 +424,11 @@ namespace SAICP
             {
                 SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
                 SqlCommand commandClinicalRecords = new SqlCommand("SELECT date_birth, sex, pacient_weight, pacient_size FROM clinical_records WHERE folio=@folio;", connection);
-                SqlCommand commandMedicalQuerys = new SqlCommand("SELECT weight, size FROM medical_querys WHERE folio=@folio;");
+                SqlCommand commandMedicalQuerys = new SqlCommand("SELECT date, weight, size FROM medical_querys WHERE folio=@folio;", connection);
                 SqlDataReader reader;
+                DateTime birthday = new DateTime();
                 DatesDifference difference;
+                string sex = "";
 
                 dgvPercentilTable.Rows.Clear();
 
@@ -434,6 +436,7 @@ namespace SAICP
 
                 commandMedicalQuerys.Parameters.AddWithValue("@folio", txtFolio.Text);
 
+                // Para el expediente clinico
                 connection.Open();
 
                 reader = commandClinicalRecords.ExecuteReader();
@@ -442,14 +445,124 @@ namespace SAICP
                 {
                     while (reader.Read())
                     {
-                        difference = DateDifference(reader.GetDateTime(reader.GetOrdinal("date_birth")), DateTime.Now.Date);
+                        birthday = reader.GetDateTime(reader.GetOrdinal("date_birth"));
 
-                        string[] data = { txtName.Text, "Recién nacido", reader["pacient_weight"].ToString(), "", reader["pacient_size"].ToString(), "" };
-                        dgvPercentilTable.Rows.Add(data);
+                        if (reader["sex"].ToString() == "M")
+                        {
+                            string[] data = { txtName.Text, "Recién nacido", reader["pacient_weight"].ToString() + " kg", "3.4 kg", reader["pacient_size"].ToString() + " cm", "50.3 cm"};
+                            sex = "M";
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else
+                        {
+                            string[] data = { txtName.Text, "Recién nacido", reader["pacient_weight"].ToString() + " kg", "3.4 kg", reader["pacient_size"].ToString() + " cm", "50.3 cm" };
+                            sex = "F";
+                            dgvPercentilTable.Rows.Add(data);
+                        }
                     }
                 }
 
                 connection.Close();
+
+                // Para el resto de las consultas
+                connection.Open();
+
+                reader = commandMedicalQuerys.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        difference = DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date);
+
+                        if (difference.Years == 0 && difference.Months <= 3)
+                        {
+                            string[] data = { txtName.Text, difference.Months.ToString() + " meses", reader["weight"].ToString() + " kg", CalculatePercentilWeight(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " kg", reader["size"].ToString() + " cm", CalculatePercentilSize(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else if (difference.Years == 0 && difference.Months <= 6)
+                        {
+                            string[] data = { txtName.Text, difference.Months.ToString() + " meses", reader["weight"].ToString() + " kg", CalculatePercentilWeight(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " kg", reader["size"].ToString() + " cm", CalculatePercentilSize(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else if (difference.Years == 0 && difference.Months <= 9)
+                        {
+                            string[] data = { txtName.Text, difference.Months.ToString() + " meses", reader["weight"].ToString() + " kg", CalculatePercentilWeight(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " kg", reader["size"].ToString() + " cm", CalculatePercentilSize(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else if (difference.Years == 1 && difference.Months <= 0)
+                        {
+                            string[] data = { txtName.Text, 12 + " meses", reader["weight"].ToString() + " kg", CalculatePercentilWeight(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " kg", reader["size"].ToString() + " cm", CalculatePercentilSize(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else if (difference.Years == 1 && difference.Months <= 3)
+                        {
+                            string[] data = { txtName.Text, 15 + " meses", reader["weight"].ToString() + " kg", CalculatePercentilWeight(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " kg", reader["size"].ToString() + " cm", CalculatePercentilSize(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else if (difference.Years == 1 && difference.Months <= 6)
+                        {
+                            string[] data = { txtName.Text, 18 + " meses", reader["weight"].ToString() + " kg", CalculatePercentilWeight(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " kg", reader["size"].ToString() + " cm", CalculatePercentilSize(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else if (difference.Years >= 2 && difference.Years <= 8)
+                        {
+                            string[] data = { txtName.Text, difference.Years + " años", reader["weight"].ToString() + " kg", CalculatePercentilWeight(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " kg", reader["size"].ToString() + " cm", CalculatePercentilSize(DateDifference(birthday, reader.GetDateTime(reader.GetOrdinal("date")).Date), sex).ToString() + " cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                        else
+                        {
+                            string[] data = { txtName.Text, difference.Years + " años", reader["weight"].ToString() + " kg", "- kg", reader["size"].ToString() + " cm", "- cm" };
+                            dgvPercentilTable.Rows.Add(data);
+                        }
+                    }
+                }
+
+                connection.Close();
+
+                // Para la consulta actual
+                difference = DateDifference(birthday, DateTime.Now.Date);
+
+                if (difference.Years == 0 && difference.Months <= 3)
+                {
+                    string[] data = { txtName.Text, difference.Months.ToString() + " meses", txtWeight.Text + " kg", CalculatePercentilWeight(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " kg", txtSize.Text + " cm", CalculatePercentilSize(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
+                else if (difference.Years == 0 && difference.Months <= 6)
+                {
+                    string[] data = { txtName.Text, difference.Months.ToString() + " meses", txtWeight.Text + " cm", CalculatePercentilWeight(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " kg", txtSize.Text + " cm", CalculatePercentilSize(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
+                else if (difference.Years == 0 && difference.Months <= 9)
+                {
+                    string[] data = { txtName.Text, difference.Months.ToString() + " meses", txtWeight.Text + " cm", CalculatePercentilWeight(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " kg", txtSize.Text + " cm", CalculatePercentilSize(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
+                else if (difference.Years == 1 && difference.Months <= 0)
+                {
+                    string[] data = { txtName.Text, 12 + " meses", txtWeight.Text + " kg", CalculatePercentilWeight(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " kg", txtSize.Text + " cm", CalculatePercentilSize(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
+                else if (difference.Years == 1 && difference.Months <= 3)
+                {
+                    string[] data = { txtName.Text, 15 + " meses", txtWeight.Text + " kg", CalculatePercentilWeight(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " kg", txtSize.Text + " cm", CalculatePercentilSize(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
+                else if (difference.Years == 1 && difference.Months <= 6)
+                {
+                    string[] data = { txtName.Text, 18 + " meses", txtWeight.Text + " kg", CalculatePercentilWeight(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " kg", txtSize.Text + " cm", CalculatePercentilSize(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
+                else if (difference.Years >= 2 && difference.Years <= 8)
+                {
+                    string[] data = { txtName.Text, difference.Years + " años", txtWeight.Text + " kg", CalculatePercentilWeight(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " kg", txtSize.Text + " cm", CalculatePercentilSize(DateDifference(birthday, DateTime.Now.Date), sex).ToString() + " cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
+                else
+                {
+                    string[] data = { txtName.Text, difference.Years + " años", txtWeight.Text + " kg", "- kg", txtSize.Text + " cm", "- cm" };
+                    dgvPercentilTable.Rows.Add(data);
+                }
             }
         }
 
@@ -516,29 +629,137 @@ namespace SAICP
             return difference;
         }
 
-        //private float CalculatePercentilWeight(DatesDifference difference, string sex)
-        //{
-        //    if (sex == "M")
-        //    {
+        private double CalculatePercentilWeight(DatesDifference difference, string sex)
+        {
+            if (sex == "M")
+            {
+                if (difference.Years == 0 && difference.Months <= 3)
+                    return 6.2;
+                else if (difference.Years == 0 && difference.Months <= 6)
+                    return 8;
+                else if (difference.Years == 0 && difference.Months <= 9)
+                    return 9.2;
+                else if (difference.Years == 1 && difference.Months <= 0)
+                    return 10.2;
+                else if (difference.Years == 1 && difference.Months <= 3)
+                    return 11.1;
+                else if (difference.Years == 1 && difference.Months <= 6)
+                    return 11.8;
+                else if (difference.Years == 2)
+                    return 12.9;
+                else if (difference.Years == 3)
+                    return 15.1;
+                else if (difference.Years == 4)
+                    return 16.07;
+                else if (difference.Years == 5)
+                    return 18.03;
+                else if (difference.Years == 6)
+                    return 19.91;
+                else if (difference.Years == 7)
+                    return 22;
+                else if (difference.Years == 8)
+                    return 23.56;
+                else
+                    return -1;
+            }
+            else
+            {
+                if (difference.Years == 0 && difference.Months <= 3)
+                    return 5.6;
+                else if (difference.Years == 0 && difference.Months <= 6)
+                    return 7.3;
+                else if (difference.Years == 0 && difference.Months <= 9)
+                    return 8.6;
+                else if (difference.Years == 1 && difference.Months <= 0)
+                    return 9.5;
+                else if (difference.Years == 1 && difference.Months <= 3)
+                    return 11;
+                else if (difference.Years == 1 && difference.Months <= 6)
+                    return 11.5;
+                else if (difference.Years == 2)
+                    return 12.4;
+                else if (difference.Years == 3)
+                    return 14.4;
+                else if (difference.Years == 4)
+                    return 15.5;
+                else if (difference.Years == 5)
+                    return 17.4;
+                else if (difference.Years == 6)
+                    return 19.6;
+                else if (difference.Years == 7)
+                    return 21.2;
+                else if (difference.Years == 8)
+                    return 23.5;
+                else
+                    return -1;
+            }
+        }
 
-        //    }
-        //    else
-        //    {
-
-        //    }
-        //}
-
-        //private float CalculatePercentilSize(DatesDifference difference, string sex)
-        //{
-        //    if (sex == "M")
-        //    {
-
-        //    }
-        //    else
-        //    {
-
-        //    }
-        //}
+        private double CalculatePercentilSize(DatesDifference difference, string sex)
+        {
+            if (sex == "M")
+            {
+                if (difference.Years == 0 && difference.Months <= 3)
+                    return 60;
+                else if (difference.Years == 0 && difference.Months <= 6)
+                    return 67;
+                else if (difference.Years == 0 && difference.Months <= 9)
+                    return 72;
+                else if (difference.Years == 1 && difference.Months <= 0)
+                    return 76;
+                else if (difference.Years == 1 && difference.Months <= 3)
+                    return 79;
+                else if (difference.Years == 1 && difference.Months <= 6)
+                    return 82.5;
+                else if (difference.Years == 2)
+                    return 88;
+                else if (difference.Years == 3)
+                    return 96.5;
+                else if (difference.Years == 4)
+                    return 100.13;
+                else if (difference.Years == 5)
+                    return 106.40;
+                else if (difference.Years == 6)
+                    return 112.77;
+                else if (difference.Years == 7)
+                    return 118.50;
+                else if (difference.Years == 8)
+                    return 122.86;
+                else
+                    return -1;
+            }
+            else
+            {
+                if (difference.Years == 0 && difference.Months <= 3)
+                    return 59;
+                else if (difference.Years == 0 && difference.Months <= 6)
+                    return 65;
+                else if (difference.Years == 0 && difference.Months <= 9)
+                    return 70;
+                else if (difference.Years == 1 && difference.Months <= 0)
+                    return 74;
+                else if (difference.Years == 1 && difference.Months <= 3)
+                    return 77;
+                else if (difference.Years == 1 && difference.Months <= 6)
+                    return 80.5;
+                else if (difference.Years == 2)
+                    return 86;
+                else if (difference.Years == 3)
+                    return 95;
+                else if (difference.Years == 4)
+                    return 99.14;
+                else if (difference.Years == 5)
+                    return 105.95;
+                else if (difference.Years == 6)
+                    return 112.22;
+                else if (difference.Years == 7)
+                    return 117.27;
+                else if (difference.Years == 8)
+                    return 122.62;
+                else
+                    return -1;
+            }
+        }
     }
 
     public class DatesDifference

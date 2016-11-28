@@ -27,6 +27,7 @@ namespace SAICP
         {
             InitializeComponent();
             this.windowMenu = windowMenu;
+            MaximizeBox = false;
         }
 
         /*
