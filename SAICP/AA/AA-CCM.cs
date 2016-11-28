@@ -46,15 +46,13 @@ namespace SAICP
 
         private void frmQueryMedicalDates_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("¿Seguro que desea regresar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Hide();
                 windowMenu.Show();
             }
             else
-            {
                 e.Cancel = true;
-            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -204,6 +202,9 @@ namespace SAICP
                     connection.Close();
 
                     dgvData.Rows.RemoveAt(dgvData.CurrentCell.RowIndex);
+
+                    if (dgvData.Rows.Count == 1)
+                        btnDelete.Enabled = false;
                 }
             }
             else

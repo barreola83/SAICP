@@ -197,7 +197,7 @@ namespace SAICP
 
                     dgvData.Rows.RemoveAt(dgvData.CurrentCell.RowIndex);
 
-                    if (dgvData.Rows.Count == 0)
+                    if (dgvData.Rows.Count == 1)
                         cmdDelete.Enabled = false;
                 }
             }
