@@ -55,7 +55,6 @@ namespace SAICP
 
         private void cldDate_DateSelected(object sender, DateRangeEventArgs e)
         {
-            // SELECT CAST(ROUND(123.4567, 2) AS MONEY)
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
             SqlCommand command = new SqlCommand("SELECT date, description, amount, supplier FROM expenditures WHERE date=@date", connection);
             SqlDataReader reader;
