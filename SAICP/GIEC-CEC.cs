@@ -1860,7 +1860,8 @@ namespace SAICP
             txtContactPhone.Text = reader["contact_phone"].ToString();
 
             // Mostramos la fecha de nacimiento
-            clnDateBirth.SelectedDate = reader.GetDateTime(reader.GetOrdinal("date_birth"));
+            clnDateBirth.SelectedDate = reader.GetDateTime(reader.GetOrdinal("date_birth")).Date;
+            clnDateBirth.DisplayMonth = reader.GetDateTime(reader.GetOrdinal("date_birth")).Date;
 
             // Mostramos el sexo
             if (reader["sex"].ToString() == "M")

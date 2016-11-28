@@ -159,6 +159,7 @@ namespace SAICP
             // 
             this.cmdBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.cmdBack.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.cmdBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdBack.Location = new System.Drawing.Point(523, 387);
             this.cmdBack.Name = "cmdBack";
