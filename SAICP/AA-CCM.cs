@@ -131,9 +131,14 @@ namespace SAICP
                     string[] data = { reader["name"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).ToString("d"), reader.GetTimeSpan(reader.GetOrdinal("time")).ToString(), reader["contact_phone"].ToString() };
                     dgvData.Rows.Add(data);
                 }
+
+                btnDelete.Enabled = true;
             }
             else
+            {
                 searchFound = false;
+                btnDelete.Enabled = false;
+            }
 
             connection.Close();
         }
@@ -165,9 +170,14 @@ namespace SAICP
                         string[] data = { reader["name"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).ToString("d"), reader.GetTimeSpan(reader.GetOrdinal("time")).ToString(), reader["contact_phone"].ToString() };
                         dgvData.Rows.Add(data);
                     }
+
+                    btnDelete.Enabled = true;
                 }
                 else
+                {
                     searchFound = false;
+                    btnDelete.Enabled = false;
+                }
 
                 connection.Close();
             }
