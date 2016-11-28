@@ -137,7 +137,7 @@ namespace SAICP
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
             SqlCommand command = new SqlCommand(buildInsertCommand, connection);
 
-            pgrSaving.Visible = true;
+            pgrSaving.Visible = false;
 
             if (ValidateDataAndAsignSqlCommandParameters(command))
             {

@@ -31,9 +31,9 @@ namespace SAICP
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateMedicalQuery));
             this.statusBar = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
@@ -43,15 +43,6 @@ namespace SAICP
             this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.stcGeneral_Data = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.dgvPercentilTable = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.standardSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stiTable = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.txtFolio = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -83,14 +74,21 @@ namespace SAICP
             this.chrIMC = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.sptIMC = new DevComponents.DotNetBar.SuperTabItem();
             this.stiGraphics = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.dgvPercentilTable = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.standardSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stiTable = new DevComponents.DotNetBar.SuperTabItem();
             this.cmdCancel = new DevComponents.DotNetBar.ButtonX();
             this.cmdSave = new DevComponents.DotNetBar.ButtonX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.lblMedicalQueryDate = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.stcGeneral_Data)).BeginInit();
             this.stcGeneral_Data.SuspendLayout();
-            this.superTabControlPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentilTable)).BeginInit();
             this.superTabControlPanel1.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
@@ -99,6 +97,8 @@ namespace SAICP
             ((System.ComponentModel.ISupportInitialize)(this.chrSize)).BeginInit();
             this.superTabControlPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chrIMC)).BeginInit();
+            this.superTabControlPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentilTable)).BeginInit();
             this.SuspendLayout();
             // 
             // statusBar
@@ -178,8 +178,8 @@ namespace SAICP
             this.stcGeneral_Data.ControlBox.MenuBox,
             this.stcGeneral_Data.ControlBox.CloseBox});
             this.stcGeneral_Data.Controls.Add(this.superTabControlPanel1);
-            this.stcGeneral_Data.Controls.Add(this.superTabControlPanel2);
             this.stcGeneral_Data.Controls.Add(this.superTabControlPanel3);
+            this.stcGeneral_Data.Controls.Add(this.superTabControlPanel2);
             this.stcGeneral_Data.ForeColor = System.Drawing.Color.Black;
             this.stcGeneral_Data.Location = new System.Drawing.Point(12, 33);
             this.stcGeneral_Data.Name = "stcGeneral_Data";
@@ -195,88 +195,6 @@ namespace SAICP
             this.stiTable});
             this.stcGeneral_Data.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.stcGeneral_Data.Text = "superTabControl1";
-            // 
-            // superTabControlPanel3
-            // 
-            this.superTabControlPanel3.Controls.Add(this.dgvPercentilTable);
-            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel3.Name = "superTabControlPanel3";
-            this.superTabControlPanel3.Size = new System.Drawing.Size(760, 405);
-            this.superTabControlPanel3.TabIndex = 3;
-            this.superTabControlPanel3.TabItem = this.stiTable;
-            // 
-            // dgvPercentilTable
-            // 
-            this.dgvPercentilTable.AllowUserToDeleteRows = false;
-            this.dgvPercentilTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPercentilTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.age,
-            this.weight,
-            this.standardWeight,
-            this.size,
-            this.standardSize});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPercentilTable.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPercentilTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dgvPercentilTable.Location = new System.Drawing.Point(4, 4);
-            this.dgvPercentilTable.Name = "dgvPercentilTable";
-            this.dgvPercentilTable.ReadOnly = true;
-            this.dgvPercentilTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPercentilTable.Size = new System.Drawing.Size(753, 398);
-            this.dgvPercentilTable.TabIndex = 0;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Nombre del paciente";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 210;
-            // 
-            // age
-            // 
-            this.age.HeaderText = "Edad";
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            // 
-            // weight
-            // 
-            this.weight.HeaderText = "Peso";
-            this.weight.Name = "weight";
-            this.weight.ReadOnly = true;
-            // 
-            // standardWeight
-            // 
-            this.standardWeight.HeaderText = "Peso estándar";
-            this.standardWeight.Name = "standardWeight";
-            this.standardWeight.ReadOnly = true;
-            // 
-            // size
-            // 
-            this.size.HeaderText = "Talla";
-            this.size.Name = "size";
-            this.size.ReadOnly = true;
-            // 
-            // standardSize
-            // 
-            this.standardSize.HeaderText = "Talla estándar";
-            this.standardSize.Name = "standardSize";
-            this.standardSize.ReadOnly = true;
-            // 
-            // stiTable
-            // 
-            this.stiTable.AttachedControl = this.superTabControlPanel3;
-            this.stiTable.GlobalItem = false;
-            this.stiTable.Name = "stiTable";
-            this.stiTable.Text = "Tabla";
-            this.stiTable.Click += new System.EventHandler(this.stiTable_Click);
             // 
             // superTabControlPanel1
             // 
@@ -770,6 +688,88 @@ namespace SAICP
             this.stiGraphics.Text = "Gráficas";
             this.stiGraphics.Click += new System.EventHandler(this.stiGraphics_Click);
             // 
+            // superTabControlPanel3
+            // 
+            this.superTabControlPanel3.Controls.Add(this.dgvPercentilTable);
+            this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel3.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel3.Name = "superTabControlPanel3";
+            this.superTabControlPanel3.Size = new System.Drawing.Size(760, 405);
+            this.superTabControlPanel3.TabIndex = 3;
+            this.superTabControlPanel3.TabItem = this.stiTable;
+            // 
+            // dgvPercentilTable
+            // 
+            this.dgvPercentilTable.AllowUserToDeleteRows = false;
+            this.dgvPercentilTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPercentilTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.age,
+            this.weight,
+            this.standardWeight,
+            this.size,
+            this.standardSize});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPercentilTable.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPercentilTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvPercentilTable.Location = new System.Drawing.Point(4, 4);
+            this.dgvPercentilTable.Name = "dgvPercentilTable";
+            this.dgvPercentilTable.ReadOnly = true;
+            this.dgvPercentilTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPercentilTable.Size = new System.Drawing.Size(753, 398);
+            this.dgvPercentilTable.TabIndex = 0;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Nombre del paciente";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 210;
+            // 
+            // age
+            // 
+            this.age.HeaderText = "Edad";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
+            // 
+            // weight
+            // 
+            this.weight.HeaderText = "Peso";
+            this.weight.Name = "weight";
+            this.weight.ReadOnly = true;
+            // 
+            // standardWeight
+            // 
+            this.standardWeight.HeaderText = "Peso estándar";
+            this.standardWeight.Name = "standardWeight";
+            this.standardWeight.ReadOnly = true;
+            // 
+            // size
+            // 
+            this.size.HeaderText = "Talla";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            // 
+            // standardSize
+            // 
+            this.standardSize.HeaderText = "Talla estándar";
+            this.standardSize.Name = "standardSize";
+            this.standardSize.ReadOnly = true;
+            // 
+            // stiTable
+            // 
+            this.stiTable.AttachedControl = this.superTabControlPanel3;
+            this.stiTable.GlobalItem = false;
+            this.stiTable.Name = "stiTable";
+            this.stiTable.Text = "Tabla";
+            this.stiTable.Click += new System.EventHandler(this.stiTable_Click);
+            // 
             // cmdCancel
             // 
             this.cmdCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -843,13 +843,11 @@ namespace SAICP
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUpdateMedicalQuery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.TitleText = "Nueva consulta médica";
+            this.TitleText = "Datos del paciente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNewMedicalQuery_FormClosing);
             this.Load += new System.EventHandler(this.frmNewMedicalQuery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stcGeneral_Data)).EndInit();
             this.stcGeneral_Data.ResumeLayout(false);
-            this.superTabControlPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentilTable)).EndInit();
             this.superTabControlPanel1.ResumeLayout(false);
             this.superTabControlPanel1.PerformLayout();
             this.superTabControlPanel2.ResumeLayout(false);
@@ -859,6 +857,8 @@ namespace SAICP
             ((System.ComponentModel.ISupportInitialize)(this.chrSize)).EndInit();
             this.superTabControlPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chrIMC)).EndInit();
+            this.superTabControlPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPercentilTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
