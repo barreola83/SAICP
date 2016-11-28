@@ -62,7 +62,7 @@ namespace SAICP
         private void SetAutoCompleteCustomSourceByName()
         {
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand command = new SqlCommand("SELECT folio, name, first_last_name, second_last_name, contact_phone FROM clinical_records", connection);
+            SqlCommand command = new SqlCommand("SELECT ID, folio, name, first_last_name, second_last_name, contact_phone FROM clinical_records", connection);
             SqlDataReader reader;
             AutoCompleteStringCollection data = new AutoCompleteStringCollection();
 
@@ -97,7 +97,7 @@ namespace SAICP
         private void clnDate_DateSelected(object sender, DateRangeEventArgs e)
         {
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand command = new SqlCommand("SELECT folio, name, date FROM medical_querys WHERE date=@date;", connection);
+            SqlCommand command = new SqlCommand("SELECT ID, folio, name, date FROM medical_querys WHERE date=@date;", connection);
             SqlDataReader reader;
 
             txtSearchByName.Clear();
@@ -113,15 +113,19 @@ namespace SAICP
             {
                 search = SearchBy.Date;
                 searchFound = true;
+                cmdDelete.Enabled = true;
 
                 while (reader.Read())
                 {
-                    string[] data = { reader["name"].ToString(), reader["folio"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).Date.ToString("d") };
+                    string[] data = { reader["ID"].ToString(), reader["name"].ToString(), reader["folio"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).Date.ToString("d") };
                     dgvData.Rows.Add(data);
                 }
             }
             else
+            {
                 searchFound = false;
+                cmdDelete.Enabled = false;
+            }
 
             connection.Close();
         }
@@ -131,7 +135,7 @@ namespace SAICP
             if (e.KeyCode == Keys.Enter)
             {
                 SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-                SqlCommand command = new SqlCommand("SELECT folio, name, date FROM medical_querys WHERE name=@name;", connection);
+                SqlCommand command = new SqlCommand("SELECT ID, folio, name, date FROM medical_querys WHERE name=@name;", connection);
                 SqlDataReader reader;
 
                 dgvData.Rows.Clear();
@@ -146,15 +150,19 @@ namespace SAICP
                 {
                     search = SearchBy.Name;
                     searchFound = true;
+                    cmdDelete.Enabled = true;
 
                     while (reader.Read())
                     {
-                        string[] data = { reader["name"].ToString(), reader["folio"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).Date.ToString("d") };
+                        string[] data = { reader["ID"].ToString(), reader["name"].ToString(), reader["folio"].ToString(), reader.GetDateTime(reader.GetOrdinal("date")).Date.ToString("d") };
                         dgvData.Rows.Add(data);
                     }
                 }
                 else
+                {
                     searchFound = false;
+                    cmdDelete.Enabled = false;
+                }
 
                 connection.Close();
             }
@@ -164,8 +172,45 @@ namespace SAICP
         {
             if (dgvData.Rows.GetRowCount(DataGridViewElementStates.Selected) != 0 && searchFound)
             {
+                frmUpdateMedicalQuery updateMedicalQuery = new frmUpdateMedicalQuery(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["ID"].Value.ToString());
 
+                updateMedicalQuery.ShowDialog();
             }
         }
+
+        private void cmdDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvData.Rows.GetRowCount(DataGridViewElementStates.Selected) != 0 && searchFound)
+            {
+                if (MessageBox.Show("¿Seguro que desea eliminar la consulta médica?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+                    SqlCommand command = new SqlCommand("DELETE FROM medical_querys WHERE ID=@ID;", connection);
+
+                    command.Parameters.AddWithValue("@ID", int.Parse(dgvData.Rows[dgvData.CurrentCell.RowIndex].Cells["ID"].Value.ToString()));
+
+                    connection.Open();
+
+                    command.ExecuteNonQuery();
+
+                    connection.Close();
+
+                    dgvData.Rows.RemoveAt(dgvData.CurrentCell.RowIndex);
+
+                    if (dgvData.Rows.Count == 0)
+                        cmdDelete.Enabled = false;
+                }
+            }
+            else
+                MessageBox.Show("Seleccione una cita", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
+
+    public class PacientSearchInfo
+    {
+        public int ID { get; set; }
+        public string Folio { get; set; }
+        public string Name { get; set; }
+        public DateTime Date { get; set; }
     }
 }

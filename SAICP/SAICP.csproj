@@ -133,6 +133,12 @@
     <Compile Include="AA\AA-MCM.Designer.cs">
       <DependentUpon>AA-MCM.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIEC\GIEC-MCM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIEC\GIEC-MCM.Designer.cs">
+      <DependentUpon>GIEC-MCM.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AA\AA-CCM.resx">
       <DependentUpon>AA-CCM.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AA\AA-MCM.resx">
       <DependentUpon>AA-MCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIEC\GIEC-MCM.resx">
+      <DependentUpon>GIEC-MCM.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -240,6 +249,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

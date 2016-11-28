@@ -11,25 +11,57 @@ using System.IO;
 
 namespace SAICP
 {
-    public partial class frmNewMedicalQuery : DevComponents.DotNetBar.Metro.MetroForm
+    public partial class frmUpdateMedicalQuery : DevComponents.DotNetBar.Metro.MetroForm
     {
-        private frmMain windowMenu;
         private List<PacientData> pacientsList = new List<PacientData>();
         private bool FlagFromClosingAfterSavingData = false;
+        private string IDFromMedicalQuery;
 
-        public frmNewMedicalQuery(frmMain windowMenu)
+        public frmUpdateMedicalQuery(string IDFromMedicalQuery)
         {
             InitializeComponent();
-            this.windowMenu = windowMenu;
             MaximizeBox = false;
+
+            stiGraphics.Enabled = false;
+            stiTable.Enabled = false;
+
+            this.IDFromMedicalQuery = IDFromMedicalQuery;
+
+            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
+            SqlCommand command = new SqlCommand("SELECT * FROM medical_querys WHERE ID=@ID;", connection);
+            SqlDataReader reader;
+
+            command.Parameters.AddWithValue("@ID", int.Parse(IDFromMedicalQuery));
+
+            connection.Open();
+
+            reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    lblMedicalQueryDate.Text = reader.GetDateTime(reader.GetOrdinal("date")).Date.ToString("d");
+                    txtName.Text = reader["name"].ToString();
+                    txtFolio.Text = reader["folio"].ToString();
+                    txtWeight.Text = reader["weight"].ToString();
+                    txtSize.Text = reader["size"].ToString();
+                    txtIMC.Text = reader["IMC"].ToString();
+                    txtHead_Circunference.Text = reader["cephalic_perimeter"].ToString();
+                    txtReason.Text = reader["reason"].ToString();
+                    txtPhysical_Exploration.Text = reader["physical_exploration"].ToString();
+                    txtDiagnostic.Text = reader["diagnostic"].ToString();
+                    txtTreatment.Text = reader["treatment"].ToString();
+                }
+            }
+
+            connection.Close();
         }
 
         private void frmNewMedicalQuery_Load(object sender, EventArgs e)
         {
             lblDate.Text = DateTime.Today.ToString("d");
             lblHour.Text = DateTime.Now.ToString("hh:mm tt", System.Globalization.DateTimeFormatInfo.InvariantInfo);
-
-            SetAutoCompleteCustomSourceToFolioAndName();
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -45,10 +77,7 @@ namespace SAICP
                 if (MessageBox.Show("¿Seguro que desea salir? Los datos no guardados se perderán", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                     e.Cancel = true;
                 else
-                {
                     Hide();
-                    windowMenu.Show();
-                }
             }
         }
 
@@ -119,23 +148,19 @@ namespace SAICP
 
         private void cmdSave_Click(object sender, EventArgs e)
         {
-            string buildInsertCommand = @"INSERT INTO medical_querys VALUES (
-            @folio,
-            @name,
-            @date,
-            @reason,
-            @physical_exploration,
-            @diagnostic,
-            @treatment,
-            @weight,
-            @size,
-            @IMC,
-            @cephalic_perimeter,
-            @medical_query_registered
-            );";
+            string buildUpdateCommand = @"UPDATE medical_querys SET
+            reason=@reason,
+            physical_exploration=@physical_exploration,
+            diagnostic=@diagnostic,
+            treatment=@treatment,
+            weight=@weight,
+            size=@size,
+            IMC=@IMC,
+            cephalic_perimeter=@cephalic_perimeter
+            WHERE ID=@ID;";
 
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand command = new SqlCommand(buildInsertCommand, connection);
+            SqlCommand command = new SqlCommand(buildUpdateCommand, connection);
 
             pgrSaving.Visible = true;
 
@@ -151,23 +176,11 @@ namespace SAICP
                 pgrSaving.PerformStep();
                 pgrSaving.Visible = false;
 
-                MessageBox.Show("Consulta médica guardada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Consulta médica actualizada", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 FlagFromClosingAfterSavingData = true;
 
-                if (MessageBox.Show("¿Desea registrar otra consulta médica?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    frmNewClinicalRecord windowNewClinicalRecord = new frmNewClinicalRecord(windowMenu);
-                    Hide();
-                    windowNewClinicalRecord.Show();
-                    Close();
-                }
-                else
-                {
-                    Hide();
-                    windowMenu.Show();
-                    Close();
-                }
+                Close();
             }
             else
                 MessageBox.Show("Faltan campos obligatorios por llenar", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -175,22 +188,9 @@ namespace SAICP
 
         private bool ValidateDataAndAsignSqlCommandParameters(SqlCommand command)
         {
-            // Validacion del nombre
-            if (txtName.Text.Length == 0)
-                return false;
-            else
-                command.Parameters.AddWithValue("@name", txtName.Text);
+            command.Parameters.AddWithValue("@ID", int.Parse(IDFromMedicalQuery));
 
-            // Validacion del folio
-            if (txtFolio.Text.Length == 0)
-                return false;
-            else
-                command.Parameters.AddWithValue("@folio", txtFolio.Text);
-
-            // Validacion de la fecha
-            command.Parameters.AddWithValue("@date", DateTime.Today.Date);
-
-            // Validacion del peso del paciente
+           // Validacion del peso del paciente
             if (txtWeight.Text.Length == 0)
                 return false;
             else
@@ -238,9 +238,6 @@ namespace SAICP
             else
                 command.Parameters.AddWithValue("@treatment", txtTreatment.Text);
 
-            // Asignar a 0 el parametro de medical_query_registered
-            command.Parameters.AddWithValue("@medical_query_registered", 0);
-
             pgrSaving.PerformStep();
 
             return true;
@@ -255,40 +252,6 @@ namespace SAICP
                 if (Char.IsLetter(e.KeyChar))
                     e.KeyChar = Char.ToUpper(e.KeyChar);
             }
-        }
-
-        private void SetAutoCompleteCustomSourceToFolioAndName()
-        {
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
-            SqlCommand command = new SqlCommand("SELECT folio, name, first_last_name, second_last_name FROM clinical_records;", connection);
-            SqlDataReader reader;
-            AutoCompleteStringCollection dataNames = new AutoCompleteStringCollection(), dataFolio = new AutoCompleteStringCollection();
-            PacientData pacient;
-
-            connection.Open();
-
-            reader = command.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    pacient = new PacientData();
-
-                    dataNames.Add(reader["name"].ToString() + " " + reader["first_last_name"].ToString() + " " + reader["second_last_name"].ToString());
-                    dataFolio.Add(reader["folio"].ToString());
-
-                    pacient.Name = reader["name"].ToString() + " " + reader["first_last_name"].ToString() + " " + reader["second_last_name"].ToString();
-                    pacient.Folio = reader["folio"].ToString();
-
-                    pacientsList.Add(pacient);
-                }
-            }
-
-            connection.Close();
-
-            txtName.AutoCompleteCustomSource = dataNames;
-            txtFolio.AutoCompleteCustomSource = dataFolio;
         }
 
         private void txtName_KeyDown(object sender, KeyEventArgs e)
@@ -449,7 +412,7 @@ namespace SAICP
 
                         if (reader["sex"].ToString() == "M")
                         {
-                            string[] data = { txtName.Text, "Recién nacido", reader["pacient_weight"].ToString() + " kg", "3.4 kg", reader["pacient_size"].ToString() + " cm", "50.3 cm"};
+                            string[] data = { txtName.Text, "Recién nacido", reader["pacient_weight"].ToString() + " kg", "3.4 kg", reader["pacient_size"].ToString() + " cm", "50.3 cm" };
                             sex = "M";
                             dgvPercentilTable.Rows.Add(data);
                         }
@@ -760,12 +723,5 @@ namespace SAICP
                     return -1;
             }
         }
-    }
-
-    public class DatesDifference
-    {
-        public int Years { get; set; }
-        public int Months { get; set; }
-        public int Days { get; set; }
     }
 }

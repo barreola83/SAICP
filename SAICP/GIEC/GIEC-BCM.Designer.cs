@@ -50,9 +50,11 @@ namespace SAICP
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cmdBack = new DevComponents.DotNetBar.ButtonX();
             this.dgvData = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmdDelete = new DevComponents.DotNetBar.ButtonX();
             this.statusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
@@ -249,12 +251,13 @@ namespace SAICP
             // cmdBack
             // 
             this.cmdBack.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdBack.AutoSize = true;
             this.cmdBack.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.cmdBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdBack.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdBack.Location = new System.Drawing.Point(12, 260);
+            this.cmdBack.Location = new System.Drawing.Point(12, 255);
             this.cmdBack.Name = "cmdBack";
-            this.cmdBack.Size = new System.Drawing.Size(75, 23);
+            this.cmdBack.Size = new System.Drawing.Size(75, 28);
             this.cmdBack.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmdBack.TabIndex = 7;
             this.cmdBack.Text = "Regresar";
@@ -265,6 +268,7 @@ namespace SAICP
             this.dgvData.AllowUserToDeleteRows = false;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.name,
             this.folio,
             this.date});
@@ -287,6 +291,13 @@ namespace SAICP
             this.dgvData.TabIndex = 8;
             this.dgvData.DoubleClick += new System.EventHandler(this.dgvData_DoubleClick);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "Número de cita";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
             // name
             // 
             this.name.HeaderText = "Nombre del paciente";
@@ -299,20 +310,37 @@ namespace SAICP
             this.folio.HeaderText = "Folio";
             this.folio.Name = "folio";
             this.folio.ReadOnly = true;
-            this.folio.Width = 140;
+            this.folio.Width = 120;
             // 
             // date
             // 
             this.date.HeaderText = "Fecha";
             this.date.Name = "date";
             this.date.ReadOnly = true;
-            this.date.Width = 120;
+            this.date.Width = 90;
+            // 
+            // cmdDelete
+            // 
+            this.cmdDelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.cmdDelete.AutoSize = true;
+            this.cmdDelete.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
+            this.cmdDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdDelete.Enabled = false;
+            this.cmdDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdDelete.Location = new System.Drawing.Point(93, 255);
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Size = new System.Drawing.Size(63, 28);
+            this.cmdDelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmdDelete.TabIndex = 9;
+            this.cmdDelete.Text = "Eliminar";
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
             // 
             // frmQueryMedicalQuerys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 311);
+            this.Controls.Add(this.cmdDelete);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.cmdBack);
             this.Controls.Add(this.labelX1);
@@ -356,8 +384,10 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem labelItem3;
         private DevComponents.DotNetBar.LabelItem labelItem4;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn folio;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private DevComponents.DotNetBar.ButtonX cmdDelete;
     }
 }
