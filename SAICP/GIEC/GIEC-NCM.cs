@@ -157,9 +157,9 @@ namespace SAICP
 
                 if (MessageBox.Show("¿Desea registrar otra consulta médica?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    frmNewClinicalRecord windowNewClinicalRecord = new frmNewClinicalRecord(windowMenu);
+                    frmNewMedicalQuery newMedicalQuery = new frmNewMedicalQuery(windowMenu);
                     Hide();
-                    windowNewClinicalRecord.Show();
+                    newMedicalQuery.Show();
                     Close();
                 }
                 else
