@@ -178,6 +178,7 @@ namespace SAICP
                     chrGraphic.Titles.Clear();
                     chrGraphic.Legends.Clear();
                     chrGraphic.Series.Clear();
+                    chrGraphic.ChartAreas.Clear();
 
                     chrGraphic.Legends.Add("Peso");
                     chrGraphic.Legends.Add("Talla");
@@ -280,6 +281,7 @@ namespace SAICP
                     chrGraphic.Titles.Clear();
                     chrGraphic.Legends.Clear();
                     chrGraphic.Series.Clear();
+                    chrGraphic.ChartAreas.Clear();
 
                     chrGraphic.Legends.Add("Peso");
                     chrGraphic.Legends.Add("Talla");
