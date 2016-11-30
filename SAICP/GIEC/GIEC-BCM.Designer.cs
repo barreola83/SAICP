@@ -36,13 +36,13 @@ namespace SAICP
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
             this.progressBarItem2 = new DevComponents.DotNetBar.ProgressBarItem();
             this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
-            this.labelItem3 = new DevComponents.DotNetBar.LabelItem();
-            this.labelItem4 = new DevComponents.DotNetBar.LabelItem();
+            this.lblDate = new DevComponents.DotNetBar.LabelItem();
+            this.lblHour = new DevComponents.DotNetBar.LabelItem();
             this.lblMessage = new DevComponents.DotNetBar.LabelItem();
             this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
             this.lblBlank = new DevComponents.DotNetBar.LabelItem();
-            this.lblDate = new DevComponents.DotNetBar.LabelItem();
-            this.lblHour = new DevComponents.DotNetBar.LabelItem();
+            this.lblNot = new DevComponents.DotNetBar.LabelItem();
+            this.lblNot_2 = new DevComponents.DotNetBar.LabelItem();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.clnDate = new DevComponents.Editors.DateTimeAdv.MonthCalendarAdv();
             this.txtSearchByName = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -74,8 +74,8 @@ namespace SAICP
             this.lblMessage,
             this.progressBarItem1,
             this.lblBlank,
-            this.lblDate,
-            this.lblHour});
+            this.lblNot,
+            this.lblNot_2});
             this.statusBar.Location = new System.Drawing.Point(0, 289);
             this.statusBar.Name = "statusBar";
             this.statusBar.Size = new System.Drawing.Size(782, 22);
@@ -95,8 +95,8 @@ namespace SAICP
             this.labelItem1,
             this.progressBarItem2,
             this.labelItem2,
-            this.labelItem3,
-            this.labelItem4});
+            this.lblDate,
+            this.lblHour});
             this.metroStatusBar1.Location = new System.Drawing.Point(0, 0);
             this.metroStatusBar1.Name = "metroStatusBar1";
             this.metroStatusBar1.Size = new System.Drawing.Size(782, 22);
@@ -124,15 +124,15 @@ namespace SAICP
             this.labelItem2.Name = "labelItem2";
             this.labelItem2.Stretch = true;
             // 
-            // labelItem3
+            // lblDate
             // 
-            this.labelItem3.Name = "labelItem3";
-            this.labelItem3.Text = "Fecha";
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Text = "Fecha";
             // 
-            // labelItem4
+            // lblHour
             // 
-            this.labelItem4.Name = "labelItem4";
-            this.labelItem4.Text = "Hora";
+            this.lblHour.Name = "lblHour";
+            this.lblHour.Text = "Hora";
             // 
             // lblMessage
             // 
@@ -156,15 +156,15 @@ namespace SAICP
             this.lblBlank.Name = "lblBlank";
             this.lblBlank.Stretch = true;
             // 
-            // lblDate
+            // lblNot
             // 
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Text = "Fecha";
+            this.lblNot.Name = "lblNot";
+            this.lblNot.Text = "Fecha";
             // 
-            // lblHour
+            // lblNot_2
             // 
-            this.lblHour.Name = "lblHour";
-            this.lblHour.Text = "Hora";
+            this.lblNot_2.Name = "lblNot_2";
+            this.lblNot_2.Text = "Hora";
             // 
             // timer
             // 
@@ -369,8 +369,8 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem lblMessage;
         private DevComponents.DotNetBar.ProgressBarItem progressBarItem1;
         private DevComponents.DotNetBar.LabelItem lblBlank;
-        private DevComponents.DotNetBar.LabelItem lblDate;
-        private DevComponents.DotNetBar.LabelItem lblHour;
+        private DevComponents.DotNetBar.LabelItem lblNot;
+        private DevComponents.DotNetBar.LabelItem lblNot_2;
         private System.Windows.Forms.Timer timer;
         private DevComponents.Editors.DateTimeAdv.MonthCalendarAdv clnDate;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearchByName;
@@ -381,8 +381,8 @@ namespace SAICP
         private DevComponents.DotNetBar.LabelItem labelItem1;
         private DevComponents.DotNetBar.ProgressBarItem progressBarItem2;
         private DevComponents.DotNetBar.LabelItem labelItem2;
-        private DevComponents.DotNetBar.LabelItem labelItem3;
-        private DevComponents.DotNetBar.LabelItem labelItem4;
+        private DevComponents.DotNetBar.LabelItem lblDate;
+        private DevComponents.DotNetBar.LabelItem lblHour;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvData;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
