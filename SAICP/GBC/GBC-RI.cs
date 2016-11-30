@@ -124,13 +124,21 @@ namespace SAICP
         {
             SqlConnection connection = new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=SAICP-Database;Integrated Security=True");
             SqlCommand command = new SqlCommand("SELECT ID FROM medical_querys WHERE medical_query_registered=0;", connection);
+            SqlDataReader reader;
+            AutoCompleteStringCollection data = new AutoCompleteStringCollection();
+
             connection.Open();
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            cmbDateNumber.DisplayMember = "ID";
-            cmbDateNumber.DataSource = dataTable;
-            cmbDateNumber.ValueMember = "ID";
+
+            reader = command.ExecuteReader();
+
+            if (reader.HasRows) 
+            {
+                while (reader.Read()) 
+                {
+                    cmbDateNumber.Items.Add(reader["ID"].ToString());
+                }
+            }
+
             connection.Close();
         }
     }
