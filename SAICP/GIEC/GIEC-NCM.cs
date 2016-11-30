@@ -317,7 +317,7 @@ namespace SAICP
 
         private void stiGraphics_Click(object sender, EventArgs e)
         {
-            if (txtName.Text.Length == 0 && txtFolio.Text.Length == 0 && txtSize.Text.Length == 0 && txtIMC.Text.Length == 0)
+            if (txtName.Text.Length == 0 || txtFolio.Text.Length == 0 || txtSize.Text.Length == 0 || txtIMC.Text.Length == 0)
                 MessageBox.Show("Falta información para generar gráficas", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
@@ -408,7 +408,7 @@ namespace SAICP
 
                 NumberOfMedicalQuery++;
 
-                chrSize.Series["Talla"].Points.AddXY(NumberOfMedicalQuery.ToString(), float.Parse(txtSize.Text));
+               chrSize.Series["Talla"].Points.AddXY(NumberOfMedicalQuery.ToString(), float.Parse(txtSize.Text));
                 chrSize.Series["TallaPoint"].Points.AddY(float.Parse(txtSize.Text));
 
                 chrIMC.Series["IMC"].Points.AddXY(NumberOfMedicalQuery.ToString(), float.Parse(txtIMC.Text));
